@@ -1,0 +1,128 @@
+\hypertarget{_get_essai_8php}{}\doxysection{php/\+Get\+Essai.php File Reference}
+\label{_get_essai_8php}\index{php/GetEssai.php@{php/GetEssai.php}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_get_essai_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}{\$authentication}} = new \mbox{\hyperlink{class_secure_user_authentication}{Secure\+User\+Authentication}}()
+\item 
+\mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}}(! \$authentication-\/$>$is\+User\+Connected()) \mbox{\hyperlink{_get_essai_8php_a0811826b78691f7e8c277c73d7da0ae6}{\$user}} = \$authentication-\/$>$get\+User\+From\+Session()
+\item 
+\mbox{\hyperlink{_get_essai_8php_ae1a413be39aa48003638bca47ebd152d}{\$id\+Essai}} = \$\+\_\+\+GET\mbox{[}\textquotesingle{}idessai\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{_get_essai_8php_ab49e858fb7f2cb8c6d802493c612e770}{\$\+Cap\+Deb}} = \$\+\_\+\+POST\mbox{[}\textquotesingle{}Cap\+Deb\$ret\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{_get_essai_8php_a6e24a37a8ef63a59f41da5c7e99900d4}{\$\+Cap\+Fin}} = \$\+\_\+\+POST\mbox{[}\textquotesingle{}Cap\+Fin\$ret\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{_get_essai_8php_a4b5a48bfdfd30f60f31483792d12e906}{\$\+SN}} = \$\+\_\+\+POST\mbox{[}\textquotesingle{}SN\$ret\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{_get_essai_8php_af2723ab1af96af7cec53e7c7cc7022c6}{\$num\+Lot}} = \$\+\_\+\+POST\mbox{[}\textquotesingle{}num\+Lot\$ret\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{_get_essai_8php_ac80e008a32cd30cff04f9b4feb1ccc2b}{\$id\+Lot}} = \$cap-\/$>$get\+Id\+Lot()
+\item 
+\mbox{\hyperlink{_get_essai_8php_a0ee17d3bce7e8683a56cf90060b4dc6c}{\$lot}} = Lot\+::get\+Lot\+From\+ID(\$id\+Lot)
+\item 
+\mbox{\hyperlink{_get_essai_8php_a0a53a8f3a010d341aa90f7a679449332}{\$essai}} = Essai\+::get\+Essai\+From\+Id(\$id\+Essai)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_get_essai_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}\label{_get_essai_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}} 
+\index{GetEssai.php@{GetEssai.php}!\$authentication@{\$authentication}}
+\index{\$authentication@{\$authentication}!GetEssai.php@{GetEssai.php}}
+\doxysubsubsection{\texorpdfstring{\$authentication}{$authentication}}
+{\footnotesize\ttfamily \$authentication = new \mbox{\hyperlink{class_secure_user_authentication}{Secure\+User\+Authentication}}()}
+
+
+
+Definition at line 9 of file Get\+Essai.\+php.
+
+\mbox{\Hypertarget{_get_essai_8php_ab49e858fb7f2cb8c6d802493c612e770}\label{_get_essai_8php_ab49e858fb7f2cb8c6d802493c612e770}} 
+\index{GetEssai.php@{GetEssai.php}!\$CapDeb@{\$CapDeb}}
+\index{\$CapDeb@{\$CapDeb}!GetEssai.php@{GetEssai.php}}
+\doxysubsubsection{\texorpdfstring{\$CapDeb}{$CapDeb}}
+{\footnotesize\ttfamily \$Cap\+Deb = \$\+\_\+\+POST\mbox{[}\textquotesingle{}Cap\+Deb\$ret\textquotesingle{}\mbox{]}}
+
+
+
+Definition at line 24 of file Get\+Essai.\+php.
+
+\mbox{\Hypertarget{_get_essai_8php_a6e24a37a8ef63a59f41da5c7e99900d4}\label{_get_essai_8php_a6e24a37a8ef63a59f41da5c7e99900d4}} 
+\index{GetEssai.php@{GetEssai.php}!\$CapFin@{\$CapFin}}
+\index{\$CapFin@{\$CapFin}!GetEssai.php@{GetEssai.php}}
+\doxysubsubsection{\texorpdfstring{\$CapFin}{$CapFin}}
+{\footnotesize\ttfamily \$Cap\+Fin = \$\+\_\+\+POST\mbox{[}\textquotesingle{}Cap\+Fin\$ret\textquotesingle{}\mbox{]}}
+
+
+
+Definition at line 25 of file Get\+Essai.\+php.
+
+\mbox{\Hypertarget{_get_essai_8php_a0a53a8f3a010d341aa90f7a679449332}\label{_get_essai_8php_a0a53a8f3a010d341aa90f7a679449332}} 
+\index{GetEssai.php@{GetEssai.php}!\$essai@{\$essai}}
+\index{\$essai@{\$essai}!GetEssai.php@{GetEssai.php}}
+\doxysubsubsection{\texorpdfstring{\$essai}{$essai}}
+{\footnotesize\ttfamily \$essai = Essai\+::get\+Essai\+From\+Id(\$id\+Essai)}
+
+
+
+Definition at line 38 of file Get\+Essai.\+php.
+
+\mbox{\Hypertarget{_get_essai_8php_ae1a413be39aa48003638bca47ebd152d}\label{_get_essai_8php_ae1a413be39aa48003638bca47ebd152d}} 
+\index{GetEssai.php@{GetEssai.php}!\$idEssai@{\$idEssai}}
+\index{\$idEssai@{\$idEssai}!GetEssai.php@{GetEssai.php}}
+\doxysubsubsection{\texorpdfstring{\$idEssai}{$idEssai}}
+{\footnotesize\ttfamily \$id\+Essai = \$\+\_\+\+GET\mbox{[}\textquotesingle{}idessai\textquotesingle{}\mbox{]}}
+
+
+
+Definition at line 21 of file Get\+Essai.\+php.
+
+\mbox{\Hypertarget{_get_essai_8php_ac80e008a32cd30cff04f9b4feb1ccc2b}\label{_get_essai_8php_ac80e008a32cd30cff04f9b4feb1ccc2b}} 
+\index{GetEssai.php@{GetEssai.php}!\$idLot@{\$idLot}}
+\index{\$idLot@{\$idLot}!GetEssai.php@{GetEssai.php}}
+\doxysubsubsection{\texorpdfstring{\$idLot}{$idLot}}
+{\footnotesize\ttfamily \$id\+Lot = \$cap-\/$>$get\+Id\+Lot()}
+
+
+
+Definition at line 33 of file Get\+Essai.\+php.
+
+\mbox{\Hypertarget{_get_essai_8php_a0ee17d3bce7e8683a56cf90060b4dc6c}\label{_get_essai_8php_a0ee17d3bce7e8683a56cf90060b4dc6c}} 
+\index{GetEssai.php@{GetEssai.php}!\$lot@{\$lot}}
+\index{\$lot@{\$lot}!GetEssai.php@{GetEssai.php}}
+\doxysubsubsection{\texorpdfstring{\$lot}{$lot}}
+{\footnotesize\ttfamily \$lot = Lot\+::get\+Lot\+From\+ID(\$id\+Lot)}
+
+
+
+Definition at line 34 of file Get\+Essai.\+php.
+
+\mbox{\Hypertarget{_get_essai_8php_af2723ab1af96af7cec53e7c7cc7022c6}\label{_get_essai_8php_af2723ab1af96af7cec53e7c7cc7022c6}} 
+\index{GetEssai.php@{GetEssai.php}!\$numLot@{\$numLot}}
+\index{\$numLot@{\$numLot}!GetEssai.php@{GetEssai.php}}
+\doxysubsubsection{\texorpdfstring{\$numLot}{$numLot}}
+{\footnotesize\ttfamily \$num\+Lot = \$\+\_\+\+POST\mbox{[}\textquotesingle{}num\+Lot\$ret\textquotesingle{}\mbox{]}}
+
+
+
+Definition at line 27 of file Get\+Essai.\+php.
+
+\mbox{\Hypertarget{_get_essai_8php_a4b5a48bfdfd30f60f31483792d12e906}\label{_get_essai_8php_a4b5a48bfdfd30f60f31483792d12e906}} 
+\index{GetEssai.php@{GetEssai.php}!\$SN@{\$SN}}
+\index{\$SN@{\$SN}!GetEssai.php@{GetEssai.php}}
+\doxysubsubsection{\texorpdfstring{\$SN}{$SN}}
+{\footnotesize\ttfamily \$SN = \$\+\_\+\+POST\mbox{[}\textquotesingle{}SN\$ret\textquotesingle{}\mbox{]}}
+
+
+
+Definition at line 26 of file Get\+Essai.\+php.
+
+\mbox{\Hypertarget{_get_essai_8php_a0811826b78691f7e8c277c73d7da0ae6}\label{_get_essai_8php_a0811826b78691f7e8c277c73d7da0ae6}} 
+\index{GetEssai.php@{GetEssai.php}!\$user@{\$user}}
+\index{\$user@{\$user}!GetEssai.php@{GetEssai.php}}
+\doxysubsubsection{\texorpdfstring{\$user}{$user}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}} (! \$authentication-\/$>$is\+User\+Connected()) \$user = \$authentication-\/$>$get\+User\+From\+Session()}
+
+
+
+Definition at line 15 of file Get\+Essai.\+php.
+

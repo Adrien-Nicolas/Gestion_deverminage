@@ -1,0 +1,609 @@
+\hypertarget{class_capteur}{}\doxysection{Capteur Class Reference}
+\label{class_capteur}\index{Capteur@{Capteur}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_capteur_aa0e0c2d94b526994372a33f033309544}{\+\_\+\+\_\+construct}} (int \$id, int \$valid, int \$position, int \$id\+Essai, int \$id\+Lot=null, string \$SN=null)
+\item 
+\mbox{\hyperlink{class_capteur_a70a0fe08035189260c72e32a9e20d30c}{get\+Values}} ()
+\item 
+\mbox{\hyperlink{class_capteur_aaa94455d65f2b08636c391eea2f4f6fd}{get\+Time\+Essai}} ()
+\item 
+\mbox{\hyperlink{class_capteur_ab33c7f3af9b5e16802e04c38b124862a}{get\+False\+Values}} ()
+\item 
+\mbox{\hyperlink{class_capteur_a4391034679b296004623bff054ec5406}{get\+Id\+Lot}} ()
+\item 
+\mbox{\hyperlink{class_capteur_a107d1509bfad2c1b7507aac4e81be889}{get\+Position}} ()
+\item 
+\mbox{\hyperlink{class_capteur_a12251d0c022e9e21c137a105ff683f13}{get\+Id}} ()
+\item 
+\mbox{\hyperlink{class_capteur_a532fb5e0031d177f1b042b0308e7937b}{get\+SN}} ()
+\item 
+\mbox{\hyperlink{class_capteur_a404514e9c819b52ed9c5feaab6cd74e5}{get\+Valid}} ()
+\item 
+\mbox{\hyperlink{class_capteur_a6bdf9bd664cfb2369bbd95d720ac5da8}{get\+Valid\+PDF}} ()
+\item 
+\mbox{\hyperlink{class_capteur_a5a637133dc076fe653b849ee26716d4b}{getid\+Essai}} ()
+\item 
+\mbox{\hyperlink{class_capteur_a8ebb27dc9dd00cc3ce89ebee7a43582c}{get\+Lastdate}} ()
+\item 
+\mbox{\hyperlink{class_capteur_a23969ee69f197030d797bd008404f3f8}{set\+Position}} (int \$position)
+\item 
+\mbox{\hyperlink{class_capteur_a421efe9298e0e84f725f47dc948bb5ab}{set\+Value}} (int \$id\+Essai)
+\item 
+\mbox{\hyperlink{class_capteur_ae9e336f5ae1abd79b64bd3da8c911119}{set\+Valid}} (int \$valid)
+\item 
+\mbox{\hyperlink{class_capteur_ac0908a47cff60019455be8e424a724c7}{set\+SN}} (string \$SN)
+\item 
+\mbox{\hyperlink{class_capteur_a46b5c90d8addd8ac7b5c5a33117015cd}{get\+Product}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_capteur_a75f9354fcae453b73b750a10e1ca3fae}{get\+Capteur\+From\+Id}} (int \$id)
+\item 
+static \mbox{\hyperlink{class_capteur_a582345da918a4cdd05a886dfc5ea029c}{get\+Capteur\+From\+SN}} (string \$SN)
+\item 
+static \mbox{\hyperlink{class_capteur_a9970f42a15c53fab6f855ce0478c67eb}{remove\+To\+DB}} (int \$id)
+\item 
+static \mbox{\hyperlink{class_capteur_aae14f238415994b9a9363883e68158ca}{Update\+Valid}} (int \$id)
+\item 
+static \mbox{\hyperlink{class_capteur_a544f3aafa1205c75bbce85b743940970}{Update\+Not\+Valid}} (int \$id)
+\item 
+static \mbox{\hyperlink{class_capteur_a6d29249d0298c80b1837fef183c66b9a}{create\+Capteur\+To\+DB}} (int \$id\+Essai, int \$position)
+\item 
+static \mbox{\hyperlink{class_capteur_ab3d9bb24338225e5ad7e5758609f6fd4}{Update\+Cap}} (String \$num\+Lot, string \$SN, int \$id\+Essai, int \$pos)
+\item 
+static \mbox{\hyperlink{class_capteur_a73261b850dcb5ce71488f897965fb4ab}{Update\+Cap\+Set0}} (int \$id\+Essai)
+\item 
+static \mbox{\hyperlink{class_capteur_ade3166035fe50c45e1bc2465e2c35293}{Update\+Cap\+Set\+HS}} (int \$id\+Essai, int \$pos)
+\item 
+static \mbox{\hyperlink{class_capteur_a16432625ba0cc82577d06c0dbec60017}{Verif\+SN}} (string \$SN, int \$id\+Essai)
+\item 
+static \mbox{\hyperlink{class_capteur_af62f28ae2598e0ae9898584d95442345}{get\+Stats\+Per\+Position}} ()
+\item 
+static \mbox{\hyperlink{class_capteur_aeddc263c89d667cd9689009fe65b9731}{get\+Pos\+Byid\+Essai}} (int \$id\+Essai)
+\item 
+static \mbox{\hyperlink{class_capteur_a97943192fc6dd3fd7fa6a5de026e3412}{get\+HS}} (int \$id\+Cap)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 7 of file Capteur.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_capteur_aa0e0c2d94b526994372a33f033309544}\label{class_capteur_aa0e0c2d94b526994372a33f033309544}} 
+\index{Capteur@{Capteur}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Capteur@{Capteur}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{int}]{\$id,  }\item[{int}]{\$valid,  }\item[{int}]{\$position,  }\item[{int}]{\$id\+Essai,  }\item[{int}]{\$id\+Lot = {\ttfamily null},  }\item[{string}]{\$\+SN = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Constructeur de la classe \mbox{\hyperlink{class_capteur}{Capteur}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & \\
+\hline
+int & {\em \$id\+Lot} & \\
+\hline
+string & {\em \$\+SN} & \\
+\hline
+int & {\em \$valid} & \\
+\hline
+int & {\em \$position} & \\
+\hline
+int & {\em \$id\+Essai} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 28 of file Capteur.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_capteur_a6d29249d0298c80b1837fef183c66b9a}\label{class_capteur_a6d29249d0298c80b1837fef183c66b9a}} 
+\index{Capteur@{Capteur}!createCapteurToDB@{createCapteurToDB}}
+\index{createCapteurToDB@{createCapteurToDB}!Capteur@{Capteur}}
+\doxysubsubsection{\texorpdfstring{createCapteurToDB()}{createCapteurToDB()}}
+{\footnotesize\ttfamily static create\+Capteur\+To\+DB (\begin{DoxyParamCaption}\item[{int}]{\$id\+Essai,  }\item[{int}]{\$position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Méthode de la classe \mbox{\hyperlink{class_capteur}{Capteur}}, créer un capteur et retourne son id
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id\+Essai} & \\
+\hline
+int & {\em \$position} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 387 of file Capteur.\+php.
+
+\mbox{\Hypertarget{class_capteur_a75f9354fcae453b73b750a10e1ca3fae}\label{class_capteur_a75f9354fcae453b73b750a10e1ca3fae}} 
+\index{Capteur@{Capteur}!getCapteurFromId@{getCapteurFromId}}
+\index{getCapteurFromId@{getCapteurFromId}!Capteur@{Capteur}}
+\doxysubsubsection{\texorpdfstring{getCapteurFromId()}{getCapteurFromId()}}
+{\footnotesize\ttfamily static get\+Capteur\+From\+Id (\begin{DoxyParamCaption}\item[{int}]{\$id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Méthode de la classe \mbox{\hyperlink{class_capteur}{Capteur}} qui permet la création d\textquotesingle{}un \mbox{\hyperlink{class_capteur}{Capteur}} avec son ID
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_capteur}{Capteur}} 
+\end{DoxyReturn}
+
+
+Definition at line 47 of file Capteur.\+php.
+
+\mbox{\Hypertarget{class_capteur_a582345da918a4cdd05a886dfc5ea029c}\label{class_capteur_a582345da918a4cdd05a886dfc5ea029c}} 
+\index{Capteur@{Capteur}!getCapteurFromSN@{getCapteurFromSN}}
+\index{getCapteurFromSN@{getCapteurFromSN}!Capteur@{Capteur}}
+\doxysubsubsection{\texorpdfstring{getCapteurFromSN()}{getCapteurFromSN()}}
+{\footnotesize\ttfamily static get\+Capteur\+From\+SN (\begin{DoxyParamCaption}\item[{string}]{\$\+SN }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Méthode de la classe \mbox{\hyperlink{class_capteur}{Capteur}} qui permet la création d\textquotesingle{}un \mbox{\hyperlink{class_capteur}{Capteur}} avec son numéro de serie
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$\+SN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_capteur}{Capteur}} 
+\end{DoxyReturn}
+
+
+Definition at line 71 of file Capteur.\+php.
+
+\mbox{\Hypertarget{class_capteur_ab33c7f3af9b5e16802e04c38b124862a}\label{class_capteur_ab33c7f3af9b5e16802e04c38b124862a}} 
+\index{Capteur@{Capteur}!getFalseValues@{getFalseValues}}
+\index{getFalseValues@{getFalseValues}!Capteur@{Capteur}}
+\doxysubsubsection{\texorpdfstring{getFalseValues()}{getFalseValues()}}
+{\footnotesize\ttfamily get\+False\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Méthode de la classe \mbox{\hyperlink{class_capteur}{Capteur}}, permet l\textquotesingle{}obtention valeurs invalides
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Definition at line 170 of file Capteur.\+php.
+
+\mbox{\Hypertarget{class_capteur_a97943192fc6dd3fd7fa6a5de026e3412}\label{class_capteur_a97943192fc6dd3fd7fa6a5de026e3412}} 
+\index{Capteur@{Capteur}!getHS@{getHS}}
+\index{getHS@{getHS}!Capteur@{Capteur}}
+\doxysubsubsection{\texorpdfstring{getHS()}{getHS()}}
+{\footnotesize\ttfamily static get\+HS (\begin{DoxyParamCaption}\item[{int}]{\$id\+Cap }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Methode de la classe Capeur, permet de retourner si un capteur si il est hs
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id\+Cap} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Definition at line 596 of file Capteur.\+php.
+
+\mbox{\Hypertarget{class_capteur_a12251d0c022e9e21c137a105ff683f13}\label{class_capteur_a12251d0c022e9e21c137a105ff683f13}} 
+\index{Capteur@{Capteur}!getId@{getId}}
+\index{getId@{getId}!Capteur@{Capteur}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Méthode de la classe \mbox{\hyperlink{class_capteur}{Capteur}}, permet l\textquotesingle{}obtention de l\textquotesingle{}ID
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 217 of file Capteur.\+php.
+
+\mbox{\Hypertarget{class_capteur_a5a637133dc076fe653b849ee26716d4b}\label{class_capteur_a5a637133dc076fe653b849ee26716d4b}} 
+\index{Capteur@{Capteur}!getidEssai@{getidEssai}}
+\index{getidEssai@{getidEssai}!Capteur@{Capteur}}
+\doxysubsubsection{\texorpdfstring{getidEssai()}{getidEssai()}}
+{\footnotesize\ttfamily getid\+Essai (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Méthode de la classe \mbox{\hyperlink{class_capteur}{Capteur}}, permet l\textquotesingle{}obtention du numéro de série
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 264 of file Capteur.\+php.
+
+\mbox{\Hypertarget{class_capteur_a4391034679b296004623bff054ec5406}\label{class_capteur_a4391034679b296004623bff054ec5406}} 
+\index{Capteur@{Capteur}!getIdLot@{getIdLot}}
+\index{getIdLot@{getIdLot}!Capteur@{Capteur}}
+\doxysubsubsection{\texorpdfstring{getIdLot()}{getIdLot()}}
+{\footnotesize\ttfamily get\+Id\+Lot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Méthode de la classe \mbox{\hyperlink{class_capteur}{Capteur}}, permet l\textquotesingle{}obtention de l\textquotesingle{}ID Lot
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 195 of file Capteur.\+php.
+
+\mbox{\Hypertarget{class_capteur_a8ebb27dc9dd00cc3ce89ebee7a43582c}\label{class_capteur_a8ebb27dc9dd00cc3ce89ebee7a43582c}} 
+\index{Capteur@{Capteur}!getLastdate@{getLastdate}}
+\index{getLastdate@{getLastdate}!Capteur@{Capteur}}
+\doxysubsubsection{\texorpdfstring{getLastdate()}{getLastdate()}}
+{\footnotesize\ttfamily get\+Lastdate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Méthode de la classe \mbox{\hyperlink{class_capteur}{Capteur}}, permet l\textquotesingle{}obtention de la derniere valeur du capteur
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 276 of file Capteur.\+php.
+
+\mbox{\Hypertarget{class_capteur_aeddc263c89d667cd9689009fe65b9731}\label{class_capteur_aeddc263c89d667cd9689009fe65b9731}} 
+\index{Capteur@{Capteur}!getPosByidEssai@{getPosByidEssai}}
+\index{getPosByidEssai@{getPosByidEssai}!Capteur@{Capteur}}
+\doxysubsubsection{\texorpdfstring{getPosByidEssai()}{getPosByidEssai()}}
+{\footnotesize\ttfamily static get\+Pos\+Byid\+Essai (\begin{DoxyParamCaption}\item[{int}]{\$id\+Essai }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Methode de la classe \mbox{\hyperlink{class_capteur}{Capteur}}, permet de retourner la derniere position dans un essai
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Definition at line 575 of file Capteur.\+php.
+
+\mbox{\Hypertarget{class_capteur_a107d1509bfad2c1b7507aac4e81be889}\label{class_capteur_a107d1509bfad2c1b7507aac4e81be889}} 
+\index{Capteur@{Capteur}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Capteur@{Capteur}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Méthode de la classe \mbox{\hyperlink{class_capteur}{Capteur}}, permet l\textquotesingle{}obtention de la position
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 206 of file Capteur.\+php.
+
+\mbox{\Hypertarget{class_capteur_a46b5c90d8addd8ac7b5c5a33117015cd}\label{class_capteur_a46b5c90d8addd8ac7b5c5a33117015cd}} 
+\index{Capteur@{Capteur}!getProduct@{getProduct}}
+\index{getProduct@{getProduct}!Capteur@{Capteur}}
+\doxysubsubsection{\texorpdfstring{getProduct()}{getProduct()}}
+{\footnotesize\ttfamily get\+Product (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Methode de la classe \mbox{\hyperlink{class_capteur}{Capteur}}, permet de retourner le nom du produit en fonction de l\textquotesingle{}id Prduit dans Lot
+
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Definition at line 553 of file Capteur.\+php.
+
+\mbox{\Hypertarget{class_capteur_a532fb5e0031d177f1b042b0308e7937b}\label{class_capteur_a532fb5e0031d177f1b042b0308e7937b}} 
+\index{Capteur@{Capteur}!getSN@{getSN}}
+\index{getSN@{getSN}!Capteur@{Capteur}}
+\doxysubsubsection{\texorpdfstring{getSN()}{getSN()}}
+{\footnotesize\ttfamily get\+SN (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Méthode de la classe \mbox{\hyperlink{class_capteur}{Capteur}}, permet l\textquotesingle{}obtention du numéro de série
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 228 of file Capteur.\+php.
+
+\mbox{\Hypertarget{class_capteur_af62f28ae2598e0ae9898584d95442345}\label{class_capteur_af62f28ae2598e0ae9898584d95442345}} 
+\index{Capteur@{Capteur}!getStatsPerPosition@{getStatsPerPosition}}
+\index{getStatsPerPosition@{getStatsPerPosition}!Capteur@{Capteur}}
+\doxysubsubsection{\texorpdfstring{getStatsPerPosition()}{getStatsPerPosition()}}
+{\footnotesize\ttfamily static get\+Stats\+Per\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Méthode de la classe \mbox{\hyperlink{class_capteur}{Capteur}}, retourne une liste avec le nombre de capteurs non valides par position
+
+\begin{DoxyReturn}{Returns}
+array$\vert$int\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 526 of file Capteur.\+php.
+
+\mbox{\Hypertarget{class_capteur_aaa94455d65f2b08636c391eea2f4f6fd}\label{class_capteur_aaa94455d65f2b08636c391eea2f4f6fd}} 
+\index{Capteur@{Capteur}!getTimeEssai@{getTimeEssai}}
+\index{getTimeEssai@{getTimeEssai}!Capteur@{Capteur}}
+\doxysubsubsection{\texorpdfstring{getTimeEssai()}{getTimeEssai()}}
+{\footnotesize\ttfamily get\+Time\+Essai (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Méthode de la classe \mbox{\hyperlink{class_capteur}{Capteur}}, permet l\textquotesingle{}obtention du timestamp de l\textquotesingle{}essai
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Definition at line 144 of file Capteur.\+php.
+
+\mbox{\Hypertarget{class_capteur_a404514e9c819b52ed9c5feaab6cd74e5}\label{class_capteur_a404514e9c819b52ed9c5feaab6cd74e5}} 
+\index{Capteur@{Capteur}!getValid@{getValid}}
+\index{getValid@{getValid}!Capteur@{Capteur}}
+\doxysubsubsection{\texorpdfstring{getValid()}{getValid()}}
+{\footnotesize\ttfamily get\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Méthode de la classe \mbox{\hyperlink{class_capteur}{Capteur}}, permet l\textquotesingle{}obtention de Valid
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 239 of file Capteur.\+php.
+
+\mbox{\Hypertarget{class_capteur_a6bdf9bd664cfb2369bbd95d720ac5da8}\label{class_capteur_a6bdf9bd664cfb2369bbd95d720ac5da8}} 
+\index{Capteur@{Capteur}!getValidPDF@{getValidPDF}}
+\index{getValidPDF@{getValidPDF}!Capteur@{Capteur}}
+\doxysubsubsection{\texorpdfstring{getValidPDF()}{getValidPDF()}}
+{\footnotesize\ttfamily get\+Valid\+PDF (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Méthode de la classe \mbox{\hyperlink{class_capteur}{Capteur}}, permet l\textquotesingle{}obtention de Valid pour le PDF
+
+\begin{DoxyReturn}{Returns}
+String 
+\end{DoxyReturn}
+
+
+Definition at line 249 of file Capteur.\+php.
+
+\mbox{\Hypertarget{class_capteur_a70a0fe08035189260c72e32a9e20d30c}\label{class_capteur_a70a0fe08035189260c72e32a9e20d30c}} 
+\index{Capteur@{Capteur}!getValues@{getValues}}
+\index{getValues@{getValues}!Capteur@{Capteur}}
+\doxysubsubsection{\texorpdfstring{getValues()}{getValues()}}
+{\footnotesize\ttfamily get\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Méthode de la classe \mbox{\hyperlink{class_capteur}{Capteur}}, permet l\textquotesingle{}obtention valeurs valides
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Definition at line 116 of file Capteur.\+php.
+
+\mbox{\Hypertarget{class_capteur_a9970f42a15c53fab6f855ce0478c67eb}\label{class_capteur_a9970f42a15c53fab6f855ce0478c67eb}} 
+\index{Capteur@{Capteur}!removeToDB@{removeToDB}}
+\index{removeToDB@{removeToDB}!Capteur@{Capteur}}
+\doxysubsubsection{\texorpdfstring{removeToDB()}{removeToDB()}}
+{\footnotesize\ttfamily static remove\+To\+DB (\begin{DoxyParamCaption}\item[{int}]{\$id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Méthode permetant de supprimer les Capteurs 
+
+Definition at line 98 of file Capteur.\+php.
+
+\mbox{\Hypertarget{class_capteur_a23969ee69f197030d797bd008404f3f8}\label{class_capteur_a23969ee69f197030d797bd008404f3f8}} 
+\index{Capteur@{Capteur}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!Capteur@{Capteur}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily set\+Position (\begin{DoxyParamCaption}\item[{int}]{\$position }\end{DoxyParamCaption})}
+
+Méthode de la classe \mbox{\hyperlink{class_capteur}{Capteur}}, permet l\textquotesingle{}affectation de la position
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$position} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 296 of file Capteur.\+php.
+
+\mbox{\Hypertarget{class_capteur_ac0908a47cff60019455be8e424a724c7}\label{class_capteur_ac0908a47cff60019455be8e424a724c7}} 
+\index{Capteur@{Capteur}!setSN@{setSN}}
+\index{setSN@{setSN}!Capteur@{Capteur}}
+\doxysubsubsection{\texorpdfstring{setSN()}{setSN()}}
+{\footnotesize\ttfamily set\+SN (\begin{DoxyParamCaption}\item[{string}]{\$\+SN }\end{DoxyParamCaption})}
+
+Méthode de la classe \mbox{\hyperlink{class_capteur}{Capteur}}, permet l\textquotesingle{}affectation de SN
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$\+SN} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 328 of file Capteur.\+php.
+
+\mbox{\Hypertarget{class_capteur_ae9e336f5ae1abd79b64bd3da8c911119}\label{class_capteur_ae9e336f5ae1abd79b64bd3da8c911119}} 
+\index{Capteur@{Capteur}!setValid@{setValid}}
+\index{setValid@{setValid}!Capteur@{Capteur}}
+\doxysubsubsection{\texorpdfstring{setValid()}{setValid()}}
+{\footnotesize\ttfamily set\+Valid (\begin{DoxyParamCaption}\item[{int}]{\$valid }\end{DoxyParamCaption})}
+
+Méthode de la classe \mbox{\hyperlink{class_capteur}{Capteur}}, permet l\textquotesingle{}affectation de Valid
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$valid} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 317 of file Capteur.\+php.
+
+\mbox{\Hypertarget{class_capteur_a421efe9298e0e84f725f47dc948bb5ab}\label{class_capteur_a421efe9298e0e84f725f47dc948bb5ab}} 
+\index{Capteur@{Capteur}!setValue@{setValue}}
+\index{setValue@{setValue}!Capteur@{Capteur}}
+\doxysubsubsection{\texorpdfstring{setValue()}{setValue()}}
+{\footnotesize\ttfamily set\+Value (\begin{DoxyParamCaption}\item[{int}]{\$id\+Essai }\end{DoxyParamCaption})}
+
+Méthode de la classe \mbox{\hyperlink{class_capteur}{Capteur}}, permet l\textquotesingle{}affectation de ID\+\_\+essai
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id\+Essai} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 306 of file Capteur.\+php.
+
+\mbox{\Hypertarget{class_capteur_ab3d9bb24338225e5ad7e5758609f6fd4}\label{class_capteur_ab3d9bb24338225e5ad7e5758609f6fd4}} 
+\index{Capteur@{Capteur}!UpdateCap@{UpdateCap}}
+\index{UpdateCap@{UpdateCap}!Capteur@{Capteur}}
+\doxysubsubsection{\texorpdfstring{UpdateCap()}{UpdateCap()}}
+{\footnotesize\ttfamily static Update\+Cap (\begin{DoxyParamCaption}\item[{String}]{\$num\+Lot,  }\item[{string}]{\$\+SN,  }\item[{int}]{\$id\+Essai,  }\item[{int}]{\$pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Méthode de la classe \mbox{\hyperlink{class_capteur}{Capteur}}, met à jour un capteur déja existant
+
+
+\begin{DoxyParams}[1]{Parameters}
+String & {\em \$num\+Lot} & \\
+\hline
+string & {\em \$\+SN} & \\
+\hline
+int & {\em \$id\+Essai} & \\
+\hline
+int & {\em \$pos} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 419 of file Capteur.\+php.
+
+\mbox{\Hypertarget{class_capteur_a73261b850dcb5ce71488f897965fb4ab}\label{class_capteur_a73261b850dcb5ce71488f897965fb4ab}} 
+\index{Capteur@{Capteur}!UpdateCapSet0@{UpdateCapSet0}}
+\index{UpdateCapSet0@{UpdateCapSet0}!Capteur@{Capteur}}
+\doxysubsubsection{\texorpdfstring{UpdateCapSet0()}{UpdateCapSet0()}}
+{\footnotesize\ttfamily static Update\+Cap\+Set0 (\begin{DoxyParamCaption}\item[{int}]{\$id\+Essai }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Méthode de la classe \mbox{\hyperlink{class_capteur}{Capteur}}, met à 0 SN et id\+Lot
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id\+Essai} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 447 of file Capteur.\+php.
+
+\mbox{\Hypertarget{class_capteur_ade3166035fe50c45e1bc2465e2c35293}\label{class_capteur_ade3166035fe50c45e1bc2465e2c35293}} 
+\index{Capteur@{Capteur}!UpdateCapSetHS@{UpdateCapSetHS}}
+\index{UpdateCapSetHS@{UpdateCapSetHS}!Capteur@{Capteur}}
+\doxysubsubsection{\texorpdfstring{UpdateCapSetHS()}{UpdateCapSetHS()}}
+{\footnotesize\ttfamily static Update\+Cap\+Set\+HS (\begin{DoxyParamCaption}\item[{int}]{\$id\+Essai,  }\item[{int}]{\$pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Méthode de la classe \mbox{\hyperlink{class_capteur}{Capteur}}, met à 0 SN et id\+Lot 
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id\+Essai} & \\
+\hline
+int & {\em \$pos} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 470 of file Capteur.\+php.
+
+\mbox{\Hypertarget{class_capteur_a544f3aafa1205c75bbce85b743940970}\label{class_capteur_a544f3aafa1205c75bbce85b743940970}} 
+\index{Capteur@{Capteur}!UpdateNotValid@{UpdateNotValid}}
+\index{UpdateNotValid@{UpdateNotValid}!Capteur@{Capteur}}
+\doxysubsubsection{\texorpdfstring{UpdateNotValid()}{UpdateNotValid()}}
+{\footnotesize\ttfamily static Update\+Not\+Valid (\begin{DoxyParamCaption}\item[{int}]{\$id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Méthode permetant de mettre à jour la conformité
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 364 of file Capteur.\+php.
+
+\mbox{\Hypertarget{class_capteur_aae14f238415994b9a9363883e68158ca}\label{class_capteur_aae14f238415994b9a9363883e68158ca}} 
+\index{Capteur@{Capteur}!UpdateValid@{UpdateValid}}
+\index{UpdateValid@{UpdateValid}!Capteur@{Capteur}}
+\doxysubsubsection{\texorpdfstring{UpdateValid()}{UpdateValid()}}
+{\footnotesize\ttfamily static Update\+Valid (\begin{DoxyParamCaption}\item[{int}]{\$id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Méthode permetant de mettre à jour la conformité 
+
+Definition at line 340 of file Capteur.\+php.
+
+\mbox{\Hypertarget{class_capteur_a16432625ba0cc82577d06c0dbec60017}\label{class_capteur_a16432625ba0cc82577d06c0dbec60017}} 
+\index{Capteur@{Capteur}!VerifSN@{VerifSN}}
+\index{VerifSN@{VerifSN}!Capteur@{Capteur}}
+\doxysubsubsection{\texorpdfstring{VerifSN()}{VerifSN()}}
+{\footnotesize\ttfamily static Verif\+SN (\begin{DoxyParamCaption}\item[{string}]{\$\+SN,  }\item[{int}]{\$id\+Essai }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Méthode de la classe \mbox{\hyperlink{class_capteur}{Capteur}}, vérifie qu\textquotesingle{}un numéro de série n\textquotesingle{}est pas utilisé
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$\+SN} & \\
+\hline
+int & {\em \$id\+Essai} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 495 of file Capteur.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/src/\mbox{\hyperlink{_capteur_8php}{Capteur.\+php}}\end{DoxyCompactItemize}

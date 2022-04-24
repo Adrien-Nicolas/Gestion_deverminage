@@ -1,0 +1,9 @@
+var searchData=
+[
+  ['new_5fpage_3284',['new_page',['../class_dompdf_1_1_adapter_1_1_c_p_d_f.html#a2d6093dcef3824fd108d0a2239a9887a',1,'Dompdf\Adapter\CPDF\new_page()'],['../class_dompdf_1_1_adapter_1_1_g_d.html#a2d6093dcef3824fd108d0a2239a9887a',1,'Dompdf\Adapter\GD\new_page()'],['../class_dompdf_1_1_adapter_1_1_p_d_f_lib.html#a2d6093dcef3824fd108d0a2239a9887a',1,'Dompdf\Adapter\PDFLib\new_page()'],['../interface_dompdf_1_1_canvas.html#a2d6093dcef3824fd108d0a2239a9887a',1,'Dompdf\Canvas\new_page()'],['../class_dompdf_1_1_renderer.html#a2d6093dcef3824fd108d0a2239a9887a',1,'Dompdf\Renderer\new_page()']]],
+  ['next_3285',['next',['../class_font_lib_1_1_true_type_1_1_collection.html#acea62048bfee7b3cd80ed446c86fb78a',1,'FontLib\TrueType\Collection\next()'],['../class_dompdf_1_1_frame_1_1_frame_list_iterator.html#acea62048bfee7b3cd80ed446c86fb78a',1,'Dompdf\Frame\FrameListIterator\next()'],['../class_dompdf_1_1_frame_1_1_frame_tree_iterator.html#acea62048bfee7b3cd80ed446c86fb78a',1,'Dompdf\Frame\FrameTreeIterator\next()']]],
+  ['next_5fpage_3286',['next_page',['../class_dompdf_1_1_frame_decorator_1_1_page.html#a278a4166422aff5cc097ab173bb769a0',1,'Dompdf::FrameDecorator::Page']]],
+  ['nextlevel_3287',['nextLevel',['../class_sabberworm_1_1_c_s_s_1_1_output_format.html#a7e17edb88858668dec2dbc81194d2a43',1,'Sabberworm::CSS::OutputFormat']]],
+  ['normalise_3288',['normalise',['../class_dompdf_1_1_frame_decorator_1_1_table.html#aded82e1f1c8adfe87dc2cbccf8a4b718',1,'Dompdf\FrameDecorator\Table\normalise()'],['../class_dompdf_1_1_frame_decorator_1_1_table_row.html#aded82e1f1c8adfe87dc2cbccf8a4b718',1,'Dompdf\FrameDecorator\TableRow\normalise()']]],
+  ['normalizefunit_3289',['normalizeFUnit',['../class_font_lib_1_1_true_type_1_1_file.html#a16853548ddca87bd315f1bcf5ba9352d',1,'FontLib::TrueType::File']]]
+];

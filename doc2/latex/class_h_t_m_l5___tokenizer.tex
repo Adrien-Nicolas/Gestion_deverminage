@@ -1,0 +1,407 @@
+\hypertarget{class_h_t_m_l5___tokenizer}{}\doxysection{HTML5\+\_\+\+Tokenizer Class Reference}
+\label{class_h_t_m_l5___tokenizer}\index{HTML5\_Tokenizer@{HTML5\_Tokenizer}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_h_t_m_l5___tokenizer_a2dab2d360d6222b9c2c2d90ab23a0fcd}{\+\_\+\+\_\+construct}} (\$data, \$builder=null)
+\item 
+\mbox{\hyperlink{class_h_t_m_l5___tokenizer_a24cec0463e2dfb49cab77debb5cb98df}{parse\+Fragment}} (\$context=null)
+\item 
+\mbox{\hyperlink{class_h_t_m_l5___tokenizer_a38d99acc70a1d8fd8f94455743b2d237}{parse}} ()
+\item 
+\mbox{\hyperlink{class_h_t_m_l5___tokenizer_afc8a3c62679cf00ade9f15fb2a6d6132}{save}} ()
+\item 
+\mbox{\hyperlink{class_h_t_m_l5___tokenizer_a2c2898339d804a3d0a7a6f3d3c2685a3}{get\+Tree}} ()
+\item 
+\mbox{\hyperlink{class_h_t_m_l5___tokenizer_a38772d5d7a8e46605d949882eeae01bd}{stream}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tokenizer_af7f3333cc71420f91a4b3becd3ad58d0}{PCDATA}} = 0
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tokenizer_ab4cbdfd6f946852adc2789bfb16ef633}{RCDATA}} = 1
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tokenizer_a63727fcd534c5c3627a354120ec79060}{CDATA}} = 2
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tokenizer_a37ff22c445596862300420ef1dc1e742}{PLAINTEXT}} = 3
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tokenizer_a1f181b931c1328d8924854f1a3abae0e}{DOCTYPE}} = 0
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tokenizer_af372a198da7ec65547651eae2c6e1c8b}{STARTTAG}} = 1
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tokenizer_a9d75489ba89942eea71387e17e692803}{ENDTAG}} = 2
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tokenizer_a4951cfda1f15c6edbf240a5c44971eb0}{COMMENT}} = 3
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tokenizer_aaa77134e6d4199684e258368991889b5}{CHARACTER}} = 4
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tokenizer_a925d5bfbe131334ddd841073fcb4e175}{SPACECHARACTER}} = 5
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tokenizer_abcce3792747746abf207343a8bf18fcf}{EOF}} = 6
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tokenizer_a35c8a8a6aa8e93ac7d4dd4b1149da138}{PARSEERROR}} = 7
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tokenizer_a6bb7987358cd3de8e7c775094597e631}{ALPHA}} = \textquotesingle{}ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tokenizer_ad6e7741ec8fcf15176c4c1a15d44e122}{UPPER\+\_\+\+ALPHA}} = \textquotesingle{}ABCDEFGHIJKLMNOPQRSTUVWXYZ\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tokenizer_a2131f411477eb023b276d674f473e51a}{LOWER\+\_\+\+ALPHA}} = \textquotesingle{}abcdefghijklmnopqrstuvwxyz\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tokenizer_aaebb7c17974d43dd55b02d6033ee8746}{DIGIT}} = \textquotesingle{}0123456789\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tokenizer_a84ecc3b07e7e9d57b63c5baf09da6985}{HEX}} = \textquotesingle{}0123456789ABCDEFabcdef\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tokenizer_abcf1a098376d1d6d2b88a84f25709979}{WHITESPACE}} = \char`\"{}\textbackslash{}t\textbackslash{}n\textbackslash{}x0c \char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_h_t_m_l5___tokenizer_ad94a486cc9687f2844c93eea5b4dab59}{emit\+Token}} (\$token, \$check\+Stream=true, \$dry=false)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_h_t_m_l5___tokenizer_aa658946a5d6cb700e35df1fc7854e7b3}{\$stream}}
+\item 
+\mbox{\hyperlink{class_h_t_m_l5___tokenizer_a33b15d31b4f865ae52c242023a2a9f8f}{\$content\+\_\+model}}
+\item 
+\mbox{\hyperlink{class_h_t_m_l5___tokenizer_a00ae4fcafb1145f5e968bdf920f83e2e}{\$token}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 36 of file Tokenizer.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_h_t_m_l5___tokenizer_a2dab2d360d6222b9c2c2d90ab23a0fcd}\label{class_h_t_m_l5___tokenizer_a2dab2d360d6222b9c2c2d90ab23a0fcd}} 
+\index{HTML5\_Tokenizer@{HTML5\_Tokenizer}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!HTML5\_Tokenizer@{HTML5\_Tokenizer}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$data,  }\item[{}]{\$builder = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em \$data} & $\vert$ Data to parse \\
+\hline
+\mbox{\hyperlink{class_h_t_m_l5___tree_builder}{HTML5\+\_\+\+Tree\+Builder}} | null & {\em \$builder} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 94 of file Tokenizer.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_h_t_m_l5___tokenizer_ad94a486cc9687f2844c93eea5b4dab59}\label{class_h_t_m_l5___tokenizer_ad94a486cc9687f2844c93eea5b4dab59}} 
+\index{HTML5\_Tokenizer@{HTML5\_Tokenizer}!emitToken@{emitToken}}
+\index{emitToken@{emitToken}!HTML5\_Tokenizer@{HTML5\_Tokenizer}}
+\doxysubsubsection{\texorpdfstring{emitToken()}{emitToken()}}
+{\footnotesize\ttfamily emit\+Token (\begin{DoxyParamCaption}\item[{}]{\$token,  }\item[{}]{\$check\+Stream = {\ttfamily true},  }\item[{}]{\$dry = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Emits a token, passing it on to the tree builder.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em \$token} & \\
+\hline
+bool & {\em \$check\+Stream} & \\
+\hline
+bool & {\em \$dry} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 2420 of file Tokenizer.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tokenizer_a2c2898339d804a3d0a7a6f3d3c2685a3}\label{class_h_t_m_l5___tokenizer_a2c2898339d804a3d0a7a6f3d3c2685a3}} 
+\index{HTML5\_Tokenizer@{HTML5\_Tokenizer}!getTree@{getTree}}
+\index{getTree@{getTree}!HTML5\_Tokenizer@{HTML5\_Tokenizer}}
+\doxysubsubsection{\texorpdfstring{getTree()}{getTree()}}
+{\footnotesize\ttfamily get\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_h_t_m_l5___tree_builder}{HTML5\+\_\+\+Tree\+Builder}} The tree 
+\end{DoxyReturn}
+
+
+Definition at line 2127 of file Tokenizer.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tokenizer_a38d99acc70a1d8fd8f94455743b2d237}\label{class_h_t_m_l5___tokenizer_a38d99acc70a1d8fd8f94455743b2d237}} 
+\index{HTML5\_Tokenizer@{HTML5\_Tokenizer}!parse@{parse}}
+\index{parse@{parse}!HTML5\_Tokenizer@{HTML5\_Tokenizer}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily parse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Performs the actual parsing of the document. Escape flag as specified by the HTML5 specification\+: "{}used to control the behavior of the tokeniser. It is either true or false, and initially must be set to the false state."{}
+
+Definition at line 121 of file Tokenizer.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tokenizer_a24cec0463e2dfb49cab77debb5cb98df}\label{class_h_t_m_l5___tokenizer_a24cec0463e2dfb49cab77debb5cb98df}} 
+\index{HTML5\_Tokenizer@{HTML5\_Tokenizer}!parseFragment@{parseFragment}}
+\index{parseFragment@{parseFragment}!HTML5\_Tokenizer@{HTML5\_Tokenizer}}
+\doxysubsubsection{\texorpdfstring{parseFragment()}{parseFragment()}}
+{\footnotesize\ttfamily parse\+Fragment (\begin{DoxyParamCaption}\item[{}]{\$context = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+null & {\em \$context} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 107 of file Tokenizer.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tokenizer_afc8a3c62679cf00ade9f15fb2a6d6132}\label{class_h_t_m_l5___tokenizer_afc8a3c62679cf00ade9f15fb2a6d6132}} 
+\index{HTML5\_Tokenizer@{HTML5\_Tokenizer}!save@{save}}
+\index{save@{save}!HTML5\_Tokenizer@{HTML5\_Tokenizer}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a serialized representation of the tree.
+
+\begin{DoxyReturn}{Returns}
+DOMDocument$\vert$\+DOMNode\+List 
+\end{DoxyReturn}
+
+
+Definition at line 2120 of file Tokenizer.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tokenizer_a38772d5d7a8e46605d949882eeae01bd}\label{class_h_t_m_l5___tokenizer_a38772d5d7a8e46605d949882eeae01bd}} 
+\index{HTML5\_Tokenizer@{HTML5\_Tokenizer}!stream@{stream}}
+\index{stream@{stream}!HTML5\_Tokenizer@{HTML5\_Tokenizer}}
+\doxysubsubsection{\texorpdfstring{stream()}{stream()}}
+{\footnotesize\ttfamily stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the input stream.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_h_t_m_l5___input_stream}{HTML5\+\_\+\+Input\+Stream}} 
+\end{DoxyReturn}
+
+
+Definition at line 2138 of file Tokenizer.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_h_t_m_l5___tokenizer_a33b15d31b4f865ae52c242023a2a9f8f}\label{class_h_t_m_l5___tokenizer_a33b15d31b4f865ae52c242023a2a9f8f}} 
+\index{HTML5\_Tokenizer@{HTML5\_Tokenizer}!\$content\_model@{\$content\_model}}
+\index{\$content\_model@{\$content\_model}!HTML5\_Tokenizer@{HTML5\_Tokenizer}}
+\doxysubsubsection{\texorpdfstring{\$content\_model}{$content\_model}}
+{\footnotesize\ttfamily \$content\+\_\+model\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 56 of file Tokenizer.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tokenizer_aa658946a5d6cb700e35df1fc7854e7b3}\label{class_h_t_m_l5___tokenizer_aa658946a5d6cb700e35df1fc7854e7b3}} 
+\index{HTML5\_Tokenizer@{HTML5\_Tokenizer}!\$stream@{\$stream}}
+\index{\$stream@{\$stream}!HTML5\_Tokenizer@{HTML5\_Tokenizer}}
+\doxysubsubsection{\texorpdfstring{\$stream}{$stream}}
+{\footnotesize\ttfamily \$\mbox{\hyperlink{class_h_t_m_l5___tokenizer_a38772d5d7a8e46605d949882eeae01bd}{stream}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 42 of file Tokenizer.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tokenizer_a00ae4fcafb1145f5e968bdf920f83e2e}\label{class_h_t_m_l5___tokenizer_a00ae4fcafb1145f5e968bdf920f83e2e}} 
+\index{HTML5\_Tokenizer@{HTML5\_Tokenizer}!\$token@{\$token}}
+\index{\$token@{\$token}!HTML5\_Tokenizer@{HTML5\_Tokenizer}}
+\doxysubsubsection{\texorpdfstring{\$token}{$token}}
+{\footnotesize\ttfamily \$token\hspace{0.3cm}{\ttfamily [protected]}}
+
+Current token that is being built, but not yet emitted. Also is the last token emitted, if applicable. 
+
+Definition at line 62 of file Tokenizer.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tokenizer_a6bb7987358cd3de8e7c775094597e631}\label{class_h_t_m_l5___tokenizer_a6bb7987358cd3de8e7c775094597e631}} 
+\index{HTML5\_Tokenizer@{HTML5\_Tokenizer}!ALPHA@{ALPHA}}
+\index{ALPHA@{ALPHA}!HTML5\_Tokenizer@{HTML5\_Tokenizer}}
+\doxysubsubsection{\texorpdfstring{ALPHA}{ALPHA}}
+{\footnotesize\ttfamily const ALPHA = \textquotesingle{}ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz\textquotesingle{}}
+
+
+
+Definition at line 83 of file Tokenizer.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tokenizer_a63727fcd534c5c3627a354120ec79060}\label{class_h_t_m_l5___tokenizer_a63727fcd534c5c3627a354120ec79060}} 
+\index{HTML5\_Tokenizer@{HTML5\_Tokenizer}!CDATA@{CDATA}}
+\index{CDATA@{CDATA}!HTML5\_Tokenizer@{HTML5\_Tokenizer}}
+\doxysubsubsection{\texorpdfstring{CDATA}{CDATA}}
+{\footnotesize\ttfamily const CDATA = 2}
+
+
+
+Definition at line 67 of file Tokenizer.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tokenizer_aaa77134e6d4199684e258368991889b5}\label{class_h_t_m_l5___tokenizer_aaa77134e6d4199684e258368991889b5}} 
+\index{HTML5\_Tokenizer@{HTML5\_Tokenizer}!CHARACTER@{CHARACTER}}
+\index{CHARACTER@{CHARACTER}!HTML5\_Tokenizer@{HTML5\_Tokenizer}}
+\doxysubsubsection{\texorpdfstring{CHARACTER}{CHARACTER}}
+{\footnotesize\ttfamily const CHARACTER = 4}
+
+
+
+Definition at line 77 of file Tokenizer.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tokenizer_a4951cfda1f15c6edbf240a5c44971eb0}\label{class_h_t_m_l5___tokenizer_a4951cfda1f15c6edbf240a5c44971eb0}} 
+\index{HTML5\_Tokenizer@{HTML5\_Tokenizer}!COMMENT@{COMMENT}}
+\index{COMMENT@{COMMENT}!HTML5\_Tokenizer@{HTML5\_Tokenizer}}
+\doxysubsubsection{\texorpdfstring{COMMENT}{COMMENT}}
+{\footnotesize\ttfamily const COMMENT = 3}
+
+
+
+Definition at line 76 of file Tokenizer.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tokenizer_aaebb7c17974d43dd55b02d6033ee8746}\label{class_h_t_m_l5___tokenizer_aaebb7c17974d43dd55b02d6033ee8746}} 
+\index{HTML5\_Tokenizer@{HTML5\_Tokenizer}!DIGIT@{DIGIT}}
+\index{DIGIT@{DIGIT}!HTML5\_Tokenizer@{HTML5\_Tokenizer}}
+\doxysubsubsection{\texorpdfstring{DIGIT}{DIGIT}}
+{\footnotesize\ttfamily const DIGIT = \textquotesingle{}0123456789\textquotesingle{}}
+
+
+
+Definition at line 86 of file Tokenizer.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tokenizer_a1f181b931c1328d8924854f1a3abae0e}\label{class_h_t_m_l5___tokenizer_a1f181b931c1328d8924854f1a3abae0e}} 
+\index{HTML5\_Tokenizer@{HTML5\_Tokenizer}!DOCTYPE@{DOCTYPE}}
+\index{DOCTYPE@{DOCTYPE}!HTML5\_Tokenizer@{HTML5\_Tokenizer}}
+\doxysubsubsection{\texorpdfstring{DOCTYPE}{DOCTYPE}}
+{\footnotesize\ttfamily const DOCTYPE = 0}
+
+
+
+Definition at line 73 of file Tokenizer.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tokenizer_a9d75489ba89942eea71387e17e692803}\label{class_h_t_m_l5___tokenizer_a9d75489ba89942eea71387e17e692803}} 
+\index{HTML5\_Tokenizer@{HTML5\_Tokenizer}!ENDTAG@{ENDTAG}}
+\index{ENDTAG@{ENDTAG}!HTML5\_Tokenizer@{HTML5\_Tokenizer}}
+\doxysubsubsection{\texorpdfstring{ENDTAG}{ENDTAG}}
+{\footnotesize\ttfamily const ENDTAG = 2}
+
+
+
+Definition at line 75 of file Tokenizer.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tokenizer_abcce3792747746abf207343a8bf18fcf}\label{class_h_t_m_l5___tokenizer_abcce3792747746abf207343a8bf18fcf}} 
+\index{HTML5\_Tokenizer@{HTML5\_Tokenizer}!EOF@{EOF}}
+\index{EOF@{EOF}!HTML5\_Tokenizer@{HTML5\_Tokenizer}}
+\doxysubsubsection{\texorpdfstring{EOF}{EOF}}
+{\footnotesize\ttfamily const EOF = 6}
+
+
+
+Definition at line 79 of file Tokenizer.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tokenizer_a84ecc3b07e7e9d57b63c5baf09da6985}\label{class_h_t_m_l5___tokenizer_a84ecc3b07e7e9d57b63c5baf09da6985}} 
+\index{HTML5\_Tokenizer@{HTML5\_Tokenizer}!HEX@{HEX}}
+\index{HEX@{HEX}!HTML5\_Tokenizer@{HTML5\_Tokenizer}}
+\doxysubsubsection{\texorpdfstring{HEX}{HEX}}
+{\footnotesize\ttfamily const HEX = \textquotesingle{}0123456789ABCDEFabcdef\textquotesingle{}}
+
+
+
+Definition at line 87 of file Tokenizer.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tokenizer_a2131f411477eb023b276d674f473e51a}\label{class_h_t_m_l5___tokenizer_a2131f411477eb023b276d674f473e51a}} 
+\index{HTML5\_Tokenizer@{HTML5\_Tokenizer}!LOWER\_ALPHA@{LOWER\_ALPHA}}
+\index{LOWER\_ALPHA@{LOWER\_ALPHA}!HTML5\_Tokenizer@{HTML5\_Tokenizer}}
+\doxysubsubsection{\texorpdfstring{LOWER\_ALPHA}{LOWER\_ALPHA}}
+{\footnotesize\ttfamily const LOWER\+\_\+\+ALPHA = \textquotesingle{}abcdefghijklmnopqrstuvwxyz\textquotesingle{}}
+
+
+
+Definition at line 85 of file Tokenizer.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tokenizer_a35c8a8a6aa8e93ac7d4dd4b1149da138}\label{class_h_t_m_l5___tokenizer_a35c8a8a6aa8e93ac7d4dd4b1149da138}} 
+\index{HTML5\_Tokenizer@{HTML5\_Tokenizer}!PARSEERROR@{PARSEERROR}}
+\index{PARSEERROR@{PARSEERROR}!HTML5\_Tokenizer@{HTML5\_Tokenizer}}
+\doxysubsubsection{\texorpdfstring{PARSEERROR}{PARSEERROR}}
+{\footnotesize\ttfamily const PARSEERROR = 7}
+
+
+
+Definition at line 80 of file Tokenizer.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tokenizer_af7f3333cc71420f91a4b3becd3ad58d0}\label{class_h_t_m_l5___tokenizer_af7f3333cc71420f91a4b3becd3ad58d0}} 
+\index{HTML5\_Tokenizer@{HTML5\_Tokenizer}!PCDATA@{PCDATA}}
+\index{PCDATA@{PCDATA}!HTML5\_Tokenizer@{HTML5\_Tokenizer}}
+\doxysubsubsection{\texorpdfstring{PCDATA}{PCDATA}}
+{\footnotesize\ttfamily const PCDATA = 0}
+
+
+
+Definition at line 65 of file Tokenizer.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tokenizer_a37ff22c445596862300420ef1dc1e742}\label{class_h_t_m_l5___tokenizer_a37ff22c445596862300420ef1dc1e742}} 
+\index{HTML5\_Tokenizer@{HTML5\_Tokenizer}!PLAINTEXT@{PLAINTEXT}}
+\index{PLAINTEXT@{PLAINTEXT}!HTML5\_Tokenizer@{HTML5\_Tokenizer}}
+\doxysubsubsection{\texorpdfstring{PLAINTEXT}{PLAINTEXT}}
+{\footnotesize\ttfamily const PLAINTEXT = 3}
+
+
+
+Definition at line 68 of file Tokenizer.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tokenizer_ab4cbdfd6f946852adc2789bfb16ef633}\label{class_h_t_m_l5___tokenizer_ab4cbdfd6f946852adc2789bfb16ef633}} 
+\index{HTML5\_Tokenizer@{HTML5\_Tokenizer}!RCDATA@{RCDATA}}
+\index{RCDATA@{RCDATA}!HTML5\_Tokenizer@{HTML5\_Tokenizer}}
+\doxysubsubsection{\texorpdfstring{RCDATA}{RCDATA}}
+{\footnotesize\ttfamily const RCDATA = 1}
+
+
+
+Definition at line 66 of file Tokenizer.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tokenizer_a925d5bfbe131334ddd841073fcb4e175}\label{class_h_t_m_l5___tokenizer_a925d5bfbe131334ddd841073fcb4e175}} 
+\index{HTML5\_Tokenizer@{HTML5\_Tokenizer}!SPACECHARACTER@{SPACECHARACTER}}
+\index{SPACECHARACTER@{SPACECHARACTER}!HTML5\_Tokenizer@{HTML5\_Tokenizer}}
+\doxysubsubsection{\texorpdfstring{SPACECHARACTER}{SPACECHARACTER}}
+{\footnotesize\ttfamily const SPACECHARACTER = 5}
+
+
+
+Definition at line 78 of file Tokenizer.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tokenizer_af372a198da7ec65547651eae2c6e1c8b}\label{class_h_t_m_l5___tokenizer_af372a198da7ec65547651eae2c6e1c8b}} 
+\index{HTML5\_Tokenizer@{HTML5\_Tokenizer}!STARTTAG@{STARTTAG}}
+\index{STARTTAG@{STARTTAG}!HTML5\_Tokenizer@{HTML5\_Tokenizer}}
+\doxysubsubsection{\texorpdfstring{STARTTAG}{STARTTAG}}
+{\footnotesize\ttfamily const STARTTAG = 1}
+
+
+
+Definition at line 74 of file Tokenizer.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tokenizer_ad6e7741ec8fcf15176c4c1a15d44e122}\label{class_h_t_m_l5___tokenizer_ad6e7741ec8fcf15176c4c1a15d44e122}} 
+\index{HTML5\_Tokenizer@{HTML5\_Tokenizer}!UPPER\_ALPHA@{UPPER\_ALPHA}}
+\index{UPPER\_ALPHA@{UPPER\_ALPHA}!HTML5\_Tokenizer@{HTML5\_Tokenizer}}
+\doxysubsubsection{\texorpdfstring{UPPER\_ALPHA}{UPPER\_ALPHA}}
+{\footnotesize\ttfamily const UPPER\+\_\+\+ALPHA = \textquotesingle{}ABCDEFGHIJKLMNOPQRSTUVWXYZ\textquotesingle{}}
+
+
+
+Definition at line 84 of file Tokenizer.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tokenizer_abcf1a098376d1d6d2b88a84f25709979}\label{class_h_t_m_l5___tokenizer_abcf1a098376d1d6d2b88a84f25709979}} 
+\index{HTML5\_Tokenizer@{HTML5\_Tokenizer}!WHITESPACE@{WHITESPACE}}
+\index{WHITESPACE@{WHITESPACE}!HTML5\_Tokenizer@{HTML5\_Tokenizer}}
+\doxysubsubsection{\texorpdfstring{WHITESPACE}{WHITESPACE}}
+{\footnotesize\ttfamily const WHITESPACE = \char`\"{}\textbackslash{}t\textbackslash{}n\textbackslash{}x0c \char`\"{}}
+
+
+
+Definition at line 88 of file Tokenizer.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/dompdf/lib/html5lib/\mbox{\hyperlink{_tokenizer_8php}{Tokenizer.\+php}}\end{DoxyCompactItemize}

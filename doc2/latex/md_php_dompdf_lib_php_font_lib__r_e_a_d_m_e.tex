@@ -1,0 +1,27 @@
+\href{https://travis-ci.org/PhenX/php-font-lib}{\texttt{ }}
+
+This library can be used to\+:
+\begin{DoxyItemize}
+\item Read True\+Type, Open\+Type (with True\+Type glyphs), WOFF font files
+\item Extract basic info (name, style, etc)
+\item Extract advanced info (horizontal metrics, glyph names, glyph shapes, etc)
+\item Make an Adobe Font Metrics (AFM) file from a font
+\end{DoxyItemize}
+
+You can find a demo GUI \href{http://pxd.me/php-font-lib/www/font_explorer.html}{\texttt{ here}}.
+
+This project was initiated by the need to read font files in the \href{https://github.com/dompdf/dompdf}{\texttt{ DOMPDF project}}.\hypertarget{md_php_dompdf_lib_php_font_lib__r_e_a_d_m_e_autotoc_md81}{}\doxysection{Usage Example}\label{md_php_dompdf_lib_php_font_lib__r_e_a_d_m_e_autotoc_md81}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$font = \(\backslash\)FontLib\(\backslash\)Font::load('../../fontfile.ttf');}
+\DoxyCodeLine{\$font-\/>parse();  // for getFontWeight() to work this call must be done first!}
+\DoxyCodeLine{echo \$font-\/>getFontName() .'<br>';}
+\DoxyCodeLine{echo \$font-\/>getFontSubfamily() .'<br>';}
+\DoxyCodeLine{echo \$font-\/>getFontSubfamilyID() .'<br>';}
+\DoxyCodeLine{echo \$font-\/>getFontFullName() .'<br>';}
+\DoxyCodeLine{echo \$font-\/>getFontVersion() .'<br>';}
+\DoxyCodeLine{echo \$font-\/>getFontWeight() .'<br>';}
+\DoxyCodeLine{echo \$font-\/>getFontPostscriptName() .'<br>';}
+
+\end{DoxyCode}
+ 

@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['length_5fin_5fpt_3174',['length_in_pt',['../class_dompdf_1_1_css_1_1_style.html#a51d6bec48032235393b5f49d55b528d2',1,'Dompdf::Css::Style']]],
+  ['level_3175',['level',['../class_sabberworm_1_1_c_s_s_1_1_output_format.html#a07d981f1dd3ffe78519d1786f60fa769',1,'Sabberworm::CSS::OutputFormat']]],
+  ['line_3176',['line',['../class_dompdf_1_1_adapter_1_1_c_p_d_f.html#a8af2ac827a5e227786238147978b88ce',1,'Dompdf\Adapter\CPDF\line()'],['../class_dompdf_1_1_adapter_1_1_g_d.html#a7065b3fb8f116be5a7036c16950594b2',1,'Dompdf\Adapter\GD\line()'],['../class_dompdf_1_1_adapter_1_1_p_d_f_lib.html#a7065b3fb8f116be5a7036c16950594b2',1,'Dompdf\Adapter\PDFLib\line()'],['../interface_dompdf_1_1_canvas.html#a7065b3fb8f116be5a7036c16950594b2',1,'Dompdf\Canvas\line()']]],
+  ['lineto_3177',['lineTo',['../class_svg_1_1_surface_1_1_surface_cpdf.html#a2f2b58bb4485bf68296b7cc73993f857',1,'Svg\Surface\SurfaceCpdf\lineTo()'],['../class_svg_1_1_surface_1_1_surface_gmagick.html#a2f2b58bb4485bf68296b7cc73993f857',1,'Svg\Surface\SurfaceGmagick\lineTo()'],['../interface_svg_1_1_surface_1_1_surface_interface.html#a2f2b58bb4485bf68296b7cc73993f857',1,'Svg\Surface\SurfaceInterface\lineTo()'],['../class_svg_1_1_surface_1_1_surface_p_d_f_lib.html#a2f2b58bb4485bf68296b7cc73993f857',1,'Svg\Surface\SurfacePDFLib\lineTo()']]],
+  ['load_3178',['load',['../class_font_lib_1_1_binary_stream.html#a585c262d16bad21a05af8804df8372b2',1,'FontLib\BinaryStream\load()'],['../class_font_lib_1_1_w_o_f_f_1_1_file.html#aaa4e95f27857ab78defda3e0c0b7039b',1,'FontLib\WOFF\File\load()']]],
+  ['load_5fcss_3179',['load_css',['../class_dompdf_1_1_css_1_1_stylesheet.html#aeaeb28097599d77a4e7dcce33bae83c8',1,'Dompdf::Css::Stylesheet']]],
+  ['load_5fcss_5ffile_3180',['load_css_file',['../class_dompdf_1_1_css_1_1_stylesheet.html#a8580e73172fc4db7f7c507811768718b',1,'Dompdf::Css::Stylesheet']]],
+  ['load_5ffont_5ffamilies_3181',['load_font_families',['../class_dompdf_1_1_font_metrics.html#ac9eb0d542dfcfc8eb3ee1c07e92e9daf',1,'Dompdf::FontMetrics']]],
+  ['load_5fhtml_3182',['load_html',['../class_dompdf_1_1_dompdf.html#a86170ee2c74e0eea9167f91d2a64850b',1,'Dompdf::Dompdf']]],
+  ['load_5fhtml_5ffile_3183',['load_html_file',['../class_dompdf_1_1_dompdf.html#a0059cb9cc6d5885d7b9a2a0b94020923',1,'Dompdf::Dompdf']]],
+  ['loaddom_3184',['loadDOM',['../class_dompdf_1_1_dompdf.html#a8cc71bafe970f104165056b13e588a75',1,'Dompdf::Dompdf']]],
+  ['loadfile_3185',['loadFile',['../class_svg_1_1_document.html#a64d6ef0b5dd542185ab771b9d169a0da',1,'Svg::Document']]],
+  ['loadfontfamilies_3186',['loadFontFamilies',['../class_dompdf_1_1_font_metrics.html#a85ad8b96dd4d617e712a82adb77d4d05',1,'Dompdf::FontMetrics']]],
+  ['loadhtml_3187',['loadHtml',['../class_dompdf_1_1_dompdf.html#a096bc11ab5bfad008027252c2eed05fa',1,'Dompdf::Dompdf']]],
+  ['loadhtmlfile_3188',['loadHtmlFile',['../class_dompdf_1_1_dompdf.html#a0f2fe4c408705fbb3b68f0337538f593',1,'Dompdf::Dompdf']]],
+  ['lock_5fcolumns_3189',['lock_columns',['../class_dompdf_1_1_cellmap.html#acd6ce9a4b0403ee5ba50de896eaeec53',1,'Dompdf::Cellmap']]],
+  ['loginform_3190',['loginForm',['../class_secure_user_authentication.html#aac9696282963482ab84860f2c2183e0f',1,'SecureUserAuthentication']]],
+  ['lookup_3191',['lookup',['../class_dompdf_1_1_css_1_1_stylesheet.html#a2d576f646789dca76cee965874dd61d6',1,'Dompdf::Css::Stylesheet']]],
+  ['lookup_5fcounter_5fframe_3192',['lookup_counter_frame',['../class_dompdf_1_1_frame_decorator_1_1_abstract_frame_decorator.html#a0f87277898a055fbf858de7eb1124d8e',1,'Dompdf::FrameDecorator::AbstractFrameDecorator']]]
+];

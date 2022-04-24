@@ -1,0 +1,245 @@
+\hypertarget{class_secure_user_authentication}{}\doxysection{Secure\+User\+Authentication Class Reference}
+\label{class_secure_user_authentication}\index{SecureUserAuthentication@{SecureUserAuthentication}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_secure_user_authentication_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\item 
+\mbox{\hyperlink{class_secure_user_authentication_a0947a3207d86e1ea3f67840881dbc81f}{get\+User\+From\+Session}} ()
+\item 
+\mbox{\hyperlink{class_secure_user_authentication_a9528c09d0d0c094cc7e56bcbd22dff2b}{set\+User}} (\mbox{\hyperlink{class_utilisateur}{Utilisateur}} \$User)
+\item 
+\mbox{\hyperlink{class_secure_user_authentication_ae81b7186fb97a7c6457edcc68c9aa2ef}{get\+User}} ()
+\item 
+\mbox{\hyperlink{class_secure_user_authentication_aba0fa3d6e5fdb720397f057b6f98aca9}{is\+User\+Connected}} ()
+\item 
+\mbox{\hyperlink{class_secure_user_authentication_aac9696282963482ab84860f2c2183e0f}{login\+Form}} (string \$action)
+\item 
+\mbox{\hyperlink{class_secure_user_authentication_adae9daf51798064317bf8d60fa72cef4}{get\+User\+From\+Auth}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_secure_user_authentication_ac795dc253e2c88377e80cb60089a25e1}{SESSION\+\_\+\+KEY}} = \textquotesingle{}\+\_\+\+\_\+\+User\+Authentication\+\_\+\+\_\+\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_secure_user_authentication_ad0e05f4697e26df1ebad9bf2c4a022bd}{SESSION\+\_\+\+USER\+\_\+\+KEY}} = \textquotesingle{}user\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_secure_user_authentication_ab668dbfd99f3cf05b422300757213cd4}{CODE\+\_\+\+INPUT\+\_\+\+NAME}} = \textquotesingle{}code\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_secure_user_authentication_a68c89250a2157129f27c71c91eb44bd3}{SESSION\+\_\+\+CHALLENGE\+\_\+\+KEY}} = \textquotesingle{}challenge\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_secure_user_authentication_a112e7a53f84bf3c262efafbb6a786a57}{RANDOM\+\_\+\+STRING\+\_\+\+SIZE}} = 16
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 7 of file Secure\+User\+Authentication.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_secure_user_authentication_a095c5d389db211932136b53f25f39685}\label{class_secure_user_authentication_a095c5d389db211932136b53f25f39685}} 
+\index{SecureUserAuthentication@{SecureUserAuthentication}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!SecureUserAuthentication@{SecureUserAuthentication}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructeur
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_session_exception}{Session\+Exception}}} & si la session ne peut pas être démarrée \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 23 of file Secure\+User\+Authentication.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_secure_user_authentication_ae81b7186fb97a7c6457edcc68c9aa2ef}\label{class_secure_user_authentication_ae81b7186fb97a7c6457edcc68c9aa2ef}} 
+\index{SecureUserAuthentication@{SecureUserAuthentication}!getUser@{getUser}}
+\index{getUser@{getUser}!SecureUserAuthentication@{SecureUserAuthentication}}
+\doxysubsubsection{\texorpdfstring{getUser()}{getUser()}}
+{\footnotesize\ttfamily get\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Accesseur à l\textquotesingle{}\mbox{\hyperlink{class_utilisateur}{Utilisateur}} connecté
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_utilisateur}{Utilisateur}} Utlisateur connecté 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_not_logged_in_exception}{Not\+Logged\+In\+Exception}}} & Si aucun utilisateur n\textquotesingle{}est connecté \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 73 of file Secure\+User\+Authentication.\+php.
+
+\mbox{\Hypertarget{class_secure_user_authentication_adae9daf51798064317bf8d60fa72cef4}\label{class_secure_user_authentication_adae9daf51798064317bf8d60fa72cef4}} 
+\index{SecureUserAuthentication@{SecureUserAuthentication}!getUserFromAuth@{getUserFromAuth}}
+\index{getUserFromAuth@{getUserFromAuth}!SecureUserAuthentication@{SecureUserAuthentication}}
+\doxysubsubsection{\texorpdfstring{getUserFromAuth()}{getUserFromAuth()}}
+{\footnotesize\ttfamily get\+User\+From\+Auth (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Validation de la connexion de l\textquotesingle{}\mbox{\hyperlink{class_utilisateur}{Utilisateur}}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_utilisateur}{Utilisateur}} User authentifié
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_authentication_exception}{Authentication\+Exception}}} & si l\textquotesingle{}authentification échoue \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 176 of file Secure\+User\+Authentication.\+php.
+
+\mbox{\Hypertarget{class_secure_user_authentication_a0947a3207d86e1ea3f67840881dbc81f}\label{class_secure_user_authentication_a0947a3207d86e1ea3f67840881dbc81f}} 
+\index{SecureUserAuthentication@{SecureUserAuthentication}!getUserFromSession@{getUserFromSession}}
+\index{getUserFromSession@{getUserFromSession}!SecureUserAuthentication@{SecureUserAuthentication}}
+\doxysubsubsection{\texorpdfstring{getUserFromSession()}{getUserFromSession()}}
+{\footnotesize\ttfamily get\+User\+From\+Session (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Lecture de l\textquotesingle{}objet \mbox{\hyperlink{class_utilisateur}{Utilisateur}} dans la session
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_utilisateur}{Utilisateur}}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_session_exception}{Session\+Exception}}} & si la session ne peut pas être démarrée \\
+\hline
+{\em \mbox{\hyperlink{class_not_logged_in_exception}{Not\+Logged\+In\+Exception}}} & si l\textquotesingle{}objet n\textquotesingle{}est pas dans la session \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 40 of file Secure\+User\+Authentication.\+php.
+
+\mbox{\Hypertarget{class_secure_user_authentication_aba0fa3d6e5fdb720397f057b6f98aca9}\label{class_secure_user_authentication_aba0fa3d6e5fdb720397f057b6f98aca9}} 
+\index{SecureUserAuthentication@{SecureUserAuthentication}!isUserConnected@{isUserConnected}}
+\index{isUserConnected@{isUserConnected}!SecureUserAuthentication@{SecureUserAuthentication}}
+\doxysubsubsection{\texorpdfstring{isUserConnected()}{isUserConnected()}}
+{\footnotesize\ttfamily is\+User\+Connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Test si un utilisateur est mémorisé dans les données de session \begin{DoxyReturn}{Returns}
+bool un utilisateur est connecté 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_session_exception}{Session\+Exception}}} & si la session ne peut pas être démarrée \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 87 of file Secure\+User\+Authentication.\+php.
+
+\mbox{\Hypertarget{class_secure_user_authentication_aac9696282963482ab84860f2c2183e0f}\label{class_secure_user_authentication_aac9696282963482ab84860f2c2183e0f}} 
+\index{SecureUserAuthentication@{SecureUserAuthentication}!loginForm@{loginForm}}
+\index{loginForm@{loginForm}!SecureUserAuthentication@{SecureUserAuthentication}}
+\doxysubsubsection{\texorpdfstring{loginForm()}{loginForm()}}
+{\footnotesize\ttfamily login\+Form (\begin{DoxyParamCaption}\item[{string}]{\$action }\end{DoxyParamCaption})}
+
+Production d\textquotesingle{}un formulaire de connexion contenant un challenge et une méthode Java\+Script de hachage 
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$action} & URL cible du formulaire \\
+\hline
+string & {\em \$submit\+Text} & texte du bouton d\textquotesingle{}envoi\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string code HTML du formulaire 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_session_exception}{Session\+Exception}}} & si la session ne peut pas être démarrée \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 104 of file Secure\+User\+Authentication.\+php.
+
+\mbox{\Hypertarget{class_secure_user_authentication_a9528c09d0d0c094cc7e56bcbd22dff2b}\label{class_secure_user_authentication_a9528c09d0d0c094cc7e56bcbd22dff2b}} 
+\index{SecureUserAuthentication@{SecureUserAuthentication}!setUser@{setUser}}
+\index{setUser@{setUser}!SecureUserAuthentication@{SecureUserAuthentication}}
+\doxysubsubsection{\texorpdfstring{setUser()}{setUser()}}
+{\footnotesize\ttfamily set\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_utilisateur}{Utilisateur}}}]{\$\+User }\end{DoxyParamCaption})}
+
+Affecte le user passé en paramètre à la propriété \$\+User et le mémorise dans les données de session 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_utilisateur}{Utilisateur}} & {\em \$\+User} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_session_exception}{Session\+Exception}}} & si la session ne peut pas être démarrée \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 59 of file Secure\+User\+Authentication.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_secure_user_authentication_ab668dbfd99f3cf05b422300757213cd4}\label{class_secure_user_authentication_ab668dbfd99f3cf05b422300757213cd4}} 
+\index{SecureUserAuthentication@{SecureUserAuthentication}!CODE\_INPUT\_NAME@{CODE\_INPUT\_NAME}}
+\index{CODE\_INPUT\_NAME@{CODE\_INPUT\_NAME}!SecureUserAuthentication@{SecureUserAuthentication}}
+\doxysubsubsection{\texorpdfstring{CODE\_INPUT\_NAME}{CODE\_INPUT\_NAME}}
+{\footnotesize\ttfamily const CODE\+\_\+\+INPUT\+\_\+\+NAME = \textquotesingle{}code\textquotesingle{}}
+
+
+
+Definition at line 12 of file Secure\+User\+Authentication.\+php.
+
+\mbox{\Hypertarget{class_secure_user_authentication_a112e7a53f84bf3c262efafbb6a786a57}\label{class_secure_user_authentication_a112e7a53f84bf3c262efafbb6a786a57}} 
+\index{SecureUserAuthentication@{SecureUserAuthentication}!RANDOM\_STRING\_SIZE@{RANDOM\_STRING\_SIZE}}
+\index{RANDOM\_STRING\_SIZE@{RANDOM\_STRING\_SIZE}!SecureUserAuthentication@{SecureUserAuthentication}}
+\doxysubsubsection{\texorpdfstring{RANDOM\_STRING\_SIZE}{RANDOM\_STRING\_SIZE}}
+{\footnotesize\ttfamily const RANDOM\+\_\+\+STRING\+\_\+\+SIZE = 16}
+
+
+
+Definition at line 14 of file Secure\+User\+Authentication.\+php.
+
+\mbox{\Hypertarget{class_secure_user_authentication_a68c89250a2157129f27c71c91eb44bd3}\label{class_secure_user_authentication_a68c89250a2157129f27c71c91eb44bd3}} 
+\index{SecureUserAuthentication@{SecureUserAuthentication}!SESSION\_CHALLENGE\_KEY@{SESSION\_CHALLENGE\_KEY}}
+\index{SESSION\_CHALLENGE\_KEY@{SESSION\_CHALLENGE\_KEY}!SecureUserAuthentication@{SecureUserAuthentication}}
+\doxysubsubsection{\texorpdfstring{SESSION\_CHALLENGE\_KEY}{SESSION\_CHALLENGE\_KEY}}
+{\footnotesize\ttfamily const SESSION\+\_\+\+CHALLENGE\+\_\+\+KEY = \textquotesingle{}challenge\textquotesingle{}}
+
+
+
+Definition at line 13 of file Secure\+User\+Authentication.\+php.
+
+\mbox{\Hypertarget{class_secure_user_authentication_ac795dc253e2c88377e80cb60089a25e1}\label{class_secure_user_authentication_ac795dc253e2c88377e80cb60089a25e1}} 
+\index{SecureUserAuthentication@{SecureUserAuthentication}!SESSION\_KEY@{SESSION\_KEY}}
+\index{SESSION\_KEY@{SESSION\_KEY}!SecureUserAuthentication@{SecureUserAuthentication}}
+\doxysubsubsection{\texorpdfstring{SESSION\_KEY}{SESSION\_KEY}}
+{\footnotesize\ttfamily const SESSION\+\_\+\+KEY = \textquotesingle{}\+\_\+\+\_\+\+User\+Authentication\+\_\+\+\_\+\textquotesingle{}}
+
+
+
+Definition at line 9 of file Secure\+User\+Authentication.\+php.
+
+\mbox{\Hypertarget{class_secure_user_authentication_ad0e05f4697e26df1ebad9bf2c4a022bd}\label{class_secure_user_authentication_ad0e05f4697e26df1ebad9bf2c4a022bd}} 
+\index{SecureUserAuthentication@{SecureUserAuthentication}!SESSION\_USER\_KEY@{SESSION\_USER\_KEY}}
+\index{SESSION\_USER\_KEY@{SESSION\_USER\_KEY}!SecureUserAuthentication@{SecureUserAuthentication}}
+\doxysubsubsection{\texorpdfstring{SESSION\_USER\_KEY}{SESSION\_USER\_KEY}}
+{\footnotesize\ttfamily const SESSION\+\_\+\+USER\+\_\+\+KEY = \textquotesingle{}user\textquotesingle{}}
+
+
+
+Definition at line 10 of file Secure\+User\+Authentication.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/src/\mbox{\hyperlink{_secure_user_authentication_8php}{Secure\+User\+Authentication.\+php}}\end{DoxyCompactItemize}

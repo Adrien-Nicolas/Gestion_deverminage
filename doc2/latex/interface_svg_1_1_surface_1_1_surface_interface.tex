@@ -1,0 +1,401 @@
+\hypertarget{interface_svg_1_1_surface_1_1_surface_interface}{}\doxysection{Surface\+Interface Interface Reference}
+\label{interface_svg_1_1_surface_1_1_surface_interface}\index{SurfaceInterface@{SurfaceInterface}}
+Inheritance diagram for Surface\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_svg_1_1_surface_1_1_surface_interface}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_afc8a3c62679cf00ade9f15fb2a6d6132}{save}} ()
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_aa1371f22826cf8cde4454c9b467203d0}{restore}} ()
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_a48659847fa591027c79f58eefd4f5f6b}{scale}} (\$x, \$y)
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_a4295061e879c4cc714213bf14116d346}{rotate}} (\$angle)
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_a352a9045a49fbf216c57ca51c3d815ad}{translate}} (\$x, \$y)
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_a0ed069e6d27565df8234584216d3f45c}{transform}} (\$a, \$b, \$c, \$d, \$e, \$f)
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_a5bee193b5c282c9ff2c23ede62726c17}{begin\+Path}} ()
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_a6de1c6cb0c05bf8ec30edf2a8031a65f}{close\+Path}} ()
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_a3b7d92e90d5b153fbec937f0f8fab087}{fill}} ()
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_a1991a97282c68ad118b460031d1216e7}{stroke}} ()
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_a796b5dc3a5b1a9e260740e1b22a54da4}{end\+Path}} ()
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_a3b334118a90df424afc00229aa7382b7}{fill\+Stroke}} ()
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_ab345788a3827eaf68f48c69abd983d36}{clip}} ()
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_adf939aa9ff298dfdf2d61b5c0a5c7868}{fill\+Text}} (\$text, \$x, \$y, \$max\+Width=null)
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_a8ea6898c34349f720d2cf4f291c0f298}{stroke\+Text}} (\$text, \$x, \$y, \$max\+Width=null)
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_a238773ff680888fd152d32a0647eefef}{measure\+Text}} (\$text)
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_a5bcad5746dc5a9e171e84ce51485a52c}{draw\+Image}} (\$image, \$sx, \$sy, \$sw=null, \$sh=null, \$dx=null, \$dy=null, \$dw=null, \$dh=null)
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_a2f2b58bb4485bf68296b7cc73993f857}{line\+To}} (\$x, \$y)
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_aa0363a3450ef2e1730acd5275ab9fab2}{move\+To}} (\$x, \$y)
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_a943e749b9da58b014660de87b8f57c15}{quadratic\+Curve\+To}} (\$cpx, \$cpy, \$x, \$y)
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_a9710572ee36f3f05f963a44f26e55fe9}{bezier\+Curve\+To}} (\$cp1x, \$cp1y, \$cp2x, \$cp2y, \$x, \$y)
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_a92385f07c1da4b66d806d61a975450e5}{arc\+To}} (\$x1, \$y1, \$x2, \$y2, \$radius)
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_ab9b4a6f37478082e8c5d248d795b2fdb}{circle}} (\$x, \$y, \$radius)
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_a8931c1ff0404445abed5ffafa7c877b4}{arc}} (\$x, \$y, \$radius, \$start\+Angle, \$end\+Angle, \$anticlockwise=false)
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_aa7b26a80725ae69fde54e3f9094bf40d}{ellipse}} (\$x, \$y, \$radiusX, \$radiusY, \$rotation, \$start\+Angle, \$end\+Angle, \$anticlockwise)
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_a1d6624a6daeba8b079fba5bc82ac3b3c}{rect}} (\$x, \$y, \$w, \$h, \$rx=0, \$ry=0)
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_a14bee904e253b1a9dd249e34089f8ced}{fill\+Rect}} (\$x, \$y, \$w, \$h)
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_a90e7422273db9d74379991669a3b24be}{stroke\+Rect}} (\$x, \$y, \$w, \$h)
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_aeea8f5fe99b837647cbc79f0d77ca209}{set\+Style}} (\mbox{\hyperlink{class_svg_1_1_style}{Style}} \$style)
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_a1a9c641ae8a39113009425cbccaee5d5}{get\+Style}} ()
+\item 
+\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface_ab132931383a6dd3f1c3b1dc28de9568c}{set\+Font}} (\$family, \$style, \$weight)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 18 of file Surface\+Interface.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_a8931c1ff0404445abed5ffafa7c877b4}\label{interface_svg_1_1_surface_1_1_surface_interface_a8931c1ff0404445abed5ffafa7c877b4}} 
+\index{SurfaceInterface@{SurfaceInterface}!arc@{arc}}
+\index{arc@{arc}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{arc()}{arc()}}
+{\footnotesize\ttfamily arc (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y,  }\item[{}]{\$radius,  }\item[{}]{\$start\+Angle,  }\item[{}]{\$end\+Angle,  }\item[{}]{\$anticlockwise = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_a8931c1ff0404445abed5ffafa7c877b4}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_a8931c1ff0404445abed5ffafa7c877b4}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_a8931c1ff0404445abed5ffafa7c877b4}{Surface\+Cpdf}}.
+
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_a92385f07c1da4b66d806d61a975450e5}\label{interface_svg_1_1_surface_1_1_surface_interface_a92385f07c1da4b66d806d61a975450e5}} 
+\index{SurfaceInterface@{SurfaceInterface}!arcTo@{arcTo}}
+\index{arcTo@{arcTo}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{arcTo()}{arcTo()}}
+{\footnotesize\ttfamily arc\+To (\begin{DoxyParamCaption}\item[{}]{\$x1,  }\item[{}]{\$y1,  }\item[{}]{\$x2,  }\item[{}]{\$y2,  }\item[{}]{\$radius }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_a92385f07c1da4b66d806d61a975450e5}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_a92385f07c1da4b66d806d61a975450e5}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_a92385f07c1da4b66d806d61a975450e5}{Surface\+Cpdf}}.
+
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_a5bee193b5c282c9ff2c23ede62726c17}\label{interface_svg_1_1_surface_1_1_surface_interface_a5bee193b5c282c9ff2c23ede62726c17}} 
+\index{SurfaceInterface@{SurfaceInterface}!beginPath@{beginPath}}
+\index{beginPath@{beginPath}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{beginPath()}{beginPath()}}
+{\footnotesize\ttfamily begin\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_a5bee193b5c282c9ff2c23ede62726c17}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_a5bee193b5c282c9ff2c23ede62726c17}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_a5bee193b5c282c9ff2c23ede62726c17}{Surface\+Cpdf}}.
+
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_a9710572ee36f3f05f963a44f26e55fe9}\label{interface_svg_1_1_surface_1_1_surface_interface_a9710572ee36f3f05f963a44f26e55fe9}} 
+\index{SurfaceInterface@{SurfaceInterface}!bezierCurveTo@{bezierCurveTo}}
+\index{bezierCurveTo@{bezierCurveTo}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{bezierCurveTo()}{bezierCurveTo()}}
+{\footnotesize\ttfamily bezier\+Curve\+To (\begin{DoxyParamCaption}\item[{}]{\$cp1x,  }\item[{}]{\$cp1y,  }\item[{}]{\$cp2x,  }\item[{}]{\$cp2y,  }\item[{}]{\$x,  }\item[{}]{\$y }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_a9710572ee36f3f05f963a44f26e55fe9}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_a9710572ee36f3f05f963a44f26e55fe9}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_a9710572ee36f3f05f963a44f26e55fe9}{Surface\+Cpdf}}.
+
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_ab9b4a6f37478082e8c5d248d795b2fdb}\label{interface_svg_1_1_surface_1_1_surface_interface_ab9b4a6f37478082e8c5d248d795b2fdb}} 
+\index{SurfaceInterface@{SurfaceInterface}!circle@{circle}}
+\index{circle@{circle}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{circle()}{circle()}}
+{\footnotesize\ttfamily circle (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y,  }\item[{}]{\$radius }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_ab9b4a6f37478082e8c5d248d795b2fdb}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_ab9b4a6f37478082e8c5d248d795b2fdb}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_ab9b4a6f37478082e8c5d248d795b2fdb}{Surface\+Cpdf}}.
+
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_ab345788a3827eaf68f48c69abd983d36}\label{interface_svg_1_1_surface_1_1_surface_interface_ab345788a3827eaf68f48c69abd983d36}} 
+\index{SurfaceInterface@{SurfaceInterface}!clip@{clip}}
+\index{clip@{clip}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{clip()}{clip()}}
+{\footnotesize\ttfamily clip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_ab345788a3827eaf68f48c69abd983d36}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_ab345788a3827eaf68f48c69abd983d36}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_ab345788a3827eaf68f48c69abd983d36}{Surface\+Cpdf}}.
+
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_a6de1c6cb0c05bf8ec30edf2a8031a65f}\label{interface_svg_1_1_surface_1_1_surface_interface_a6de1c6cb0c05bf8ec30edf2a8031a65f}} 
+\index{SurfaceInterface@{SurfaceInterface}!closePath@{closePath}}
+\index{closePath@{closePath}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{closePath()}{closePath()}}
+{\footnotesize\ttfamily close\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_a6de1c6cb0c05bf8ec30edf2a8031a65f}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_a6de1c6cb0c05bf8ec30edf2a8031a65f}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_a6de1c6cb0c05bf8ec30edf2a8031a65f}{Surface\+Cpdf}}.
+
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_a5bcad5746dc5a9e171e84ce51485a52c}\label{interface_svg_1_1_surface_1_1_surface_interface_a5bcad5746dc5a9e171e84ce51485a52c}} 
+\index{SurfaceInterface@{SurfaceInterface}!drawImage@{drawImage}}
+\index{drawImage@{drawImage}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{drawImage()}{drawImage()}}
+{\footnotesize\ttfamily draw\+Image (\begin{DoxyParamCaption}\item[{}]{\$image,  }\item[{}]{\$sx,  }\item[{}]{\$sy,  }\item[{}]{\$sw = {\ttfamily null},  }\item[{}]{\$sh = {\ttfamily null},  }\item[{}]{\$dx = {\ttfamily null},  }\item[{}]{\$dy = {\ttfamily null},  }\item[{}]{\$dw = {\ttfamily null},  }\item[{}]{\$dh = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_a5bcad5746dc5a9e171e84ce51485a52c}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_a5bcad5746dc5a9e171e84ce51485a52c}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_a5bcad5746dc5a9e171e84ce51485a52c}{Surface\+Cpdf}}.
+
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_aa7b26a80725ae69fde54e3f9094bf40d}\label{interface_svg_1_1_surface_1_1_surface_interface_aa7b26a80725ae69fde54e3f9094bf40d}} 
+\index{SurfaceInterface@{SurfaceInterface}!ellipse@{ellipse}}
+\index{ellipse@{ellipse}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{ellipse()}{ellipse()}}
+{\footnotesize\ttfamily ellipse (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y,  }\item[{}]{\$radiusX,  }\item[{}]{\$radiusY,  }\item[{}]{\$rotation,  }\item[{}]{\$start\+Angle,  }\item[{}]{\$end\+Angle,  }\item[{}]{\$anticlockwise }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_aa7b26a80725ae69fde54e3f9094bf40d}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_aa7b26a80725ae69fde54e3f9094bf40d}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_aa7b26a80725ae69fde54e3f9094bf40d}{Surface\+Cpdf}}.
+
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_a796b5dc3a5b1a9e260740e1b22a54da4}\label{interface_svg_1_1_surface_1_1_surface_interface_a796b5dc3a5b1a9e260740e1b22a54da4}} 
+\index{SurfaceInterface@{SurfaceInterface}!endPath@{endPath}}
+\index{endPath@{endPath}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{endPath()}{endPath()}}
+{\footnotesize\ttfamily end\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_a796b5dc3a5b1a9e260740e1b22a54da4}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_a796b5dc3a5b1a9e260740e1b22a54da4}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_a796b5dc3a5b1a9e260740e1b22a54da4}{Surface\+Cpdf}}.
+
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_a3b7d92e90d5b153fbec937f0f8fab087}\label{interface_svg_1_1_surface_1_1_surface_interface_a3b7d92e90d5b153fbec937f0f8fab087}} 
+\index{SurfaceInterface@{SurfaceInterface}!fill@{fill}}
+\index{fill@{fill}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{fill()}{fill()}}
+{\footnotesize\ttfamily fill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_a3b7d92e90d5b153fbec937f0f8fab087}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_a3b7d92e90d5b153fbec937f0f8fab087}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_a3b7d92e90d5b153fbec937f0f8fab087}{Surface\+Cpdf}}.
+
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_a14bee904e253b1a9dd249e34089f8ced}\label{interface_svg_1_1_surface_1_1_surface_interface_a14bee904e253b1a9dd249e34089f8ced}} 
+\index{SurfaceInterface@{SurfaceInterface}!fillRect@{fillRect}}
+\index{fillRect@{fillRect}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{fillRect()}{fillRect()}}
+{\footnotesize\ttfamily fill\+Rect (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y,  }\item[{}]{\$w,  }\item[{}]{\$h }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_a14bee904e253b1a9dd249e34089f8ced}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_a14bee904e253b1a9dd249e34089f8ced}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_a14bee904e253b1a9dd249e34089f8ced}{Surface\+Cpdf}}.
+
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_a3b334118a90df424afc00229aa7382b7}\label{interface_svg_1_1_surface_1_1_surface_interface_a3b334118a90df424afc00229aa7382b7}} 
+\index{SurfaceInterface@{SurfaceInterface}!fillStroke@{fillStroke}}
+\index{fillStroke@{fillStroke}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{fillStroke()}{fillStroke()}}
+{\footnotesize\ttfamily fill\+Stroke (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_a3b334118a90df424afc00229aa7382b7}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_a3b334118a90df424afc00229aa7382b7}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_a3b334118a90df424afc00229aa7382b7}{Surface\+Cpdf}}.
+
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_adf939aa9ff298dfdf2d61b5c0a5c7868}\label{interface_svg_1_1_surface_1_1_surface_interface_adf939aa9ff298dfdf2d61b5c0a5c7868}} 
+\index{SurfaceInterface@{SurfaceInterface}!fillText@{fillText}}
+\index{fillText@{fillText}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{fillText()}{fillText()}}
+{\footnotesize\ttfamily fill\+Text (\begin{DoxyParamCaption}\item[{}]{\$text,  }\item[{}]{\$x,  }\item[{}]{\$y,  }\item[{}]{\$max\+Width = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_adf939aa9ff298dfdf2d61b5c0a5c7868}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_adf939aa9ff298dfdf2d61b5c0a5c7868}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_adf939aa9ff298dfdf2d61b5c0a5c7868}{Surface\+Cpdf}}.
+
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_a1a9c641ae8a39113009425cbccaee5d5}\label{interface_svg_1_1_surface_1_1_surface_interface_a1a9c641ae8a39113009425cbccaee5d5}} 
+\index{SurfaceInterface@{SurfaceInterface}!getStyle@{getStyle}}
+\index{getStyle@{getStyle}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{getStyle()}{getStyle()}}
+{\footnotesize\ttfamily get\+Style (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_svg_1_1_style}{Style}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_a1a9c641ae8a39113009425cbccaee5d5}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_a1a9c641ae8a39113009425cbccaee5d5}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_a1a9c641ae8a39113009425cbccaee5d5}{Surface\+Cpdf}}.
+
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_a2f2b58bb4485bf68296b7cc73993f857}\label{interface_svg_1_1_surface_1_1_surface_interface_a2f2b58bb4485bf68296b7cc73993f857}} 
+\index{SurfaceInterface@{SurfaceInterface}!lineTo@{lineTo}}
+\index{lineTo@{lineTo}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{lineTo()}{lineTo()}}
+{\footnotesize\ttfamily line\+To (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_a2f2b58bb4485bf68296b7cc73993f857}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_a2f2b58bb4485bf68296b7cc73993f857}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_a2f2b58bb4485bf68296b7cc73993f857}{Surface\+Cpdf}}.
+
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_a238773ff680888fd152d32a0647eefef}\label{interface_svg_1_1_surface_1_1_surface_interface_a238773ff680888fd152d32a0647eefef}} 
+\index{SurfaceInterface@{SurfaceInterface}!measureText@{measureText}}
+\index{measureText@{measureText}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{measureText()}{measureText()}}
+{\footnotesize\ttfamily measure\+Text (\begin{DoxyParamCaption}\item[{}]{\$text }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_a238773ff680888fd152d32a0647eefef}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_a238773ff680888fd152d32a0647eefef}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_a238773ff680888fd152d32a0647eefef}{Surface\+Cpdf}}.
+
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_aa0363a3450ef2e1730acd5275ab9fab2}\label{interface_svg_1_1_surface_1_1_surface_interface_aa0363a3450ef2e1730acd5275ab9fab2}} 
+\index{SurfaceInterface@{SurfaceInterface}!moveTo@{moveTo}}
+\index{moveTo@{moveTo}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{moveTo()}{moveTo()}}
+{\footnotesize\ttfamily move\+To (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_aa0363a3450ef2e1730acd5275ab9fab2}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_aa0363a3450ef2e1730acd5275ab9fab2}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_aa0363a3450ef2e1730acd5275ab9fab2}{Surface\+Cpdf}}.
+
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_a943e749b9da58b014660de87b8f57c15}\label{interface_svg_1_1_surface_1_1_surface_interface_a943e749b9da58b014660de87b8f57c15}} 
+\index{SurfaceInterface@{SurfaceInterface}!quadraticCurveTo@{quadraticCurveTo}}
+\index{quadraticCurveTo@{quadraticCurveTo}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{quadraticCurveTo()}{quadraticCurveTo()}}
+{\footnotesize\ttfamily quadratic\+Curve\+To (\begin{DoxyParamCaption}\item[{}]{\$cpx,  }\item[{}]{\$cpy,  }\item[{}]{\$x,  }\item[{}]{\$y }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_a943e749b9da58b014660de87b8f57c15}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_a943e749b9da58b014660de87b8f57c15}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_a943e749b9da58b014660de87b8f57c15}{Surface\+Cpdf}}.
+
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_a1d6624a6daeba8b079fba5bc82ac3b3c}\label{interface_svg_1_1_surface_1_1_surface_interface_a1d6624a6daeba8b079fba5bc82ac3b3c}} 
+\index{SurfaceInterface@{SurfaceInterface}!rect@{rect}}
+\index{rect@{rect}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{rect()}{rect()}}
+{\footnotesize\ttfamily rect (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y,  }\item[{}]{\$w,  }\item[{}]{\$h,  }\item[{}]{\$rx = {\ttfamily 0},  }\item[{}]{\$ry = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_a1d6624a6daeba8b079fba5bc82ac3b3c}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_a1d6624a6daeba8b079fba5bc82ac3b3c}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_a1d6624a6daeba8b079fba5bc82ac3b3c}{Surface\+Cpdf}}.
+
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_aa1371f22826cf8cde4454c9b467203d0}\label{interface_svg_1_1_surface_1_1_surface_interface_aa1371f22826cf8cde4454c9b467203d0}} 
+\index{SurfaceInterface@{SurfaceInterface}!restore@{restore}}
+\index{restore@{restore}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{restore()}{restore()}}
+{\footnotesize\ttfamily restore (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_aa1371f22826cf8cde4454c9b467203d0}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_aa1371f22826cf8cde4454c9b467203d0}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_aa1371f22826cf8cde4454c9b467203d0}{Surface\+Cpdf}}.
+
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_a4295061e879c4cc714213bf14116d346}\label{interface_svg_1_1_surface_1_1_surface_interface_a4295061e879c4cc714213bf14116d346}} 
+\index{SurfaceInterface@{SurfaceInterface}!rotate@{rotate}}
+\index{rotate@{rotate}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily rotate (\begin{DoxyParamCaption}\item[{}]{\$angle }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_a4295061e879c4cc714213bf14116d346}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_a4295061e879c4cc714213bf14116d346}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_a4295061e879c4cc714213bf14116d346}{Surface\+Cpdf}}.
+
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_afc8a3c62679cf00ade9f15fb2a6d6132}\label{interface_svg_1_1_surface_1_1_surface_interface_afc8a3c62679cf00ade9f15fb2a6d6132}} 
+\index{SurfaceInterface@{SurfaceInterface}!save@{save}}
+\index{save@{save}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_afc8a3c62679cf00ade9f15fb2a6d6132}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_afc8a3c62679cf00ade9f15fb2a6d6132}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_afc8a3c62679cf00ade9f15fb2a6d6132}{Surface\+Cpdf}}.
+
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_a48659847fa591027c79f58eefd4f5f6b}\label{interface_svg_1_1_surface_1_1_surface_interface_a48659847fa591027c79f58eefd4f5f6b}} 
+\index{SurfaceInterface@{SurfaceInterface}!scale@{scale}}
+\index{scale@{scale}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily scale (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_a48659847fa591027c79f58eefd4f5f6b}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_a48659847fa591027c79f58eefd4f5f6b}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_a48659847fa591027c79f58eefd4f5f6b}{Surface\+Cpdf}}.
+
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_ab132931383a6dd3f1c3b1dc28de9568c}\label{interface_svg_1_1_surface_1_1_surface_interface_ab132931383a6dd3f1c3b1dc28de9568c}} 
+\index{SurfaceInterface@{SurfaceInterface}!setFont@{setFont}}
+\index{setFont@{setFont}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{setFont()}{setFont()}}
+{\footnotesize\ttfamily set\+Font (\begin{DoxyParamCaption}\item[{}]{\$family,  }\item[{}]{\$style,  }\item[{}]{\$weight }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_ab132931383a6dd3f1c3b1dc28de9568c}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_ab132931383a6dd3f1c3b1dc28de9568c}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_ab132931383a6dd3f1c3b1dc28de9568c}{Surface\+Cpdf}}.
+
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_aeea8f5fe99b837647cbc79f0d77ca209}\label{interface_svg_1_1_surface_1_1_surface_interface_aeea8f5fe99b837647cbc79f0d77ca209}} 
+\index{SurfaceInterface@{SurfaceInterface}!setStyle@{setStyle}}
+\index{setStyle@{setStyle}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{setStyle()}{setStyle()}}
+{\footnotesize\ttfamily set\+Style (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_svg_1_1_style}{Style}}}]{\$style }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_aeea8f5fe99b837647cbc79f0d77ca209}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_aeea8f5fe99b837647cbc79f0d77ca209}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_aeea8f5fe99b837647cbc79f0d77ca209}{Surface\+Cpdf}}.
+
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_a1991a97282c68ad118b460031d1216e7}\label{interface_svg_1_1_surface_1_1_surface_interface_a1991a97282c68ad118b460031d1216e7}} 
+\index{SurfaceInterface@{SurfaceInterface}!stroke@{stroke}}
+\index{stroke@{stroke}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{stroke()}{stroke()}}
+{\footnotesize\ttfamily stroke (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_a1991a97282c68ad118b460031d1216e7}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_a1991a97282c68ad118b460031d1216e7}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_a1991a97282c68ad118b460031d1216e7}{Surface\+Cpdf}}.
+
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_a90e7422273db9d74379991669a3b24be}\label{interface_svg_1_1_surface_1_1_surface_interface_a90e7422273db9d74379991669a3b24be}} 
+\index{SurfaceInterface@{SurfaceInterface}!strokeRect@{strokeRect}}
+\index{strokeRect@{strokeRect}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{strokeRect()}{strokeRect()}}
+{\footnotesize\ttfamily stroke\+Rect (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y,  }\item[{}]{\$w,  }\item[{}]{\$h }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_a90e7422273db9d74379991669a3b24be}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_a90e7422273db9d74379991669a3b24be}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_a90e7422273db9d74379991669a3b24be}{Surface\+Cpdf}}.
+
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_a8ea6898c34349f720d2cf4f291c0f298}\label{interface_svg_1_1_surface_1_1_surface_interface_a8ea6898c34349f720d2cf4f291c0f298}} 
+\index{SurfaceInterface@{SurfaceInterface}!strokeText@{strokeText}}
+\index{strokeText@{strokeText}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{strokeText()}{strokeText()}}
+{\footnotesize\ttfamily stroke\+Text (\begin{DoxyParamCaption}\item[{}]{\$text,  }\item[{}]{\$x,  }\item[{}]{\$y,  }\item[{}]{\$max\+Width = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_a8ea6898c34349f720d2cf4f291c0f298}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_a8ea6898c34349f720d2cf4f291c0f298}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_a8ea6898c34349f720d2cf4f291c0f298}{Surface\+Cpdf}}.
+
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_a0ed069e6d27565df8234584216d3f45c}\label{interface_svg_1_1_surface_1_1_surface_interface_a0ed069e6d27565df8234584216d3f45c}} 
+\index{SurfaceInterface@{SurfaceInterface}!transform@{transform}}
+\index{transform@{transform}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{transform()}{transform()}}
+{\footnotesize\ttfamily transform (\begin{DoxyParamCaption}\item[{}]{\$a,  }\item[{}]{\$b,  }\item[{}]{\$c,  }\item[{}]{\$d,  }\item[{}]{\$e,  }\item[{}]{\$f }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_a0ed069e6d27565df8234584216d3f45c}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_a0ed069e6d27565df8234584216d3f45c}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_a0ed069e6d27565df8234584216d3f45c}{Surface\+Cpdf}}.
+
+\mbox{\Hypertarget{interface_svg_1_1_surface_1_1_surface_interface_a352a9045a49fbf216c57ca51c3d815ad}\label{interface_svg_1_1_surface_1_1_surface_interface_a352a9045a49fbf216c57ca51c3d815ad}} 
+\index{SurfaceInterface@{SurfaceInterface}!translate@{translate}}
+\index{translate@{translate}!SurfaceInterface@{SurfaceInterface}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily translate (\begin{DoxyParamCaption}\item[{}]{\$x,  }\item[{}]{\$y }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_p_d_f_lib_a352a9045a49fbf216c57ca51c3d815ad}{Surface\+PDFLib}}, \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_gmagick_a352a9045a49fbf216c57ca51c3d815ad}{Surface\+Gmagick}}, and \mbox{\hyperlink{class_svg_1_1_surface_1_1_surface_cpdf_a352a9045a49fbf216c57ca51c3d815ad}{Surface\+Cpdf}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/dompdf/lib/php-\/svg-\/lib/src/\+Svg/\+Surface/\mbox{\hyperlink{_surface_interface_8php}{Surface\+Interface.\+php}}\end{DoxyCompactItemize}

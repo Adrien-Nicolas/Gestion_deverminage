@@ -1,0 +1,50 @@
+\hypertarget{_not_conform_tube_8php}{}\doxysection{php/\+Not\+Conform\+Tube.php File Reference}
+\label{_not_conform_tube_8php}\index{php/NotConformTube.php@{php/NotConformTube.php}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_not_conform_tube_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}{\$authentication}} = new \mbox{\hyperlink{class_secure_user_authentication}{Secure\+User\+Authentication}}()
+\item 
+\mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}}(! \$authentication-\/$>$is\+User\+Connected()) \mbox{\hyperlink{_not_conform_tube_8php_a0811826b78691f7e8c277c73d7da0ae6}{\$user}} = \$authentication-\/$>$get\+User\+From\+Session()
+\item 
+\mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}}(\$user-\/$>$get\+Role()==\textquotesingle{}Administrateur\textquotesingle{}) \mbox{\hyperlink{_not_conform_tube_8php_aeb2421c89704577767a224f0bb692b13}{else}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_not_conform_tube_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}\label{_not_conform_tube_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}} 
+\index{NotConformTube.php@{NotConformTube.php}!\$authentication@{\$authentication}}
+\index{\$authentication@{\$authentication}!NotConformTube.php@{NotConformTube.php}}
+\doxysubsubsection{\texorpdfstring{\$authentication}{$authentication}}
+{\footnotesize\ttfamily \$authentication = new \mbox{\hyperlink{class_secure_user_authentication}{Secure\+User\+Authentication}}()}
+
+
+
+Definition at line 10 of file Not\+Conform\+Tube.\+php.
+
+\mbox{\Hypertarget{_not_conform_tube_8php_a0811826b78691f7e8c277c73d7da0ae6}\label{_not_conform_tube_8php_a0811826b78691f7e8c277c73d7da0ae6}} 
+\index{NotConformTube.php@{NotConformTube.php}!\$user@{\$user}}
+\index{\$user@{\$user}!NotConformTube.php@{NotConformTube.php}}
+\doxysubsubsection{\texorpdfstring{\$user}{$user}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}} (! \$authentication-\/$>$is\+User\+Connected()) \$user = \$authentication-\/$>$get\+User\+From\+Session()}
+
+
+
+Definition at line 17 of file Not\+Conform\+Tube.\+php.
+
+\mbox{\Hypertarget{_not_conform_tube_8php_aeb2421c89704577767a224f0bb692b13}\label{_not_conform_tube_8php_aeb2421c89704577767a224f0bb692b13}} 
+\index{NotConformTube.php@{NotConformTube.php}!else@{else}}
+\index{else@{else}!NotConformTube.php@{NotConformTube.php}}
+\doxysubsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}} ( \$user-\/$>$get\+Role()==\textquotesingle{}Administrateur\textquotesingle{}) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{        exit()}
+
+\end{DoxyCode}
+
+
+Definition at line 36 of file Not\+Conform\+Tube.\+php.
+

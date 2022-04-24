@@ -1,0 +1,284 @@
+\hypertarget{test_p_d_f_8php}{}\doxysection{php/test\+PDF.php File Reference}
+\label{test_p_d_f_8php}\index{php/testPDF.php@{php/testPDF.php}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{test_p_d_f_8php_a1bf439302ce1fc61a272b7a27c8da5c7}{\$html}} = \char`\"{}\char`\"{}
+\item 
+\mbox{\hyperlink{test_p_d_f_8php_a0ee17d3bce7e8683a56cf90060b4dc6c}{\$lot}} = Lot\+::get\+Lot\+From\+ID(\$\+\_\+\+GET\mbox{[}\char`\"{}id\char`\"{}\mbox{]})
+\item 
+\mbox{\hyperlink{test_p_d_f_8php_a0e425132423181ab2baa28175852d336}{\$nb\+Cap}} = \$lot-\/$>$get\+Nb\+Cap()
+\item 
+\mbox{\hyperlink{test_p_d_f_8php_a5476a80a115c45868a2c62fbf9166f20}{\$nb\+Page}} = round(\$nb\+Cap/60)
+\item 
+\mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}}((\$nb\+Cap\%60 !=0 \&\& \$nb\+Cap/60 $>$ 1)$\vert$$\vert$ \$nb\+Page==0) \mbox{\hyperlink{test_p_d_f_8php_a5ba603bdb50312c5da47f24be3ec59de}{\$date}} = date(\char`\"{}j/m/Y à H\+:i\+:s\char`\"{}, \$lot-\/$>$get\+First\+Date\+Essai()/1000)
+\item 
+\mbox{\hyperlink{test_p_d_f_8php_a0ca3efc7d7f1d90eb7a9c7213e75c85d}{\$date\+Now}} = date(\char`\"{}j/m/Y à H\+:i\+:s\char`\"{})
+\item 
+\mbox{\hyperlink{test_p_d_f_8php_af2723ab1af96af7cec53e7c7cc7022c6}{\$num\+Lot}} = \$lot-\/$>$get\+Num\+Lot()
+\item 
+\mbox{\hyperlink{test_p_d_f_8php_a9c3cd68ece2fa455d30bbf738c6ed523}{\$num\+Lot0}} = \$num\+Lot\mbox{[}0\mbox{]}
+\item 
+\mbox{\hyperlink{test_p_d_f_8php_a9eb5f74537d9ad60c36af3d5cc409177}{\$num\+Lot1}} = \$num\+Lot\mbox{[}1\mbox{]}
+\item 
+\mbox{\hyperlink{test_p_d_f_8php_a14d808d97070d66eec8464e44b163f08}{\$num\+Lot2}} = \$num\+Lot\mbox{[}2\mbox{]}
+\item 
+\mbox{\hyperlink{test_p_d_f_8php_a93ffe49a4b0f39e4c6d7c964151c73c3}{\$num\+Lot3}} = \$num\+Lot\mbox{[}3\mbox{]}
+\item 
+\mbox{\hyperlink{test_p_d_f_8php_af132ee9d906033a75a66589f15a27cdb}{\$num\+Lot4}} = \$num\+Lot\mbox{[}4\mbox{]}
+\item 
+\mbox{\hyperlink{test_p_d_f_8php_abf5aaa52a2aeba242b02729b0c93b5cb}{\$num\+Lot5}} = \$num\+Lot\mbox{[}5\mbox{]}
+\item 
+\mbox{\hyperlink{test_p_d_f_8php_aaea362fd30e97b88a739a44d442947bc}{\$num\+Lot6}} = \$num\+Lot\mbox{[}6\mbox{]}
+\item 
+\mbox{\hyperlink{test_p_d_f_8php_af2427d249ab5ba1f2f27df8750a9e5cc}{\$num\+Lot7}} = \$num\+Lot\mbox{[}7\mbox{]}
+\item 
+\mbox{\hyperlink{test_p_d_f_8php_a13116f73951b7d10fc78a44bea93d563}{\$quantitatif}} = (int)\char`\"{}\$num\+Lot\mbox{[}4\mbox{]}\$num\+Lot\mbox{[}5\mbox{]}\$num\+Lot\mbox{[}6\mbox{]}\$num\+Lot\mbox{[}7\mbox{]}\char`\"{}
+\item 
+\mbox{\hyperlink{test_p_d_f_8php_af89b54a7ac02bef0fd9935b8c005cea7}{\$deb\+Temp1}} = 1
+\item 
+\mbox{\hyperlink{test_p_d_f_8php_a140861ca7f193fe9d67994a03e047a97}{\$deb\+Temp2}} = \$deb\+Temp1 + 20
+\item 
+\mbox{\hyperlink{test_p_d_f_8php_a95e92c8cfbc50d8126f6478650184a0c}{\$deb\+Temp3}} = \$deb\+Temp2 + 20
+\item 
+\mbox{\hyperlink{test_p_d_f_8php_a8177bcab1e1e42015226a84199f88d2e}{\$list\+Cap}} = \$lot-\/$>$get\+All\+Capteurs()
+\item 
+\mbox{\hyperlink{test_p_d_f_8php_a935f9bb96d57b9d0b240697716be3bbd}{\$\+NQA}} = \$lot-\/$>$get\+NQA()
+\item 
+\mbox{\hyperlink{test_p_d_f_8php_a0722441477f957078ee2437054556cbc}{\$filename}} = \char`\"{}Procès\+\_\+\+Verbal\+\_\+\+Lot\+\_\+\char`\"{}.\$num\+Lot
+\item 
+\mbox{\hyperlink{test_p_d_f_8php_a43a29153c5521d1c78e68e511d4d73a6}{\$dompdf}} = new \mbox{\hyperlink{class_dompdf_1_1_dompdf}{Dompdf}}()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{test_p_d_f_8php_a5ba603bdb50312c5da47f24be3ec59de}\label{test_p_d_f_8php_a5ba603bdb50312c5da47f24be3ec59de}} 
+\index{testPDF.php@{testPDF.php}!\$date@{\$date}}
+\index{\$date@{\$date}!testPDF.php@{testPDF.php}}
+\doxysubsubsection{\texorpdfstring{\$date}{$date}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}} (( \$nb\+Cap\%60 !=0 \&\&\$nb\+Cap/60 $>$ 1)$\vert$$\vert$\$nb\+Page==0) \$date = date(\char`\"{}j/m/Y à H\+:i\+:s\char`\"{}, \$lot-\/$>$get\+First\+Date\+Essai()/1000)}
+
+
+
+Definition at line 15 of file test\+PDF.\+php.
+
+\mbox{\Hypertarget{test_p_d_f_8php_a0ca3efc7d7f1d90eb7a9c7213e75c85d}\label{test_p_d_f_8php_a0ca3efc7d7f1d90eb7a9c7213e75c85d}} 
+\index{testPDF.php@{testPDF.php}!\$dateNow@{\$dateNow}}
+\index{\$dateNow@{\$dateNow}!testPDF.php@{testPDF.php}}
+\doxysubsubsection{\texorpdfstring{\$dateNow}{$dateNow}}
+{\footnotesize\ttfamily \$date\+Now = date(\char`\"{}j/m/Y à H\+:i\+:s\char`\"{})}
+
+
+
+Definition at line 16 of file test\+PDF.\+php.
+
+\mbox{\Hypertarget{test_p_d_f_8php_af89b54a7ac02bef0fd9935b8c005cea7}\label{test_p_d_f_8php_af89b54a7ac02bef0fd9935b8c005cea7}} 
+\index{testPDF.php@{testPDF.php}!\$debTemp1@{\$debTemp1}}
+\index{\$debTemp1@{\$debTemp1}!testPDF.php@{testPDF.php}}
+\doxysubsubsection{\texorpdfstring{\$debTemp1}{$debTemp1}}
+{\footnotesize\ttfamily \$deb\+Temp1 = 1}
+
+
+
+Definition at line 30 of file test\+PDF.\+php.
+
+\mbox{\Hypertarget{test_p_d_f_8php_a140861ca7f193fe9d67994a03e047a97}\label{test_p_d_f_8php_a140861ca7f193fe9d67994a03e047a97}} 
+\index{testPDF.php@{testPDF.php}!\$debTemp2@{\$debTemp2}}
+\index{\$debTemp2@{\$debTemp2}!testPDF.php@{testPDF.php}}
+\doxysubsubsection{\texorpdfstring{\$debTemp2}{$debTemp2}}
+{\footnotesize\ttfamily \$deb\+Temp2 = \$deb\+Temp1 + 20}
+
+
+
+Definition at line 31 of file test\+PDF.\+php.
+
+\mbox{\Hypertarget{test_p_d_f_8php_a95e92c8cfbc50d8126f6478650184a0c}\label{test_p_d_f_8php_a95e92c8cfbc50d8126f6478650184a0c}} 
+\index{testPDF.php@{testPDF.php}!\$debTemp3@{\$debTemp3}}
+\index{\$debTemp3@{\$debTemp3}!testPDF.php@{testPDF.php}}
+\doxysubsubsection{\texorpdfstring{\$debTemp3}{$debTemp3}}
+{\footnotesize\ttfamily \$deb\+Temp3 = \$deb\+Temp2 + 20}
+
+
+
+Definition at line 32 of file test\+PDF.\+php.
+
+\mbox{\Hypertarget{test_p_d_f_8php_a43a29153c5521d1c78e68e511d4d73a6}\label{test_p_d_f_8php_a43a29153c5521d1c78e68e511d4d73a6}} 
+\index{testPDF.php@{testPDF.php}!\$dompdf@{\$dompdf}}
+\index{\$dompdf@{\$dompdf}!testPDF.php@{testPDF.php}}
+\doxysubsubsection{\texorpdfstring{\$dompdf}{$dompdf}}
+{\footnotesize\ttfamily \$dompdf = new \mbox{\hyperlink{class_dompdf_1_1_dompdf}{Dompdf}}()}
+
+
+
+Definition at line 532 of file test\+PDF.\+php.
+
+\mbox{\Hypertarget{test_p_d_f_8php_a0722441477f957078ee2437054556cbc}\label{test_p_d_f_8php_a0722441477f957078ee2437054556cbc}} 
+\index{testPDF.php@{testPDF.php}!\$filename@{\$filename}}
+\index{\$filename@{\$filename}!testPDF.php@{testPDF.php}}
+\doxysubsubsection{\texorpdfstring{\$filename}{$filename}}
+{\footnotesize\ttfamily \$filename = \char`\"{}Procès\+\_\+\+Verbal\+\_\+\+Lot\+\_\+\char`\"{}.\$num\+Lot}
+
+
+
+Definition at line 523 of file test\+PDF.\+php.
+
+\mbox{\Hypertarget{test_p_d_f_8php_a1bf439302ce1fc61a272b7a27c8da5c7}\label{test_p_d_f_8php_a1bf439302ce1fc61a272b7a27c8da5c7}} 
+\index{testPDF.php@{testPDF.php}!\$html@{\$html}}
+\index{\$html@{\$html}!testPDF.php@{testPDF.php}}
+\doxysubsubsection{\texorpdfstring{\$html}{$html}}
+{\footnotesize\ttfamily \mbox{\hyperlink{valeurr_8php_ac315b66d4c38b5fa2e7b3e106caa96e3}{for}} ( \$index=1; \$index$<$=\$nb\+Page; \$index++) \$html = \char`\"{}\char`\"{}}
+
+
+
+Definition at line 5 of file test\+PDF.\+php.
+
+\mbox{\Hypertarget{test_p_d_f_8php_a8177bcab1e1e42015226a84199f88d2e}\label{test_p_d_f_8php_a8177bcab1e1e42015226a84199f88d2e}} 
+\index{testPDF.php@{testPDF.php}!\$listCap@{\$listCap}}
+\index{\$listCap@{\$listCap}!testPDF.php@{testPDF.php}}
+\doxysubsubsection{\texorpdfstring{\$listCap}{$listCap}}
+{\footnotesize\ttfamily \$list\+Cap = \$lot-\/$>$get\+All\+Capteurs()}
+
+
+
+Definition at line 34 of file test\+PDF.\+php.
+
+\mbox{\Hypertarget{test_p_d_f_8php_a0ee17d3bce7e8683a56cf90060b4dc6c}\label{test_p_d_f_8php_a0ee17d3bce7e8683a56cf90060b4dc6c}} 
+\index{testPDF.php@{testPDF.php}!\$lot@{\$lot}}
+\index{\$lot@{\$lot}!testPDF.php@{testPDF.php}}
+\doxysubsubsection{\texorpdfstring{\$lot}{$lot}}
+{\footnotesize\ttfamily \$lot = Lot\+::get\+Lot\+From\+ID(\$\+\_\+\+GET\mbox{[}\char`\"{}id\char`\"{}\mbox{]})}
+
+
+
+Definition at line 7 of file test\+PDF.\+php.
+
+\mbox{\Hypertarget{test_p_d_f_8php_a0e425132423181ab2baa28175852d336}\label{test_p_d_f_8php_a0e425132423181ab2baa28175852d336}} 
+\index{testPDF.php@{testPDF.php}!\$nbCap@{\$nbCap}}
+\index{\$nbCap@{\$nbCap}!testPDF.php@{testPDF.php}}
+\doxysubsubsection{\texorpdfstring{\$nbCap}{$nbCap}}
+{\footnotesize\ttfamily \$nb\+Cap = \$lot-\/$>$get\+Nb\+Cap()}
+
+
+
+Definition at line 9 of file test\+PDF.\+php.
+
+\mbox{\Hypertarget{test_p_d_f_8php_a5476a80a115c45868a2c62fbf9166f20}\label{test_p_d_f_8php_a5476a80a115c45868a2c62fbf9166f20}} 
+\index{testPDF.php@{testPDF.php}!\$nbPage@{\$nbPage}}
+\index{\$nbPage@{\$nbPage}!testPDF.php@{testPDF.php}}
+\doxysubsubsection{\texorpdfstring{\$nbPage}{$nbPage}}
+{\footnotesize\ttfamily \$nb\+Page = round(\$nb\+Cap/60)}
+
+
+
+Definition at line 10 of file test\+PDF.\+php.
+
+\mbox{\Hypertarget{test_p_d_f_8php_a935f9bb96d57b9d0b240697716be3bbd}\label{test_p_d_f_8php_a935f9bb96d57b9d0b240697716be3bbd}} 
+\index{testPDF.php@{testPDF.php}!\$NQA@{\$NQA}}
+\index{\$NQA@{\$NQA}!testPDF.php@{testPDF.php}}
+\doxysubsubsection{\texorpdfstring{\$NQA}{$NQA}}
+{\footnotesize\ttfamily \$NQA = \$lot-\/$>$get\+NQA()}
+
+
+
+Definition at line 36 of file test\+PDF.\+php.
+
+\mbox{\Hypertarget{test_p_d_f_8php_af2723ab1af96af7cec53e7c7cc7022c6}\label{test_p_d_f_8php_af2723ab1af96af7cec53e7c7cc7022c6}} 
+\index{testPDF.php@{testPDF.php}!\$numLot@{\$numLot}}
+\index{\$numLot@{\$numLot}!testPDF.php@{testPDF.php}}
+\doxysubsubsection{\texorpdfstring{\$numLot}{$numLot}}
+{\footnotesize\ttfamily \$num\+Lot = \$lot-\/$>$get\+Num\+Lot()}
+
+
+
+Definition at line 18 of file test\+PDF.\+php.
+
+\mbox{\Hypertarget{test_p_d_f_8php_a9c3cd68ece2fa455d30bbf738c6ed523}\label{test_p_d_f_8php_a9c3cd68ece2fa455d30bbf738c6ed523}} 
+\index{testPDF.php@{testPDF.php}!\$numLot0@{\$numLot0}}
+\index{\$numLot0@{\$numLot0}!testPDF.php@{testPDF.php}}
+\doxysubsubsection{\texorpdfstring{\$numLot0}{$numLot0}}
+{\footnotesize\ttfamily \$num\+Lot0 = \$num\+Lot\mbox{[}0\mbox{]}}
+
+
+
+Definition at line 19 of file test\+PDF.\+php.
+
+\mbox{\Hypertarget{test_p_d_f_8php_a9eb5f74537d9ad60c36af3d5cc409177}\label{test_p_d_f_8php_a9eb5f74537d9ad60c36af3d5cc409177}} 
+\index{testPDF.php@{testPDF.php}!\$numLot1@{\$numLot1}}
+\index{\$numLot1@{\$numLot1}!testPDF.php@{testPDF.php}}
+\doxysubsubsection{\texorpdfstring{\$numLot1}{$numLot1}}
+{\footnotesize\ttfamily \$num\+Lot1 = \$num\+Lot\mbox{[}1\mbox{]}}
+
+
+
+Definition at line 20 of file test\+PDF.\+php.
+
+\mbox{\Hypertarget{test_p_d_f_8php_a14d808d97070d66eec8464e44b163f08}\label{test_p_d_f_8php_a14d808d97070d66eec8464e44b163f08}} 
+\index{testPDF.php@{testPDF.php}!\$numLot2@{\$numLot2}}
+\index{\$numLot2@{\$numLot2}!testPDF.php@{testPDF.php}}
+\doxysubsubsection{\texorpdfstring{\$numLot2}{$numLot2}}
+{\footnotesize\ttfamily \$num\+Lot2 = \$num\+Lot\mbox{[}2\mbox{]}}
+
+
+
+Definition at line 21 of file test\+PDF.\+php.
+
+\mbox{\Hypertarget{test_p_d_f_8php_a93ffe49a4b0f39e4c6d7c964151c73c3}\label{test_p_d_f_8php_a93ffe49a4b0f39e4c6d7c964151c73c3}} 
+\index{testPDF.php@{testPDF.php}!\$numLot3@{\$numLot3}}
+\index{\$numLot3@{\$numLot3}!testPDF.php@{testPDF.php}}
+\doxysubsubsection{\texorpdfstring{\$numLot3}{$numLot3}}
+{\footnotesize\ttfamily \$num\+Lot3 = \$num\+Lot\mbox{[}3\mbox{]}}
+
+
+
+Definition at line 22 of file test\+PDF.\+php.
+
+\mbox{\Hypertarget{test_p_d_f_8php_af132ee9d906033a75a66589f15a27cdb}\label{test_p_d_f_8php_af132ee9d906033a75a66589f15a27cdb}} 
+\index{testPDF.php@{testPDF.php}!\$numLot4@{\$numLot4}}
+\index{\$numLot4@{\$numLot4}!testPDF.php@{testPDF.php}}
+\doxysubsubsection{\texorpdfstring{\$numLot4}{$numLot4}}
+{\footnotesize\ttfamily \$num\+Lot4 = \$num\+Lot\mbox{[}4\mbox{]}}
+
+
+
+Definition at line 23 of file test\+PDF.\+php.
+
+\mbox{\Hypertarget{test_p_d_f_8php_abf5aaa52a2aeba242b02729b0c93b5cb}\label{test_p_d_f_8php_abf5aaa52a2aeba242b02729b0c93b5cb}} 
+\index{testPDF.php@{testPDF.php}!\$numLot5@{\$numLot5}}
+\index{\$numLot5@{\$numLot5}!testPDF.php@{testPDF.php}}
+\doxysubsubsection{\texorpdfstring{\$numLot5}{$numLot5}}
+{\footnotesize\ttfamily \$num\+Lot5 = \$num\+Lot\mbox{[}5\mbox{]}}
+
+
+
+Definition at line 24 of file test\+PDF.\+php.
+
+\mbox{\Hypertarget{test_p_d_f_8php_aaea362fd30e97b88a739a44d442947bc}\label{test_p_d_f_8php_aaea362fd30e97b88a739a44d442947bc}} 
+\index{testPDF.php@{testPDF.php}!\$numLot6@{\$numLot6}}
+\index{\$numLot6@{\$numLot6}!testPDF.php@{testPDF.php}}
+\doxysubsubsection{\texorpdfstring{\$numLot6}{$numLot6}}
+{\footnotesize\ttfamily \$num\+Lot6 = \$num\+Lot\mbox{[}6\mbox{]}}
+
+
+
+Definition at line 25 of file test\+PDF.\+php.
+
+\mbox{\Hypertarget{test_p_d_f_8php_af2427d249ab5ba1f2f27df8750a9e5cc}\label{test_p_d_f_8php_af2427d249ab5ba1f2f27df8750a9e5cc}} 
+\index{testPDF.php@{testPDF.php}!\$numLot7@{\$numLot7}}
+\index{\$numLot7@{\$numLot7}!testPDF.php@{testPDF.php}}
+\doxysubsubsection{\texorpdfstring{\$numLot7}{$numLot7}}
+{\footnotesize\ttfamily \$num\+Lot7 = \$num\+Lot\mbox{[}7\mbox{]}}
+
+
+
+Definition at line 26 of file test\+PDF.\+php.
+
+\mbox{\Hypertarget{test_p_d_f_8php_a13116f73951b7d10fc78a44bea93d563}\label{test_p_d_f_8php_a13116f73951b7d10fc78a44bea93d563}} 
+\index{testPDF.php@{testPDF.php}!\$quantitatif@{\$quantitatif}}
+\index{\$quantitatif@{\$quantitatif}!testPDF.php@{testPDF.php}}
+\doxysubsubsection{\texorpdfstring{\$quantitatif}{$quantitatif}}
+{\footnotesize\ttfamily \$quantitatif = (int)\char`\"{}\$num\+Lot\mbox{[}4\mbox{]}\$num\+Lot\mbox{[}5\mbox{]}\$num\+Lot\mbox{[}6\mbox{]}\$num\+Lot\mbox{[}7\mbox{]}\char`\"{}}
+
+
+
+Definition at line 28 of file test\+PDF.\+php.
+

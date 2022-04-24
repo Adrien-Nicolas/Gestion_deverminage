@@ -1,0 +1,98 @@
+\hypertarget{class_dompdf_1_1_frame_decorator_1_1_table_row}{}\doxysection{Table\+Row Class Reference}
+\label{class_dompdf_1_1_frame_decorator_1_1_table_row}\index{TableRow@{TableRow}}
+Inheritance diagram for Table\+Row\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_dompdf_1_1_frame_decorator_1_1_table_row}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_table_row_a469f79997646fdd9cc2ff02998ac9e1b}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}} \$frame, \mbox{\hyperlink{class_dompdf_1_1_dompdf}{Dompdf}} \$dompdf)
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_table_row_aded82e1f1c8adfe87dc2cbccf8a4b718}{normalise}} ()
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_table_row_ab3d776efa06ea0dae4409545ff4f1842}{split}} (\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}} \$child=null, \$force\+\_\+pagebreak=false)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 19 of file Table\+Row.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_dompdf_1_1_frame_decorator_1_1_table_row_a469f79997646fdd9cc2ff02998ac9e1b}\label{class_dompdf_1_1_frame_decorator_1_1_table_row_a469f79997646fdd9cc2ff02998ac9e1b}} 
+\index{TableRow@{TableRow}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!TableRow@{TableRow}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}}}]{\$frame,  }\item[{\mbox{\hyperlink{class_dompdf_1_1_dompdf}{Dompdf}}}]{\$dompdf }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_table_row}{Table\+Row}} constructor. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}} & {\em \$frame} & \\
+\hline
+\mbox{\hyperlink{class_dompdf_1_1_dompdf}{Dompdf}} & {\em \$dompdf} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_abstract_frame_decorator_a469f79997646fdd9cc2ff02998ac9e1b}{Abstract\+Frame\+Decorator}}.
+
+
+
+Definition at line 26 of file Table\+Row.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_dompdf_1_1_frame_decorator_1_1_table_row_aded82e1f1c8adfe87dc2cbccf8a4b718}\label{class_dompdf_1_1_frame_decorator_1_1_table_row_aded82e1f1c8adfe87dc2cbccf8a4b718}} 
+\index{TableRow@{TableRow}!normalise@{normalise}}
+\index{normalise@{normalise}!TableRow@{TableRow}}
+\doxysubsubsection{\texorpdfstring{normalise()}{normalise()}}
+{\footnotesize\ttfamily normalise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Remove all non table-\/cell frames from this row and move them after the table. 
+
+Definition at line 37 of file Table\+Row.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_decorator_1_1_table_row_ab3d776efa06ea0dae4409545ff4f1842}\label{class_dompdf_1_1_frame_decorator_1_1_table_row_ab3d776efa06ea0dae4409545ff4f1842}} 
+\index{TableRow@{TableRow}!split@{split}}
+\index{split@{split}!TableRow@{TableRow}}
+\doxysubsubsection{\texorpdfstring{split()}{split()}}
+{\footnotesize\ttfamily split (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}}}]{\$child = {\ttfamily null},  }\item[{}]{\$force\+\_\+pagebreak = {\ttfamily false} }\end{DoxyParamCaption})}
+
+split this frame at \$child. The current frame is cloned and \$child and all children following \$child are added to the clone. The clone is then passed to the current frame\textquotesingle{}s parent-\/$>$\mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_table_row_ab3d776efa06ea0dae4409545ff4f1842}{split()}} method.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}} & {\em \$child} & \\
+\hline
+boolean & {\em \$force\+\_\+pagebreak} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_dompdf_1_1_exception}{Exception}}} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_abstract_frame_decorator_ab3d776efa06ea0dae4409545ff4f1842}{Abstract\+Frame\+Decorator}}.
+
+
+
+Definition at line 57 of file Table\+Row.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/dompdf/src/\+Frame\+Decorator/\mbox{\hyperlink{_frame_decorator_2_table_row_8php}{Table\+Row.\+php}}\end{DoxyCompactItemize}

@@ -1,0 +1,510 @@
+
+#include <OneWire.h>
+#include <DallasTemperature.h>
+#include <SPI.h>
+#include <Ethernet.h>
+
+
+int signalIdEssai = 2;
+
+//capteur de température et humidité
+
+OneWire oneWire (7);
+DallasTemperature sensors(&oneWire);
+DeviceAddress sensorDeviceAddress;
+
+int frequencyTemp = 750;
+
+//Nombre de cycle
+unsigned long nbcycle = 0;
+
+//fréquence du modulo
+int frequency = 256;
+
+// seuil de conformité
+int seuil0 = 0;
+int seuil1 = 0;
+int seuil2 = 0;
+
+int validCap0 = 1;
+int validCap1 = 1;
+int validCap2 = 1;
+
+
+int nbrCapValid =0;
+
+
+//Nombre de capteurs
+int nbCap=3;
+int list[3];
+
+// id de l'essai
+int idEssai = 0;
+int pos = 1;
+
+// variables des photorésistances
+int led0 = 0;
+int led1 = 0;
+int led2 = 0;
+
+int idCap1 = -1;
+int idCap2 = -1;
+int idCap3 = -1;
+
+
+
+// variables du démarage des acquisitions de données
+int cinqv = 8;
+int val = 0;
+int ret = 0;
+
+// parametrage du micro controlleur
+byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
+char server[] = "dev.epl.local";
+
+IPAddress ip(192, 168, 0, 177);
+IPAddress myDns(192, 168, 0, 1);
+
+EthernetClient client;
+
+// Variables de mesure de la vitesse
+unsigned long beginMicros, endMicros;
+unsigned long byteCount = 0;
+bool printWebData = false;
+
+/**
+ * Méthode permettant de créer un essai dans la base de données, et de retourner son ID
+ *
+ */
+void createEssai() {
+
+    if (client.connect(server, 80)) {
+       Serial.println("connected");
+       client.println("GET /php/arduino/createEssai.php HTTP/1.0");
+       client.println();
+
+    } else {
+      Serial.println("connection failed");
+    }
+    String c;
+
+    while (client.connected()){
+      if(client.available()){
+        char letter = client.read();
+        String myString = String(letter);
+        c += myString;
+
+      }
+    }
+    int index = c.indexOf("<p>")+3;
+    int index2 = c.indexOf("</p>");
+
+    String ret = "";
+
+    for (int i =index; i<index2; i++) ret += c[i];
+    idEssai = ret.toInt();
+    Serial.println("essai =");
+     Serial.println(idEssai);
+
+}
+
+
+/**
+ * Méthode permettant de recuperer le seuil d'un produit en fonction de son idCapteur
+ *
+ */
+int getSeuil(int idCap) {
+
+
+    if (client.connect(server, 80)) {
+       Serial.println("connected");
+       client.println("GET /php/arduino/getSeuil.php?idCap=" + String (idCap) + " HTTP/1.0");
+       client.println();
+
+    } else {
+      Serial.println("connection failed");
+    }
+    String c;
+
+    while (client.connected()){
+      if(client.available()){
+        char letter = client.read();
+        String myString = String(letter);
+        c += myString;
+
+      }
+    }
+    int index = c.indexOf("<p>")+3;
+    int index2 = c.indexOf("</p>");
+
+    String ret = "";
+
+    for (int i =index; i<index2; i++) ret += c[i];
+    return ret.toInt();
+
+
+  }
+
+
+
+
+/**
+ * Méthode permettant de créer les capteurs dans la base de données, et de retourner leurs ID sous forme de liste
+ *
+ * @param EthernetClient
+ * @param int
+ * @param int
+ */
+
+
+void createCap() {
+
+  for(int i = 0; i<nbCap; i++) {
+    Serial.println(nbCap);
+    if (client.connect(server, 80)) {
+       Serial.println("connected");
+       int posi = pos+i;
+       client.println("GET /php/arduino/createCap.php?idessai="+ String(idEssai) +"&position="+ String(posi) +" HTTP/1.0");
+       client.println();
+
+    } else {
+      Serial.println("connection failed");
+    }
+    String c;
+
+    while (client.connected()){
+      if(client.available()){
+        char letter = client.read();
+        String myString = String(letter);
+        c += myString;
+      }
+    }
+    int index = c.indexOf("<p>")+3;
+    int index2 = c.indexOf("</p>");
+
+    String ret = "";
+
+    for (int i =index; i<index2; i++) ret += c[i];
+    list[i] = ret.toInt();
+
+
+  }
+}
+
+
+/**
+ * Méthode permettant d'insérer les données d'une température
+ *
+ * @param int
+ * @param int
+ * @param int
+ *
+ */
+
+void push(int idessai, unsigned long time, float value){
+    String data = "idessai=" + String(idessai) + "&time=" + String(time) + "&value=" + String(value);
+    if (client.connect("dev.epl.local",80) ) {
+      client.println("POST /php/arduino/pushTemp.php HTTP/1.1");
+      client.println("Host: dev.epl.local");
+      client.println("Content-Type: application/x-www-form-urlencoded");
+      client.print("Content-Length: ");
+      client.println(data.length());
+      client.println();
+      client.print(data);
+    } else {
+      // if you didn't get a connection to the server:
+      Serial.println("connection failed");
+    }
+}
+
+/**
+ * Méthode permettant d'insérer les données d'un capteur
+ *
+ * @param int
+ * @param int
+ * @param int
+ *
+ */
+
+void push(int value, int idCap, unsigned long time){
+  int valid = 1;
+
+
+    if (led0 <= seuil0 && validCap0 !=0 )valid = 0;
+    if (led1 <= seuil1 && validCap1 !=0) valid = 0;
+    if (led2 <= seuil2 && validCap2 !=0) valid = 0;
+
+
+    String data = "value=" + String(value) + "&time=" + String(time) + "&valid=" + String(valid) + "&idCap=" + String(idCap);
+    if (client.connect("dev.epl.local",80) ) {
+      client.println("POST /php/arduino/pushValue.php HTTP/1.1");
+      client.println("Host: dev.epl.local");
+      client.println("Content-Type: application/x-www-form-urlencoded");
+      client.print("Content-Length: ");
+      client.println(data.length());
+      client.println();
+      client.print(data);
+    } else {
+      // if you didn't get a connection to the server:
+      Serial.println("connection failed");
+    }
+}
+
+/**
+ * Méthode permettant d'insérer les données d'un capteur avec une valeur à zero mais valide
+ *
+ * @param int
+ * @param int
+ * @param int
+ *
+ */
+
+void pushzero(int idCap, unsigned long time){
+    String data = "value=0&time=" + String(time) + "&valid=1&idCap=" + String(idCap);
+    if (client.connect("dev.epl.local",80) ) {
+      client.println("POST /php/arduino/pushValue.php HTTP/1.1");
+      client.println("Host: dev.epl.local");
+      client.println("Content-Type: application/x-www-form-urlencoded");
+      client.print("Content-Length: ");
+      client.println(data.length());
+      client.println();
+      client.print(data);
+    } else {
+      // if you didn't get a connection to the server:
+      Serial.println("connection failed");
+    }
+}
+
+
+
+void setup() {
+
+
+ pinMode(signalIdEssai, OUTPUT);
+
+
+
+ /**
+  * Configuration de l'acquisition du capteur de temperature DS18B20
+  */
+  sensors.begin();
+  sensors.getAddress(sensorDeviceAddress, 0); //Demande l'adresse du capteur à l'index 0 du bus
+  sensors.setResolution(sensorDeviceAddress, 12); //Résolutions possibles: 9,10,11,12n}
+
+
+  /**
+   * Designation de l'entrée 5v en tant qu'entrée
+   */
+  pinMode(cinqv, INPUT);
+  unsigned long(millis());
+
+
+/**
+ * Lancement du port série
+ */
+  Serial.begin(9600);
+  while (!Serial) {
+    ;
+  }
+
+  /**
+   * Parametrage DHCP
+   */
+  Serial.println("Initialize Ethernet with DHCP:");
+  if (Ethernet.begin(mac) == 0) {
+    Serial.println("Failed to configure Ethernet using DHCP");
+    if (Ethernet.hardwareStatus() == EthernetNoHardware) {
+      Serial.println("Ethernet shield was not found.  Sorry, can't run without hardware. :(");
+      while (true) {
+        delay(1);
+      }
+    }
+    if (Ethernet.linkStatus() == LinkOFF) {
+      Serial.println("Ethernet cable is not connected.");
+    }
+    Ethernet.begin(mac, ip, myDns);
+  } else {
+    Serial.print(" DHCP assigned IP ");
+    Serial.println(Ethernet.localIP());
+  }
+  delay(1000);
+  Serial.print("connecting to ");
+  Serial.print(server);
+  Serial.println("...");
+
+
+
+  beginMicros = micros();
+
+  //Création de l'essai
+  createEssai();
+  Serial.println(idEssai);
+  //Création et affectation des capteurs
+
+ if(analogRead(A0) > 5){
+  nbCap -= 1;
+  validCap0 = 0;
+}
+
+if(analogRead(A1) < 5){
+  nbCap -= 1;
+   validCap1 = 0;
+}
+
+if(analogRead(A2) > 5){
+  nbCap -=1;
+   validCap2 = 0;
+}
+
+
+  createCap();
+Serial.println("nbCap");
+Serial.println(list[0]);
+
+
+ if (validCap0 == 1){
+ nbrCapValid+=1;
+ }else{
+  Serial.println("Le capteur 1 ne possede pas de tube");
+ }
+
+
+  if (validCap1 == 1){
+ nbrCapValid+=1;
+   }else{
+    Serial.println("Le capteur 2 ne possede pas de tube");
+   }
+
+  if (validCap2 == 1){
+  nbrCapValid+=1;
+  }else{
+    Serial.println("Le capteur 3 ne possede pas de tube");
+  }
+
+Serial.println(nbrCapValid);
+
+
+
+
+for(int i=0; i<nbrCapValid; i++){
+
+
+ if( validCap0 == 1 ){
+  idCap1 = list[i];
+  list[i++];
+ }
+
+
+
+  if(validCap1 == 1){
+    idCap2 = list[i];
+    list[i++];
+  }
+
+
+
+ if(validCap2 == 1){
+    idCap3 = list[i];
+   list[i++];
+  }
+
+
+}
+
+
+
+while(seuil0 == 0 && validCap0 != 0){
+  delay(1000);
+  seuil0 = getSeuil(idCap1);
+  Serial.println(seuil0);
+}
+
+while(seuil1 == 0 && validCap1 !=0){
+  delay(1000);
+  seuil1 = getSeuil(idCap2);
+Serial.println(seuil1);
+}
+
+while(seuil2 == 0 && validCap2 != 0){
+  delay(1000);
+  seuil2 = getSeuil(idCap3);
+Serial.println(seuil2);
+}
+
+
+
+}
+
+
+void loop() {
+
+
+  if ( nbcycle%frequencyTemp==0) {
+      sensors.requestTemperatures();
+      float temp = sensors.getTempCByIndex(0);
+      push(idEssai,(unsigned long) millis() ,temp);
+      Serial.println(temp);
+  }
+
+  //Récuperation des valeurs des photoresistances
+  led0 = analogRead(A0);
+  led1 = analogRead(A1);
+  led2 = analogRead(A2);
+
+
+  //Recupération d'une tension d'entrée de 5V
+  val = digitalRead(cinqv);
+
+  //Variables de récupération du temps
+  String t2 = String((unsigned long) millis());
+
+
+  //Envoie d'une donnée 0 quand il reçoit un changement d'état de la tension d'entrée
+  if (val != ret) {
+      Serial.println("attention c'est débranché");
+      pushzero(idCap1, (unsigned long) millis());
+      pushzero(idCap2, (unsigned long) millis());
+      pushzero(idCap3, (unsigned long) millis());
+  }
+
+
+  //Simplification de l'affichage et de la vitesse de traitement du port série
+  int len = client.available();
+  if (len > 0) {
+    byte buffer[80];
+    if (len > 80) len = 80;
+    client.read(buffer, len);
+    if (printWebData) {
+      Serial.write(buffer, len);
+    }
+    byteCount = byteCount + len;
+  }
+
+
+
+  //Envoie les valeurs des photoresistances lorsque la tension d'entrée est à 5V
+  if (val == HIGH){
+
+    if ( (nbcycle%frequency==0 || led0<seuil0) && validCap0 !=0 ) {
+      push(led0, idCap1, (unsigned long) millis());
+
+    }
+
+
+    if ( (nbcycle%frequency==0 || led1<seuil1) && validCap1 !=0) {
+    Serial.println("rentré");
+      push(led1, idCap2, (unsigned long) millis());
+
+    }
+
+
+    if ( (nbcycle%frequency==0 || led2<seuil2) && validCap2 !=0 ) {
+      push(led2, idCap3, (unsigned long) millis());
+
+    }
+
+  }
+
+  ret = val;
+  nbcycle++;
+}

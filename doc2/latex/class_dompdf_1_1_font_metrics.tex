@@ -1,0 +1,203 @@
+\hypertarget{class_dompdf_1_1_font_metrics}{}\doxysection{Font\+Metrics Class Reference}
+\label{class_dompdf_1_1_font_metrics}\index{FontMetrics@{FontMetrics}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_font_metrics_ad090ffa742c3951b08dd1779546ab14b}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{interface_dompdf_1_1_canvas}{Canvas}} \$canvas, \mbox{\hyperlink{class_dompdf_1_1_options}{Options}} \$options)
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_font_metrics_a1da8dc447f6b50d06f38ba6d007ae605}{save\+\_\+font\+\_\+families}} ()
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_font_metrics_a7cb52eba473a4c5dbdc96dc029972b5f}{save\+Font\+Families}} ()
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_font_metrics_ac9eb0d542dfcfc8eb3ee1c07e92e9daf}{load\+\_\+font\+\_\+families}} ()
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_font_metrics_a85ad8b96dd4d617e712a82adb77d4d05}{load\+Font\+Families}} ()
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_font_metrics_a22e30398dfd977ac14a044acb9ecf434}{register\+\_\+font}} (\$style, \$remote\+\_\+file, \$context=null)
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_font_metrics_a72d2108bee0edb782dc948310c3dde23}{register\+Font}} (\$style, \$remote\+File, \$context=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_dompdf_1_1_font_metrics_a939509a4720eb22c10e8ecbf78a87339}{CACHE\+\_\+\+FILE}} = \char`\"{}dompdf\+\_\+font\+\_\+family\+\_\+cache.\+php\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_font_metrics_a964ee5ee597c515cbb4dad2f14054cb4}{\$pdf}}
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_font_metrics_a790861ce3a5090b0c482f5c651efaaa4}{\$canvas}}
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_font_metrics_a4bc961917be4d180b5bc6e8cc6cddb79}{\$font\+Lookup}} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 25 of file Font\+Metrics.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_dompdf_1_1_font_metrics_ad090ffa742c3951b08dd1779546ab14b}\label{class_dompdf_1_1_font_metrics_ad090ffa742c3951b08dd1779546ab14b}} 
+\index{FontMetrics@{FontMetrics}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!FontMetrics@{FontMetrics}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_dompdf_1_1_canvas}{Canvas}}}]{\$canvas,  }\item[{\mbox{\hyperlink{class_dompdf_1_1_options}{Options}}}]{\$options }\end{DoxyParamCaption})}
+
+Class initialization 
+
+Definition at line 68 of file Font\+Metrics.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_dompdf_1_1_font_metrics_ac9eb0d542dfcfc8eb3ee1c07e92e9daf}\label{class_dompdf_1_1_font_metrics_ac9eb0d542dfcfc8eb3ee1c07e92e9daf}} 
+\index{FontMetrics@{FontMetrics}!load\_font\_families@{load\_font\_families}}
+\index{load\_font\_families@{load\_font\_families}!FontMetrics@{FontMetrics}}
+\doxysubsubsection{\texorpdfstring{load\_font\_families()}{load\_font\_families()}}
+{\footnotesize\ttfamily load\+\_\+font\+\_\+families (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000042}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Definition at line 113 of file Font\+Metrics.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_font_metrics_a85ad8b96dd4d617e712a82adb77d4d05}\label{class_dompdf_1_1_font_metrics_a85ad8b96dd4d617e712a82adb77d4d05}} 
+\index{FontMetrics@{FontMetrics}!loadFontFamilies@{loadFontFamilies}}
+\index{loadFontFamilies@{loadFontFamilies}!FontMetrics@{FontMetrics}}
+\doxysubsubsection{\texorpdfstring{loadFontFamilies()}{loadFontFamilies()}}
+{\footnotesize\ttfamily load\+Font\+Families (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Loads the stored font family cache
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_dompdf_1_1_font_metrics_a7cb52eba473a4c5dbdc96dc029972b5f}{Font\+Metrics\+::save\+Font\+Families()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 123 of file Font\+Metrics.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_font_metrics_a22e30398dfd977ac14a044acb9ecf434}\label{class_dompdf_1_1_font_metrics_a22e30398dfd977ac14a044acb9ecf434}} 
+\index{FontMetrics@{FontMetrics}!register\_font@{register\_font}}
+\index{register\_font@{register\_font}!FontMetrics@{FontMetrics}}
+\doxysubsubsection{\texorpdfstring{register\_font()}{register\_font()}}
+{\footnotesize\ttfamily register\+\_\+font (\begin{DoxyParamCaption}\item[{}]{\$style,  }\item[{}]{\$remote\+\_\+file,  }\item[{}]{\$context = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$style} & \\
+\hline
+string & {\em \$remote\+\_\+file} & \\
+\hline
+resource & {\em \$context} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000043}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Definition at line 160 of file Font\+Metrics.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_font_metrics_a72d2108bee0edb782dc948310c3dde23}\label{class_dompdf_1_1_font_metrics_a72d2108bee0edb782dc948310c3dde23}} 
+\index{FontMetrics@{FontMetrics}!registerFont@{registerFont}}
+\index{registerFont@{registerFont}!FontMetrics@{FontMetrics}}
+\doxysubsubsection{\texorpdfstring{registerFont()}{registerFont()}}
+{\footnotesize\ttfamily register\+Font (\begin{DoxyParamCaption}\item[{}]{\$style,  }\item[{}]{\$remote\+File,  }\item[{}]{\$context = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$style} & \\
+\hline
+string & {\em \$remote\+File} & \\
+\hline
+resource & {\em \$context} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 171 of file Font\+Metrics.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_font_metrics_a1da8dc447f6b50d06f38ba6d007ae605}\label{class_dompdf_1_1_font_metrics_a1da8dc447f6b50d06f38ba6d007ae605}} 
+\index{FontMetrics@{FontMetrics}!save\_font\_families@{save\_font\_families}}
+\index{save\_font\_families@{save\_font\_families}!FontMetrics@{FontMetrics}}
+\doxysubsubsection{\texorpdfstring{save\_font\_families()}{save\_font\_families()}}
+{\footnotesize\ttfamily save\+\_\+font\+\_\+families (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000041}{Deprecated}}]\end{DoxyRefDesc}
+
+
+Definition at line 78 of file Font\+Metrics.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_font_metrics_a7cb52eba473a4c5dbdc96dc029972b5f}\label{class_dompdf_1_1_font_metrics_a7cb52eba473a4c5dbdc96dc029972b5f}} 
+\index{FontMetrics@{FontMetrics}!saveFontFamilies@{saveFontFamilies}}
+\index{saveFontFamilies@{saveFontFamilies}!FontMetrics@{FontMetrics}}
+\doxysubsubsection{\texorpdfstring{saveFontFamilies()}{saveFontFamilies()}}
+{\footnotesize\ttfamily save\+Font\+Families (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Saves the stored font family cache
+
+The name and location of the cache file are determined by \{\mbox{\hyperlink{class_dompdf_1_1_font_metrics_a939509a4720eb22c10e8ecbf78a87339}{\}. This file should be writable by the webserver process.  Font\+Metrics\+::load\+Font\+Families() }}
+
+Definition at line 92 of file Font\+Metrics.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_dompdf_1_1_font_metrics_a790861ce3a5090b0c482f5c651efaaa4}\label{class_dompdf_1_1_font_metrics_a790861ce3a5090b0c482f5c651efaaa4}} 
+\index{FontMetrics@{FontMetrics}!\$canvas@{\$canvas}}
+\index{\$canvas@{\$canvas}!FontMetrics@{FontMetrics}}
+\doxysubsubsection{\texorpdfstring{\$canvas}{$canvas}}
+{\footnotesize\ttfamily \$canvas\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 49 of file Font\+Metrics.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_font_metrics_a4bc961917be4d180b5bc6e8cc6cddb79}\label{class_dompdf_1_1_font_metrics_a4bc961917be4d180b5bc6e8cc6cddb79}} 
+\index{FontMetrics@{FontMetrics}!\$fontLookup@{\$fontLookup}}
+\index{\$fontLookup@{\$fontLookup}!FontMetrics@{FontMetrics}}
+\doxysubsubsection{\texorpdfstring{\$fontLookup}{$fontLookup}}
+{\footnotesize\ttfamily \$font\+Lookup = \mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 58 of file Font\+Metrics.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_font_metrics_a964ee5ee597c515cbb4dad2f14054cb4}\label{class_dompdf_1_1_font_metrics_a964ee5ee597c515cbb4dad2f14054cb4}} 
+\index{FontMetrics@{FontMetrics}!\$pdf@{\$pdf}}
+\index{\$pdf@{\$pdf}!FontMetrics@{FontMetrics}}
+\doxysubsubsection{\texorpdfstring{\$pdf}{$pdf}}
+{\footnotesize\ttfamily \$pdf\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 42 of file Font\+Metrics.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_font_metrics_a939509a4720eb22c10e8ecbf78a87339}\label{class_dompdf_1_1_font_metrics_a939509a4720eb22c10e8ecbf78a87339}} 
+\index{FontMetrics@{FontMetrics}!CACHE\_FILE@{CACHE\_FILE}}
+\index{CACHE\_FILE@{CACHE\_FILE}!FontMetrics@{FontMetrics}}
+\doxysubsubsection{\texorpdfstring{CACHE\_FILE}{CACHE\_FILE}}
+{\footnotesize\ttfamily const CACHE\+\_\+\+FILE = \char`\"{}dompdf\+\_\+font\+\_\+family\+\_\+cache.\+php\char`\"{}}
+
+Name of the font cache file
+
+This file must be writable by the webserver process only to update it with \mbox{\hyperlink{class_dompdf_1_1_font_metrics_a1da8dc447f6b50d06f38ba6d007ae605}{save\+\_\+font\+\_\+families()}} after adding the .afm file references of a new font family with \mbox{\hyperlink{class_dompdf_1_1_font_metrics_a7cb52eba473a4c5dbdc96dc029972b5f}{Font\+Metrics\+::save\+Font\+Families()}}. This is typically done only from command line with load\+\_\+font.\+php on converting ttf fonts to ufm with php-\/font-\/lib. 
+
+Definition at line 36 of file Font\+Metrics.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/dompdf/src/\mbox{\hyperlink{_font_metrics_8php}{Font\+Metrics.\+php}}\end{DoxyCompactItemize}

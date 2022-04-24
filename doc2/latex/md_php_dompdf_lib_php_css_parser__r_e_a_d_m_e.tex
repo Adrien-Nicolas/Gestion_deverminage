@@ -1,0 +1,617 @@
+\href{https://travis-ci.org/sabberworm/PHP-CSS-Parser}{\texttt{ }} \href{http://hhvm.h4cc.de/package/sabberworm/php-css-parser}{\texttt{ }}
+
+A Parser for CSS Files written in PHP. Allows extraction of CSS files into a data structure, manipulation of said structure and output as (optimized) CSS.\hypertarget{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md49}{}\doxysection{Usage}\label{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md49}
+\hypertarget{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md50}{}\doxysubsection{Installation using composer}\label{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md50}
+Add php-\/css-\/parser to your composer.\+json
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    "{}require"{}: \{}
+\DoxyCodeLine{        "{}sabberworm/php-\/css-\/parser"{}: "{}*"{}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md51}{}\doxysubsection{Extraction}\label{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md51}
+To use the CSS Parser, create a new instance. The constructor takes the following form\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{new} \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parser}{Sabberworm\(\backslash\)CSS\(\backslash\)Parser}}(\$sText);}
+
+\end{DoxyCode}
+
+
+To read a file, for example, you’d do the following\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$oCssParser = \textcolor{keyword}{new} \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parser}{Sabberworm\(\backslash\)CSS\(\backslash\)Parser}}(file\_get\_contents(\textcolor{stringliteral}{'somefile.css'}));}
+\DoxyCodeLine{\$oCssDocument = \$oCssParser-\/>parse();}
+
+\end{DoxyCode}
+
+
+The resulting CSS document structure can be manipulated prior to being output.\hypertarget{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md52}{}\doxysubsection{Options}\label{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md52}
+\hypertarget{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md53}{}\doxysubsubsection{Charset}\label{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md53}
+The charset option is used only if no @charset declaration is found in the CSS file. UTF-\/8 is the default, so you won’t have to create a settings object at all if you don’t intend to change that.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$oSettings = \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_settings_a239b1c70258014a86569483c2d009de6}{Sabberworm\(\backslash\)CSS\(\backslash\)Settings::create}}()-\/>withDefaultCharset(\textcolor{stringliteral}{'windows-\/1252'});}
+\DoxyCodeLine{\textcolor{keyword}{new} \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parser}{Sabberworm\(\backslash\)CSS\(\backslash\)Parser}}(\$sText, \$oSettings);}
+
+\end{DoxyCode}
+\hypertarget{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md54}{}\doxysubsubsection{Strict parsing}\label{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md54}
+To have the parser choke on invalid rules, supply a thusly configured Sabberworm\textbackslash{}\+CSS\textbackslash{}\+Settings object\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$oCssParser = \textcolor{keyword}{new} \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parser}{Sabberworm\(\backslash\)CSS\(\backslash\)Parser}}(file\_get\_contents(\textcolor{stringliteral}{'somefile.css'}), Sabberworm\(\backslash\)CSS\(\backslash\)Settings::create()-\/>beStrict());}
+
+\end{DoxyCode}
+\hypertarget{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md55}{}\doxysubsubsection{Disable multibyte functions}\label{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md55}
+To achieve faster parsing, you can choose to have PHP-\/\+CSS-\/\+Parser use regular string functions instead of {\ttfamily mb\+\_\+$\ast$} functions. This should work fine in most cases, even for UTF-\/8 files, as all the multibyte characters are in string literals. Still it’s not recommended to use this with input you have no control over as it’s not thoroughly covered by test cases.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$oSettings = \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_settings_a239b1c70258014a86569483c2d009de6}{Sabberworm\(\backslash\)CSS\(\backslash\)Settings::create}}()-\/>withMultibyteSupport(\textcolor{keyword}{false});}
+\DoxyCodeLine{\textcolor{keyword}{new} \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parser}{Sabberworm\(\backslash\)CSS\(\backslash\)Parser}}(\$sText, \$oSettings);}
+
+\end{DoxyCode}
+\hypertarget{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md56}{}\doxysubsection{Manipulation}\label{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md56}
+The resulting data structure consists mainly of five basic types\+: {\ttfamily CSSList}, {\ttfamily Rule\+Set}, {\ttfamily Rule}, {\ttfamily Selector} and {\ttfamily Value}. There are two additional types used\+: {\ttfamily Import} and {\ttfamily Charset} which you won’t use often.\hypertarget{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md57}{}\doxysubsubsection{CSSList}\label{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md57}
+{\ttfamily CSSList} represents a generic CSS container, most likely containing declaration blocks (rule sets with a selector) but it may also contain at-\/rules, charset declarations, etc. {\ttfamily CSSList} has the following concrete subtypes\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Document} – representing the root of a CSS file.
+\item {\ttfamily Media\+Query} – represents a subsection of a CSSList that only applies to a output device matching the contained media query.
+\end{DoxyItemize}
+
+To access the items stored in a {\ttfamily CSSList} – like the document you got back when calling {\ttfamily \$o\+Css\+Parser-\/$>$parse()} –, use {\ttfamily get\+Contents()}, then iterate over that collection and use instanceof to check whether you’re dealing with another {\ttfamily CSSList}, a {\ttfamily Rule\+Set}, a {\ttfamily Import} or a {\ttfamily Charset}.
+
+To append a new item (selector, media query, etc.) to an existing {\ttfamily CSSList}, construct it using the constructor for this class and use the {\ttfamily append(\$o\+Item)} method.\hypertarget{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md58}{}\doxysubsubsection{Rule\+Set}\label{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md58}
+{\ttfamily Rule\+Set} is a container for individual rules. The most common form of a rule set is one constrained by a selector. The following concrete subtypes exist\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily At\+Rule\+Set} – for generic at-\/rules which do not match the ones specifically mentioned like @import, @charset or @media. A common example for this is @font-\/face.
+\item {\ttfamily Declaration\+Block} – a Rule\+Set constrained by a {\ttfamily Selector}; contains an array of selector objects (comma-\/separated in the CSS) as well as the rules to be applied to the matching elements.
+\end{DoxyItemize}
+
+Note\+: A {\ttfamily CSSList} can contain other {\ttfamily CSSList}s (and {\ttfamily Import}s as well as a {\ttfamily Charset}) while a {\ttfamily Rule\+Set} can only contain {\ttfamily Rule}s.
+
+If you want to manipulate a {\ttfamily Rule\+Set}, use the methods {\ttfamily add\+Rule(Rule \$o\+Rule)}, {\ttfamily get\+Rules()} and {\ttfamily remove\+Rule(\$m\+Rule)} (which accepts either a Rule instance or a rule name; optionally suffixed by a dash to remove all related rules).\hypertarget{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md59}{}\doxysubsubsection{Rule}\label{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md59}
+{\ttfamily Rule}s just have a key (the rule) and a value. These values are all instances of a {\ttfamily Value}.\hypertarget{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md60}{}\doxysubsubsection{Value}\label{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md60}
+{\ttfamily Value} is an abstract class that only defines the {\ttfamily render} method. The concrete subclasses for atomic value types are\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Size} – consists of a numeric {\ttfamily size} value and a unit.
+\item {\ttfamily Color} – colors can be input in the form \#rrggbb, \#rgb or schema(val1, val2, …) but are always stored as an array of (\textquotesingle{}s\textquotesingle{} =$>$ val1, \textquotesingle{}c\textquotesingle{} =$>$ val2, \textquotesingle{}h\textquotesingle{} =$>$ val3, …) and output in the second form.
+\item {\ttfamily CSSString} – this is just a wrapper for quoted strings to distinguish them from keywords; always output with double quotes.
+\item {\ttfamily URL} – URLs in CSS; always output in URL(\char`\"{}\char`\"{}) notation.
+\end{DoxyItemize}
+
+There is another abstract subclass of {\ttfamily Value}, {\ttfamily Value\+List}. A {\ttfamily Value\+List} represents a lists of {\ttfamily Value}s, separated by some separation character (mostly {\ttfamily ,}, whitespace, or {\ttfamily /}). There are two types of {\ttfamily Value\+List}s\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Rule\+Value\+List} – The default type, used to represent all multi-\/valued rules like {\ttfamily font\+: bold 12px/3 Helvetica, Verdana, sans-\/serif;} (where the value would be a whitespace-\/separated list of the primitive value {\ttfamily bold}, a slash-\/separated list and a comma-\/separated list).
+\item {\ttfamily CSSFunction} – A special kind of value that also contains a function name and where the values are the function’s arguments. Also handles equals-\/sign-\/separated argument lists like {\ttfamily filter\+: alpha(opacity=90);}.
+\end{DoxyItemize}\hypertarget{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md61}{}\doxysubsubsection{Convenience methods}\label{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md61}
+There are a few convenience methods on Document to ease finding, manipulating and deleting rules\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily get\+All\+Declaration\+Blocks()} – does what it says; no matter how deeply nested your selectors are. Aliased as {\ttfamily get\+All\+Selectors()}.
+\item {\ttfamily get\+All\+Rule\+Sets()} – does what it says; no matter how deeply nested your rule sets are.
+\item {\ttfamily get\+All\+Values()} – finds all {\ttfamily Value} objects inside {\ttfamily Rule}s.
+\end{DoxyItemize}\hypertarget{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md62}{}\doxysection{To-\/\+Do}\label{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md62}
+
+\begin{DoxyItemize}
+\item More convenience methods \mbox{[}like {\ttfamily selectors\+With\+Element(\$s\+Id/\+Class/\+Tag\+Name)}, {\ttfamily attributes\+Of\+Type(\$s\+Type)}, {\ttfamily remove\+Attributes\+Of\+Type(\$s\+Type)}\mbox{]}
+\item Real multibyte support. Currently only multibyte charsets whose first 255 code points take up only one byte and are identical with ASCII are supported (yes, UTF-\/8 fits this description).
+\item Named color support (using {\ttfamily Color} instead of an anonymous string literal)
+\end{DoxyItemize}\hypertarget{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md63}{}\doxysection{Use cases}\label{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md63}
+\hypertarget{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md64}{}\doxysubsection{Use $<$tt$>$\+Parser$<$/tt$>$ to prepend an id to all selectors}\label{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md64}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$sMyId = \textcolor{stringliteral}{"{}\#my\_id"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{quickdump_8php_aeff203ad4825b3aee07cbf632a78662f}{\$oParser}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parser}{Sabberworm\(\backslash\)CSS\(\backslash\)Parser}}(\$sText);}
+\DoxyCodeLine{\$oCss = \mbox{\hyperlink{quickdump_8php_aeff203ad4825b3aee07cbf632a78662f}{\$oParser}}-\/>parse();}
+\DoxyCodeLine{\textcolor{keywordflow}{foreach}(\$oCss-\/>getAllDeclarationBlocks() as \$oBlock) \{}
+\DoxyCodeLine{    \textcolor{keywordflow}{foreach}(\$oBlock-\/>getSelectors() as \$oSelector) \{}
+\DoxyCodeLine{        \textcolor{comment}{//Loop over all selector parts (the comma-\/separated strings in a selector) and prepend the id}}
+\DoxyCodeLine{        \$oSelector-\/>setSelector(\$sMyId.\textcolor{charliteral}{' '}.\$oSelector-\/>getSelector());}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md65}{}\doxysubsection{Shrink all absolute sizes to half}\label{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md65}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{quickdump_8php_aeff203ad4825b3aee07cbf632a78662f}{\$oParser}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parser}{Sabberworm\(\backslash\)CSS\(\backslash\)Parser}}(\$sText);}
+\DoxyCodeLine{\$oCss = \mbox{\hyperlink{quickdump_8php_aeff203ad4825b3aee07cbf632a78662f}{\$oParser}}-\/>parse();}
+\DoxyCodeLine{\textcolor{keywordflow}{foreach}(\$oCss-\/>getAllValues() as \$mValue) \{}
+\DoxyCodeLine{    \textcolor{keywordflow}{if}(\$mValue instanceof CSSSize \&\& !\$mValue-\/>isRelative()) \{}
+\DoxyCodeLine{        \$mValue-\/>setSize(\$mValue-\/>getSize()/2);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md66}{}\doxysubsection{Remove unwanted rules}\label{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md66}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{quickdump_8php_aeff203ad4825b3aee07cbf632a78662f}{\$oParser}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parser}{Sabberworm\(\backslash\)CSS\(\backslash\)Parser}}(\$sText);}
+\DoxyCodeLine{\$oCss = \mbox{\hyperlink{quickdump_8php_aeff203ad4825b3aee07cbf632a78662f}{\$oParser}}-\/>parse();}
+\DoxyCodeLine{\textcolor{keywordflow}{foreach}(\$oCss-\/>getAllRuleSets() as \$oRuleSet) \{}
+\DoxyCodeLine{    \$oRuleSet-\/>removeRule(\textcolor{stringliteral}{'font-\/'}); \textcolor{comment}{//Note that the added dash will make this remove all rules starting with font-\/ (like font-\/size, font-\/weight, etc.) as well as a potential font-\/rule}}
+\DoxyCodeLine{    \$oRuleSet-\/>removeRule(\textcolor{stringliteral}{'cursor'});}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md67}{}\doxysubsection{Output}\label{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md67}
+To output the entire CSS document into a variable, just use {\ttfamily -\/$>$render()}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$oCssParser = \textcolor{keyword}{new} \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parser}{Sabberworm\(\backslash\)CSS\(\backslash\)Parser}}(file\_get\_contents(\textcolor{stringliteral}{'somefile.css'}));}
+\DoxyCodeLine{\$oCssDocument = \$oCssParser-\/>parse();}
+\DoxyCodeLine{print \$oCssDocument-\/>render();}
+
+\end{DoxyCode}
+
+
+If you want to format the output, pass an instance of type {\ttfamily Sabberworm\textbackslash{}CSS\textbackslash{}Output\+Format}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$oFormat = \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_output_format_a239b1c70258014a86569483c2d009de6}{Sabberworm\(\backslash\)CSS\(\backslash\)OutputFormat::create}}()-\/>indentWithSpaces(4)-\/>setSpaceBetweenRules(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{print \$oCssDocument-\/>render(\$oFormat);}
+
+\end{DoxyCode}
+
+
+Or use one of the predefined formats\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{print \$oCssDocument-\/>render(Sabberworm\(\backslash\)CSS\(\backslash\)OutputFormat::createPretty());}
+\DoxyCodeLine{print \$oCssDocument-\/>render(Sabberworm\(\backslash\)CSS\(\backslash\)OutputFormat::createCompact());}
+
+\end{DoxyCode}
+
+
+To see what you can do with output formatting, look at the tests in {\ttfamily \mbox{\hyperlink{_output_format_test_8php}{tests/\+Sabberworm/\+CSS/\+Output\+Format\+Test.\+php}}}.\hypertarget{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md68}{}\doxysection{Examples}\label{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md68}
+\hypertarget{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md69}{}\doxysubsection{Example 1 (\+At-\/\+Rules)}\label{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md69}
+\hypertarget{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md70}{}\doxysubsubsection{Input}\label{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md70}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{@charset "{}utf-\/8"{};}
+\DoxyCodeLine{}
+\DoxyCodeLine{@font-\/face \{}
+\DoxyCodeLine{  font-\/family: "{}CrassRoots"{};}
+\DoxyCodeLine{  src: url("{}../media/cr.ttf"{})}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{html, body \{}
+\DoxyCodeLine{    font-\/size: 1.6em}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{@keyframes mymove \{}
+\DoxyCodeLine{    from \{ top: 0px; \}}
+\DoxyCodeLine{    to \{ top: 200px; \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md71}{}\doxysubsubsection{Structure ($<$tt$>$var\+\_\+dump()$<$/tt$>$)}\label{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md71}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{class }\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_document}{Sabberworm\(\backslash\)CSS\(\backslash\)CSSList\(\backslash\)Document}}\#4 (2) \{}
+\DoxyCodeLine{  \textcolor{keyword}{protected} \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a52a5abaca8a00a902bc2c6f548d59024}{\$aContents}} =>}
+\DoxyCodeLine{  array(4) \{}
+\DoxyCodeLine{    [0] =>}
+\DoxyCodeLine{    \textcolor{keyword}{class }\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_property_1_1_charset}{Sabberworm\(\backslash\)CSS\(\backslash\)Property\(\backslash\)Charset}}\#6 (2) \{}
+\DoxyCodeLine{      \textcolor{keyword}{private} \$sCharset =>}
+\DoxyCodeLine{      \textcolor{keyword}{class }\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_value_1_1_c_s_s_string}{Sabberworm\(\backslash\)CSS\(\backslash\)Value\(\backslash\)CSSString}}\#5 (2) \{}
+\DoxyCodeLine{        \textcolor{keyword}{private} \$sString =>}
+\DoxyCodeLine{        string(5) \textcolor{stringliteral}{"{}utf-\/8"{}}}
+\DoxyCodeLine{        \textcolor{keyword}{protected} \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{        int(1)}
+\DoxyCodeLine{      \}}
+\DoxyCodeLine{      \textcolor{keyword}{protected} \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{      int(1)}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    [1] =>}
+\DoxyCodeLine{    \textcolor{keyword}{class }\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_rule_set_1_1_at_rule_set}{Sabberworm\(\backslash\)CSS\(\backslash\)RuleSet\(\backslash\)AtRuleSet}}\#7 (4) \{}
+\DoxyCodeLine{      \textcolor{keyword}{private} \$sType =>}
+\DoxyCodeLine{      string(9) \textcolor{stringliteral}{"{}font-\/face"{}}}
+\DoxyCodeLine{      \textcolor{keyword}{private} \$sArgs =>}
+\DoxyCodeLine{      string(0) \textcolor{stringliteral}{"{}"{}}}
+\DoxyCodeLine{      \textcolor{keyword}{private} \$aRules =>}
+\DoxyCodeLine{      array(2) \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{'font-\/family'} =>}
+\DoxyCodeLine{        array(1) \{}
+\DoxyCodeLine{          [0] =>}
+\DoxyCodeLine{          \textcolor{keyword}{class }\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_rule_1_1_rule}{Sabberworm\(\backslash\)CSS\(\backslash\)Rule\(\backslash\)Rule}}\#8 (4) \{}
+\DoxyCodeLine{            \textcolor{keyword}{private} \$sRule =>}
+\DoxyCodeLine{            string(11) \textcolor{stringliteral}{"{}font-\/family"{}}}
+\DoxyCodeLine{            \textcolor{keyword}{private} \$mValue =>}
+\DoxyCodeLine{            \textcolor{keyword}{class }\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_value_1_1_c_s_s_string}{Sabberworm\(\backslash\)CSS\(\backslash\)Value\(\backslash\)CSSString}}\#9 (2) \{}
+\DoxyCodeLine{              \textcolor{keyword}{private} \$sString =>}
+\DoxyCodeLine{              string(10) \textcolor{stringliteral}{"{}CrassRoots"{}}}
+\DoxyCodeLine{              \textcolor{keyword}{protected} \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{              int(4)}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{            \textcolor{keyword}{private} \$bIsImportant =>}
+\DoxyCodeLine{            bool(\textcolor{keyword}{false})}
+\DoxyCodeLine{            protected \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{            \textcolor{keywordtype}{int}(4)}
+\DoxyCodeLine{          \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{        'src' =>}
+\DoxyCodeLine{        array(1) \{}
+\DoxyCodeLine{          [0] =>}
+\DoxyCodeLine{          \textcolor{keyword}{class }\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_rule_1_1_rule}{Sabberworm\(\backslash\)CSS\(\backslash\)Rule\(\backslash\)Rule}}\#10 (4) \{}
+\DoxyCodeLine{            \textcolor{keyword}{private} \$sRule =>}
+\DoxyCodeLine{            string(3) \textcolor{stringliteral}{"{}src"{}}}
+\DoxyCodeLine{            \textcolor{keyword}{private} \$mValue =>}
+\DoxyCodeLine{            \textcolor{keyword}{class }\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_value_1_1_u_r_l}{Sabberworm\(\backslash\)CSS\(\backslash\)Value\(\backslash\)URL}}\#11 (2) \{}
+\DoxyCodeLine{              \textcolor{keyword}{private} \$oURL =>}
+\DoxyCodeLine{              \textcolor{keyword}{class }\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_value_1_1_c_s_s_string}{Sabberworm\(\backslash\)CSS\(\backslash\)Value\(\backslash\)CSSString}}\#12 (2) \{}
+\DoxyCodeLine{                \textcolor{keyword}{private} \$sString =>}
+\DoxyCodeLine{                string(15) \textcolor{stringliteral}{"{}../media/cr.ttf"{}}}
+\DoxyCodeLine{                \textcolor{keyword}{protected} \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{                int(5)}
+\DoxyCodeLine{              \}}
+\DoxyCodeLine{              \textcolor{keyword}{protected} \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{              int(5)}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{            \textcolor{keyword}{private} \$bIsImportant =>}
+\DoxyCodeLine{            bool(\textcolor{keyword}{false})}
+\DoxyCodeLine{            protected \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{            \textcolor{keywordtype}{int}(5)}
+\DoxyCodeLine{          \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{      \}}
+\DoxyCodeLine{      protected \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{      \textcolor{keywordtype}{int}(3)}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    [2] =>}
+\DoxyCodeLine{    class Sabberworm\(\backslash\)CSS\(\backslash\)RuleSet\(\backslash\)DeclarationBlock\textcolor{preprocessor}{\#13 (3) \{}}
+\DoxyCodeLine{      \textcolor{keyword}{private} \$aSelectors =>}
+\DoxyCodeLine{      array(2) \{}
+\DoxyCodeLine{        [0] =>}
+\DoxyCodeLine{        \textcolor{keyword}{class }\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_property_1_1_selector}{Sabberworm\(\backslash\)CSS\(\backslash\)Property\(\backslash\)Selector}}\#14 (2) \{}
+\DoxyCodeLine{          \textcolor{keyword}{private} \$sSelector =>}
+\DoxyCodeLine{          string(4) \textcolor{stringliteral}{"{}html"{}}}
+\DoxyCodeLine{          \textcolor{keyword}{private} \$iSpecificity =>}
+\DoxyCodeLine{          NULL}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{        [1] =>}
+\DoxyCodeLine{        \textcolor{keyword}{class }\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_property_1_1_selector}{Sabberworm\(\backslash\)CSS\(\backslash\)Property\(\backslash\)Selector}}\#15 (2) \{}
+\DoxyCodeLine{          \textcolor{keyword}{private} \$sSelector =>}
+\DoxyCodeLine{          string(4) \textcolor{stringliteral}{"{}body"{}}}
+\DoxyCodeLine{          \textcolor{keyword}{private} \$iSpecificity =>}
+\DoxyCodeLine{          NULL}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{      \}}
+\DoxyCodeLine{      \textcolor{keyword}{private} \$aRules =>}
+\DoxyCodeLine{      array(1) \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{'font-\/size'} =>}
+\DoxyCodeLine{        array(1) \{}
+\DoxyCodeLine{          [0] =>}
+\DoxyCodeLine{          \textcolor{keyword}{class }\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_rule_1_1_rule}{Sabberworm\(\backslash\)CSS\(\backslash\)Rule\(\backslash\)Rule}}\#16 (4) \{}
+\DoxyCodeLine{            \textcolor{keyword}{private} \$sRule =>}
+\DoxyCodeLine{            string(9) \textcolor{stringliteral}{"{}font-\/size"{}}}
+\DoxyCodeLine{            \textcolor{keyword}{private} \$mValue =>}
+\DoxyCodeLine{            \textcolor{keyword}{class }\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_value_1_1_size}{Sabberworm\(\backslash\)CSS\(\backslash\)Value\(\backslash\)Size}}\#17 (4) \{}
+\DoxyCodeLine{              \textcolor{keyword}{private} \$fSize =>}
+\DoxyCodeLine{              double(1.6)}
+\DoxyCodeLine{              private \$sUnit =>}
+\DoxyCodeLine{              \textcolor{keywordtype}{string}(2) "{}em"{}}
+\DoxyCodeLine{              private \$bIsColorComponent =>}
+\DoxyCodeLine{              \textcolor{keywordtype}{bool}(false)}
+\DoxyCodeLine{              protected \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{              \textcolor{keywordtype}{int}(9)}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{            private \$bIsImportant =>}
+\DoxyCodeLine{            \textcolor{keywordtype}{bool}(false)}
+\DoxyCodeLine{            protected \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{            \textcolor{keywordtype}{int}(9)}
+\DoxyCodeLine{          \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{      \}}
+\DoxyCodeLine{      protected \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{      \textcolor{keywordtype}{int}(8)}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    [3] =>}
+\DoxyCodeLine{    class Sabberworm\(\backslash\)CSS\(\backslash\)CSSList\(\backslash\)KeyFrame\textcolor{preprocessor}{\#18 (4) \{}}
+\DoxyCodeLine{      \textcolor{keyword}{private} \$vendorKeyFrame =>}
+\DoxyCodeLine{      string(9) \textcolor{stringliteral}{"{}keyframes"{}}}
+\DoxyCodeLine{      \textcolor{keyword}{private} \$animationName =>}
+\DoxyCodeLine{      string(6) \textcolor{stringliteral}{"{}mymove"{}}}
+\DoxyCodeLine{      \textcolor{keyword}{protected} \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a52a5abaca8a00a902bc2c6f548d59024}{\$aContents}} =>}
+\DoxyCodeLine{      array(2) \{}
+\DoxyCodeLine{        [0] =>}
+\DoxyCodeLine{        \textcolor{keyword}{class }\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_rule_set_1_1_declaration_block}{Sabberworm\(\backslash\)CSS\(\backslash\)RuleSet\(\backslash\)DeclarationBlock}}\#19 (3) \{}
+\DoxyCodeLine{          \textcolor{keyword}{private} \$aSelectors =>}
+\DoxyCodeLine{          array(1) \{}
+\DoxyCodeLine{            [0] =>}
+\DoxyCodeLine{            \textcolor{keyword}{class }\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_property_1_1_selector}{Sabberworm\(\backslash\)CSS\(\backslash\)Property\(\backslash\)Selector}}\#20 (2) \{}
+\DoxyCodeLine{              \textcolor{keyword}{private} \$sSelector =>}
+\DoxyCodeLine{              string(4) \textcolor{stringliteral}{"{}from"{}}}
+\DoxyCodeLine{              \textcolor{keyword}{private} \$iSpecificity =>}
+\DoxyCodeLine{              NULL}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{          \}}
+\DoxyCodeLine{          \textcolor{keyword}{private} \$aRules =>}
+\DoxyCodeLine{          array(1) \{}
+\DoxyCodeLine{            \textcolor{stringliteral}{'top'} =>}
+\DoxyCodeLine{            array(1) \{}
+\DoxyCodeLine{              [0] =>}
+\DoxyCodeLine{              \textcolor{keyword}{class }\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_rule_1_1_rule}{Sabberworm\(\backslash\)CSS\(\backslash\)Rule\(\backslash\)Rule}}\#21 (4) \{}
+\DoxyCodeLine{                \textcolor{keyword}{private} \$sRule =>}
+\DoxyCodeLine{                string(3) \textcolor{stringliteral}{"{}top"{}}}
+\DoxyCodeLine{                \textcolor{keyword}{private} \$mValue =>}
+\DoxyCodeLine{                \textcolor{keyword}{class }\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_value_1_1_size}{Sabberworm\(\backslash\)CSS\(\backslash\)Value\(\backslash\)Size}}\#22 (4) \{}
+\DoxyCodeLine{                  \textcolor{keyword}{private} \$fSize =>}
+\DoxyCodeLine{                  double(0)}
+\DoxyCodeLine{                  private \$sUnit =>}
+\DoxyCodeLine{                  \textcolor{keywordtype}{string}(2) "{}px"{}}
+\DoxyCodeLine{                  private \$bIsColorComponent =>}
+\DoxyCodeLine{                  \textcolor{keywordtype}{bool}(false)}
+\DoxyCodeLine{                  protected \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{                  \textcolor{keywordtype}{int}(13)}
+\DoxyCodeLine{                \}}
+\DoxyCodeLine{                private \$bIsImportant =>}
+\DoxyCodeLine{                \textcolor{keywordtype}{bool}(false)}
+\DoxyCodeLine{                protected \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{                \textcolor{keywordtype}{int}(13)}
+\DoxyCodeLine{              \}}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{          \}}
+\DoxyCodeLine{          protected \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{          \textcolor{keywordtype}{int}(13)}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{        [1] =>}
+\DoxyCodeLine{        class Sabberworm\(\backslash\)CSS\(\backslash\)RuleSet\(\backslash\)DeclarationBlock\textcolor{preprocessor}{\#23 (3) \{}}
+\DoxyCodeLine{          \textcolor{keyword}{private} \$aSelectors =>}
+\DoxyCodeLine{          array(1) \{}
+\DoxyCodeLine{            [0] =>}
+\DoxyCodeLine{            \textcolor{keyword}{class }\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_property_1_1_selector}{Sabberworm\(\backslash\)CSS\(\backslash\)Property\(\backslash\)Selector}}\#24 (2) \{}
+\DoxyCodeLine{              \textcolor{keyword}{private} \$sSelector =>}
+\DoxyCodeLine{              string(2) \textcolor{stringliteral}{"{}to"{}}}
+\DoxyCodeLine{              \textcolor{keyword}{private} \$iSpecificity =>}
+\DoxyCodeLine{              NULL}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{          \}}
+\DoxyCodeLine{          \textcolor{keyword}{private} \$aRules =>}
+\DoxyCodeLine{          array(1) \{}
+\DoxyCodeLine{            \textcolor{stringliteral}{'top'} =>}
+\DoxyCodeLine{            array(1) \{}
+\DoxyCodeLine{              [0] =>}
+\DoxyCodeLine{              \textcolor{keyword}{class }\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_rule_1_1_rule}{Sabberworm\(\backslash\)CSS\(\backslash\)Rule\(\backslash\)Rule}}\#25 (4) \{}
+\DoxyCodeLine{                \textcolor{keyword}{private} \$sRule =>}
+\DoxyCodeLine{                string(3) \textcolor{stringliteral}{"{}top"{}}}
+\DoxyCodeLine{                \textcolor{keyword}{private} \$mValue =>}
+\DoxyCodeLine{                \textcolor{keyword}{class }\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_value_1_1_size}{Sabberworm\(\backslash\)CSS\(\backslash\)Value\(\backslash\)Size}}\#26 (4) \{}
+\DoxyCodeLine{                  \textcolor{keyword}{private} \$fSize =>}
+\DoxyCodeLine{                  double(200)}
+\DoxyCodeLine{                  private \$sUnit =>}
+\DoxyCodeLine{                  \textcolor{keywordtype}{string}(2) "{}px"{}}
+\DoxyCodeLine{                  private \$bIsColorComponent =>}
+\DoxyCodeLine{                  \textcolor{keywordtype}{bool}(false)}
+\DoxyCodeLine{                  protected \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{                  \textcolor{keywordtype}{int}(14)}
+\DoxyCodeLine{                \}}
+\DoxyCodeLine{                private \$bIsImportant =>}
+\DoxyCodeLine{                \textcolor{keywordtype}{bool}(false)}
+\DoxyCodeLine{                protected \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{                \textcolor{keywordtype}{int}(14)}
+\DoxyCodeLine{              \}}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{          \}}
+\DoxyCodeLine{          protected \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{          \textcolor{keywordtype}{int}(14)}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{      \}}
+\DoxyCodeLine{      protected \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{      \textcolor{keywordtype}{int}(12)}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{  protected \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{  \textcolor{keywordtype}{int}(1)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md72}{}\doxysubsubsection{Output ($<$tt$>$render()$<$/tt$>$)}\label{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md72}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{@charset "{}utf-\/8"{};}
+\DoxyCodeLine{@font-\/face \{font-\/family: "{}CrassRoots"{};src: url("{}../media/cr.ttf"{});\}}
+\DoxyCodeLine{html, body \{font-\/size: 1.6em;\}}
+\DoxyCodeLine{@keyframes mymove \{from \{top: 0px;\}}
+\DoxyCodeLine{    to \{top: 200px;\}\}}
+
+\end{DoxyCode}
+\hypertarget{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md73}{}\doxysubsection{Example 2 (\+Values)}\label{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md73}
+\hypertarget{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md74}{}\doxysubsubsection{Input}\label{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md74}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#header \{}
+\DoxyCodeLine{    margin: 10px 2em 1cm 2\%;}
+\DoxyCodeLine{    font-\/family: Verdana, Helvetica, "{}Gill Sans"{}, sans-\/serif;}
+\DoxyCodeLine{    color: red !important;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md75}{}\doxysubsubsection{Structure ($<$tt$>$var\+\_\+dump()$<$/tt$>$)}\label{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md75}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{class }\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_document}{Sabberworm\(\backslash\)CSS\(\backslash\)CSSList\(\backslash\)Document}}\#4 (2) \{}
+\DoxyCodeLine{  \textcolor{keyword}{protected} \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a52a5abaca8a00a902bc2c6f548d59024}{\$aContents}} =>}
+\DoxyCodeLine{  array(1) \{}
+\DoxyCodeLine{    [0] =>}
+\DoxyCodeLine{    \textcolor{keyword}{class }\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_rule_set_1_1_declaration_block}{Sabberworm\(\backslash\)CSS\(\backslash\)RuleSet\(\backslash\)DeclarationBlock}}\#5 (3) \{}
+\DoxyCodeLine{      \textcolor{keyword}{private} \$aSelectors =>}
+\DoxyCodeLine{      array(1) \{}
+\DoxyCodeLine{        [0] =>}
+\DoxyCodeLine{        \textcolor{keyword}{class }\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_property_1_1_selector}{Sabberworm\(\backslash\)CSS\(\backslash\)Property\(\backslash\)Selector}}\#6 (2) \{}
+\DoxyCodeLine{          \textcolor{keyword}{private} \$sSelector =>}
+\DoxyCodeLine{          string(7) \textcolor{stringliteral}{"{}\#header"{}}}
+\DoxyCodeLine{          \textcolor{keyword}{private} \$iSpecificity =>}
+\DoxyCodeLine{          NULL}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{      \}}
+\DoxyCodeLine{      \textcolor{keyword}{private} \$aRules =>}
+\DoxyCodeLine{      array(3) \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{'margin'} =>}
+\DoxyCodeLine{        array(1) \{}
+\DoxyCodeLine{          [0] =>}
+\DoxyCodeLine{          \textcolor{keyword}{class }\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_rule_1_1_rule}{Sabberworm\(\backslash\)CSS\(\backslash\)Rule\(\backslash\)Rule}}\#7 (4) \{}
+\DoxyCodeLine{            \textcolor{keyword}{private} \$sRule =>}
+\DoxyCodeLine{            string(6) \textcolor{stringliteral}{"{}margin"{}}}
+\DoxyCodeLine{            \textcolor{keyword}{private} \$mValue =>}
+\DoxyCodeLine{            \textcolor{keyword}{class }\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_value_1_1_rule_value_list}{Sabberworm\(\backslash\)CSS\(\backslash\)Value\(\backslash\)RuleValueList}}\#12 (3) \{}
+\DoxyCodeLine{              \textcolor{keyword}{protected} \$aComponents =>}
+\DoxyCodeLine{              array(4) \{}
+\DoxyCodeLine{                [0] =>}
+\DoxyCodeLine{                \textcolor{keyword}{class }\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_value_1_1_size}{Sabberworm\(\backslash\)CSS\(\backslash\)Value\(\backslash\)Size}}\#8 (4) \{}
+\DoxyCodeLine{                  \textcolor{keyword}{private} \$fSize =>}
+\DoxyCodeLine{                  double(10)}
+\DoxyCodeLine{                  private \$sUnit =>}
+\DoxyCodeLine{                  \textcolor{keywordtype}{string}(2) "{}px"{}}
+\DoxyCodeLine{                  private \$bIsColorComponent =>}
+\DoxyCodeLine{                  \textcolor{keywordtype}{bool}(false)}
+\DoxyCodeLine{                  protected \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{                  \textcolor{keywordtype}{int}(2)}
+\DoxyCodeLine{                \}}
+\DoxyCodeLine{                [1] =>}
+\DoxyCodeLine{                class Sabberworm\(\backslash\)CSS\(\backslash\)Value\(\backslash\)Size\textcolor{preprocessor}{\#9 (4) \{}}
+\DoxyCodeLine{                  \textcolor{keyword}{private} \$fSize =>}
+\DoxyCodeLine{                  double(2)}
+\DoxyCodeLine{                  private \$sUnit =>}
+\DoxyCodeLine{                  \textcolor{keywordtype}{string}(2) "{}em"{}}
+\DoxyCodeLine{                  private \$bIsColorComponent =>}
+\DoxyCodeLine{                  \textcolor{keywordtype}{bool}(false)}
+\DoxyCodeLine{                  protected \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{                  \textcolor{keywordtype}{int}(2)}
+\DoxyCodeLine{                \}}
+\DoxyCodeLine{                [2] =>}
+\DoxyCodeLine{                class Sabberworm\(\backslash\)CSS\(\backslash\)Value\(\backslash\)Size\textcolor{preprocessor}{\#10 (4) \{}}
+\DoxyCodeLine{                  \textcolor{keyword}{private} \$fSize =>}
+\DoxyCodeLine{                  double(1)}
+\DoxyCodeLine{                  private \$sUnit =>}
+\DoxyCodeLine{                  \textcolor{keywordtype}{string}(2) "{}cm"{}}
+\DoxyCodeLine{                  private \$bIsColorComponent =>}
+\DoxyCodeLine{                  \textcolor{keywordtype}{bool}(false)}
+\DoxyCodeLine{                  protected \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{                  \textcolor{keywordtype}{int}(2)}
+\DoxyCodeLine{                \}}
+\DoxyCodeLine{                [3] =>}
+\DoxyCodeLine{                class Sabberworm\(\backslash\)CSS\(\backslash\)Value\(\backslash\)Size\textcolor{preprocessor}{\#11 (4) \{}}
+\DoxyCodeLine{                  \textcolor{keyword}{private} \$fSize =>}
+\DoxyCodeLine{                  double(2)}
+\DoxyCodeLine{                  private \$sUnit =>}
+\DoxyCodeLine{                  \textcolor{keywordtype}{string}(1) "{}\%"{}}
+\DoxyCodeLine{                  private \$bIsColorComponent =>}
+\DoxyCodeLine{                  \textcolor{keywordtype}{bool}(false)}
+\DoxyCodeLine{                  protected \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{                  \textcolor{keywordtype}{int}(2)}
+\DoxyCodeLine{                \}}
+\DoxyCodeLine{              \}}
+\DoxyCodeLine{              protected \$sSeparator =>}
+\DoxyCodeLine{              \textcolor{keywordtype}{string}(1) "{} "{}}
+\DoxyCodeLine{              protected \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{              \textcolor{keywordtype}{int}(2)}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{            private \$bIsImportant =>}
+\DoxyCodeLine{            \textcolor{keywordtype}{bool}(false)}
+\DoxyCodeLine{            protected \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{            \textcolor{keywordtype}{int}(2)}
+\DoxyCodeLine{          \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{        'font-\/family' =>}
+\DoxyCodeLine{        array(1) \{}
+\DoxyCodeLine{          [0] =>}
+\DoxyCodeLine{          \textcolor{keyword}{class }\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_rule_1_1_rule}{Sabberworm\(\backslash\)CSS\(\backslash\)Rule\(\backslash\)Rule}}\#13 (4) \{}
+\DoxyCodeLine{            \textcolor{keyword}{private} \$sRule =>}
+\DoxyCodeLine{            string(11) \textcolor{stringliteral}{"{}font-\/family"{}}}
+\DoxyCodeLine{            \textcolor{keyword}{private} \$mValue =>}
+\DoxyCodeLine{            \textcolor{keyword}{class }\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_value_1_1_rule_value_list}{Sabberworm\(\backslash\)CSS\(\backslash\)Value\(\backslash\)RuleValueList}}\#15 (3) \{}
+\DoxyCodeLine{              \textcolor{keyword}{protected} \$aComponents =>}
+\DoxyCodeLine{              array(4) \{}
+\DoxyCodeLine{                [0] =>}
+\DoxyCodeLine{                string(7) \textcolor{stringliteral}{"{}Verdana"{}}}
+\DoxyCodeLine{                [1] =>}
+\DoxyCodeLine{                string(9) \textcolor{stringliteral}{"{}Helvetica"{}}}
+\DoxyCodeLine{                [2] =>}
+\DoxyCodeLine{                \textcolor{keyword}{class }\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_value_1_1_c_s_s_string}{Sabberworm\(\backslash\)CSS\(\backslash\)Value\(\backslash\)CSSString}}\#14 (2) \{}
+\DoxyCodeLine{                  \textcolor{keyword}{private} \$sString =>}
+\DoxyCodeLine{                  string(9) \textcolor{stringliteral}{"{}Gill Sans"{}}}
+\DoxyCodeLine{                  \textcolor{keyword}{protected} \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{                  int(3)}
+\DoxyCodeLine{                \}}
+\DoxyCodeLine{                [3] =>}
+\DoxyCodeLine{                string(10) \textcolor{stringliteral}{"{}sans-\/serif"{}}}
+\DoxyCodeLine{              \}}
+\DoxyCodeLine{              \textcolor{keyword}{protected} \$sSeparator =>}
+\DoxyCodeLine{              string(1) \textcolor{stringliteral}{"{},"{}}}
+\DoxyCodeLine{              \textcolor{keyword}{protected} \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{              int(3)}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{            \textcolor{keyword}{private} \$bIsImportant =>}
+\DoxyCodeLine{            bool(\textcolor{keyword}{false})}
+\DoxyCodeLine{            protected \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{            \textcolor{keywordtype}{int}(3)}
+\DoxyCodeLine{          \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{        'color' =>}
+\DoxyCodeLine{        array(1) \{}
+\DoxyCodeLine{          [0] =>}
+\DoxyCodeLine{          \textcolor{keyword}{class }\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_rule_1_1_rule}{Sabberworm\(\backslash\)CSS\(\backslash\)Rule\(\backslash\)Rule}}\#16 (4) \{}
+\DoxyCodeLine{            \textcolor{keyword}{private} \$sRule =>}
+\DoxyCodeLine{            string(5) \textcolor{stringliteral}{"{}color"{}}}
+\DoxyCodeLine{            \textcolor{keyword}{private} \$mValue =>}
+\DoxyCodeLine{            string(3) \textcolor{stringliteral}{"{}red"{}}}
+\DoxyCodeLine{            \textcolor{keyword}{private} \$bIsImportant =>}
+\DoxyCodeLine{            bool(\textcolor{keyword}{true})}
+\DoxyCodeLine{            protected \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{            \textcolor{keywordtype}{int}(4)}
+\DoxyCodeLine{          \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{      \}}
+\DoxyCodeLine{      protected \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{      \textcolor{keywordtype}{int}(1)}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{  protected \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_a1019368868955f64e3173e8f40d62582}{\$iLineNo}} =>}
+\DoxyCodeLine{  \textcolor{keywordtype}{int}(1)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md76}{}\doxysubsubsection{Output ($<$tt$>$render()$<$/tt$>$)}\label{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md76}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#header \{margin: 10px 2em 1cm 2\%;font-\/family: Verdana,Helvetica,"{}Gill Sans"{},sans-\/serif;color: red !important;\}}
+
+\end{DoxyCode}
+\hypertarget{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md77}{}\doxysection{Contributors/\+Thanks to}\label{md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e_autotoc_md77}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/raxbg}{\texttt{ raxbg}} for contributions to parse {\ttfamily calc}, grid lines, and various bugfixes.
+\item \href{https://github.com/westonruter}{\texttt{ westonruter}} for bugfixes and improvements.
+\item \href{https://github.com/FMCorz}{\texttt{ FMCorz}} for many patches and suggestions, for being able to parse comments and IE hacks (in lenient mode).
+\item \href{https://github.com/Lullabot}{\texttt{ Lullabot}} for a patch that allows to know the line number for each parsed token.
+\item \href{https://github.com/ju1ius}{\texttt{ ju1ius}} for the specificity parsing code and the ability to expand/compact shorthand properties.
+\item \href{https://github.com/ossinkine}{\texttt{ ossinkine}} for a 150 time performance boost.
+\item \href{https://github.com/GaryJones}{\texttt{ Gary\+Jones}} for lots of input and \href{http://css-specificity.info/}{\texttt{ http\+://css-\/specificity.\+info/}}.
+\item \href{https://github.com/docteurklein}{\texttt{ docteurklein}} for output formatting and {\ttfamily CSSList-\/$>$remove()} inspiration.
+\item \href{https://github.com/nicolopignatelli}{\texttt{ nicolopignatelli}} for PSR-\/0 compatibility.
+\item \href{https://github.com/diegoembarcadero}{\texttt{ diegoembarcadero}} for keyframe at-\/rule parsing.
+\item \href{https://github.com/goetas}{\texttt{ goetas}} for 
+\end{DoxyItemize}

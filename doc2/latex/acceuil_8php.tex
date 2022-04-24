@@ -1,0 +1,68 @@
+\hypertarget{acceuil_8php}{}\doxysection{acceuil.\+php File Reference}
+\label{acceuil_8php}\index{acceuil.php@{acceuil.php}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{acceuil_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}{\$authentication}} = new \mbox{\hyperlink{class_secure_user_authentication}{Secure\+User\+Authentication}}()
+\item 
+\mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}}(! \$authentication-\/$>$is\+User\+Connected()) \mbox{\hyperlink{acceuil_8php_a9f7f5a36d1cb3f1201708d284cae89cf}{\$start\+\_\+time}} = microtime(true)
+\item 
+\mbox{\hyperlink{acceuil_8php_a0a44e6760141442bb439b1ab1395d8ff}{\$page}} = new Web\+Page(\char`\"{}EPL -\/ Administration Essai de déverminage\char`\"{})
+\item 
+\mbox{\hyperlink{acceuil_8php_a0d57fb0317e19ec798aa625381ebf342}{\$temp}} = \mbox{\hyperlink{class_temperature_a380ede095fdfcd01e19927bdd98eb3c6}{Temperature\+::getlast\+Temp}}()
+\item 
+\mbox{\hyperlink{acceuil_8php_a598ca4e71b15a1313ec95f0df1027ca5}{\$user}} = \$authentication-\/$>$get\+User\+From\+Session()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{acceuil_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}\label{acceuil_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}} 
+\index{acceuil.php@{acceuil.php}!\$authentication@{\$authentication}}
+\index{\$authentication@{\$authentication}!acceuil.php@{acceuil.php}}
+\doxysubsubsection{\texorpdfstring{\$authentication}{$authentication}}
+{\footnotesize\ttfamily \$authentication = new \mbox{\hyperlink{class_secure_user_authentication}{Secure\+User\+Authentication}}()}
+
+
+
+Definition at line 12 of file acceuil.\+php.
+
+\mbox{\Hypertarget{acceuil_8php_a0a44e6760141442bb439b1ab1395d8ff}\label{acceuil_8php_a0a44e6760141442bb439b1ab1395d8ff}} 
+\index{acceuil.php@{acceuil.php}!\$page@{\$page}}
+\index{\$page@{\$page}!acceuil.php@{acceuil.php}}
+\doxysubsubsection{\texorpdfstring{\$page}{$page}}
+{\footnotesize\ttfamily \$page = new Web\+Page(\char`\"{}EPL -\/ Administration Essai de déverminage\char`\"{})}
+
+
+
+Definition at line 18 of file acceuil.\+php.
+
+\mbox{\Hypertarget{acceuil_8php_a9f7f5a36d1cb3f1201708d284cae89cf}\label{acceuil_8php_a9f7f5a36d1cb3f1201708d284cae89cf}} 
+\index{acceuil.php@{acceuil.php}!\$start\_time@{\$start\_time}}
+\index{\$start\_time@{\$start\_time}!acceuil.php@{acceuil.php}}
+\doxysubsubsection{\texorpdfstring{\$start\_time}{$start\_time}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}} (! \$authentication-\/$>$is\+User\+Connected()) \$start\+\_\+time = microtime(true)}
+
+
+
+Definition at line 17 of file acceuil.\+php.
+
+\mbox{\Hypertarget{acceuil_8php_a0d57fb0317e19ec798aa625381ebf342}\label{acceuil_8php_a0d57fb0317e19ec798aa625381ebf342}} 
+\index{acceuil.php@{acceuil.php}!\$temp@{\$temp}}
+\index{\$temp@{\$temp}!acceuil.php@{acceuil.php}}
+\doxysubsubsection{\texorpdfstring{\$temp}{$temp}}
+{\footnotesize\ttfamily \$temp = \mbox{\hyperlink{class_temperature_a380ede095fdfcd01e19927bdd98eb3c6}{Temperature\+::getlast\+Temp}}()}
+
+
+
+Definition at line 21 of file acceuil.\+php.
+
+\mbox{\Hypertarget{acceuil_8php_a598ca4e71b15a1313ec95f0df1027ca5}\label{acceuil_8php_a598ca4e71b15a1313ec95f0df1027ca5}} 
+\index{acceuil.php@{acceuil.php}!\$user@{\$user}}
+\index{\$user@{\$user}!acceuil.php@{acceuil.php}}
+\doxysubsubsection{\texorpdfstring{\$user}{$user}}
+{\footnotesize\ttfamily \$user = \$authentication-\/$>$get\+User\+From\+Session()}
+
+
+
+Definition at line 23 of file acceuil.\+php.
+

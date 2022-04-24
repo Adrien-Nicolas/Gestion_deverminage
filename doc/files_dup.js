@@ -1,0 +1,27 @@
+var files_dup =
+[
+    [ "home", "dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html", "dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2" ],
+    [ "php", "dir_05194b7bb14e4bdbd759acf3e4294839.html", "dir_05194b7bb14e4bdbd759acf3e4294839" ],
+    [ "AddProduct.php", "_add_product_8php.html", "_add_product_8php" ],
+    [ "ConformTube.php", "_conform_tube_8php.html", "_conform_tube_8php" ],
+    [ "Connect.php", "_connect_8php.html", "_connect_8php" ],
+    [ "createuser.php", "createuser_8php.html", "createuser_8php" ],
+    [ "DeleteProduct.php", "_delete_product_8php.html", "_delete_product_8php" ],
+    [ "essai.php", "essai_8php.html", "essai_8php" ],
+    [ "GetEssai.php", "_get_essai_8php.html", "_get_essai_8php" ],
+    [ "graph.php", "graph_8php.html", "graph_8php" ],
+    [ "SetEssai.php", "_set_essai_8php.html", "_set_essai_8php" ],
+    [ "index.php", "index_8php.html", "index_8php" ],
+    [ "login.php", "login_8php.html", "login_8php" ],
+    [ "lot.php", "lot_8php.html", "lot_8php" ],
+    [ "NotConformTube.php", "_not_conform_tube_8php.html", "_not_conform_tube_8php" ],
+    [ "RemoveToDBEssai.php", "_remove_to_d_b_essai_8php.html", null ],
+    [ "product.php", "product_8php.html", "product_8php" ],
+    [ "RemoveToDB.php", "_remove_to_d_b_8php.html", "_remove_to_d_b_8php" ],
+    [ "search.php", "search_8php.html", "search_8php" ],
+    [ "setProduct.php", "set_product_8php.html", "set_product_8php" ],
+    [ "stats.php", "stats_8php.html", "stats_8php" ],
+    [ "TimeToNotValid.php", "_time_to_not_valid_8php.html", "_time_to_not_valid_8php" ],
+    [ "users.php", "users_8php.html", "users_8php" ],
+    [ "verifyUser.php", "verify_user_8php.html", "verify_user_8php" ]
+];

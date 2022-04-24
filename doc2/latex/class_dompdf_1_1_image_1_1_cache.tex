@@ -1,0 +1,148 @@
+\hypertarget{class_dompdf_1_1_image_1_1_cache}{}\doxysection{Cache Class Reference}
+\label{class_dompdf_1_1_image_1_1_cache}\index{Cache@{Cache}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_dompdf_1_1_image_1_1_cache_aa6dc4ce4c25b1d9f162dddbdc91f5e6a}{resolve\+\_\+url}} (\$url, \$protocol, \$host, \$base\+\_\+path, \mbox{\hyperlink{class_dompdf_1_1_dompdf}{Dompdf}} \$dompdf)
+\item 
+static \mbox{\hyperlink{class_dompdf_1_1_image_1_1_cache_a342b1676bf9651477ec79ed93f606244}{clear}} ()
+\item 
+static \mbox{\hyperlink{class_dompdf_1_1_image_1_1_cache_a8334f48dc9e7686774ecc6c91cfe0a91}{detect\+\_\+type}} (\$file, \$context=null)
+\item 
+static \mbox{\hyperlink{class_dompdf_1_1_image_1_1_cache_a1f43728904848ce432493121be847a5d}{is\+\_\+broken}} (\$url)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_dompdf_1_1_image_1_1_cache_a8b194807998cf897d4c306e7cc59d4c5}{\$broken\+\_\+image}} = \char`\"{}data\+:image/svg+xml;charset=utf8,\%3C?xml version=\textquotesingle{}1.\+0\textquotesingle{}?\%3E\%3Csvg width=\textquotesingle{}64\textquotesingle{} height=\textquotesingle{}64\textquotesingle{} xmlns=\textquotesingle{}http\+://www.\+w3.\+org/2000/svg\textquotesingle{}\%3E\%3Cg\%3E\%3Crect stroke=\textquotesingle{}\%23666666\textquotesingle{} id=\textquotesingle{}svg\+\_\+1\textquotesingle{} height=\textquotesingle{}60.\+499994\textquotesingle{} width=\textquotesingle{}60.\+166667\textquotesingle{} y=\textquotesingle{}1.\+666669\textquotesingle{} x=\textquotesingle{}1.\+999998\textquotesingle{} stroke-\/width=\textquotesingle{}1.\+5\textquotesingle{} fill=\textquotesingle{}none\textquotesingle{}/\%3E\%3Cline stroke-\/linecap=\textquotesingle{}null\textquotesingle{} stroke-\/linejoin=\textquotesingle{}null\textquotesingle{} id=\textquotesingle{}svg\+\_\+3\textquotesingle{} y2=\textquotesingle{}59.\+333253\textquotesingle{} x2=\textquotesingle{}59.\+749916\textquotesingle{} y1=\textquotesingle{}4.\+333415\textquotesingle{} x1=\textquotesingle{}4.\+250079\textquotesingle{} stroke-\/width=\textquotesingle{}1.\+5\textquotesingle{} stroke=\textquotesingle{}\%23999999\textquotesingle{} fill=\textquotesingle{}none\textquotesingle{}/\%3E\%3Cline stroke-\/linecap=\textquotesingle{}null\textquotesingle{} stroke-\/linejoin=\textquotesingle{}null\textquotesingle{} id=\textquotesingle{}svg\+\_\+4\textquotesingle{} y2=\textquotesingle{}59.\+999665\textquotesingle{} x2=\textquotesingle{}4.\+062838\textquotesingle{} y1=\textquotesingle{}3.\+750342\textquotesingle{} x1=\textquotesingle{}60.\+062164\textquotesingle{} stroke-\/width=\textquotesingle{}1.\+5\textquotesingle{} stroke=\textquotesingle{}\%23999999\textquotesingle{} fill=\textquotesingle{}none\textquotesingle{}/\%3E\%3C/g\%3E\%3C/svg\%3E\char`\"{}
+\item 
+static \mbox{\hyperlink{class_dompdf_1_1_image_1_1_cache_ae838cbd355959defbd4d49d0fbe7b273}{\$error\+\_\+message}} = \char`\"{}Image not found or type unknown\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_dompdf_1_1_image_1_1_cache_af7d8375fb97cbf318fea2d67df85c2b3}{\$\+\_\+cache}} = \mbox{[}$\,$\mbox{]}
+\item 
+static \mbox{\hyperlink{class_dompdf_1_1_image_1_1_cache_a3d42c6b602f6b5a224b276b1efed7820}{\$\+\_\+dompdf}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 22 of file Cache.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_dompdf_1_1_image_1_1_cache_a342b1676bf9651477ec79ed93f606244}\label{class_dompdf_1_1_image_1_1_cache_a342b1676bf9651477ec79ed93f606244}} 
+\index{Cache@{Cache}!clear@{clear}}
+\index{clear@{clear}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily static clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Unlink all cached images (i.\+e. temporary images either downloaded or converted) except for the bundled \char`\"{}broken image\char`\"{} 
+
+Definition at line 186 of file Cache.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_image_1_1_cache_a8334f48dc9e7686774ecc6c91cfe0a91}\label{class_dompdf_1_1_image_1_1_cache_a8334f48dc9e7686774ecc6c91cfe0a91}} 
+\index{Cache@{Cache}!detect\_type@{detect\_type}}
+\index{detect\_type@{detect\_type}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{detect\_type()}{detect\_type()}}
+{\footnotesize\ttfamily static detect\+\_\+type (\begin{DoxyParamCaption}\item[{}]{\$file,  }\item[{}]{\$context = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 205 of file Cache.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_image_1_1_cache_a1f43728904848ce432493121be847a5d}\label{class_dompdf_1_1_image_1_1_cache_a1f43728904848ce432493121be847a5d}} 
+\index{Cache@{Cache}!is\_broken@{is\_broken}}
+\index{is\_broken@{is\_broken}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{is\_broken()}{is\_broken()}}
+{\footnotesize\ttfamily static is\+\_\+broken (\begin{DoxyParamCaption}\item[{}]{\$url }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 212 of file Cache.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_image_1_1_cache_aa6dc4ce4c25b1d9f162dddbdc91f5e6a}\label{class_dompdf_1_1_image_1_1_cache_aa6dc4ce4c25b1d9f162dddbdc91f5e6a}} 
+\index{Cache@{Cache}!resolve\_url@{resolve\_url}}
+\index{resolve\_url@{resolve\_url}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{resolve\_url()}{resolve\_url()}}
+{\footnotesize\ttfamily static resolve\+\_\+url (\begin{DoxyParamCaption}\item[{}]{\$url,  }\item[{}]{\$protocol,  }\item[{}]{\$host,  }\item[{}]{\$base\+\_\+path,  }\item[{\mbox{\hyperlink{class_dompdf_1_1_dompdf}{Dompdf}}}]{\$dompdf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Resolve and fetch an image for use.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$url} & The url of the image \\
+\hline
+string & {\em \$protocol} & Default protocol if none specified in \$url \\
+\hline
+string & {\em \$host} & Default host if none specified in \$url \\
+\hline
+string & {\em \$base\+\_\+path} & Default path if none specified in \$url \\
+\hline
+\mbox{\hyperlink{class_dompdf_1_1_dompdf}{Dompdf}} & {\em \$dompdf} & The \mbox{\hyperlink{class_dompdf_1_1_dompdf}{Dompdf}} instance\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Image\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+array An array with two elements\+: The local path to the image and the image extension 
+\end{DoxyReturn}
+
+
+Definition at line 60 of file Cache.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_dompdf_1_1_image_1_1_cache_af7d8375fb97cbf318fea2d67df85c2b3}\label{class_dompdf_1_1_image_1_1_cache_af7d8375fb97cbf318fea2d67df85c2b3}} 
+\index{Cache@{Cache}!\$\_cache@{\$\_cache}}
+\index{\$\_cache@{\$\_cache}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{\$\_cache}{$\_cache}}
+{\footnotesize\ttfamily \$\+\_\+cache = \mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 30 of file Cache.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_image_1_1_cache_a3d42c6b602f6b5a224b276b1efed7820}\label{class_dompdf_1_1_image_1_1_cache_a3d42c6b602f6b5a224b276b1efed7820}} 
+\index{Cache@{Cache}!\$\_dompdf@{\$\_dompdf}}
+\index{\$\_dompdf@{\$\_dompdf}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{\$\_dompdf}{$\_dompdf}}
+{\footnotesize\ttfamily \$\+\_\+dompdf\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 46 of file Cache.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_image_1_1_cache_a8b194807998cf897d4c306e7cc59d4c5}\label{class_dompdf_1_1_image_1_1_cache_a8b194807998cf897d4c306e7cc59d4c5}} 
+\index{Cache@{Cache}!\$broken\_image@{\$broken\_image}}
+\index{\$broken\_image@{\$broken\_image}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{\$broken\_image}{$broken\_image}}
+{\footnotesize\ttfamily \$broken\+\_\+image = \char`\"{}data\+:image/svg+xml;charset=utf8,\%3C?xml version=\textquotesingle{}1.\+0\textquotesingle{}?\%3E\%3Csvg width=\textquotesingle{}64\textquotesingle{} height=\textquotesingle{}64\textquotesingle{} xmlns=\textquotesingle{}http\+://www.\+w3.\+org/2000/svg\textquotesingle{}\%3E\%3Cg\%3E\%3Crect stroke=\textquotesingle{}\%23666666\textquotesingle{} id=\textquotesingle{}svg\+\_\+1\textquotesingle{} height=\textquotesingle{}60.\+499994\textquotesingle{} width=\textquotesingle{}60.\+166667\textquotesingle{} y=\textquotesingle{}1.\+666669\textquotesingle{} x=\textquotesingle{}1.\+999998\textquotesingle{} stroke-\/width=\textquotesingle{}1.\+5\textquotesingle{} fill=\textquotesingle{}none\textquotesingle{}/\%3E\%3Cline stroke-\/linecap=\textquotesingle{}null\textquotesingle{} stroke-\/linejoin=\textquotesingle{}null\textquotesingle{} id=\textquotesingle{}svg\+\_\+3\textquotesingle{} y2=\textquotesingle{}59.\+333253\textquotesingle{} x2=\textquotesingle{}59.\+749916\textquotesingle{} y1=\textquotesingle{}4.\+333415\textquotesingle{} x1=\textquotesingle{}4.\+250079\textquotesingle{} stroke-\/width=\textquotesingle{}1.\+5\textquotesingle{} stroke=\textquotesingle{}\%23999999\textquotesingle{} fill=\textquotesingle{}none\textquotesingle{}/\%3E\%3Cline stroke-\/linecap=\textquotesingle{}null\textquotesingle{} stroke-\/linejoin=\textquotesingle{}null\textquotesingle{} id=\textquotesingle{}svg\+\_\+4\textquotesingle{} y2=\textquotesingle{}59.\+999665\textquotesingle{} x2=\textquotesingle{}4.\+062838\textquotesingle{} y1=\textquotesingle{}3.\+750342\textquotesingle{} x1=\textquotesingle{}60.\+062164\textquotesingle{} stroke-\/width=\textquotesingle{}1.\+5\textquotesingle{} stroke=\textquotesingle{}\%23999999\textquotesingle{} fill=\textquotesingle{}none\textquotesingle{}/\%3E\%3C/g\%3E\%3C/svg\%3E\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 37 of file Cache.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_image_1_1_cache_ae838cbd355959defbd4d49d0fbe7b273}\label{class_dompdf_1_1_image_1_1_cache_ae838cbd355959defbd4d49d0fbe7b273}} 
+\index{Cache@{Cache}!\$error\_message@{\$error\_message}}
+\index{\$error\_message@{\$error\_message}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{\$error\_message}{$error\_message}}
+{\footnotesize\ttfamily \$error\+\_\+message = \char`\"{}Image not found or type unknown\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 39 of file Cache.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/dompdf/src/\+Image/\mbox{\hyperlink{_cache_8php}{Cache.\+php}}\end{DoxyCompactItemize}

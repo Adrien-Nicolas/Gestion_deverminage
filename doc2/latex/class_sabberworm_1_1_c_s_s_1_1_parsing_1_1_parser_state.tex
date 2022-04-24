@@ -1,0 +1,242 @@
+\hypertarget{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state}{}\doxysection{Parser\+State Class Reference}
+\label{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state}\index{ParserState@{ParserState}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_aa95d448bdba62293690522e0f37c49e8}{\+\_\+\+\_\+construct}} (\$s\+Text, \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_settings}{Settings}} \$o\+Parser\+Settings, \$i\+Line\+No=1)
+\item 
+\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_a8a7d48fff7cdf30fbf1cac6383a060d8}{set\+Charset}} (\$s\+Charset)
+\item 
+\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_abca2d528da8311b6fcfe040768cbaa24}{get\+Charset}} ()
+\item 
+\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_a019496412a2398a981060c2b4d7bc7e6}{current\+Line}} ()
+\item 
+\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_ae7b2b0de7f05bf6b6993996d7475804d}{get\+Settings}} ()
+\item 
+\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_a37d2f313bea2269be7e5f61c02f207bb}{parse\+Identifier}} (\$b\+Ignore\+Case=true)
+\item 
+\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_af4a6fea92f510f5c7b4f44c8da332ee1}{parse\+Character}} (\$b\+Is\+For\+Identifier)
+\item 
+\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_a18004592cdcc08abb692d7b21a83dc5b}{consume\+White\+Space}} ()
+\item 
+\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_ae540dba505d8f43834447873da039eaf}{comes}} (\$s\+String, \$b\+Case\+Insensitive=false)
+\item 
+\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_a9368fe6e85a9bf26ba32f058b19bba1b}{peek}} (\$i\+Length=1, \$i\+Offset=0)
+\item 
+\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_a7732c7a5d950168b4b9ab6b461f3d185}{consume}} (\$m\+Value=1)
+\item 
+\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_aa9ccfbf94780d00052237903abcbdf98}{consume\+Expression}} (\$m\+Expression, \$i\+Max\+Length=null)
+\item 
+\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_af7d0d1885a26414a6cc5fba1d593f6b2}{consume\+Comment}} ()
+\item 
+\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_a6709ee6eb9000a566b893c12dc8dda94}{is\+End}} ()
+\item 
+\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_aa63d98c1b59d52e5798ba2bddb9f02dd}{consume\+Until}} (\$a\+End, \$b\+Include\+End=false, \$consume\+End=false, array \&\$comments=array())
+\item 
+\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_ac2e9243d374487f96d1ad3264050f8f7}{streql}} (\$s\+String1, \$s\+String2, \$b\+Case\+Insensitive=true)
+\item 
+\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_a236f52c424c04bd69f6331b2879d82a7}{backtrack}} (\$i\+Amount)
+\item 
+\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_a0f2257176f01d67d5e9b07c5e34721ff}{strlen}} (\$s\+String)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 8 of file Parser\+State.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_aa95d448bdba62293690522e0f37c49e8}\label{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_aa95d448bdba62293690522e0f37c49e8}} 
+\index{ParserState@{ParserState}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!ParserState@{ParserState}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$s\+Text,  }\item[{\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_settings}{Settings}}}]{\$o\+Parser\+Settings,  }\item[{}]{\$i\+Line\+No = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file Parser\+State.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_a236f52c424c04bd69f6331b2879d82a7}\label{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_a236f52c424c04bd69f6331b2879d82a7}} 
+\index{ParserState@{ParserState}!backtrack@{backtrack}}
+\index{backtrack@{backtrack}!ParserState@{ParserState}}
+\doxysubsubsection{\texorpdfstring{backtrack()}{backtrack()}}
+{\footnotesize\ttfamily backtrack (\begin{DoxyParamCaption}\item[{}]{\$i\+Amount }\end{DoxyParamCaption})}
+
+
+
+Definition at line 246 of file Parser\+State.\+php.
+
+\mbox{\Hypertarget{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_ae540dba505d8f43834447873da039eaf}\label{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_ae540dba505d8f43834447873da039eaf}} 
+\index{ParserState@{ParserState}!comes@{comes}}
+\index{comes@{comes}!ParserState@{ParserState}}
+\doxysubsubsection{\texorpdfstring{comes()}{comes()}}
+{\footnotesize\ttfamily comes (\begin{DoxyParamCaption}\item[{}]{\$s\+String,  }\item[{}]{\$b\+Case\+Insensitive = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 134 of file Parser\+State.\+php.
+
+\mbox{\Hypertarget{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_a7732c7a5d950168b4b9ab6b461f3d185}\label{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_a7732c7a5d950168b4b9ab6b461f3d185}} 
+\index{ParserState@{ParserState}!consume@{consume}}
+\index{consume@{consume}!ParserState@{ParserState}}
+\doxysubsubsection{\texorpdfstring{consume()}{consume()}}
+{\footnotesize\ttfamily consume (\begin{DoxyParamCaption}\item[{}]{\$m\+Value = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 149 of file Parser\+State.\+php.
+
+\mbox{\Hypertarget{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_af7d0d1885a26414a6cc5fba1d593f6b2}\label{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_af7d0d1885a26414a6cc5fba1d593f6b2}} 
+\index{ParserState@{ParserState}!consumeComment@{consumeComment}}
+\index{consumeComment@{consumeComment}!ParserState@{ParserState}}
+\doxysubsubsection{\texorpdfstring{consumeComment()}{consumeComment()}}
+{\footnotesize\ttfamily consume\+Comment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+false$\vert$\+Comment 
+\end{DoxyReturn}
+
+
+Definition at line 183 of file Parser\+State.\+php.
+
+\mbox{\Hypertarget{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_aa9ccfbf94780d00052237903abcbdf98}\label{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_aa9ccfbf94780d00052237903abcbdf98}} 
+\index{ParserState@{ParserState}!consumeExpression@{consumeExpression}}
+\index{consumeExpression@{consumeExpression}!ParserState@{ParserState}}
+\doxysubsubsection{\texorpdfstring{consumeExpression()}{consumeExpression()}}
+{\footnotesize\ttfamily consume\+Expression (\begin{DoxyParamCaption}\item[{}]{\$m\+Expression,  }\item[{}]{\$i\+Max\+Length = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 171 of file Parser\+State.\+php.
+
+\mbox{\Hypertarget{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_aa63d98c1b59d52e5798ba2bddb9f02dd}\label{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_aa63d98c1b59d52e5798ba2bddb9f02dd}} 
+\index{ParserState@{ParserState}!consumeUntil@{consumeUntil}}
+\index{consumeUntil@{consumeUntil}!ParserState@{ParserState}}
+\doxysubsubsection{\texorpdfstring{consumeUntil()}{consumeUntil()}}
+{\footnotesize\ttfamily consume\+Until (\begin{DoxyParamCaption}\item[{}]{\$a\+End,  }\item[{}]{\$b\+Include\+End = {\ttfamily false},  }\item[{}]{\$consume\+End = {\ttfamily false},  }\item[{array \&}]{\$comments = {\ttfamily array()} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 210 of file Parser\+State.\+php.
+
+\mbox{\Hypertarget{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_a18004592cdcc08abb692d7b21a83dc5b}\label{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_a18004592cdcc08abb692d7b21a83dc5b}} 
+\index{ParserState@{ParserState}!consumeWhiteSpace@{consumeWhiteSpace}}
+\index{consumeWhiteSpace@{consumeWhiteSpace}!ParserState@{ParserState}}
+\doxysubsubsection{\texorpdfstring{consumeWhiteSpace()}{consumeWhiteSpace()}}
+{\footnotesize\ttfamily consume\+White\+Space (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 110 of file Parser\+State.\+php.
+
+\mbox{\Hypertarget{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_a019496412a2398a981060c2b4d7bc7e6}\label{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_a019496412a2398a981060c2b4d7bc7e6}} 
+\index{ParserState@{ParserState}!currentLine@{currentLine}}
+\index{currentLine@{currentLine}!ParserState@{ParserState}}
+\doxysubsubsection{\texorpdfstring{currentLine()}{currentLine()}}
+{\footnotesize\ttfamily current\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 38 of file Parser\+State.\+php.
+
+\mbox{\Hypertarget{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_abca2d528da8311b6fcfe040768cbaa24}\label{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_abca2d528da8311b6fcfe040768cbaa24}} 
+\index{ParserState@{ParserState}!getCharset@{getCharset}}
+\index{getCharset@{getCharset}!ParserState@{ParserState}}
+\doxysubsubsection{\texorpdfstring{getCharset()}{getCharset()}}
+{\footnotesize\ttfamily get\+Charset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 33 of file Parser\+State.\+php.
+
+\mbox{\Hypertarget{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_ae7b2b0de7f05bf6b6993996d7475804d}\label{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_ae7b2b0de7f05bf6b6993996d7475804d}} 
+\index{ParserState@{ParserState}!getSettings@{getSettings}}
+\index{getSettings@{getSettings}!ParserState@{ParserState}}
+\doxysubsubsection{\texorpdfstring{getSettings()}{getSettings()}}
+{\footnotesize\ttfamily get\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 42 of file Parser\+State.\+php.
+
+\mbox{\Hypertarget{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_a6709ee6eb9000a566b893c12dc8dda94}\label{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_a6709ee6eb9000a566b893c12dc8dda94}} 
+\index{ParserState@{ParserState}!isEnd@{isEnd}}
+\index{isEnd@{isEnd}!ParserState@{ParserState}}
+\doxysubsubsection{\texorpdfstring{isEnd()}{isEnd()}}
+{\footnotesize\ttfamily is\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 206 of file Parser\+State.\+php.
+
+\mbox{\Hypertarget{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_af4a6fea92f510f5c7b4f44c8da332ee1}\label{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_af4a6fea92f510f5c7b4f44c8da332ee1}} 
+\index{ParserState@{ParserState}!parseCharacter@{parseCharacter}}
+\index{parseCharacter@{parseCharacter}!ParserState@{ParserState}}
+\doxysubsubsection{\texorpdfstring{parseCharacter()}{parseCharacter()}}
+{\footnotesize\ttfamily parse\+Character (\begin{DoxyParamCaption}\item[{}]{\$b\+Is\+For\+Identifier }\end{DoxyParamCaption})}
+
+
+
+Definition at line 61 of file Parser\+State.\+php.
+
+\mbox{\Hypertarget{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_a37d2f313bea2269be7e5f61c02f207bb}\label{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_a37d2f313bea2269be7e5f61c02f207bb}} 
+\index{ParserState@{ParserState}!parseIdentifier@{parseIdentifier}}
+\index{parseIdentifier@{parseIdentifier}!ParserState@{ParserState}}
+\doxysubsubsection{\texorpdfstring{parseIdentifier()}{parseIdentifier()}}
+{\footnotesize\ttfamily parse\+Identifier (\begin{DoxyParamCaption}\item[{}]{\$b\+Ignore\+Case = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 46 of file Parser\+State.\+php.
+
+\mbox{\Hypertarget{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_a9368fe6e85a9bf26ba32f058b19bba1b}\label{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_a9368fe6e85a9bf26ba32f058b19bba1b}} 
+\index{ParserState@{ParserState}!peek@{peek}}
+\index{peek@{peek}!ParserState@{ParserState}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}}
+{\footnotesize\ttfamily peek (\begin{DoxyParamCaption}\item[{}]{\$i\+Length = {\ttfamily 1},  }\item[{}]{\$i\+Offset = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 141 of file Parser\+State.\+php.
+
+\mbox{\Hypertarget{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_a8a7d48fff7cdf30fbf1cac6383a060d8}\label{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_a8a7d48fff7cdf30fbf1cac6383a060d8}} 
+\index{ParserState@{ParserState}!setCharset@{setCharset}}
+\index{setCharset@{setCharset}!ParserState@{ParserState}}
+\doxysubsubsection{\texorpdfstring{setCharset()}{setCharset()}}
+{\footnotesize\ttfamily set\+Charset (\begin{DoxyParamCaption}\item[{}]{\$s\+Charset }\end{DoxyParamCaption})}
+
+
+
+Definition at line 27 of file Parser\+State.\+php.
+
+\mbox{\Hypertarget{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_ac2e9243d374487f96d1ad3264050f8f7}\label{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_ac2e9243d374487f96d1ad3264050f8f7}} 
+\index{ParserState@{ParserState}!streql@{streql}}
+\index{streql@{streql}!ParserState@{ParserState}}
+\doxysubsubsection{\texorpdfstring{streql()}{streql()}}
+{\footnotesize\ttfamily streql (\begin{DoxyParamCaption}\item[{}]{\$s\+String1,  }\item[{}]{\$s\+String2,  }\item[{}]{\$b\+Case\+Insensitive = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 238 of file Parser\+State.\+php.
+
+\mbox{\Hypertarget{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_a0f2257176f01d67d5e9b07c5e34721ff}\label{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state_a0f2257176f01d67d5e9b07c5e34721ff}} 
+\index{ParserState@{ParserState}!strlen@{strlen}}
+\index{strlen@{strlen}!ParserState@{ParserState}}
+\doxysubsubsection{\texorpdfstring{strlen()}{strlen()}}
+{\footnotesize\ttfamily strlen (\begin{DoxyParamCaption}\item[{}]{\$s\+String }\end{DoxyParamCaption})}
+
+
+
+Definition at line 250 of file Parser\+State.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/dompdf/lib/php-\/css-\/parser/lib/\+Sabberworm/\+CSS/\+Parsing/\mbox{\hyperlink{_parser_state_8php}{Parser\+State.\+php}}\end{DoxyCompactItemize}

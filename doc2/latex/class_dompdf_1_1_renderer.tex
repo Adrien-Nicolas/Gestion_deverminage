@@ -1,0 +1,126 @@
+\hypertarget{class_dompdf_1_1_renderer}{}\doxysection{Renderer Class Reference}
+\label{class_dompdf_1_1_renderer}\index{Renderer@{Renderer}}
+Inheritance diagram for Renderer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_dompdf_1_1_renderer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_renderer_a2d6093dcef3824fd108d0a2239a9887a}{new\+\_\+page}} ()
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_renderer_a25d4f887dbbc6f4685b4d41f3e88050f}{render}} (\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}} \$frame)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_renderer_af4368d71af7073b4e47ef4fa3bd3d787}{\+\_\+check\+\_\+callbacks}} (\$event, \$frame)
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_renderer_a2cd0d2abb58183ba1bfa1741fc4dc878}{\+\_\+render\+\_\+frame}} (\$type, \$frame)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_renderer_a3110068d74dae95c90a1f01f6daca838}{\$\+\_\+renderers}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 25 of file Renderer.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_dompdf_1_1_renderer_af4368d71af7073b4e47ef4fa3bd3d787}\label{class_dompdf_1_1_renderer_af4368d71af7073b4e47ef4fa3bd3d787}} 
+\index{Renderer@{Renderer}!\_check\_callbacks@{\_check\_callbacks}}
+\index{\_check\_callbacks@{\_check\_callbacks}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{\_check\_callbacks()}{\_check\_callbacks()}}
+{\footnotesize\ttfamily \+\_\+check\+\_\+callbacks (\begin{DoxyParamCaption}\item[{}]{\$event,  }\item[{}]{\$frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Check for callbacks that need to be performed when a given event gets triggered on a frame
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$event} & the type of event \\
+\hline
+\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}} & {\em \$frame} & the frame that event is triggered on \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 218 of file Renderer.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_renderer_a2cd0d2abb58183ba1bfa1741fc4dc878}\label{class_dompdf_1_1_renderer_a2cd0d2abb58183ba1bfa1741fc4dc878}} 
+\index{Renderer@{Renderer}!\_render\_frame@{\_render\_frame}}
+\index{\_render\_frame@{\_render\_frame}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{\_render\_frame()}{\_render\_frame()}}
+{\footnotesize\ttfamily \+\_\+render\+\_\+frame (\begin{DoxyParamCaption}\item[{}]{\$type,  }\item[{}]{\$frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Render a single frame
+
+Creates \mbox{\hyperlink{class_dompdf_1_1_renderer}{Renderer}} objects on demand
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$type} & type of renderer to use \\
+\hline
+\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}} & {\em \$frame} & the frame to render \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 248 of file Renderer.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_renderer_a2d6093dcef3824fd108d0a2239a9887a}\label{class_dompdf_1_1_renderer_a2d6093dcef3824fd108d0a2239a9887a}} 
+\index{Renderer@{Renderer}!new\_page@{new\_page}}
+\index{new\_page@{new\_page}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{new\_page()}{new\_page()}}
+{\footnotesize\ttfamily new\+\_\+page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Advance the canvas to the next page 
+
+Definition at line 45 of file Renderer.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_renderer_a25d4f887dbbc6f4685b4d41f3e88050f}\label{class_dompdf_1_1_renderer_a25d4f887dbbc6f4685b4d41f3e88050f}} 
+\index{Renderer@{Renderer}!render@{render}}
+\index{render@{render}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}}}]{\$frame }\end{DoxyParamCaption})}
+
+Render frames recursively
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}} & {\em \$frame} & the frame to render \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_dompdf_1_1_renderer_1_1_abstract_renderer_a25d4f887dbbc6f4685b4d41f3e88050f}{Abstract\+Renderer}}.
+
+
+
+Definition at line 55 of file Renderer.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_dompdf_1_1_renderer_a3110068d74dae95c90a1f01f6daca838}\label{class_dompdf_1_1_renderer_a3110068d74dae95c90a1f01f6daca838}} 
+\index{Renderer@{Renderer}!\$\_renderers@{\$\_renderers}}
+\index{\$\_renderers@{\$\_renderers}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{\$\_renderers}{$\_renderers}}
+{\footnotesize\ttfamily \$\+\_\+renderers\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 33 of file Renderer.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/dompdf/src/\mbox{\hyperlink{_renderer_8php}{Renderer.\+php}}\end{DoxyCompactItemize}

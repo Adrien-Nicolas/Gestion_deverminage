@@ -1,0 +1,662 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>EPL - Essai de déverminage: PHP CSS Parser</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo (1).png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">EPL - Essai de déverminage
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('md_php_dompdf_lib_php_css_parser__r_e_a_d_m_e.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">PHP CSS Parser </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a href="https://travis-ci.org/sabberworm/PHP-CSS-Parser"><img src="https://api.travis-ci.org/sabberworm/PHP-CSS-Parser.svg" alt="build status" style="pointer-events: none;" class="inline"/></a> <a href="http://hhvm.h4cc.de/package/sabberworm/php-css-parser"><img src="http://hhvm.h4cc.de/badge/sabberworm/php-css-parser.svg" alt="HHVM Status" style="pointer-events: none;" class="inline"/></a></p>
+<p>A Parser for CSS Files written in PHP. Allows extraction of CSS files into a data structure, manipulation of said structure and output as (optimized) CSS.</p>
+<h1><a class="anchor" id="autotoc_md49"></a>
+Usage</h1>
+<h2><a class="anchor" id="autotoc_md50"></a>
+Installation using composer</h2>
+<p>Add php-css-parser to your composer.json</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    &quot;require&quot;: {</div>
+<div class="line">        &quot;sabberworm/php-css-parser&quot;: &quot;*&quot;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md51"></a>
+Extraction</h2>
+<p>To use the CSS Parser, create a new instance. The constructor takes the following form:</p>
+<div class="fragment"><div class="line"><span class="keyword">new</span> <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_parser.html">Sabberworm\CSS\Parser</a>($sText);</div>
+<div class="ttc" id="aclass_sabberworm_1_1_c_s_s_1_1_parser_html"><div class="ttname"><a href="class_sabberworm_1_1_c_s_s_1_1_parser.html">Sabberworm\CSS\Parser</a></div><div class="ttdef"><b>Definition:</b> Parser.php:11</div></div>
+</div><!-- fragment --><p>To read a file, for example, you’d do the following:</p>
+<div class="fragment"><div class="line">$oCssParser = <span class="keyword">new</span> <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_parser.html">Sabberworm\CSS\Parser</a>(file_get_contents(<span class="stringliteral">&#39;somefile.css&#39;</span>));</div>
+<div class="line">$oCssDocument = $oCssParser-&gt;parse();</div>
+</div><!-- fragment --><p>The resulting CSS document structure can be manipulated prior to being output.</p>
+<h2><a class="anchor" id="autotoc_md52"></a>
+Options</h2>
+<h3><a class="anchor" id="autotoc_md53"></a>
+Charset</h3>
+<p>The charset option is used only if no @charset declaration is found in the CSS file. UTF-8 is the default, so you won’t have to create a settings object at all if you don’t intend to change that.</p>
+<div class="fragment"><div class="line">$oSettings = <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_settings.html#a239b1c70258014a86569483c2d009de6">Sabberworm\CSS\Settings::create</a>()-&gt;withDefaultCharset(<span class="stringliteral">&#39;windows-1252&#39;</span>);</div>
+<div class="line"><span class="keyword">new</span> <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_parser.html">Sabberworm\CSS\Parser</a>($sText, $oSettings);</div>
+<div class="ttc" id="aclass_sabberworm_1_1_c_s_s_1_1_settings_html_a239b1c70258014a86569483c2d009de6"><div class="ttname"><a href="class_sabberworm_1_1_c_s_s_1_1_settings.html#a239b1c70258014a86569483c2d009de6">Sabberworm\CSS\Settings\create</a></div><div class="ttdeci">static create()</div><div class="ttdef"><b>Definition:</b> Settings.php:32</div></div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md54"></a>
+Strict parsing</h3>
+<p>To have the parser choke on invalid rules, supply a thusly configured Sabberworm\CSS\Settings object:</p>
+<div class="fragment"><div class="line">$oCssParser = <span class="keyword">new</span> <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_parser.html">Sabberworm\CSS\Parser</a>(file_get_contents(<span class="stringliteral">&#39;somefile.css&#39;</span>), Sabberworm\CSS\Settings::create()-&gt;beStrict());</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md55"></a>
+Disable multibyte functions</h3>
+<p>To achieve faster parsing, you can choose to have PHP-CSS-Parser use regular string functions instead of <code>mb_*</code> functions. This should work fine in most cases, even for UTF-8 files, as all the multibyte characters are in string literals. Still it’s not recommended to use this with input you have no control over as it’s not thoroughly covered by test cases.</p>
+<div class="fragment"><div class="line">$oSettings = <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_settings.html#a239b1c70258014a86569483c2d009de6">Sabberworm\CSS\Settings::create</a>()-&gt;withMultibyteSupport(<span class="keyword">false</span>);</div>
+<div class="line"><span class="keyword">new</span> <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_parser.html">Sabberworm\CSS\Parser</a>($sText, $oSettings);</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md56"></a>
+Manipulation</h2>
+<p>The resulting data structure consists mainly of five basic types: <code>CSSList</code>, <code>RuleSet</code>, <code>Rule</code>, <code>Selector</code> and <code>Value</code>. There are two additional types used: <code>Import</code> and <code>Charset</code> which you won’t use often.</p>
+<h3><a class="anchor" id="autotoc_md57"></a>
+CSSList</h3>
+<p><code>CSSList</code> represents a generic CSS container, most likely containing declaration blocks (rule sets with a selector) but it may also contain at-rules, charset declarations, etc. <code>CSSList</code> has the following concrete subtypes:</p>
+<ul>
+<li><code>Document</code> – representing the root of a CSS file.</li>
+<li><code>MediaQuery</code> – represents a subsection of a CSSList that only applies to a output device matching the contained media query.</li>
+</ul>
+<p>To access the items stored in a <code>CSSList</code> – like the document you got back when calling <code>$oCssParser-&gt;parse()</code> –, use <code>getContents()</code>, then iterate over that collection and use instanceof to check whether you’re dealing with another <code>CSSList</code>, a <code>RuleSet</code>, a <code>Import</code> or a <code>Charset</code>.</p>
+<p>To append a new item (selector, media query, etc.) to an existing <code>CSSList</code>, construct it using the constructor for this class and use the <code>append($oItem)</code> method.</p>
+<h3><a class="anchor" id="autotoc_md58"></a>
+RuleSet</h3>
+<p><code>RuleSet</code> is a container for individual rules. The most common form of a rule set is one constrained by a selector. The following concrete subtypes exist:</p>
+<ul>
+<li><code>AtRuleSet</code> – for generic at-rules which do not match the ones specifically mentioned like @import, @charset or @media. A common example for this is @font-face.</li>
+<li><code>DeclarationBlock</code> – a RuleSet constrained by a <code>Selector</code>; contains an array of selector objects (comma-separated in the CSS) as well as the rules to be applied to the matching elements.</li>
+</ul>
+<p>Note: A <code>CSSList</code> can contain other <code>CSSList</code>s (and <code>Import</code>s as well as a <code>Charset</code>) while a <code>RuleSet</code> can only contain <code>Rule</code>s.</p>
+<p>If you want to manipulate a <code>RuleSet</code>, use the methods <code>addRule(Rule $oRule)</code>, <code>getRules()</code> and <code>removeRule($mRule)</code> (which accepts either a Rule instance or a rule name; optionally suffixed by a dash to remove all related rules).</p>
+<h3><a class="anchor" id="autotoc_md59"></a>
+Rule</h3>
+<p><code>Rule</code>s just have a key (the rule) and a value. These values are all instances of a <code>Value</code>.</p>
+<h3><a class="anchor" id="autotoc_md60"></a>
+Value</h3>
+<p><code>Value</code> is an abstract class that only defines the <code>render</code> method. The concrete subclasses for atomic value types are:</p>
+<ul>
+<li><code>Size</code> – consists of a numeric <code>size</code> value and a unit.</li>
+<li><code>Color</code> – colors can be input in the form #rrggbb, #rgb or schema(val1, val2, …) but are always stored as an array of ('s' =&gt; val1, 'c' =&gt; val2, 'h' =&gt; val3, …) and output in the second form.</li>
+<li><code>CSSString</code> – this is just a wrapper for quoted strings to distinguish them from keywords; always output with double quotes.</li>
+<li><code>URL</code> – URLs in CSS; always output in URL("") notation.</li>
+</ul>
+<p>There is another abstract subclass of <code>Value</code>, <code>ValueList</code>. A <code>ValueList</code> represents a lists of <code>Value</code>s, separated by some separation character (mostly <code>,</code>, whitespace, or <code>/</code>). There are two types of <code>ValueList</code>s:</p>
+<ul>
+<li><code>RuleValueList</code> – The default type, used to represent all multi-valued rules like <code>font: bold 12px/3 Helvetica, Verdana, sans-serif;</code> (where the value would be a whitespace-separated list of the primitive value <code>bold</code>, a slash-separated list and a comma-separated list).</li>
+<li><code>CSSFunction</code> – A special kind of value that also contains a function name and where the values are the function’s arguments. Also handles equals-sign-separated argument lists like <code>filter: alpha(opacity=90);</code>.</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md61"></a>
+Convenience methods</h3>
+<p>There are a few convenience methods on Document to ease finding, manipulating and deleting rules:</p>
+<ul>
+<li><code>getAllDeclarationBlocks()</code> – does what it says; no matter how deeply nested your selectors are. Aliased as <code>getAllSelectors()</code>.</li>
+<li><code>getAllRuleSets()</code> – does what it says; no matter how deeply nested your rule sets are.</li>
+<li><code>getAllValues()</code> – finds all <code>Value</code> objects inside <code>Rule</code>s.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md62"></a>
+To-Do</h1>
+<ul>
+<li>More convenience methods [like <code>selectorsWithElement($sId/Class/TagName)</code>, <code>attributesOfType($sType)</code>, <code>removeAttributesOfType($sType)</code>]</li>
+<li>Real multibyte support. Currently only multibyte charsets whose first 255 code points take up only one byte and are identical with ASCII are supported (yes, UTF-8 fits this description).</li>
+<li>Named color support (using <code>Color</code> instead of an anonymous string literal)</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md63"></a>
+Use cases</h1>
+<h2><a class="anchor" id="autotoc_md64"></a>
+Use &lt;tt&gt;Parser&lt;/tt&gt; to prepend an id to all selectors</h2>
+<div class="fragment"><div class="line">$sMyId = <span class="stringliteral">&quot;#my_id&quot;</span>;</div>
+<div class="line"><a class="code" href="quickdump_8php.html#aeff203ad4825b3aee07cbf632a78662f">$oParser</a> = <span class="keyword">new</span> <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_parser.html">Sabberworm\CSS\Parser</a>($sText);</div>
+<div class="line">$oCss = <a class="code" href="quickdump_8php.html#aeff203ad4825b3aee07cbf632a78662f">$oParser</a>-&gt;parse();</div>
+<div class="line"><span class="keywordflow">foreach</span>($oCss-&gt;getAllDeclarationBlocks() as $oBlock) {</div>
+<div class="line">    <span class="keywordflow">foreach</span>($oBlock-&gt;getSelectors() as $oSelector) {</div>
+<div class="line">        <span class="comment">//Loop over all selector parts (the comma-separated strings in a selector) and prepend the id</span></div>
+<div class="line">        $oSelector-&gt;setSelector($sMyId.<span class="charliteral">&#39; &#39;</span>.$oSelector-&gt;getSelector());</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="aquickdump_8php_html_aeff203ad4825b3aee07cbf632a78662f"><div class="ttname"><a href="quickdump_8php.html#aeff203ad4825b3aee07cbf632a78662f">$oParser</a></div><div class="ttdeci">$oParser</div><div class="ttdef"><b>Definition:</b> quickdump.php:7</div></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md65"></a>
+Shrink all absolute sizes to half</h2>
+<div class="fragment"><div class="line"><a class="code" href="quickdump_8php.html#aeff203ad4825b3aee07cbf632a78662f">$oParser</a> = <span class="keyword">new</span> <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_parser.html">Sabberworm\CSS\Parser</a>($sText);</div>
+<div class="line">$oCss = <a class="code" href="quickdump_8php.html#aeff203ad4825b3aee07cbf632a78662f">$oParser</a>-&gt;parse();</div>
+<div class="line"><span class="keywordflow">foreach</span>($oCss-&gt;getAllValues() as $mValue) {</div>
+<div class="line">    <span class="keywordflow">if</span>($mValue instanceof CSSSize &amp;&amp; !$mValue-&gt;isRelative()) {</div>
+<div class="line">        $mValue-&gt;setSize($mValue-&gt;getSize()/2);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md66"></a>
+Remove unwanted rules</h2>
+<div class="fragment"><div class="line"><a class="code" href="quickdump_8php.html#aeff203ad4825b3aee07cbf632a78662f">$oParser</a> = <span class="keyword">new</span> <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_parser.html">Sabberworm\CSS\Parser</a>($sText);</div>
+<div class="line">$oCss = <a class="code" href="quickdump_8php.html#aeff203ad4825b3aee07cbf632a78662f">$oParser</a>-&gt;parse();</div>
+<div class="line"><span class="keywordflow">foreach</span>($oCss-&gt;getAllRuleSets() as $oRuleSet) {</div>
+<div class="line">    $oRuleSet-&gt;removeRule(<span class="stringliteral">&#39;font-&#39;</span>); <span class="comment">//Note that the added dash will make this remove all rules starting with font- (like font-size, font-weight, etc.) as well as a potential font-rule</span></div>
+<div class="line">    $oRuleSet-&gt;removeRule(<span class="stringliteral">&#39;cursor&#39;</span>);</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md67"></a>
+Output</h2>
+<p>To output the entire CSS document into a variable, just use <code>-&gt;render()</code>:</p>
+<div class="fragment"><div class="line">$oCssParser = <span class="keyword">new</span> <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_parser.html">Sabberworm\CSS\Parser</a>(file_get_contents(<span class="stringliteral">&#39;somefile.css&#39;</span>));</div>
+<div class="line">$oCssDocument = $oCssParser-&gt;parse();</div>
+<div class="line">print $oCssDocument-&gt;render();</div>
+</div><!-- fragment --><p>If you want to format the output, pass an instance of type <code>Sabberworm\CSS\OutputFormat</code>:</p>
+<div class="fragment"><div class="line">$oFormat = <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_output_format.html#a239b1c70258014a86569483c2d009de6">Sabberworm\CSS\OutputFormat::create</a>()-&gt;indentWithSpaces(4)-&gt;setSpaceBetweenRules(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line">print $oCssDocument-&gt;render($oFormat);</div>
+<div class="ttc" id="aclass_sabberworm_1_1_c_s_s_1_1_output_format_html_a239b1c70258014a86569483c2d009de6"><div class="ttname"><a href="class_sabberworm_1_1_c_s_s_1_1_output_format.html#a239b1c70258014a86569483c2d009de6">Sabberworm\CSS\OutputFormat\create</a></div><div class="ttdeci">static create()</div><div class="ttdef"><b>Definition:</b> OutputFormat.php:164</div></div>
+</div><!-- fragment --><p>Or use one of the predefined formats:</p>
+<div class="fragment"><div class="line">print $oCssDocument-&gt;render(Sabberworm\CSS\OutputFormat::createPretty());</div>
+<div class="line">print $oCssDocument-&gt;render(Sabberworm\CSS\OutputFormat::createCompact());</div>
+</div><!-- fragment --><p>To see what you can do with output formatting, look at the tests in <code><a class="el" href="_output_format_test_8php.html">tests/Sabberworm/CSS/OutputFormatTest.php</a></code>.</p>
+<h1><a class="anchor" id="autotoc_md68"></a>
+Examples</h1>
+<h2><a class="anchor" id="autotoc_md69"></a>
+Example 1 (At-Rules)</h2>
+<h3><a class="anchor" id="autotoc_md70"></a>
+Input</h3>
+<div class="fragment"><div class="line">@charset &quot;utf-8&quot;;</div>
+<div class="line"> </div>
+<div class="line">@font-face {</div>
+<div class="line">  font-family: &quot;CrassRoots&quot;;</div>
+<div class="line">  src: url(&quot;../media/cr.ttf&quot;)</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">html, body {</div>
+<div class="line">    font-size: 1.6em</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">@keyframes mymove {</div>
+<div class="line">    from { top: 0px; }</div>
+<div class="line">    to { top: 200px; }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md71"></a>
+Structure (&lt;tt&gt;var_dump()&lt;/tt&gt;)</h3>
+<div class="fragment"><div class="line"><span class="keyword">class </span><a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_document.html">Sabberworm\CSS\CSSList\Document</a>#4 (2) {</div>
+<div class="line">  <span class="keyword">protected</span> <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a52a5abaca8a00a902bc2c6f548d59024">$aContents</a> =&gt;</div>
+<div class="line">  array(4) {</div>
+<div class="line">    [0] =&gt;</div>
+<div class="line">    <span class="keyword">class </span><a class="code" href="class_sabberworm_1_1_c_s_s_1_1_property_1_1_charset.html">Sabberworm\CSS\Property\Charset</a>#6 (2) {</div>
+<div class="line">      <span class="keyword">private</span> $sCharset =&gt;</div>
+<div class="line">      <span class="keyword">class </span><a class="code" href="class_sabberworm_1_1_c_s_s_1_1_value_1_1_c_s_s_string.html">Sabberworm\CSS\Value\CSSString</a>#5 (2) {</div>
+<div class="line">        <span class="keyword">private</span> $sString =&gt;</div>
+<div class="line">        string(5) <span class="stringliteral">&quot;utf-8&quot;</span></div>
+<div class="line">        <span class="keyword">protected</span> <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">        int(1)</div>
+<div class="line">      }</div>
+<div class="line">      <span class="keyword">protected</span> <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">      int(1)</div>
+<div class="line">    }</div>
+<div class="line">    [1] =&gt;</div>
+<div class="line">    <span class="keyword">class </span><a class="code" href="class_sabberworm_1_1_c_s_s_1_1_rule_set_1_1_at_rule_set.html">Sabberworm\CSS\RuleSet\AtRuleSet</a>#7 (4) {</div>
+<div class="line">      <span class="keyword">private</span> $sType =&gt;</div>
+<div class="line">      string(9) <span class="stringliteral">&quot;font-face&quot;</span></div>
+<div class="line">      <span class="keyword">private</span> $sArgs =&gt;</div>
+<div class="line">      string(0) <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line">      <span class="keyword">private</span> $aRules =&gt;</div>
+<div class="line">      array(2) {</div>
+<div class="line">        <span class="stringliteral">&#39;font-family&#39;</span> =&gt;</div>
+<div class="line">        array(1) {</div>
+<div class="line">          [0] =&gt;</div>
+<div class="line">          <span class="keyword">class </span><a class="code" href="class_sabberworm_1_1_c_s_s_1_1_rule_1_1_rule.html">Sabberworm\CSS\Rule\Rule</a>#8 (4) {</div>
+<div class="line">            <span class="keyword">private</span> $sRule =&gt;</div>
+<div class="line">            string(11) <span class="stringliteral">&quot;font-family&quot;</span></div>
+<div class="line">            <span class="keyword">private</span> $mValue =&gt;</div>
+<div class="line">            <span class="keyword">class </span><a class="code" href="class_sabberworm_1_1_c_s_s_1_1_value_1_1_c_s_s_string.html">Sabberworm\CSS\Value\CSSString</a>#9 (2) {</div>
+<div class="line">              <span class="keyword">private</span> $sString =&gt;</div>
+<div class="line">              string(10) <span class="stringliteral">&quot;CrassRoots&quot;</span></div>
+<div class="line">              <span class="keyword">protected</span> <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">              int(4)</div>
+<div class="line">            }</div>
+<div class="line">            <span class="keyword">private</span> $bIsImportant =&gt;</div>
+<div class="line">            bool(<span class="keyword">false</span>)</div>
+<div class="line">            protected <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">            <span class="keywordtype">int</span>(4)</div>
+<div class="line">          }</div>
+<div class="line">        }</div>
+<div class="line">        &#39;src&#39; =&gt;</div>
+<div class="line">        array(1) {</div>
+<div class="line">          [0] =&gt;</div>
+<div class="line">          <span class="keyword">class </span><a class="code" href="class_sabberworm_1_1_c_s_s_1_1_rule_1_1_rule.html">Sabberworm\CSS\Rule\Rule</a>#10 (4) {</div>
+<div class="line">            <span class="keyword">private</span> $sRule =&gt;</div>
+<div class="line">            string(3) <span class="stringliteral">&quot;src&quot;</span></div>
+<div class="line">            <span class="keyword">private</span> $mValue =&gt;</div>
+<div class="line">            <span class="keyword">class </span><a class="code" href="class_sabberworm_1_1_c_s_s_1_1_value_1_1_u_r_l.html">Sabberworm\CSS\Value\URL</a>#11 (2) {</div>
+<div class="line">              <span class="keyword">private</span> $oURL =&gt;</div>
+<div class="line">              <span class="keyword">class </span><a class="code" href="class_sabberworm_1_1_c_s_s_1_1_value_1_1_c_s_s_string.html">Sabberworm\CSS\Value\CSSString</a>#12 (2) {</div>
+<div class="line">                <span class="keyword">private</span> $sString =&gt;</div>
+<div class="line">                string(15) <span class="stringliteral">&quot;../media/cr.ttf&quot;</span></div>
+<div class="line">                <span class="keyword">protected</span> <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">                int(5)</div>
+<div class="line">              }</div>
+<div class="line">              <span class="keyword">protected</span> <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">              int(5)</div>
+<div class="line">            }</div>
+<div class="line">            <span class="keyword">private</span> $bIsImportant =&gt;</div>
+<div class="line">            bool(<span class="keyword">false</span>)</div>
+<div class="line">            protected <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">            <span class="keywordtype">int</span>(5)</div>
+<div class="line">          }</div>
+<div class="line">        }</div>
+<div class="line">      }</div>
+<div class="line">      protected <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">      <span class="keywordtype">int</span>(3)</div>
+<div class="line">    }</div>
+<div class="line">    [2] =&gt;</div>
+<div class="line">    class Sabberworm\CSS\RuleSet\DeclarationBlock<span class="preprocessor">#13 (3) {</span></div>
+<div class="line">      <span class="keyword">private</span> $aSelectors =&gt;</div>
+<div class="line">      array(2) {</div>
+<div class="line">        [0] =&gt;</div>
+<div class="line">        <span class="keyword">class </span><a class="code" href="class_sabberworm_1_1_c_s_s_1_1_property_1_1_selector.html">Sabberworm\CSS\Property\Selector</a>#14 (2) {</div>
+<div class="line">          <span class="keyword">private</span> $sSelector =&gt;</div>
+<div class="line">          string(4) <span class="stringliteral">&quot;html&quot;</span></div>
+<div class="line">          <span class="keyword">private</span> $iSpecificity =&gt;</div>
+<div class="line">          NULL</div>
+<div class="line">        }</div>
+<div class="line">        [1] =&gt;</div>
+<div class="line">        <span class="keyword">class </span><a class="code" href="class_sabberworm_1_1_c_s_s_1_1_property_1_1_selector.html">Sabberworm\CSS\Property\Selector</a>#15 (2) {</div>
+<div class="line">          <span class="keyword">private</span> $sSelector =&gt;</div>
+<div class="line">          string(4) <span class="stringliteral">&quot;body&quot;</span></div>
+<div class="line">          <span class="keyword">private</span> $iSpecificity =&gt;</div>
+<div class="line">          NULL</div>
+<div class="line">        }</div>
+<div class="line">      }</div>
+<div class="line">      <span class="keyword">private</span> $aRules =&gt;</div>
+<div class="line">      array(1) {</div>
+<div class="line">        <span class="stringliteral">&#39;font-size&#39;</span> =&gt;</div>
+<div class="line">        array(1) {</div>
+<div class="line">          [0] =&gt;</div>
+<div class="line">          <span class="keyword">class </span><a class="code" href="class_sabberworm_1_1_c_s_s_1_1_rule_1_1_rule.html">Sabberworm\CSS\Rule\Rule</a>#16 (4) {</div>
+<div class="line">            <span class="keyword">private</span> $sRule =&gt;</div>
+<div class="line">            string(9) <span class="stringliteral">&quot;font-size&quot;</span></div>
+<div class="line">            <span class="keyword">private</span> $mValue =&gt;</div>
+<div class="line">            <span class="keyword">class </span><a class="code" href="class_sabberworm_1_1_c_s_s_1_1_value_1_1_size.html">Sabberworm\CSS\Value\Size</a>#17 (4) {</div>
+<div class="line">              <span class="keyword">private</span> $fSize =&gt;</div>
+<div class="line">              double(1.6)</div>
+<div class="line">              private $sUnit =&gt;</div>
+<div class="line">              <span class="keywordtype">string</span>(2) &quot;em&quot;</div>
+<div class="line">              private $bIsColorComponent =&gt;</div>
+<div class="line">              <span class="keywordtype">bool</span>(false)</div>
+<div class="line">              protected <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">              <span class="keywordtype">int</span>(9)</div>
+<div class="line">            }</div>
+<div class="line">            private $bIsImportant =&gt;</div>
+<div class="line">            <span class="keywordtype">bool</span>(false)</div>
+<div class="line">            protected <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">            <span class="keywordtype">int</span>(9)</div>
+<div class="line">          }</div>
+<div class="line">        }</div>
+<div class="line">      }</div>
+<div class="line">      protected <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">      <span class="keywordtype">int</span>(8)</div>
+<div class="line">    }</div>
+<div class="line">    [3] =&gt;</div>
+<div class="line">    class Sabberworm\CSS\CSSList\KeyFrame<span class="preprocessor">#18 (4) {</span></div>
+<div class="line">      <span class="keyword">private</span> $vendorKeyFrame =&gt;</div>
+<div class="line">      string(9) <span class="stringliteral">&quot;keyframes&quot;</span></div>
+<div class="line">      <span class="keyword">private</span> $animationName =&gt;</div>
+<div class="line">      string(6) <span class="stringliteral">&quot;mymove&quot;</span></div>
+<div class="line">      <span class="keyword">protected</span> <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a52a5abaca8a00a902bc2c6f548d59024">$aContents</a> =&gt;</div>
+<div class="line">      array(2) {</div>
+<div class="line">        [0] =&gt;</div>
+<div class="line">        <span class="keyword">class </span><a class="code" href="class_sabberworm_1_1_c_s_s_1_1_rule_set_1_1_declaration_block.html">Sabberworm\CSS\RuleSet\DeclarationBlock</a>#19 (3) {</div>
+<div class="line">          <span class="keyword">private</span> $aSelectors =&gt;</div>
+<div class="line">          array(1) {</div>
+<div class="line">            [0] =&gt;</div>
+<div class="line">            <span class="keyword">class </span><a class="code" href="class_sabberworm_1_1_c_s_s_1_1_property_1_1_selector.html">Sabberworm\CSS\Property\Selector</a>#20 (2) {</div>
+<div class="line">              <span class="keyword">private</span> $sSelector =&gt;</div>
+<div class="line">              string(4) <span class="stringliteral">&quot;from&quot;</span></div>
+<div class="line">              <span class="keyword">private</span> $iSpecificity =&gt;</div>
+<div class="line">              NULL</div>
+<div class="line">            }</div>
+<div class="line">          }</div>
+<div class="line">          <span class="keyword">private</span> $aRules =&gt;</div>
+<div class="line">          array(1) {</div>
+<div class="line">            <span class="stringliteral">&#39;top&#39;</span> =&gt;</div>
+<div class="line">            array(1) {</div>
+<div class="line">              [0] =&gt;</div>
+<div class="line">              <span class="keyword">class </span><a class="code" href="class_sabberworm_1_1_c_s_s_1_1_rule_1_1_rule.html">Sabberworm\CSS\Rule\Rule</a>#21 (4) {</div>
+<div class="line">                <span class="keyword">private</span> $sRule =&gt;</div>
+<div class="line">                string(3) <span class="stringliteral">&quot;top&quot;</span></div>
+<div class="line">                <span class="keyword">private</span> $mValue =&gt;</div>
+<div class="line">                <span class="keyword">class </span><a class="code" href="class_sabberworm_1_1_c_s_s_1_1_value_1_1_size.html">Sabberworm\CSS\Value\Size</a>#22 (4) {</div>
+<div class="line">                  <span class="keyword">private</span> $fSize =&gt;</div>
+<div class="line">                  double(0)</div>
+<div class="line">                  private $sUnit =&gt;</div>
+<div class="line">                  <span class="keywordtype">string</span>(2) &quot;px&quot;</div>
+<div class="line">                  private $bIsColorComponent =&gt;</div>
+<div class="line">                  <span class="keywordtype">bool</span>(false)</div>
+<div class="line">                  protected <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">                  <span class="keywordtype">int</span>(13)</div>
+<div class="line">                }</div>
+<div class="line">                private $bIsImportant =&gt;</div>
+<div class="line">                <span class="keywordtype">bool</span>(false)</div>
+<div class="line">                protected <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">                <span class="keywordtype">int</span>(13)</div>
+<div class="line">              }</div>
+<div class="line">            }</div>
+<div class="line">          }</div>
+<div class="line">          protected <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">          <span class="keywordtype">int</span>(13)</div>
+<div class="line">        }</div>
+<div class="line">        [1] =&gt;</div>
+<div class="line">        class Sabberworm\CSS\RuleSet\DeclarationBlock<span class="preprocessor">#23 (3) {</span></div>
+<div class="line">          <span class="keyword">private</span> $aSelectors =&gt;</div>
+<div class="line">          array(1) {</div>
+<div class="line">            [0] =&gt;</div>
+<div class="line">            <span class="keyword">class </span><a class="code" href="class_sabberworm_1_1_c_s_s_1_1_property_1_1_selector.html">Sabberworm\CSS\Property\Selector</a>#24 (2) {</div>
+<div class="line">              <span class="keyword">private</span> $sSelector =&gt;</div>
+<div class="line">              string(2) <span class="stringliteral">&quot;to&quot;</span></div>
+<div class="line">              <span class="keyword">private</span> $iSpecificity =&gt;</div>
+<div class="line">              NULL</div>
+<div class="line">            }</div>
+<div class="line">          }</div>
+<div class="line">          <span class="keyword">private</span> $aRules =&gt;</div>
+<div class="line">          array(1) {</div>
+<div class="line">            <span class="stringliteral">&#39;top&#39;</span> =&gt;</div>
+<div class="line">            array(1) {</div>
+<div class="line">              [0] =&gt;</div>
+<div class="line">              <span class="keyword">class </span><a class="code" href="class_sabberworm_1_1_c_s_s_1_1_rule_1_1_rule.html">Sabberworm\CSS\Rule\Rule</a>#25 (4) {</div>
+<div class="line">                <span class="keyword">private</span> $sRule =&gt;</div>
+<div class="line">                string(3) <span class="stringliteral">&quot;top&quot;</span></div>
+<div class="line">                <span class="keyword">private</span> $mValue =&gt;</div>
+<div class="line">                <span class="keyword">class </span><a class="code" href="class_sabberworm_1_1_c_s_s_1_1_value_1_1_size.html">Sabberworm\CSS\Value\Size</a>#26 (4) {</div>
+<div class="line">                  <span class="keyword">private</span> $fSize =&gt;</div>
+<div class="line">                  double(200)</div>
+<div class="line">                  private $sUnit =&gt;</div>
+<div class="line">                  <span class="keywordtype">string</span>(2) &quot;px&quot;</div>
+<div class="line">                  private $bIsColorComponent =&gt;</div>
+<div class="line">                  <span class="keywordtype">bool</span>(false)</div>
+<div class="line">                  protected <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">                  <span class="keywordtype">int</span>(14)</div>
+<div class="line">                }</div>
+<div class="line">                private $bIsImportant =&gt;</div>
+<div class="line">                <span class="keywordtype">bool</span>(false)</div>
+<div class="line">                protected <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">                <span class="keywordtype">int</span>(14)</div>
+<div class="line">              }</div>
+<div class="line">            }</div>
+<div class="line">          }</div>
+<div class="line">          protected <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">          <span class="keywordtype">int</span>(14)</div>
+<div class="line">        }</div>
+<div class="line">      }</div>
+<div class="line">      protected <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">      <span class="keywordtype">int</span>(12)</div>
+<div class="line">    }</div>
+<div class="line">  }</div>
+<div class="line">  protected <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">  <span class="keywordtype">int</span>(1)</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_html_a1019368868955f64e3173e8f40d62582"><div class="ttname"><a href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">Sabberworm\CSS\CSSList\CSSList\$iLineNo</a></div><div class="ttdeci">$iLineNo</div><div class="ttdef"><b>Definition:</b> CSSList.php:30</div></div>
+<div class="ttc" id="aclass_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list_html_a52a5abaca8a00a902bc2c6f548d59024"><div class="ttname"><a href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a52a5abaca8a00a902bc2c6f548d59024">Sabberworm\CSS\CSSList\CSSList\$aContents</a></div><div class="ttdeci">$aContents</div><div class="ttdef"><b>Definition:</b> CSSList.php:29</div></div>
+<div class="ttc" id="aclass_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_document_html"><div class="ttname"><a href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_document.html">Sabberworm\CSS\CSSList\Document</a></div><div class="ttdef"><b>Definition:</b> Document.php:10</div></div>
+<div class="ttc" id="aclass_sabberworm_1_1_c_s_s_1_1_property_1_1_charset_html"><div class="ttname"><a href="class_sabberworm_1_1_c_s_s_1_1_property_1_1_charset.html">Sabberworm\CSS\Property\Charset</a></div><div class="ttdef"><b>Definition:</b> Charset.php:12</div></div>
+<div class="ttc" id="aclass_sabberworm_1_1_c_s_s_1_1_property_1_1_selector_html"><div class="ttname"><a href="class_sabberworm_1_1_c_s_s_1_1_property_1_1_selector.html">Sabberworm\CSS\Property\Selector</a></div><div class="ttdef"><b>Definition:</b> Selector.php:8</div></div>
+<div class="ttc" id="aclass_sabberworm_1_1_c_s_s_1_1_rule_1_1_rule_html"><div class="ttname"><a href="class_sabberworm_1_1_c_s_s_1_1_rule_1_1_rule.html">Sabberworm\CSS\Rule\Rule</a></div><div class="ttdef"><b>Definition:</b> Rule.php:15</div></div>
+<div class="ttc" id="aclass_sabberworm_1_1_c_s_s_1_1_rule_set_1_1_at_rule_set_html"><div class="ttname"><a href="class_sabberworm_1_1_c_s_s_1_1_rule_set_1_1_at_rule_set.html">Sabberworm\CSS\RuleSet\AtRuleSet</a></div><div class="ttdef"><b>Definition:</b> AtRuleSet.php:10</div></div>
+<div class="ttc" id="aclass_sabberworm_1_1_c_s_s_1_1_rule_set_1_1_declaration_block_html"><div class="ttname"><a href="class_sabberworm_1_1_c_s_s_1_1_rule_set_1_1_declaration_block.html">Sabberworm\CSS\RuleSet\DeclarationBlock</a></div><div class="ttdef"><b>Definition:</b> DeclarationBlock.php:19</div></div>
+<div class="ttc" id="aclass_sabberworm_1_1_c_s_s_1_1_value_1_1_c_s_s_string_html"><div class="ttname"><a href="class_sabberworm_1_1_c_s_s_1_1_value_1_1_c_s_s_string.html">Sabberworm\CSS\Value\CSSString</a></div><div class="ttdef"><b>Definition:</b> CSSString.php:8</div></div>
+<div class="ttc" id="aclass_sabberworm_1_1_c_s_s_1_1_value_1_1_size_html"><div class="ttname"><a href="class_sabberworm_1_1_c_s_s_1_1_value_1_1_size.html">Sabberworm\CSS\Value\Size</a></div><div class="ttdef"><b>Definition:</b> Size.php:7</div></div>
+<div class="ttc" id="aclass_sabberworm_1_1_c_s_s_1_1_value_1_1_u_r_l_html"><div class="ttname"><a href="class_sabberworm_1_1_c_s_s_1_1_value_1_1_u_r_l.html">Sabberworm\CSS\Value\URL</a></div><div class="ttdef"><b>Definition:</b> URL.php:7</div></div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md72"></a>
+Output (&lt;tt&gt;render()&lt;/tt&gt;)</h3>
+<div class="fragment"><div class="line">@charset &quot;utf-8&quot;;</div>
+<div class="line">@font-face {font-family: &quot;CrassRoots&quot;;src: url(&quot;../media/cr.ttf&quot;);}</div>
+<div class="line">html, body {font-size: 1.6em;}</div>
+<div class="line">@keyframes mymove {from {top: 0px;}</div>
+<div class="line">    to {top: 200px;}}</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md73"></a>
+Example 2 (Values)</h2>
+<h3><a class="anchor" id="autotoc_md74"></a>
+Input</h3>
+<div class="fragment"><div class="line">#header {</div>
+<div class="line">    margin: 10px 2em 1cm 2%;</div>
+<div class="line">    font-family: Verdana, Helvetica, &quot;Gill Sans&quot;, sans-serif;</div>
+<div class="line">    color: red !important;</div>
+<div class="line">}</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md75"></a>
+Structure (&lt;tt&gt;var_dump()&lt;/tt&gt;)</h3>
+<div class="fragment"><div class="line"><span class="keyword">class </span><a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_document.html">Sabberworm\CSS\CSSList\Document</a>#4 (2) {</div>
+<div class="line">  <span class="keyword">protected</span> <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a52a5abaca8a00a902bc2c6f548d59024">$aContents</a> =&gt;</div>
+<div class="line">  array(1) {</div>
+<div class="line">    [0] =&gt;</div>
+<div class="line">    <span class="keyword">class </span><a class="code" href="class_sabberworm_1_1_c_s_s_1_1_rule_set_1_1_declaration_block.html">Sabberworm\CSS\RuleSet\DeclarationBlock</a>#5 (3) {</div>
+<div class="line">      <span class="keyword">private</span> $aSelectors =&gt;</div>
+<div class="line">      array(1) {</div>
+<div class="line">        [0] =&gt;</div>
+<div class="line">        <span class="keyword">class </span><a class="code" href="class_sabberworm_1_1_c_s_s_1_1_property_1_1_selector.html">Sabberworm\CSS\Property\Selector</a>#6 (2) {</div>
+<div class="line">          <span class="keyword">private</span> $sSelector =&gt;</div>
+<div class="line">          string(7) <span class="stringliteral">&quot;#header&quot;</span></div>
+<div class="line">          <span class="keyword">private</span> $iSpecificity =&gt;</div>
+<div class="line">          NULL</div>
+<div class="line">        }</div>
+<div class="line">      }</div>
+<div class="line">      <span class="keyword">private</span> $aRules =&gt;</div>
+<div class="line">      array(3) {</div>
+<div class="line">        <span class="stringliteral">&#39;margin&#39;</span> =&gt;</div>
+<div class="line">        array(1) {</div>
+<div class="line">          [0] =&gt;</div>
+<div class="line">          <span class="keyword">class </span><a class="code" href="class_sabberworm_1_1_c_s_s_1_1_rule_1_1_rule.html">Sabberworm\CSS\Rule\Rule</a>#7 (4) {</div>
+<div class="line">            <span class="keyword">private</span> $sRule =&gt;</div>
+<div class="line">            string(6) <span class="stringliteral">&quot;margin&quot;</span></div>
+<div class="line">            <span class="keyword">private</span> $mValue =&gt;</div>
+<div class="line">            <span class="keyword">class </span><a class="code" href="class_sabberworm_1_1_c_s_s_1_1_value_1_1_rule_value_list.html">Sabberworm\CSS\Value\RuleValueList</a>#12 (3) {</div>
+<div class="line">              <span class="keyword">protected</span> $aComponents =&gt;</div>
+<div class="line">              array(4) {</div>
+<div class="line">                [0] =&gt;</div>
+<div class="line">                <span class="keyword">class </span><a class="code" href="class_sabberworm_1_1_c_s_s_1_1_value_1_1_size.html">Sabberworm\CSS\Value\Size</a>#8 (4) {</div>
+<div class="line">                  <span class="keyword">private</span> $fSize =&gt;</div>
+<div class="line">                  double(10)</div>
+<div class="line">                  private $sUnit =&gt;</div>
+<div class="line">                  <span class="keywordtype">string</span>(2) &quot;px&quot;</div>
+<div class="line">                  private $bIsColorComponent =&gt;</div>
+<div class="line">                  <span class="keywordtype">bool</span>(false)</div>
+<div class="line">                  protected <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">                  <span class="keywordtype">int</span>(2)</div>
+<div class="line">                }</div>
+<div class="line">                [1] =&gt;</div>
+<div class="line">                class Sabberworm\CSS\Value\Size<span class="preprocessor">#9 (4) {</span></div>
+<div class="line">                  <span class="keyword">private</span> $fSize =&gt;</div>
+<div class="line">                  double(2)</div>
+<div class="line">                  private $sUnit =&gt;</div>
+<div class="line">                  <span class="keywordtype">string</span>(2) &quot;em&quot;</div>
+<div class="line">                  private $bIsColorComponent =&gt;</div>
+<div class="line">                  <span class="keywordtype">bool</span>(false)</div>
+<div class="line">                  protected <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">                  <span class="keywordtype">int</span>(2)</div>
+<div class="line">                }</div>
+<div class="line">                [2] =&gt;</div>
+<div class="line">                class Sabberworm\CSS\Value\Size<span class="preprocessor">#10 (4) {</span></div>
+<div class="line">                  <span class="keyword">private</span> $fSize =&gt;</div>
+<div class="line">                  double(1)</div>
+<div class="line">                  private $sUnit =&gt;</div>
+<div class="line">                  <span class="keywordtype">string</span>(2) &quot;cm&quot;</div>
+<div class="line">                  private $bIsColorComponent =&gt;</div>
+<div class="line">                  <span class="keywordtype">bool</span>(false)</div>
+<div class="line">                  protected <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">                  <span class="keywordtype">int</span>(2)</div>
+<div class="line">                }</div>
+<div class="line">                [3] =&gt;</div>
+<div class="line">                class Sabberworm\CSS\Value\Size<span class="preprocessor">#11 (4) {</span></div>
+<div class="line">                  <span class="keyword">private</span> $fSize =&gt;</div>
+<div class="line">                  double(2)</div>
+<div class="line">                  private $sUnit =&gt;</div>
+<div class="line">                  <span class="keywordtype">string</span>(1) &quot;%&quot;</div>
+<div class="line">                  private $bIsColorComponent =&gt;</div>
+<div class="line">                  <span class="keywordtype">bool</span>(false)</div>
+<div class="line">                  protected <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">                  <span class="keywordtype">int</span>(2)</div>
+<div class="line">                }</div>
+<div class="line">              }</div>
+<div class="line">              protected $sSeparator =&gt;</div>
+<div class="line">              <span class="keywordtype">string</span>(1) &quot; &quot;</div>
+<div class="line">              protected <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">              <span class="keywordtype">int</span>(2)</div>
+<div class="line">            }</div>
+<div class="line">            private $bIsImportant =&gt;</div>
+<div class="line">            <span class="keywordtype">bool</span>(false)</div>
+<div class="line">            protected <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">            <span class="keywordtype">int</span>(2)</div>
+<div class="line">          }</div>
+<div class="line">        }</div>
+<div class="line">        &#39;font-family&#39; =&gt;</div>
+<div class="line">        array(1) {</div>
+<div class="line">          [0] =&gt;</div>
+<div class="line">          <span class="keyword">class </span><a class="code" href="class_sabberworm_1_1_c_s_s_1_1_rule_1_1_rule.html">Sabberworm\CSS\Rule\Rule</a>#13 (4) {</div>
+<div class="line">            <span class="keyword">private</span> $sRule =&gt;</div>
+<div class="line">            string(11) <span class="stringliteral">&quot;font-family&quot;</span></div>
+<div class="line">            <span class="keyword">private</span> $mValue =&gt;</div>
+<div class="line">            <span class="keyword">class </span><a class="code" href="class_sabberworm_1_1_c_s_s_1_1_value_1_1_rule_value_list.html">Sabberworm\CSS\Value\RuleValueList</a>#15 (3) {</div>
+<div class="line">              <span class="keyword">protected</span> $aComponents =&gt;</div>
+<div class="line">              array(4) {</div>
+<div class="line">                [0] =&gt;</div>
+<div class="line">                string(7) <span class="stringliteral">&quot;Verdana&quot;</span></div>
+<div class="line">                [1] =&gt;</div>
+<div class="line">                string(9) <span class="stringliteral">&quot;Helvetica&quot;</span></div>
+<div class="line">                [2] =&gt;</div>
+<div class="line">                <span class="keyword">class </span><a class="code" href="class_sabberworm_1_1_c_s_s_1_1_value_1_1_c_s_s_string.html">Sabberworm\CSS\Value\CSSString</a>#14 (2) {</div>
+<div class="line">                  <span class="keyword">private</span> $sString =&gt;</div>
+<div class="line">                  string(9) <span class="stringliteral">&quot;Gill Sans&quot;</span></div>
+<div class="line">                  <span class="keyword">protected</span> <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">                  int(3)</div>
+<div class="line">                }</div>
+<div class="line">                [3] =&gt;</div>
+<div class="line">                string(10) <span class="stringliteral">&quot;sans-serif&quot;</span></div>
+<div class="line">              }</div>
+<div class="line">              <span class="keyword">protected</span> $sSeparator =&gt;</div>
+<div class="line">              string(1) <span class="stringliteral">&quot;,&quot;</span></div>
+<div class="line">              <span class="keyword">protected</span> <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">              int(3)</div>
+<div class="line">            }</div>
+<div class="line">            <span class="keyword">private</span> $bIsImportant =&gt;</div>
+<div class="line">            bool(<span class="keyword">false</span>)</div>
+<div class="line">            protected <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">            <span class="keywordtype">int</span>(3)</div>
+<div class="line">          }</div>
+<div class="line">        }</div>
+<div class="line">        &#39;color&#39; =&gt;</div>
+<div class="line">        array(1) {</div>
+<div class="line">          [0] =&gt;</div>
+<div class="line">          <span class="keyword">class </span><a class="code" href="class_sabberworm_1_1_c_s_s_1_1_rule_1_1_rule.html">Sabberworm\CSS\Rule\Rule</a>#16 (4) {</div>
+<div class="line">            <span class="keyword">private</span> $sRule =&gt;</div>
+<div class="line">            string(5) <span class="stringliteral">&quot;color&quot;</span></div>
+<div class="line">            <span class="keyword">private</span> $mValue =&gt;</div>
+<div class="line">            string(3) <span class="stringliteral">&quot;red&quot;</span></div>
+<div class="line">            <span class="keyword">private</span> $bIsImportant =&gt;</div>
+<div class="line">            bool(<span class="keyword">true</span>)</div>
+<div class="line">            protected <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">            <span class="keywordtype">int</span>(4)</div>
+<div class="line">          }</div>
+<div class="line">        }</div>
+<div class="line">      }</div>
+<div class="line">      protected <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">      <span class="keywordtype">int</span>(1)</div>
+<div class="line">    }</div>
+<div class="line">  }</div>
+<div class="line">  protected <a class="code" href="class_sabberworm_1_1_c_s_s_1_1_c_s_s_list_1_1_c_s_s_list.html#a1019368868955f64e3173e8f40d62582">$iLineNo</a> =&gt;</div>
+<div class="line">  <span class="keywordtype">int</span>(1)</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_sabberworm_1_1_c_s_s_1_1_value_1_1_rule_value_list_html"><div class="ttname"><a href="class_sabberworm_1_1_c_s_s_1_1_value_1_1_rule_value_list.html">Sabberworm\CSS\Value\RuleValueList</a></div><div class="ttdef"><b>Definition:</b> RuleValueList.php:5</div></div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md76"></a>
+Output (&lt;tt&gt;render()&lt;/tt&gt;)</h3>
+<div class="fragment"><div class="line">#header {margin: 10px 2em 1cm 2%;font-family: Verdana,Helvetica,&quot;Gill Sans&quot;,sans-serif;color: red !important;}</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md77"></a>
+Contributors/Thanks to</h1>
+<ul>
+<li><a href="https://github.com/raxbg">raxbg</a> for contributions to parse <code>calc</code>, grid lines, and various bugfixes.</li>
+<li><a href="https://github.com/westonruter">westonruter</a> for bugfixes and improvements.</li>
+<li><a href="https://github.com/FMCorz">FMCorz</a> for many patches and suggestions, for being able to parse comments and IE hacks (in lenient mode).</li>
+<li><a href="https://github.com/Lullabot">Lullabot</a> for a patch that allows to know the line number for each parsed token.</li>
+<li><a href="https://github.com/ju1ius">ju1ius</a> for the specificity parsing code and the ability to expand/compact shorthand properties.</li>
+<li><a href="https://github.com/ossinkine">ossinkine</a> for a 150 time performance boost.</li>
+<li><a href="https://github.com/GaryJones">GaryJones</a> for lots of input and <a href="http://css-specificity.info/">http://css-specificity.info/</a>.</li>
+<li><a href="https://github.com/docteurklein">docteurklein</a> for output formatting and <code>CSSList-&gt;remove()</code> inspiration.</li>
+<li><a href="https://github.com/nicolopignatelli">nicolopignatelli</a> for PSR-0 compatibility.</li>
+<li><a href="https://github.com/diegoembarcadero">diegoembarcadero</a> for keyframe at-rule parsing.</li>
+<li><a href="https://github.com/goetas">goetas</a> for </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré le Vendredi 21 Mai 2021 11:05:34 pour EPL - Essai de déverminage par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

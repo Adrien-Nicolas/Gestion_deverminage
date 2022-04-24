@@ -1,0 +1,11 @@
+\hypertarget{o_rule_set--example}{}\doxysection{o\+Rule\+Set-\/}
+Returns all rules matching the given rule name 
+\begin{DoxyParams}{Parameters}
+{\em (null$\vert$string$\vert$\+Rule)} & \$m\+Rule pattern to search for. If null, returns all rules. if the pattern ends with a dash, all rules starting with the pattern are returned as well as one matching the pattern with the dash excluded. passing a Rule behaves like calling get\+Rules(\$m\+Rule-\/$>$get\+Rule()). $>$get\+Rules(\textquotesingle{}font-\/\textquotesingle{}) //returns an array of all rules either beginning with font-\/ or matching font.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCodeInclude}{0}
+
+\end{DoxyCodeInclude}
+ 

@@ -1,0 +1,214 @@
+\hypertarget{lot_8php}{}\doxysection{lot.\+php File Reference}
+\label{lot_8php}\index{lot.php@{lot.php}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{lot_8php_ae97941710d863131c700f069b109991e}{\$id}} = \$\+\_\+\+GET\mbox{[}\textquotesingle{}id\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{lot_8php_a0ee17d3bce7e8683a56cf90060b4dc6c}{\$lot}} = Lot\+::get\+Lot\+From\+ID(\$id)
+\item 
+\mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}}(\$lot-\/$>$get\+Id()==0) \mbox{\hyperlink{lot_8php_a01ef779ad5873ef6048201aa1afad0e5}{\$conf}} = \mbox{\hyperlink{class_config_graph_abb3c091715e7b5934ec065f6bc32837c}{Config\+Graph\+::get\+Config\+From\+Id}}(1)
+\item 
+\mbox{\hyperlink{lot_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}{\$authentication}} = new \mbox{\hyperlink{class_secure_user_authentication}{Secure\+User\+Authentication}}()
+\item 
+\mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}}(! \$authentication-\/$>$is\+User\+Connected()) \mbox{\hyperlink{lot_8php_a0811826b78691f7e8c277c73d7da0ae6}{\$user}} = \$authentication-\/$>$get\+User\+From\+Session()
+\item 
+\mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}}(\$user-\/$>$get\+Role()==\textquotesingle{}Administrateur\textquotesingle{}) \mbox{\hyperlink{lot_8php_add7a093b9fc90e5cd395059192656703}{\$capteurs}} = \$lot-\/$>$get\+All\+Capteurs()
+\item 
+\mbox{\hyperlink{lot_8php_a539b5b4c703492bc98481c277388dc73}{\$nb\+Valid}} = \$lot-\/$>$get\+Nb\+Valid\+Cap()
+\item 
+\mbox{\hyperlink{lot_8php_ae85d181df6d922bfbf80fcb6cfa41e73}{\$nb\+Not\+Valid}} = \$lot-\/$>$get\+Nb\+Not\+Valid\+Cap()
+\item 
+\mbox{\hyperlink{lot_8php_a0e425132423181ab2baa28175852d336}{\$nb\+Cap}} = \$lot-\/$>$get\+Nb\+Cap()
+\item 
+\mbox{\hyperlink{lot_8php_a319b4f5fbcbd04481acc958b1ae573ce}{\$essais\+Id}} = \$lot-\/$>$get\+All\+Essais\+Id()
+\item 
+\mbox{\hyperlink{lot_8php_a31059b9e4d0c5af34df20da32232ea9a}{\$desc}} = \$lot-\/$>$get\+Description()
+\item 
+\mbox{\hyperlink{lot_8php_aa8d2a5bdf2497a75e054706b7f6baf2c}{\$idlist}} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\hyperlink{lot_8php_a9a4a6fba2208984cabb3afacadf33919}{\$type}} = \$lot-\/$>$get\+Product()
+\item 
+\mbox{\hyperlink{lot_8php_a0a44e6760141442bb439b1ab1395d8ff}{\$page}} = new Web\+Page(\char`\"{}EPL -\/ Gestion des lots\char`\"{})
+\item 
+\mbox{\hyperlink{lot_8php_acdc6acc2968dd2c18711f7101642923e}{\$numlot}} = \$lot-\/$>$get\+Num\+Lot()
+\item 
+\mbox{\hyperlink{lot_8php_ae9482e34bdf015578abffdf18cb3f441}{\$emplacement}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{lot_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}\label{lot_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}} 
+\index{lot.php@{lot.php}!\$authentication@{\$authentication}}
+\index{\$authentication@{\$authentication}!lot.php@{lot.php}}
+\doxysubsubsection{\texorpdfstring{\$authentication}{$authentication}}
+{\footnotesize\ttfamily \$authentication = new \mbox{\hyperlink{class_secure_user_authentication}{Secure\+User\+Authentication}}()}
+
+
+
+Definition at line 21 of file lot.\+php.
+
+\mbox{\Hypertarget{lot_8php_add7a093b9fc90e5cd395059192656703}\label{lot_8php_add7a093b9fc90e5cd395059192656703}} 
+\index{lot.php@{lot.php}!\$capteurs@{\$capteurs}}
+\index{\$capteurs@{\$capteurs}!lot.php@{lot.php}}
+\doxysubsubsection{\texorpdfstring{\$capteurs}{$capteurs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}} ( \$user-\/$>$get\+Role()==\textquotesingle{}Administrateur\textquotesingle{}) \$capteurs = \$lot-\/$>$get\+All\+Capteurs()}
+
+
+
+Definition at line 44 of file lot.\+php.
+
+\mbox{\Hypertarget{lot_8php_a01ef779ad5873ef6048201aa1afad0e5}\label{lot_8php_a01ef779ad5873ef6048201aa1afad0e5}} 
+\index{lot.php@{lot.php}!\$conf@{\$conf}}
+\index{\$conf@{\$conf}!lot.php@{lot.php}}
+\doxysubsubsection{\texorpdfstring{\$conf}{$conf}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}} ( \$lot-\/$>$get\+Id()==0) \$conf = \mbox{\hyperlink{class_config_graph_abb3c091715e7b5934ec065f6bc32837c}{Config\+Graph\+::get\+Config\+From\+Id}}(1)}
+
+
+
+Definition at line 20 of file lot.\+php.
+
+\mbox{\Hypertarget{lot_8php_a31059b9e4d0c5af34df20da32232ea9a}\label{lot_8php_a31059b9e4d0c5af34df20da32232ea9a}} 
+\index{lot.php@{lot.php}!\$desc@{\$desc}}
+\index{\$desc@{\$desc}!lot.php@{lot.php}}
+\doxysubsubsection{\texorpdfstring{\$desc}{$desc}}
+{\footnotesize\ttfamily \$desc = \$lot-\/$>$get\+Description()}
+
+
+
+Definition at line 49 of file lot.\+php.
+
+\mbox{\Hypertarget{lot_8php_ae9482e34bdf015578abffdf18cb3f441}\label{lot_8php_ae9482e34bdf015578abffdf18cb3f441}} 
+\index{lot.php@{lot.php}!\$emplacement@{\$emplacement}}
+\index{\$emplacement@{\$emplacement}!lot.php@{lot.php}}
+\doxysubsubsection{\texorpdfstring{\$emplacement}{$emplacement}}
+{\footnotesize\ttfamily \$emplacement}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [}
+\DoxyCodeLine{    \textcolor{stringliteral}{'A1'}, \textcolor{stringliteral}{'A2'}, \textcolor{stringliteral}{'A3'}, \textcolor{stringliteral}{'A4'}, \textcolor{stringliteral}{'A5'}, \textcolor{stringliteral}{'A6'}, \textcolor{stringliteral}{'A7'},}
+\DoxyCodeLine{    \textcolor{stringliteral}{'B1'}, \textcolor{stringliteral}{'B2'}, \textcolor{stringliteral}{'B3'}, \textcolor{stringliteral}{'B4'}, \textcolor{stringliteral}{'B5'}, \textcolor{stringliteral}{'B6'}, \textcolor{stringliteral}{'B7'}, \textcolor{stringliteral}{'B8'},}
+\DoxyCodeLine{    \textcolor{stringliteral}{'C1'}, \textcolor{stringliteral}{'C2'}, \textcolor{stringliteral}{'C3'}, \textcolor{stringliteral}{'C4'}, \textcolor{stringliteral}{'C5'}, \textcolor{stringliteral}{'C6'}, \textcolor{stringliteral}{'C7'},}
+\DoxyCodeLine{    \textcolor{stringliteral}{'D1'}, \textcolor{stringliteral}{'D2'}, \textcolor{stringliteral}{'D3'}, \textcolor{stringliteral}{'D4'}, \textcolor{stringliteral}{'D5'}, \textcolor{stringliteral}{'D6'}, \textcolor{stringliteral}{'D7'}, \textcolor{stringliteral}{'D8'},}
+\DoxyCodeLine{    \textcolor{stringliteral}{'E1'}, \textcolor{stringliteral}{'E2'}, \textcolor{stringliteral}{'E3'}, \textcolor{stringliteral}{'E4'}, \textcolor{stringliteral}{'E5'}, \textcolor{stringliteral}{'E6'}, \textcolor{stringliteral}{'E7'},}
+\DoxyCodeLine{    \textcolor{stringliteral}{'F1'}, \textcolor{stringliteral}{'F2'}, \textcolor{stringliteral}{'F3'}, \textcolor{stringliteral}{'F4'}, \textcolor{stringliteral}{'F5'}, \textcolor{stringliteral}{'F6'}, \textcolor{stringliteral}{'F7'}, \textcolor{stringliteral}{'F8'},}
+\DoxyCodeLine{    \textcolor{stringliteral}{'G1'}, \textcolor{stringliteral}{'G2'}, \textcolor{stringliteral}{'G3'}, \textcolor{stringliteral}{'G4'}, \textcolor{stringliteral}{'G5'}, \textcolor{stringliteral}{'G6'}, \textcolor{stringliteral}{'G7'},}
+\DoxyCodeLine{    \textcolor{stringliteral}{'H1'}, \textcolor{stringliteral}{'H2'}, \textcolor{stringliteral}{'H3'}, \textcolor{stringliteral}{'H4'}, \textcolor{stringliteral}{'H5'}, \textcolor{stringliteral}{'H6'}, \textcolor{stringliteral}{'H7'}, \textcolor{stringliteral}{'H8'}}
+\DoxyCodeLine{]}
+
+\end{DoxyCode}
+
+
+Definition at line 70 of file lot.\+php.
+
+\mbox{\Hypertarget{lot_8php_a319b4f5fbcbd04481acc958b1ae573ce}\label{lot_8php_a319b4f5fbcbd04481acc958b1ae573ce}} 
+\index{lot.php@{lot.php}!\$essaisId@{\$essaisId}}
+\index{\$essaisId@{\$essaisId}!lot.php@{lot.php}}
+\doxysubsubsection{\texorpdfstring{\$essaisId}{$essaisId}}
+{\footnotesize\ttfamily \$essais\+Id = \$lot-\/$>$get\+All\+Essais\+Id()}
+
+
+
+Definition at line 48 of file lot.\+php.
+
+\mbox{\Hypertarget{lot_8php_ae97941710d863131c700f069b109991e}\label{lot_8php_ae97941710d863131c700f069b109991e}} 
+\index{lot.php@{lot.php}!\$id@{\$id}}
+\index{\$id@{\$id}!lot.php@{lot.php}}
+\doxysubsubsection{\texorpdfstring{\$id}{$id}}
+{\footnotesize\ttfamily \$id = \$\+\_\+\+GET\mbox{[}\textquotesingle{}id\textquotesingle{}\mbox{]}}
+
+
+
+Definition at line 10 of file lot.\+php.
+
+\mbox{\Hypertarget{lot_8php_aa8d2a5bdf2497a75e054706b7f6baf2c}\label{lot_8php_aa8d2a5bdf2497a75e054706b7f6baf2c}} 
+\index{lot.php@{lot.php}!\$idlist@{\$idlist}}
+\index{\$idlist@{\$idlist}!lot.php@{lot.php}}
+\doxysubsubsection{\texorpdfstring{\$idlist}{$idlist}}
+{\footnotesize\ttfamily foreach ( \$essais\+Id AS \$e\+Id) \$idlist = \textquotesingle{}\textquotesingle{}}
+
+
+
+Definition at line 50 of file lot.\+php.
+
+\mbox{\Hypertarget{lot_8php_a0ee17d3bce7e8683a56cf90060b4dc6c}\label{lot_8php_a0ee17d3bce7e8683a56cf90060b4dc6c}} 
+\index{lot.php@{lot.php}!\$lot@{\$lot}}
+\index{\$lot@{\$lot}!lot.php@{lot.php}}
+\doxysubsubsection{\texorpdfstring{\$lot}{$lot}}
+{\footnotesize\ttfamily \$lot = Lot\+::get\+Lot\+From\+ID(\$id)}
+
+
+
+Definition at line 11 of file lot.\+php.
+
+\mbox{\Hypertarget{lot_8php_a0e425132423181ab2baa28175852d336}\label{lot_8php_a0e425132423181ab2baa28175852d336}} 
+\index{lot.php@{lot.php}!\$nbCap@{\$nbCap}}
+\index{\$nbCap@{\$nbCap}!lot.php@{lot.php}}
+\doxysubsubsection{\texorpdfstring{\$nbCap}{$nbCap}}
+{\footnotesize\ttfamily \$nb\+Cap = \$lot-\/$>$get\+Nb\+Cap()}
+
+
+
+Definition at line 47 of file lot.\+php.
+
+\mbox{\Hypertarget{lot_8php_ae85d181df6d922bfbf80fcb6cfa41e73}\label{lot_8php_ae85d181df6d922bfbf80fcb6cfa41e73}} 
+\index{lot.php@{lot.php}!\$nbNotValid@{\$nbNotValid}}
+\index{\$nbNotValid@{\$nbNotValid}!lot.php@{lot.php}}
+\doxysubsubsection{\texorpdfstring{\$nbNotValid}{$nbNotValid}}
+{\footnotesize\ttfamily \$nb\+Not\+Valid = \$lot-\/$>$get\+Nb\+Not\+Valid\+Cap()}
+
+
+
+Definition at line 46 of file lot.\+php.
+
+\mbox{\Hypertarget{lot_8php_a539b5b4c703492bc98481c277388dc73}\label{lot_8php_a539b5b4c703492bc98481c277388dc73}} 
+\index{lot.php@{lot.php}!\$nbValid@{\$nbValid}}
+\index{\$nbValid@{\$nbValid}!lot.php@{lot.php}}
+\doxysubsubsection{\texorpdfstring{\$nbValid}{$nbValid}}
+{\footnotesize\ttfamily \$nb\+Valid = \$lot-\/$>$get\+Nb\+Valid\+Cap()}
+
+
+
+Definition at line 45 of file lot.\+php.
+
+\mbox{\Hypertarget{lot_8php_acdc6acc2968dd2c18711f7101642923e}\label{lot_8php_acdc6acc2968dd2c18711f7101642923e}} 
+\index{lot.php@{lot.php}!\$numlot@{\$numlot}}
+\index{\$numlot@{\$numlot}!lot.php@{lot.php}}
+\doxysubsubsection{\texorpdfstring{\$numlot}{$numlot}}
+{\footnotesize\ttfamily \$numlot = \$lot-\/$>$get\+Num\+Lot()}
+
+
+
+Definition at line 67 of file lot.\+php.
+
+\mbox{\Hypertarget{lot_8php_a0a44e6760141442bb439b1ab1395d8ff}\label{lot_8php_a0a44e6760141442bb439b1ab1395d8ff}} 
+\index{lot.php@{lot.php}!\$page@{\$page}}
+\index{\$page@{\$page}!lot.php@{lot.php}}
+\doxysubsubsection{\texorpdfstring{\$page}{$page}}
+{\footnotesize\ttfamily \$page = new Web\+Page(\char`\"{}EPL -\/ Gestion des lots\char`\"{})}
+
+
+
+Definition at line 62 of file lot.\+php.
+
+\mbox{\Hypertarget{lot_8php_a9a4a6fba2208984cabb3afacadf33919}\label{lot_8php_a9a4a6fba2208984cabb3afacadf33919}} 
+\index{lot.php@{lot.php}!\$type@{\$type}}
+\index{\$type@{\$type}!lot.php@{lot.php}}
+\doxysubsubsection{\texorpdfstring{\$type}{$type}}
+{\footnotesize\ttfamily \$type = \$lot-\/$>$get\+Product()}
+
+
+
+Definition at line 51 of file lot.\+php.
+
+\mbox{\Hypertarget{lot_8php_a0811826b78691f7e8c277c73d7da0ae6}\label{lot_8php_a0811826b78691f7e8c277c73d7da0ae6}} 
+\index{lot.php@{lot.php}!\$user@{\$user}}
+\index{\$user@{\$user}!lot.php@{lot.php}}
+\doxysubsubsection{\texorpdfstring{\$user}{$user}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}} (! \$authentication-\/$>$is\+User\+Connected()) \$user = \$authentication-\/$>$get\+User\+From\+Session()}
+
+
+
+Definition at line 26 of file lot.\+php.
+

@@ -1,0 +1,26 @@
+var class_dompdf_1_1_renderer_1_1_abstract_renderer =
+[
+    [ "__construct", "class_dompdf_1_1_renderer_1_1_abstract_renderer.html#a7cd48df4f2198e8af47619bf8acc6411", null ],
+    [ "_apply_ratio", "class_dompdf_1_1_renderer_1_1_abstract_renderer.html#a569748be153b9a0f23179d4729377241", null ],
+    [ "_background_image", "class_dompdf_1_1_renderer_1_1_abstract_renderer.html#a4a03a5f4bf25ae4ff56d5205184bf1f3", null ],
+    [ "_border_dashed", "class_dompdf_1_1_renderer_1_1_abstract_renderer.html#add646fdf2c250aa882647a28be0aedea", null ],
+    [ "_border_dotted", "class_dompdf_1_1_renderer_1_1_abstract_renderer.html#ae6078fe32ab2fd7ec97ca085f4f1333b", null ],
+    [ "_border_double", "class_dompdf_1_1_renderer_1_1_abstract_renderer.html#af7c0a68eaf813d1eb90fe88b546c5030", null ],
+    [ "_border_groove", "class_dompdf_1_1_renderer_1_1_abstract_renderer.html#a72ce5bc953091d1bd68cf48ae7aa5628", null ],
+    [ "_border_hidden", "class_dompdf_1_1_renderer_1_1_abstract_renderer.html#af5331734846e9b1a2d924c162ae7ae07", null ],
+    [ "_border_inset", "class_dompdf_1_1_renderer_1_1_abstract_renderer.html#a5314f1c615f1eb3bda410aba413c9275", null ],
+    [ "_border_line", "class_dompdf_1_1_renderer_1_1_abstract_renderer.html#aa3001702a283f46e17f73f9aca843f81", null ],
+    [ "_border_none", "class_dompdf_1_1_renderer_1_1_abstract_renderer.html#ab78c35cf7665494b6211be89a0acaef9", null ],
+    [ "_border_outset", "class_dompdf_1_1_renderer_1_1_abstract_renderer.html#aaa5f312ddb3b77e16a15b96ea5b1794d", null ],
+    [ "_border_ridge", "class_dompdf_1_1_renderer_1_1_abstract_renderer.html#ac298867e88c391563235006a574b0b73", null ],
+    [ "_border_solid", "class_dompdf_1_1_renderer_1_1_abstract_renderer.html#a2a7b326d784222dffc6579081014ac7f", null ],
+    [ "_debug_layout", "class_dompdf_1_1_renderer_1_1_abstract_renderer.html#a84c90fb5864291447160001d90eb93b5", null ],
+    [ "_get_dash_pattern", "class_dompdf_1_1_renderer_1_1_abstract_renderer.html#a32402b2f8606ac5e2387442c0e8f7f8f", null ],
+    [ "_resize_background_image", "class_dompdf_1_1_renderer_1_1_abstract_renderer.html#a372d3b06aa87fb2f91789e2b7cccdbfb", null ],
+    [ "_set_opacity", "class_dompdf_1_1_renderer_1_1_abstract_renderer.html#adeeff2645b94047493a9911918689eab", null ],
+    [ "_shade", "class_dompdf_1_1_renderer_1_1_abstract_renderer.html#a988652cc03e1da6d6d8162d45c91af9e", null ],
+    [ "_tint", "class_dompdf_1_1_renderer_1_1_abstract_renderer.html#a7c5b5c66b28c61e0f4ab5ae1fa7fb01b", null ],
+    [ "render", "class_dompdf_1_1_renderer_1_1_abstract_renderer.html#a25d4f887dbbc6f4685b4d41f3e88050f", null ],
+    [ "$_canvas", "class_dompdf_1_1_renderer_1_1_abstract_renderer.html#a6982d2a7d7013eca131ec554d64fa552", null ],
+    [ "$_dompdf", "class_dompdf_1_1_renderer_1_1_abstract_renderer.html#a3d42c6b602f6b5a224b276b1efed7820", null ]
+];

@@ -1,0 +1,419 @@
+\hypertarget{class_utilisateur}{}\doxysection{Utilisateur Class Reference}
+\label{class_utilisateur}\index{Utilisateur@{Utilisateur}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_utilisateur_af293f94985228b15afdb17613b4ac899}{\+\_\+\+\_\+construct}} (int \$id, string \$firstname, string \$lastname, string \$email, string \$nickname, string \$role, string \$password, string \$vkey)
+\item 
+\mbox{\hyperlink{class_utilisateur_a42c9621713b6dcdfb9edd5a7630b6d93}{get\+Firstname}} ()
+\item 
+\mbox{\hyperlink{class_utilisateur_a12251d0c022e9e21c137a105ff683f13}{get\+Id}} ()
+\item 
+\mbox{\hyperlink{class_utilisateur_a5d606fdf02d35b79b74b91a88c09000f}{get\+Lastname}} ()
+\item 
+\mbox{\hyperlink{class_utilisateur_af2fe43408583239119210907bc75c964}{get\+Nickname}} ()
+\item 
+\mbox{\hyperlink{class_utilisateur_a0b2e7098f1c48a7439a42bada5b69689}{get\+Role}} ()
+\item 
+\mbox{\hyperlink{class_utilisateur_a02a01849f28e2535e888ae4ec87b20f2}{get\+Email}} ()
+\item 
+\mbox{\hyperlink{class_utilisateur_a2472f465800ec3d6f6cf8c63a5575c64}{get\+Vkey}} ()
+\item 
+\mbox{\hyperlink{class_utilisateur_a102793bdeeaa7eaa2bca4e31eb3782e5}{set\+Firstname}} (string \$firstname)
+\item 
+\mbox{\hyperlink{class_utilisateur_abfe04b70a700bbd9496f76350083063f}{set\+Lastname}} (string \$lastname)
+\item 
+\mbox{\hyperlink{class_utilisateur_a2d1fddb7646c1a64416e82940aa1ab3e}{set\+Nickname}} (string \$nickname)
+\item 
+\mbox{\hyperlink{class_utilisateur_a81e0f429784973551fb5417d5b92b0db}{set\+Password}} (string \$password)
+\item 
+\mbox{\hyperlink{class_utilisateur_a693ce7b594330a057ff5e70434a532ac}{set\+Role}} (string \$role)
+\item 
+\mbox{\hyperlink{class_utilisateur_a671daeec8f652d41de4a33f599ce3f4f}{set\+Vkey}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_utilisateur_aee8859be6f90e0cf976f849ed928cbf7}{get\+Utilisateur\+From\+Id}} (int \$id)
+\item 
+static \mbox{\hyperlink{class_utilisateur_a84a7758b1e6e258a56deaa2506f17093}{get\+All\+Users}} ()
+\item 
+static \mbox{\hyperlink{class_utilisateur_a4fead094db6ac8499233809b2a376e83}{create\+User}} (string \$lastname, string \$firstname, string \$email, string \$nickname, string \$role, string \$password)
+\item 
+static \mbox{\hyperlink{class_utilisateur_af14f1d9476dbbd7a3cdfe7fe8055d6be}{update\+User}} (int \$id, string \$firstname, string \$lastname, string \$email, string \$role, string \$nickname, string \$password)
+\item 
+static \mbox{\hyperlink{class_utilisateur_a4f22e95bc68b8e6d33603cab495619cc}{delete\+User}} (\$id)
+\item 
+static \mbox{\hyperlink{class_utilisateur_a59a9a2261fd5ade02c702c7207b07fd5}{get\+Nb\+Essai\+Per\+User}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 5 of file Utilisateur.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_utilisateur_af293f94985228b15afdb17613b4ac899}\label{class_utilisateur_af293f94985228b15afdb17613b4ac899}} 
+\index{Utilisateur@{Utilisateur}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{int}]{\$id,  }\item[{string}]{\$firstname,  }\item[{string}]{\$lastname,  }\item[{string}]{\$email,  }\item[{string}]{\$nickname,  }\item[{string}]{\$role,  }\item[{string}]{\$password,  }\item[{string}]{\$vkey }\end{DoxyParamCaption})}
+
+Constructeur de la classe \mbox{\hyperlink{class_utilisateur}{Utilisateur}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & \\
+\hline
+string & {\em \$firstname} & \\
+\hline
+string & {\em \$lastname} & \\
+\hline
+string & {\em \$email} & \\
+\hline
+string & {\em \$nickname} & \\
+\hline
+string & {\em \$role} & \\
+\hline
+string & {\em \$password} & \\
+\hline
+string & {\em \$vkey} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 28 of file Utilisateur.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_utilisateur_a4fead094db6ac8499233809b2a376e83}\label{class_utilisateur_a4fead094db6ac8499233809b2a376e83}} 
+\index{Utilisateur@{Utilisateur}!createUser@{createUser}}
+\index{createUser@{createUser}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{createUser()}{createUser()}}
+{\footnotesize\ttfamily static create\+User (\begin{DoxyParamCaption}\item[{string}]{\$lastname,  }\item[{string}]{\$firstname,  }\item[{string}]{\$email,  }\item[{string}]{\$nickname,  }\item[{string}]{\$role,  }\item[{string}]{\$password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Methode de la classe utilisateur qui permet la création d\textquotesingle{}un nouvel utilisateur dan sla base de données 
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$lastname} & \\
+\hline
+string & {\em \$firstname} & \\
+\hline
+string & {\em \$email} & \\
+\hline
+string & {\em \$nickname} & \\
+\hline
+string & {\em \$role} & \\
+\hline
+string & {\em \$password} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 222 of file Utilisateur.\+php.
+
+\mbox{\Hypertarget{class_utilisateur_a4f22e95bc68b8e6d33603cab495619cc}\label{class_utilisateur_a4f22e95bc68b8e6d33603cab495619cc}} 
+\index{Utilisateur@{Utilisateur}!deleteUser@{deleteUser}}
+\index{deleteUser@{deleteUser}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{deleteUser()}{deleteUser()}}
+{\footnotesize\ttfamily static delete\+User (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Methode de la classe utilisateur qui permet la suppression d\textquotesingle{}un utilisateur dans la base de données 
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 290 of file Utilisateur.\+php.
+
+\mbox{\Hypertarget{class_utilisateur_a84a7758b1e6e258a56deaa2506f17093}\label{class_utilisateur_a84a7758b1e6e258a56deaa2506f17093}} 
+\index{Utilisateur@{Utilisateur}!getAllUsers@{getAllUsers}}
+\index{getAllUsers@{getAllUsers}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{getAllUsers()}{getAllUsers()}}
+{\footnotesize\ttfamily static get\+All\+Users (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Méthode permetant d\textquotesingle{}avoir tous les utilisateurs
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Definition at line 67 of file Utilisateur.\+php.
+
+\mbox{\Hypertarget{class_utilisateur_a02a01849f28e2535e888ae4ec87b20f2}\label{class_utilisateur_a02a01849f28e2535e888ae4ec87b20f2}} 
+\index{Utilisateur@{Utilisateur}!getEmail@{getEmail}}
+\index{getEmail@{getEmail}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{getEmail()}{getEmail()}}
+{\footnotesize\ttfamily get\+Email (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Méthode de la classe \mbox{\hyperlink{class_utilisateur}{Utilisateur}}, permet l\textquotesingle{}obtention de l\textquotesingle{}email
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 139 of file Utilisateur.\+php.
+
+\mbox{\Hypertarget{class_utilisateur_a42c9621713b6dcdfb9edd5a7630b6d93}\label{class_utilisateur_a42c9621713b6dcdfb9edd5a7630b6d93}} 
+\index{Utilisateur@{Utilisateur}!getFirstname@{getFirstname}}
+\index{getFirstname@{getFirstname}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{getFirstname()}{getFirstname()}}
+{\footnotesize\ttfamily get\+Firstname (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Méthode de la classe \mbox{\hyperlink{class_utilisateur}{Utilisateur}}, permet l\textquotesingle{}obtention du prénom
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 88 of file Utilisateur.\+php.
+
+\mbox{\Hypertarget{class_utilisateur_a12251d0c022e9e21c137a105ff683f13}\label{class_utilisateur_a12251d0c022e9e21c137a105ff683f13}} 
+\index{Utilisateur@{Utilisateur}!getId@{getId}}
+\index{getId@{getId}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Méthode de la classe \mbox{\hyperlink{class_utilisateur}{Utilisateur}}, permet l\textquotesingle{}obtention de l\textquotesingle{}ID
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 98 of file Utilisateur.\+php.
+
+\mbox{\Hypertarget{class_utilisateur_a5d606fdf02d35b79b74b91a88c09000f}\label{class_utilisateur_a5d606fdf02d35b79b74b91a88c09000f}} 
+\index{Utilisateur@{Utilisateur}!getLastname@{getLastname}}
+\index{getLastname@{getLastname}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{getLastname()}{getLastname()}}
+{\footnotesize\ttfamily get\+Lastname (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Méthode de la classe \mbox{\hyperlink{class_utilisateur}{Utilisateur}}, permet l\textquotesingle{}obtention du non
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 108 of file Utilisateur.\+php.
+
+\mbox{\Hypertarget{class_utilisateur_a59a9a2261fd5ade02c702c7207b07fd5}\label{class_utilisateur_a59a9a2261fd5ade02c702c7207b07fd5}} 
+\index{Utilisateur@{Utilisateur}!getNbEssaiPerUser@{getNbEssaiPerUser}}
+\index{getNbEssaiPerUser@{getNbEssaiPerUser}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{getNbEssaiPerUser()}{getNbEssaiPerUser()}}
+{\footnotesize\ttfamily static get\+Nb\+Essai\+Per\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Méthode de la classe \mbox{\hyperlink{class_utilisateur}{Utilisateur}}, récupere le nombre d\textquotesingle{}essai effextuer par opérateur
+
+\begin{DoxyReturn}{Returns}
+array$\vert$false$\vert$\+PDOStatement 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 311 of file Utilisateur.\+php.
+
+\mbox{\Hypertarget{class_utilisateur_af2fe43408583239119210907bc75c964}\label{class_utilisateur_af2fe43408583239119210907bc75c964}} 
+\index{Utilisateur@{Utilisateur}!getNickname@{getNickname}}
+\index{getNickname@{getNickname}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{getNickname()}{getNickname()}}
+{\footnotesize\ttfamily get\+Nickname (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Méthode de la classe \mbox{\hyperlink{class_utilisateur}{Utilisateur}}, permet l\textquotesingle{}obtention du pseudo
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 118 of file Utilisateur.\+php.
+
+\mbox{\Hypertarget{class_utilisateur_a0b2e7098f1c48a7439a42bada5b69689}\label{class_utilisateur_a0b2e7098f1c48a7439a42bada5b69689}} 
+\index{Utilisateur@{Utilisateur}!getRole@{getRole}}
+\index{getRole@{getRole}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{getRole()}{getRole()}}
+{\footnotesize\ttfamily get\+Role (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Méthode de la classe \mbox{\hyperlink{class_utilisateur}{Utilisateur}}, permet l\textquotesingle{}obtention du role
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 128 of file Utilisateur.\+php.
+
+\mbox{\Hypertarget{class_utilisateur_aee8859be6f90e0cf976f849ed928cbf7}\label{class_utilisateur_aee8859be6f90e0cf976f849ed928cbf7}} 
+\index{Utilisateur@{Utilisateur}!getUtilisateurFromId@{getUtilisateurFromId}}
+\index{getUtilisateurFromId@{getUtilisateurFromId}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{getUtilisateurFromId()}{getUtilisateurFromId()}}
+{\footnotesize\ttfamily static get\+Utilisateur\+From\+Id (\begin{DoxyParamCaption}\item[{int}]{\$id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Méthode de la classe \mbox{\hyperlink{class_utilisateur}{Utilisateur}} qui permet la création d\textquotesingle{}un utilisateur avec son ID
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_utilisateur}{Utilisateur}} 
+\end{DoxyReturn}
+
+
+Definition at line 45 of file Utilisateur.\+php.
+
+\mbox{\Hypertarget{class_utilisateur_a2472f465800ec3d6f6cf8c63a5575c64}\label{class_utilisateur_a2472f465800ec3d6f6cf8c63a5575c64}} 
+\index{Utilisateur@{Utilisateur}!getVkey@{getVkey}}
+\index{getVkey@{getVkey}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{getVkey()}{getVkey()}}
+{\footnotesize\ttfamily get\+Vkey (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Méthode de la classe \mbox{\hyperlink{class_utilisateur}{Utilisateur}}, permet l\textquotesingle{}obtention de la vkey
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 149 of file Utilisateur.\+php.
+
+\mbox{\Hypertarget{class_utilisateur_a102793bdeeaa7eaa2bca4e31eb3782e5}\label{class_utilisateur_a102793bdeeaa7eaa2bca4e31eb3782e5}} 
+\index{Utilisateur@{Utilisateur}!setFirstname@{setFirstname}}
+\index{setFirstname@{setFirstname}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{setFirstname()}{setFirstname()}}
+{\footnotesize\ttfamily set\+Firstname (\begin{DoxyParamCaption}\item[{string}]{\$firstname }\end{DoxyParamCaption})}
+
+Méthode de la classe \mbox{\hyperlink{class_utilisateur}{Utilisateur}}, permet l\textquotesingle{}affectation du prénom
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$firstname} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 159 of file Utilisateur.\+php.
+
+\mbox{\Hypertarget{class_utilisateur_abfe04b70a700bbd9496f76350083063f}\label{class_utilisateur_abfe04b70a700bbd9496f76350083063f}} 
+\index{Utilisateur@{Utilisateur}!setLastname@{setLastname}}
+\index{setLastname@{setLastname}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{setLastname()}{setLastname()}}
+{\footnotesize\ttfamily set\+Lastname (\begin{DoxyParamCaption}\item[{string}]{\$lastname }\end{DoxyParamCaption})}
+
+Méthode de la classe \mbox{\hyperlink{class_utilisateur}{Utilisateur}}, permet l\textquotesingle{}affectation du nom
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$lastname} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 169 of file Utilisateur.\+php.
+
+\mbox{\Hypertarget{class_utilisateur_a2d1fddb7646c1a64416e82940aa1ab3e}\label{class_utilisateur_a2d1fddb7646c1a64416e82940aa1ab3e}} 
+\index{Utilisateur@{Utilisateur}!setNickname@{setNickname}}
+\index{setNickname@{setNickname}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{setNickname()}{setNickname()}}
+{\footnotesize\ttfamily set\+Nickname (\begin{DoxyParamCaption}\item[{string}]{\$nickname }\end{DoxyParamCaption})}
+
+Méthode de la classe \mbox{\hyperlink{class_utilisateur}{Utilisateur}}, permet l\textquotesingle{}affectation du pseudo
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$nickname} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 179 of file Utilisateur.\+php.
+
+\mbox{\Hypertarget{class_utilisateur_a81e0f429784973551fb5417d5b92b0db}\label{class_utilisateur_a81e0f429784973551fb5417d5b92b0db}} 
+\index{Utilisateur@{Utilisateur}!setPassword@{setPassword}}
+\index{setPassword@{setPassword}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{setPassword()}{setPassword()}}
+{\footnotesize\ttfamily set\+Password (\begin{DoxyParamCaption}\item[{string}]{\$password }\end{DoxyParamCaption})}
+
+Méthode de la classe \mbox{\hyperlink{class_utilisateur}{Utilisateur}}, permet l\textquotesingle{}affectation du mot de passe
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$password} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 189 of file Utilisateur.\+php.
+
+\mbox{\Hypertarget{class_utilisateur_a693ce7b594330a057ff5e70434a532ac}\label{class_utilisateur_a693ce7b594330a057ff5e70434a532ac}} 
+\index{Utilisateur@{Utilisateur}!setRole@{setRole}}
+\index{setRole@{setRole}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{setRole()}{setRole()}}
+{\footnotesize\ttfamily set\+Role (\begin{DoxyParamCaption}\item[{string}]{\$role }\end{DoxyParamCaption})}
+
+Méthode de la classe \mbox{\hyperlink{class_utilisateur}{Utilisateur}}, permet l\textquotesingle{}affectation du role
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$role} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 199 of file Utilisateur.\+php.
+
+\mbox{\Hypertarget{class_utilisateur_a671daeec8f652d41de4a33f599ce3f4f}\label{class_utilisateur_a671daeec8f652d41de4a33f599ce3f4f}} 
+\index{Utilisateur@{Utilisateur}!setVkey@{setVkey}}
+\index{setVkey@{setVkey}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{setVkey()}{setVkey()}}
+{\footnotesize\ttfamily set\+Vkey (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Méthode de la classe \mbox{\hyperlink{class_utilisateur}{Utilisateur}}, permet le changement de vkey 
+
+Definition at line 207 of file Utilisateur.\+php.
+
+\mbox{\Hypertarget{class_utilisateur_af14f1d9476dbbd7a3cdfe7fe8055d6be}\label{class_utilisateur_af14f1d9476dbbd7a3cdfe7fe8055d6be}} 
+\index{Utilisateur@{Utilisateur}!updateUser@{updateUser}}
+\index{updateUser@{updateUser}!Utilisateur@{Utilisateur}}
+\doxysubsubsection{\texorpdfstring{updateUser()}{updateUser()}}
+{\footnotesize\ttfamily static update\+User (\begin{DoxyParamCaption}\item[{int}]{\$id,  }\item[{string}]{\$firstname,  }\item[{string}]{\$lastname,  }\item[{string}]{\$email,  }\item[{string}]{\$role,  }\item[{string}]{\$nickname,  }\item[{string}]{\$password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Methode de la classe utilisateur qui permet la modification d\textquotesingle{}un utilisateur dans la base de données 
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & \\
+\hline
+string & {\em \$firstname} & \\
+\hline
+string & {\em \$lastname} & \\
+\hline
+string & {\em \$email} & \\
+\hline
+string & {\em \$role} & \\
+\hline
+string & {\em \$nickname} & \\
+\hline
+string & {\em \$password} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 259 of file Utilisateur.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/src/\mbox{\hyperlink{_utilisateur_8php}{Utilisateur.\+php}}\end{DoxyCompactItemize}

@@ -1,0 +1,416 @@
+\hypertarget{graph_8php}{}\doxysection{graph.\+php File Reference}
+\label{graph_8php}\index{graph.php@{graph.php}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{graph_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}{\$authentication}} = new \mbox{\hyperlink{class_secure_user_authentication}{Secure\+User\+Authentication}}()
+\item 
+\mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}}(! \$authentication-\/$>$is\+User\+Connected()) \mbox{\hyperlink{graph_8php_ae162bc521952eacc36ad660c85856de3}{\$conf}} = \mbox{\hyperlink{class_config_graph_abb3c091715e7b5934ec065f6bc32837c}{Config\+Graph\+::get\+Config\+From\+Id}}(1)
+\item 
+\mbox{\hyperlink{graph_8php_a73817dec3f6c92b04684e61449996ecb}{\$id\+Conf}} = \$conf-\/$>$get\+Id()
+\item 
+int \mbox{\hyperlink{graph_8php_ab8fb0c67d5751894b9c868aaa047c76e}{\$seuil\+Bas}} = \$conf-\/$>$getseuil\+Bas()
+\item 
+int \mbox{\hyperlink{graph_8php_a6563c7f822c050e7b1bea5cf62a6b969}{\$seuil\+Haut}} = \$conf-\/$>$getseuil\+Haut()
+\item 
+\mbox{\hyperlink{graph_8php_aa9cf7217a6836d244b15e29d31942231}{\$nom\+Bleu}} = \$conf-\/$>$getnom\+Bleu()
+\item 
+\mbox{\hyperlink{graph_8php_a1cec2e20923a49fd85cd928ee4ed3978}{\$nom\+Rouge}} = \$conf-\/$>$getnom\+Rouge()
+\item 
+\mbox{\hyperlink{graph_8php_a51a8b3eeb438981179ec8455bf30f891}{\$nom\+Vert}} = \$conf-\/$>$getnom\+Vert()
+\item 
+\mbox{\hyperlink{graph_8php_a801de7e433507e4aeec7ee60791c8d8a}{\$nom\+Orange}} = \$conf-\/$>$getnom\+Orange()
+\item 
+\mbox{\hyperlink{graph_8php_ac7dc7c7b0cc746274ea2a31c2b0696e7}{\$nom\+Ordonnee\+Gauche}} = \$conf-\/$>$getnom\+Ordonnee\+Gauche()
+\item 
+\mbox{\hyperlink{graph_8php_a7e5f108deea0dd8d50d401e98a5e917d}{\$nom\+Ordonnee\+Droite}} = \$conf-\/$>$getnom\+Ordonnee\+Droite()
+\item 
+\mbox{\hyperlink{graph_8php_a79de05d9a89bacb0fc0ff68a004a5fec}{\$abscisse}} = \$conf-\/$>$get\+Abscisse()
+\item 
+\mbox{\hyperlink{graph_8php_ae97941710d863131c700f069b109991e}{\$id}} =\$\+\_\+\+GET\mbox{[}\textquotesingle{}id\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{graph_8php_a8527f826b6959aaa92b0e51ee427ba1a}{\$refresh}} = (int)\$\+\_\+\+GET\mbox{[}\char`\"{}refresh\char`\"{}\mbox{]}
+\item 
+\mbox{\hyperlink{graph_8php_a55df2e3ac48fd8a02e24df58e3774bc0}{\$capteur}} = \mbox{\hyperlink{class_capteur_a75f9354fcae453b73b750a10e1ca3fae}{Capteur\+::get\+Capteur\+From\+Id}}(\$id)
+\item 
+\mbox{\hyperlink{graph_8php_aaa552cf4274620355b57296699712f49}{\$id\+Cap}} = \$capteur-\/$>$get\+Id()
+\item 
+\mbox{\hyperlink{graph_8php_a4b5a48bfdfd30f60f31483792d12e906}{\$\+SN}} = \$capteur-\/$>$get\+SN()
+\item 
+\mbox{\hyperlink{graph_8php_a584afdbe1ce6f47a213b38db9c6bda53}{\$valeur}} = \$capteur-\/$>$get\+Values()
+\item 
+\mbox{\hyperlink{graph_8php_a047170d6020a882807665812a27e2525}{\$sql}} = \char`\"{}SELECT time FROM Essai WHERE id = (SELECT id\+Essai FROM \mbox{\hyperlink{class_capteur}{Capteur}} WHERE id = \$id\+Cap)\char`\"{}
+\item 
+\mbox{\hyperlink{graph_8php_a112ef069ddc0454086e3d1e6d8d55d07}{\$result}} = My\+PDO\+::get\+Instance()-\/$>$prepare(\$sql)
+\item 
+\mbox{\hyperlink{graph_8php_a2b69de9676dd97c675cd4d9bcceb684c}{\$timestamp}} = \$result-\/$>$fetch()
+\item 
+\mbox{\hyperlink{graph_8php_a481c918f8d853749e00b5942cabf599a}{\$date}} = \$timestamp\mbox{[}\char`\"{}time\char`\"{}\mbox{]}
+\item 
+\mbox{\hyperlink{graph_8php_aa8a5a87b9c1a6a0819b88447cbe41877}{\$conn}} = \char`\"{}SELECT id\+Essai FROM \mbox{\hyperlink{class_capteur}{Capteur}} WHERE id = \$id\+Cap\char`\"{}
+\item 
+\mbox{\hyperlink{graph_8php_ae734ecc68847d4f436c60c39ec64af11}{\$result2}} = My\+PDO\+::get\+Instance()-\/$>$prepare(\$conn)
+\item 
+\mbox{\hyperlink{graph_8php_a5a9ca3bb17a55161a32d7bf9d5a65764}{\$idessai}} = \$result2-\/$>$fetch()
+\item 
+\mbox{\hyperlink{graph_8php_a0a53a8f3a010d341aa90f7a679449332}{\$essai}} = \$idessai\mbox{[}\char`\"{}id\+Essai\char`\"{}\mbox{]}
+\item 
+\mbox{\hyperlink{graph_8php_a9a7ba6dd36a0eb4f8002a5445f8ca616}{\$temperature}} = \mbox{\hyperlink{class_temperature_a6e80b8655f7a51eee60aee71167bb35b}{Temperature\+::get\+Tempid\+Essai}}(\$essai)
+\item 
+\mbox{\hyperlink{graph_8php_affc45c6ace2eeb3f300b054dbf9592b6}{\$values}} = \$temperature-\/$>$get\+Values()
+\item 
+\mbox{\hyperlink{graph_8php_ad1a3d93cb67a9afde48e8f903d210f02}{\$essaii}} = Essai\+::get\+Essai\+From\+Id(\$essai)
+\item 
+\mbox{\hyperlink{graph_8php_abf97fc4b82dc15fc8c0cbd5cbc8f2816}{\$time\+Cap}} =\$capteur-\/$>$get\+Lastdate()
+\item 
+\mbox{\hyperlink{graph_8php_a67d8e3a58e5644af40e14f6db1504f01}{\$product}} =\$capteur-\/$>$get\+Product()
+\item 
+\mbox{\hyperlink{graph_8php_a56ba76399d12529c48ecea581ecd08cf}{\$min}} = 300000
+\item 
+\mbox{\hyperlink{graph_8php_a473471234dabf4315da596559a9b0cbc}{\$add\+Head}} = \char`\"{}\char`\"{}
+\item 
+\mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}}(\$timestamp+ \$time\+Cap $>$(\$date $\ast$1000) -\/ \$min \&\& \$refresh==0) \mbox{\hyperlink{graph_8php_abbf4dc6823707194bccc7d9a63b848c2}{\$html}} =
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{graph_8php_a79de05d9a89bacb0fc0ff68a004a5fec}\label{graph_8php_a79de05d9a89bacb0fc0ff68a004a5fec}} 
+\index{graph.php@{graph.php}!\$abscisse@{\$abscisse}}
+\index{\$abscisse@{\$abscisse}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$abscisse}{$abscisse}}
+{\footnotesize\ttfamily \$abscisse = \$conf-\/$>$get\+Abscisse()}
+
+
+
+Definition at line 29 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_a473471234dabf4315da596559a9b0cbc}\label{graph_8php_a473471234dabf4315da596559a9b0cbc}} 
+\index{graph.php@{graph.php}!\$addHead@{\$addHead}}
+\index{\$addHead@{\$addHead}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$addHead}{$addHead}}
+{\footnotesize\ttfamily \$add\+Head = \char`\"{}\char`\"{}}
+
+
+
+Definition at line 104 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}\label{graph_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}} 
+\index{graph.php@{graph.php}!\$authentication@{\$authentication}}
+\index{\$authentication@{\$authentication}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$authentication}{$authentication}}
+{\footnotesize\ttfamily \$authentication = new \mbox{\hyperlink{class_secure_user_authentication}{Secure\+User\+Authentication}}()}
+
+
+
+Definition at line 10 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_a55df2e3ac48fd8a02e24df58e3774bc0}\label{graph_8php_a55df2e3ac48fd8a02e24df58e3774bc0}} 
+\index{graph.php@{graph.php}!\$capteur@{\$capteur}}
+\index{\$capteur@{\$capteur}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$capteur}{$capteur}}
+{\footnotesize\ttfamily \$capteur = \mbox{\hyperlink{class_capteur_a75f9354fcae453b73b750a10e1ca3fae}{Capteur\+::get\+Capteur\+From\+Id}}(\$id)}
+
+
+
+Definition at line 70 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_ae162bc521952eacc36ad660c85856de3}\label{graph_8php_ae162bc521952eacc36ad660c85856de3}} 
+\index{graph.php@{graph.php}!\$conf@{\$conf}}
+\index{\$conf@{\$conf}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$conf}{$conf}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}} (! \$authentication-\/$>$is\+User\+Connected()) \$conf = \mbox{\hyperlink{class_config_graph_abb3c091715e7b5934ec065f6bc32837c}{Config\+Graph\+::get\+Config\+From\+Id}}(1)}
+
+
+
+Definition at line 16 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_aa8a5a87b9c1a6a0819b88447cbe41877}\label{graph_8php_aa8a5a87b9c1a6a0819b88447cbe41877}} 
+\index{graph.php@{graph.php}!\$conn@{\$conn}}
+\index{\$conn@{\$conn}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$conn}{$conn}}
+{\footnotesize\ttfamily \$conn = \char`\"{}SELECT id\+Essai FROM \mbox{\hyperlink{class_capteur}{Capteur}} WHERE id = \$id\+Cap\char`\"{}}
+
+
+
+Definition at line 83 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_a481c918f8d853749e00b5942cabf599a}\label{graph_8php_a481c918f8d853749e00b5942cabf599a}} 
+\index{graph.php@{graph.php}!\$date@{\$date}}
+\index{\$date@{\$date}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$date}{$date}}
+{\footnotesize\ttfamily \$date = \$timestamp\mbox{[}\char`\"{}time\char`\"{}\mbox{]}}
+
+
+
+Definition at line 81 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_a0a53a8f3a010d341aa90f7a679449332}\label{graph_8php_a0a53a8f3a010d341aa90f7a679449332}} 
+\index{graph.php@{graph.php}!\$essai@{\$essai}}
+\index{\$essai@{\$essai}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$essai}{$essai}}
+{\footnotesize\ttfamily \$essai = \$idessai\mbox{[}\char`\"{}id\+Essai\char`\"{}\mbox{]}}
+
+
+
+Definition at line 87 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_ad1a3d93cb67a9afde48e8f903d210f02}\label{graph_8php_ad1a3d93cb67a9afde48e8f903d210f02}} 
+\index{graph.php@{graph.php}!\$essaii@{\$essaii}}
+\index{\$essaii@{\$essaii}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$essaii}{$essaii}}
+{\footnotesize\ttfamily \$essaii = Essai\+::get\+Essai\+From\+Id(\$essai)}
+
+
+
+Definition at line 94 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_abbf4dc6823707194bccc7d9a63b848c2}\label{graph_8php_abbf4dc6823707194bccc7d9a63b848c2}} 
+\index{graph.php@{graph.php}!\$html@{\$html}}
+\index{\$html@{\$html}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$html}{$html}}
+{\footnotesize\ttfamily foreach ( \$values as \$ret) \$html =}
+
+
+
+Definition at line 111 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_ae97941710d863131c700f069b109991e}\label{graph_8php_ae97941710d863131c700f069b109991e}} 
+\index{graph.php@{graph.php}!\$id@{\$id}}
+\index{\$id@{\$id}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$id}{$id}}
+{\footnotesize\ttfamily \$id =\$\+\_\+\+GET\mbox{[}\textquotesingle{}id\textquotesingle{}\mbox{]}}
+
+
+
+Definition at line 66 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_aaa552cf4274620355b57296699712f49}\label{graph_8php_aaa552cf4274620355b57296699712f49}} 
+\index{graph.php@{graph.php}!\$idCap@{\$idCap}}
+\index{\$idCap@{\$idCap}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$idCap}{$idCap}}
+{\footnotesize\ttfamily \$id\+Cap = \$capteur-\/$>$get\+Id()}
+
+
+
+Definition at line 71 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_a73817dec3f6c92b04684e61449996ecb}\label{graph_8php_a73817dec3f6c92b04684e61449996ecb}} 
+\index{graph.php@{graph.php}!\$idConf@{\$idConf}}
+\index{\$idConf@{\$idConf}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$idConf}{$idConf}}
+{\footnotesize\ttfamily \$id\+Conf = \$conf-\/$>$get\+Id()}
+
+
+
+Definition at line 20 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_a5a9ca3bb17a55161a32d7bf9d5a65764}\label{graph_8php_a5a9ca3bb17a55161a32d7bf9d5a65764}} 
+\index{graph.php@{graph.php}!\$idessai@{\$idessai}}
+\index{\$idessai@{\$idessai}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$idessai}{$idessai}}
+{\footnotesize\ttfamily \$idessai = \$result2-\/$>$fetch()}
+
+
+
+Definition at line 86 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_a56ba76399d12529c48ecea581ecd08cf}\label{graph_8php_a56ba76399d12529c48ecea581ecd08cf}} 
+\index{graph.php@{graph.php}!\$min@{\$min}}
+\index{\$min@{\$min}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$min}{$min}}
+{\footnotesize\ttfamily \$min = 300000}
+
+
+
+Definition at line 101 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_aa9cf7217a6836d244b15e29d31942231}\label{graph_8php_aa9cf7217a6836d244b15e29d31942231}} 
+\index{graph.php@{graph.php}!\$nomBleu@{\$nomBleu}}
+\index{\$nomBleu@{\$nomBleu}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$nomBleu}{$nomBleu}}
+{\footnotesize\ttfamily \$nom\+Bleu = \$conf-\/$>$getnom\+Bleu()}
+
+
+
+Definition at line 23 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_a801de7e433507e4aeec7ee60791c8d8a}\label{graph_8php_a801de7e433507e4aeec7ee60791c8d8a}} 
+\index{graph.php@{graph.php}!\$nomOrange@{\$nomOrange}}
+\index{\$nomOrange@{\$nomOrange}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$nomOrange}{$nomOrange}}
+{\footnotesize\ttfamily \$nom\+Orange = \$conf-\/$>$getnom\+Orange()}
+
+
+
+Definition at line 26 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_a7e5f108deea0dd8d50d401e98a5e917d}\label{graph_8php_a7e5f108deea0dd8d50d401e98a5e917d}} 
+\index{graph.php@{graph.php}!\$nomOrdonneeDroite@{\$nomOrdonneeDroite}}
+\index{\$nomOrdonneeDroite@{\$nomOrdonneeDroite}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$nomOrdonneeDroite}{$nomOrdonneeDroite}}
+{\footnotesize\ttfamily \$nom\+Ordonnee\+Droite = \$conf-\/$>$getnom\+Ordonnee\+Droite()}
+
+
+
+Definition at line 28 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_ac7dc7c7b0cc746274ea2a31c2b0696e7}\label{graph_8php_ac7dc7c7b0cc746274ea2a31c2b0696e7}} 
+\index{graph.php@{graph.php}!\$nomOrdonneeGauche@{\$nomOrdonneeGauche}}
+\index{\$nomOrdonneeGauche@{\$nomOrdonneeGauche}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$nomOrdonneeGauche}{$nomOrdonneeGauche}}
+{\footnotesize\ttfamily \$nom\+Ordonnee\+Gauche = \$conf-\/$>$getnom\+Ordonnee\+Gauche()}
+
+
+
+Definition at line 27 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_a1cec2e20923a49fd85cd928ee4ed3978}\label{graph_8php_a1cec2e20923a49fd85cd928ee4ed3978}} 
+\index{graph.php@{graph.php}!\$nomRouge@{\$nomRouge}}
+\index{\$nomRouge@{\$nomRouge}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$nomRouge}{$nomRouge}}
+{\footnotesize\ttfamily \$nom\+Rouge = \$conf-\/$>$getnom\+Rouge()}
+
+
+
+Definition at line 24 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_a51a8b3eeb438981179ec8455bf30f891}\label{graph_8php_a51a8b3eeb438981179ec8455bf30f891}} 
+\index{graph.php@{graph.php}!\$nomVert@{\$nomVert}}
+\index{\$nomVert@{\$nomVert}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$nomVert}{$nomVert}}
+{\footnotesize\ttfamily \$nom\+Vert = \$conf-\/$>$getnom\+Vert()}
+
+
+
+Definition at line 25 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_a67d8e3a58e5644af40e14f6db1504f01}\label{graph_8php_a67d8e3a58e5644af40e14f6db1504f01}} 
+\index{graph.php@{graph.php}!\$product@{\$product}}
+\index{\$product@{\$product}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$product}{$product}}
+{\footnotesize\ttfamily \$product =\$capteur-\/$>$get\+Product()}
+
+
+
+Definition at line 98 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_a8527f826b6959aaa92b0e51ee427ba1a}\label{graph_8php_a8527f826b6959aaa92b0e51ee427ba1a}} 
+\index{graph.php@{graph.php}!\$refresh@{\$refresh}}
+\index{\$refresh@{\$refresh}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$refresh}{$refresh}}
+{\footnotesize\ttfamily \$refresh = (int)\$\+\_\+\+GET\mbox{[}\char`\"{}refresh\char`\"{}\mbox{]}}
+
+
+
+Definition at line 68 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_a112ef069ddc0454086e3d1e6d8d55d07}\label{graph_8php_a112ef069ddc0454086e3d1e6d8d55d07}} 
+\index{graph.php@{graph.php}!\$result@{\$result}}
+\index{\$result@{\$result}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$result}{$result}}
+{\footnotesize\ttfamily \$result = My\+PDO\+::get\+Instance()-\/$>$prepare(\$sql)}
+
+
+
+Definition at line 78 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_ae734ecc68847d4f436c60c39ec64af11}\label{graph_8php_ae734ecc68847d4f436c60c39ec64af11}} 
+\index{graph.php@{graph.php}!\$result2@{\$result2}}
+\index{\$result2@{\$result2}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$result2}{$result2}}
+{\footnotesize\ttfamily \$result2 = My\+PDO\+::get\+Instance()-\/$>$prepare(\$conn)}
+
+
+
+Definition at line 84 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_ab8fb0c67d5751894b9c868aaa047c76e}\label{graph_8php_ab8fb0c67d5751894b9c868aaa047c76e}} 
+\index{graph.php@{graph.php}!\$seuilBas@{\$seuilBas}}
+\index{\$seuilBas@{\$seuilBas}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$seuilBas}{$seuilBas}}
+{\footnotesize\ttfamily int \$seuil\+Bas = \$conf-\/$>$getseuil\+Bas()}
+
+
+
+Definition at line 21 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_a6563c7f822c050e7b1bea5cf62a6b969}\label{graph_8php_a6563c7f822c050e7b1bea5cf62a6b969}} 
+\index{graph.php@{graph.php}!\$seuilHaut@{\$seuilHaut}}
+\index{\$seuilHaut@{\$seuilHaut}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$seuilHaut}{$seuilHaut}}
+{\footnotesize\ttfamily int \$seuil\+Haut = \$conf-\/$>$getseuil\+Haut()}
+
+
+
+Definition at line 22 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_a4b5a48bfdfd30f60f31483792d12e906}\label{graph_8php_a4b5a48bfdfd30f60f31483792d12e906}} 
+\index{graph.php@{graph.php}!\$SN@{\$SN}}
+\index{\$SN@{\$SN}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$SN}{$SN}}
+{\footnotesize\ttfamily \$SN = \$capteur-\/$>$get\+SN()}
+
+
+
+Definition at line 72 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_a047170d6020a882807665812a27e2525}\label{graph_8php_a047170d6020a882807665812a27e2525}} 
+\index{graph.php@{graph.php}!\$sql@{\$sql}}
+\index{\$sql@{\$sql}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$sql}{$sql}}
+{\footnotesize\ttfamily \$sql = \char`\"{}SELECT time FROM Essai WHERE id = (SELECT id\+Essai FROM \mbox{\hyperlink{class_capteur}{Capteur}} WHERE id = \$id\+Cap)\char`\"{}}
+
+
+
+Definition at line 77 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_a9a7ba6dd36a0eb4f8002a5445f8ca616}\label{graph_8php_a9a7ba6dd36a0eb4f8002a5445f8ca616}} 
+\index{graph.php@{graph.php}!\$temperature@{\$temperature}}
+\index{\$temperature@{\$temperature}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$temperature}{$temperature}}
+{\footnotesize\ttfamily \$temperature = \mbox{\hyperlink{class_temperature_a6e80b8655f7a51eee60aee71167bb35b}{Temperature\+::get\+Tempid\+Essai}}(\$essai)}
+
+
+
+Definition at line 90 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_abf97fc4b82dc15fc8c0cbd5cbc8f2816}\label{graph_8php_abf97fc4b82dc15fc8c0cbd5cbc8f2816}} 
+\index{graph.php@{graph.php}!\$timeCap@{\$timeCap}}
+\index{\$timeCap@{\$timeCap}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$timeCap}{$timeCap}}
+{\footnotesize\ttfamily \$time\+Cap =\$capteur-\/$>$get\+Lastdate()}
+
+
+
+Definition at line 97 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_a2b69de9676dd97c675cd4d9bcceb684c}\label{graph_8php_a2b69de9676dd97c675cd4d9bcceb684c}} 
+\index{graph.php@{graph.php}!\$timestamp@{\$timestamp}}
+\index{\$timestamp@{\$timestamp}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$timestamp}{$timestamp}}
+{\footnotesize\ttfamily \$timestamp = \$result-\/$>$fetch()}
+
+
+
+Definition at line 80 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_a584afdbe1ce6f47a213b38db9c6bda53}\label{graph_8php_a584afdbe1ce6f47a213b38db9c6bda53}} 
+\index{graph.php@{graph.php}!\$valeur@{\$valeur}}
+\index{\$valeur@{\$valeur}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$valeur}{$valeur}}
+{\footnotesize\ttfamily \$valeur = \$capteur-\/$>$get\+Values()}
+
+
+
+Definition at line 73 of file graph.\+php.
+
+\mbox{\Hypertarget{graph_8php_affc45c6ace2eeb3f300b054dbf9592b6}\label{graph_8php_affc45c6ace2eeb3f300b054dbf9592b6}} 
+\index{graph.php@{graph.php}!\$values@{\$values}}
+\index{\$values@{\$values}!graph.php@{graph.php}}
+\doxysubsubsection{\texorpdfstring{\$values}{$values}}
+{\footnotesize\ttfamily \$values = \$temperature-\/$>$get\+Values()}
+
+
+
+Definition at line 92 of file graph.\+php.
+

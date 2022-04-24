@@ -1,0 +1,388 @@
+\hypertarget{class_dompdf_1_1_frame_decorator_1_1_table}{}\doxysection{Table Class Reference}
+\label{class_dompdf_1_1_frame_decorator_1_1_table}\index{Table@{Table}}
+Inheritance diagram for Table\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_dompdf_1_1_frame_decorator_1_1_table}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_table_a469f79997646fdd9cc2ff02998ac9e1b}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}} \$frame, \mbox{\hyperlink{class_dompdf_1_1_dompdf}{Dompdf}} \$dompdf)
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_table_a4a20559544fdf4dcb457e258dc976cf8}{reset}} ()
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_table_ab3d776efa06ea0dae4409545ff4f1842}{split}} (\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}} \$child=null, \$force\+\_\+pagebreak=false)
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_table_a418ad16399ec56c39fc1da3f3ce0118b}{copy}} (DOMNode \$node)
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_table_a49939b96a6f4bbff1e73633f50074166}{get\+\_\+cellmap}} ()
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_table_a1ea894a852bdbc164df838ffa68a3a3d}{get\+\_\+min\+\_\+width}} ()
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_table_ad492eb316d967d03a7a9b41d52e942b9}{get\+\_\+max\+\_\+width}} ()
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_table_ac024e14a1e90a7dde3b846c551bdb168}{set\+\_\+min\+\_\+width}} (\$width)
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_table_aa168f16cebb7a7c7774d8d7a6383f806}{set\+\_\+max\+\_\+width}} (\$width)
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_table_aded82e1f1c8adfe87dc2cbccf8a4b718}{normalise}} ()
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_table_a6efa0840ed85599a773cc89e3e98c071}{move\+\_\+after}} (\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}} \$frame)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_table_a5486202440b2258d790e57a7638b83da}{find\+\_\+parent\+\_\+table}} (\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}} \$frame)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_table_a60149698f3d8d9577a05e4ac946df5b5}{\$\+VALID\+\_\+\+CHILDREN}}
+\item 
+static \mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_table_aa89e2492ba6060e688dce167e59784b1}{\$\+ROW\+\_\+\+GROUPS}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_table_a4fa0bedc95727de91eac1229feee0e99}{\$\+\_\+cellmap}}
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_table_a5164006f19d77dd18100e214dd0e7b5e}{\$\+\_\+min\+\_\+width}}
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_table_a19e12092a37f1b503717dc80d6d5b302}{\$\+\_\+max\+\_\+width}}
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_table_a1481ae63a7fb295087c3a668a0359500}{\$\+\_\+headers}}
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_table_afee08790ef87c68679f821af753e61dc}{\$\+\_\+footers}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 21 of file Table.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_dompdf_1_1_frame_decorator_1_1_table_a469f79997646fdd9cc2ff02998ac9e1b}\label{class_dompdf_1_1_frame_decorator_1_1_table_a469f79997646fdd9cc2ff02998ac9e1b}} 
+\index{Table@{Table}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}}}]{\$frame,  }\item[{\mbox{\hyperlink{class_dompdf_1_1_dompdf}{Dompdf}}}]{\$dompdf }\end{DoxyParamCaption})}
+
+Class constructor
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}} & {\em \$frame} & the frame to decorate \\
+\hline
+\mbox{\hyperlink{class_dompdf_1_1_dompdf}{Dompdf}} & {\em \$dompdf} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_abstract_frame_decorator_a469f79997646fdd9cc2ff02998ac9e1b}{Abstract\+Frame\+Decorator}}.
+
+
+
+Definition at line 84 of file Table.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_dompdf_1_1_frame_decorator_1_1_table_a418ad16399ec56c39fc1da3f3ce0118b}\label{class_dompdf_1_1_frame_decorator_1_1_table_a418ad16399ec56c39fc1da3f3ce0118b}} 
+\index{Table@{Table}!copy@{copy}}
+\index{copy@{copy}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily copy (\begin{DoxyParamCaption}\item[{DOMNode}]{\$node }\end{DoxyParamCaption})}
+
+Return a copy of this frame with \$node as its node
+
+
+\begin{DoxyParams}[1]{Parameters}
+DOMNode & {\em \$node} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}} 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_abstract_frame_decorator_a418ad16399ec56c39fc1da3f3ce0118b}{Abstract\+Frame\+Decorator}}.
+
+
+
+Definition at line 176 of file Table.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_decorator_1_1_table_a5486202440b2258d790e57a7638b83da}\label{class_dompdf_1_1_frame_decorator_1_1_table_a5486202440b2258d790e57a7638b83da}} 
+\index{Table@{Table}!find\_parent\_table@{find\_parent\_table}}
+\index{find\_parent\_table@{find\_parent\_table}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{find\_parent\_table()}{find\_parent\_table()}}
+{\footnotesize\ttfamily static find\+\_\+parent\+\_\+table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}}}]{\$frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Static function to locate the parent table of a frame
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}} & {\em \$frame} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_table}{Table}} the table that is an ancestor of \$frame 
+\end{DoxyReturn}
+
+
+Definition at line 194 of file Table.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_decorator_1_1_table_a49939b96a6f4bbff1e73633f50074166}\label{class_dompdf_1_1_frame_decorator_1_1_table_a49939b96a6f4bbff1e73633f50074166}} 
+\index{Table@{Table}!get\_cellmap@{get\_cellmap}}
+\index{get\_cellmap@{get\_cellmap}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{get\_cellmap()}{get\_cellmap()}}
+{\footnotesize\ttfamily get\+\_\+cellmap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return this table\textquotesingle{}s \mbox{\hyperlink{class_dompdf_1_1_cellmap}{Cellmap}}
+
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Dompdf\textbackslash{}\+Cellmap 
+\end{DoxyReturn}
+
+
+Definition at line 210 of file Table.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_decorator_1_1_table_ad492eb316d967d03a7a9b41d52e942b9}\label{class_dompdf_1_1_frame_decorator_1_1_table_ad492eb316d967d03a7a9b41d52e942b9}} 
+\index{Table@{Table}!get\_max\_width@{get\_max\_width}}
+\index{get\_max\_width@{get\_max\_width}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{get\_max\_width()}{get\_max\_width()}}
+{\footnotesize\ttfamily get\+\_\+max\+\_\+width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return the maximum width of this table
+
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+
+
+Definition at line 230 of file Table.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_decorator_1_1_table_a1ea894a852bdbc164df838ffa68a3a3d}\label{class_dompdf_1_1_frame_decorator_1_1_table_a1ea894a852bdbc164df838ffa68a3a3d}} 
+\index{Table@{Table}!get\_min\_width@{get\_min\_width}}
+\index{get\_min\_width@{get\_min\_width}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{get\_min\_width()}{get\_min\_width()}}
+{\footnotesize\ttfamily get\+\_\+min\+\_\+width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return the minimum width of this table
+
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+
+
+Definition at line 220 of file Table.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_decorator_1_1_table_a6efa0840ed85599a773cc89e3e98c071}\label{class_dompdf_1_1_frame_decorator_1_1_table_a6efa0840ed85599a773cc89e3e98c071}} 
+\index{Table@{Table}!move\_after@{move\_after}}
+\index{move\_after@{move\_after}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{move\_after()}{move\_after()}}
+{\footnotesize\ttfamily move\+\_\+after (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}}}]{\$frame }\end{DoxyParamCaption})}
+
+Moves the specified frame and it\textquotesingle{}s corresponding node outside of the table.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}} & {\em \$frame} & the frame to move \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 394 of file Table.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_decorator_1_1_table_aded82e1f1c8adfe87dc2cbccf8a4b718}\label{class_dompdf_1_1_frame_decorator_1_1_table_aded82e1f1c8adfe87dc2cbccf8a4b718}} 
+\index{Table@{Table}!normalise@{normalise}}
+\index{normalise@{normalise}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{normalise()}{normalise()}}
+{\footnotesize\ttfamily normalise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Restructure tree so that the table has the correct structure. Invalid children (i.\+e. all non-\/table-\/rows) are moved below the table.
+
+@fixme \#1363 Method has some bugs. \$table\+\_\+row has not been initialized and lookup most likely could return an array of Style instead a Style Object 
+
+Definition at line 263 of file Table.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_decorator_1_1_table_a4a20559544fdf4dcb457e258dc976cf8}\label{class_dompdf_1_1_frame_decorator_1_1_table_a4a20559544fdf4dcb457e258dc976cf8}} 
+\index{Table@{Table}!reset@{reset}}
+\index{reset@{reset}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Delegate calls to decorated frame object 
+
+Reimplemented from \mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_abstract_frame_decorator_a4a20559544fdf4dcb457e258dc976cf8}{Abstract\+Frame\+Decorator}}.
+
+
+
+Definition at line 99 of file Table.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_decorator_1_1_table_aa168f16cebb7a7c7774d8d7a6383f806}\label{class_dompdf_1_1_frame_decorator_1_1_table_aa168f16cebb7a7c7774d8d7a6383f806}} 
+\index{Table@{Table}!set\_max\_width@{set\_max\_width}}
+\index{set\_max\_width@{set\_max\_width}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{set\_max\_width()}{set\_max\_width()}}
+{\footnotesize\ttfamily set\+\_\+max\+\_\+width (\begin{DoxyParamCaption}\item[{}]{\$width }\end{DoxyParamCaption})}
+
+Set the maximum width of the table
+
+
+\begin{DoxyParams}[1]{Parameters}
+float & {\em \$width} & the new maximum width \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 250 of file Table.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_decorator_1_1_table_ac024e14a1e90a7dde3b846c551bdb168}\label{class_dompdf_1_1_frame_decorator_1_1_table_ac024e14a1e90a7dde3b846c551bdb168}} 
+\index{Table@{Table}!set\_min\_width@{set\_min\_width}}
+\index{set\_min\_width@{set\_min\_width}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{set\_min\_width()}{set\_min\_width()}}
+{\footnotesize\ttfamily set\+\_\+min\+\_\+width (\begin{DoxyParamCaption}\item[{}]{\$width }\end{DoxyParamCaption})}
+
+Set the minimum width of the table
+
+
+\begin{DoxyParams}[1]{Parameters}
+float & {\em \$width} & the new minimum width \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 240 of file Table.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_decorator_1_1_table_ab3d776efa06ea0dae4409545ff4f1842}\label{class_dompdf_1_1_frame_decorator_1_1_table_ab3d776efa06ea0dae4409545ff4f1842}} 
+\index{Table@{Table}!split@{split}}
+\index{split@{split}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{split()}{split()}}
+{\footnotesize\ttfamily split (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}}}]{\$child = {\ttfamily null},  }\item[{}]{\$force\+\_\+pagebreak = {\ttfamily false} }\end{DoxyParamCaption})}
+
+split the table at \$row. \$row and all subsequent rows will be added to the clone. This method is overidden in order to remove frames from the cellmap properly.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}} & {\em \$child} & \\
+\hline
+bool & {\em \$force\+\_\+pagebreak} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_abstract_frame_decorator_ab3d776efa06ea0dae4409545ff4f1842}{Abstract\+Frame\+Decorator}}.
+
+
+
+Definition at line 122 of file Table.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_dompdf_1_1_frame_decorator_1_1_table_a4fa0bedc95727de91eac1229feee0e99}\label{class_dompdf_1_1_frame_decorator_1_1_table_a4fa0bedc95727de91eac1229feee0e99}} 
+\index{Table@{Table}!\$\_cellmap@{\$\_cellmap}}
+\index{\$\_cellmap@{\$\_cellmap}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{\$\_cellmap}{$\_cellmap}}
+{\footnotesize\ttfamily \$\+\_\+cellmap\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 46 of file Table.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_decorator_1_1_table_afee08790ef87c68679f821af753e61dc}\label{class_dompdf_1_1_frame_decorator_1_1_table_afee08790ef87c68679f821af753e61dc}} 
+\index{Table@{Table}!\$\_footers@{\$\_footers}}
+\index{\$\_footers@{\$\_footers}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{\$\_footers}{$\_footers}}
+{\footnotesize\ttfamily \$\+\_\+footers\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 76 of file Table.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_decorator_1_1_table_a1481ae63a7fb295087c3a668a0359500}\label{class_dompdf_1_1_frame_decorator_1_1_table_a1481ae63a7fb295087c3a668a0359500}} 
+\index{Table@{Table}!\$\_headers@{\$\_headers}}
+\index{\$\_headers@{\$\_headers}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{\$\_headers}{$\_headers}}
+{\footnotesize\ttfamily \$\+\_\+headers\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 68 of file Table.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_decorator_1_1_table_a19e12092a37f1b503717dc80d6d5b302}\label{class_dompdf_1_1_frame_decorator_1_1_table_a19e12092a37f1b503717dc80d6d5b302}} 
+\index{Table@{Table}!\$\_max\_width@{\$\_max\_width}}
+\index{\$\_max\_width@{\$\_max\_width}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{\$\_max\_width}{$\_max\_width}}
+{\footnotesize\ttfamily \$\+\_\+max\+\_\+width\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 60 of file Table.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_decorator_1_1_table_a5164006f19d77dd18100e214dd0e7b5e}\label{class_dompdf_1_1_frame_decorator_1_1_table_a5164006f19d77dd18100e214dd0e7b5e}} 
+\index{Table@{Table}!\$\_min\_width@{\$\_min\_width}}
+\index{\$\_min\_width@{\$\_min\_width}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{\$\_min\_width}{$\_min\_width}}
+{\footnotesize\ttfamily \$\+\_\+min\+\_\+width\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 53 of file Table.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_decorator_1_1_table_aa89e2492ba6060e688dce167e59784b1}\label{class_dompdf_1_1_frame_decorator_1_1_table_aa89e2492ba6060e688dce167e59784b1}} 
+\index{Table@{Table}!\$ROW\_GROUPS@{\$ROW\_GROUPS}}
+\index{\$ROW\_GROUPS@{\$ROW\_GROUPS}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{\$ROW\_GROUPS}{$ROW\_GROUPS}}
+{\footnotesize\ttfamily \$ROW\+\_\+\+GROUPS\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [}
+\DoxyCodeLine{        \textcolor{stringliteral}{'table-\/row-\/group'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'table-\/header-\/group'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'table-\/footer-\/group'}}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+
+
+Definition at line 34 of file Table.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_decorator_1_1_table_a60149698f3d8d9577a05e4ac946df5b5}\label{class_dompdf_1_1_frame_decorator_1_1_table_a60149698f3d8d9577a05e4ac946df5b5}} 
+\index{Table@{Table}!\$VALID\_CHILDREN@{\$VALID\_CHILDREN}}
+\index{\$VALID\_CHILDREN@{\$VALID\_CHILDREN}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{\$VALID\_CHILDREN}{$VALID\_CHILDREN}}
+{\footnotesize\ttfamily \$VALID\+\_\+\+CHILDREN\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}table-\/row-\/group"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}table-\/row"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}table-\/header-\/group"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}table-\/footer-\/group"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}table-\/column"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}table-\/column-\/group"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}table-\/caption"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}table-\/cell"{}}}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+
+
+Definition at line 23 of file Table.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/dompdf/src/\+Frame\+Decorator/\mbox{\hyperlink{src_2_frame_decorator_2_table_8php}{Table.\+php}}\end{DoxyCompactItemize}

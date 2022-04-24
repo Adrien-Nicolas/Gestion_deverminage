@@ -1,0 +1,109 @@
+\hypertarget{class_dompdf_1_1_frame_reflower_1_1_page}{}\doxysection{Page Class Reference}
+\label{class_dompdf_1_1_frame_reflower_1_1_page}\index{Page@{Page}}
+Inheritance diagram for Page\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_dompdf_1_1_frame_reflower_1_1_page}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_reflower_1_1_page_aceab81c486ce5d4b830cf66825144c86}{\+\_\+\+\_\+construct}} (Page\+Frame\+Decorator \$frame)
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_reflower_1_1_page_ad6b2e58ece21ad08875e59a78933711a}{apply\+\_\+page\+\_\+style}} (\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}} \$frame, \$page\+\_\+number)
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_reflower_1_1_page_a6ba1034e458c4d1b7d07c01fea57d5ae}{reflow}} (Block\+Frame\+Decorator \$block=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_reflower_1_1_page_af4368d71af7073b4e47ef4fa3bd3d787}{\+\_\+check\+\_\+callbacks}} (\$event, \$frame)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 20 of file Page.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_dompdf_1_1_frame_reflower_1_1_page_aceab81c486ce5d4b830cf66825144c86}\label{class_dompdf_1_1_frame_reflower_1_1_page_aceab81c486ce5d4b830cf66825144c86}} 
+\index{Page@{Page}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Page@{Page}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{Page\+Frame\+Decorator}]{\$frame }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_dompdf_1_1_frame_reflower_1_1_page}{Page}} constructor. 
+\begin{DoxyParams}[1]{Parameters}
+Page\+Frame\+Decorator & {\em \$frame} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 41 of file Page.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_dompdf_1_1_frame_reflower_1_1_page_af4368d71af7073b4e47ef4fa3bd3d787}\label{class_dompdf_1_1_frame_reflower_1_1_page_af4368d71af7073b4e47ef4fa3bd3d787}} 
+\index{Page@{Page}!\_check\_callbacks@{\_check\_callbacks}}
+\index{\_check\_callbacks@{\_check\_callbacks}!Page@{Page}}
+\doxysubsubsection{\texorpdfstring{\_check\_callbacks()}{\_check\_callbacks()}}
+{\footnotesize\ttfamily \+\_\+check\+\_\+callbacks (\begin{DoxyParamCaption}\item[{}]{\$event,  }\item[{}]{\$frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Check for callbacks that need to be performed when a given event gets triggered on a page
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$event} & the type of event \\
+\hline
+\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}} & {\em \$frame} & the frame that event is triggered on \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 180 of file Page.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_reflower_1_1_page_ad6b2e58ece21ad08875e59a78933711a}\label{class_dompdf_1_1_frame_reflower_1_1_page_ad6b2e58ece21ad08875e59a78933711a}} 
+\index{Page@{Page}!apply\_page\_style@{apply\_page\_style}}
+\index{apply\_page\_style@{apply\_page\_style}!Page@{Page}}
+\doxysubsubsection{\texorpdfstring{apply\_page\_style()}{apply\_page\_style()}}
+{\footnotesize\ttfamily apply\+\_\+page\+\_\+style (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}}}]{\$frame,  }\item[{}]{\$page\+\_\+number }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}} & {\em \$frame} & \\
+\hline
+ & {\em \$page\+\_\+number} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 50 of file Page.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_reflower_1_1_page_a6ba1034e458c4d1b7d07c01fea57d5ae}\label{class_dompdf_1_1_frame_reflower_1_1_page_a6ba1034e458c4d1b7d07c01fea57d5ae}} 
+\index{Page@{Page}!reflow@{reflow}}
+\index{reflow@{reflow}!Page@{Page}}
+\doxysubsubsection{\texorpdfstring{reflow()}{reflow()}}
+{\footnotesize\ttfamily reflow (\begin{DoxyParamCaption}\item[{Block\+Frame\+Decorator}]{\$block = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Paged layout\+: \href{http://www.w3.org/TR/CSS21/page.html}{\texttt{ http\+://www.\+w3.\+org/\+TR/\+CSS21/page.\+html}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+Block\+Frame\+Decorator | null & {\em \$block} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 94 of file Page.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/dompdf/src/\+Frame\+Reflower/\mbox{\hyperlink{_frame_reflower_2_page_8php}{Page.\+php}}\end{DoxyCompactItemize}

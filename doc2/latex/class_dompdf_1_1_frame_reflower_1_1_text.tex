@@ -1,0 +1,289 @@
+\hypertarget{class_dompdf_1_1_frame_reflower_1_1_text}{}\doxysection{Text Class Reference}
+\label{class_dompdf_1_1_frame_reflower_1_1_text}\index{Text@{Text}}
+Inheritance diagram for Text\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_dompdf_1_1_frame_reflower_1_1_text}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_reflower_1_1_text_ae55ebe4652ffeb5ec06aec9d60554da7}{\+\_\+\+\_\+construct}} (Text\+Frame\+Decorator \$frame, \mbox{\hyperlink{class_dompdf_1_1_font_metrics}{Font\+Metrics}} \$font\+Metrics)
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_reflower_1_1_text_a6ba1034e458c4d1b7d07c01fea57d5ae}{reflow}} (Block\+Frame\+Decorator \$block=null)
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_reflower_1_1_text_a139176699e8bfe68e03e3a1866e751b6}{get\+\_\+min\+\_\+max\+\_\+width}} ()
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_reflower_1_1_text_ae0ecaa863eb8923656b2ee3f950d06cd}{set\+Font\+Metrics}} (\mbox{\hyperlink{class_dompdf_1_1_font_metrics}{Font\+Metrics}} \$font\+Metrics)
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_reflower_1_1_text_a30005c77915affe30f5a80e6498d311f}{get\+Font\+Metrics}} ()
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_reflower_1_1_text_a13a307ce2ec5efd0773f0f23ae4f7e87}{calculate\+\_\+auto\+\_\+width}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_dompdf_1_1_frame_reflower_1_1_text_a3f38bee59b85a063f500a41fca5ddcaa}{SOFT\+\_\+\+HYPHEN}} = \char`\"{}\textbackslash{}x\+C2\textbackslash{}x\+AD\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_dompdf_1_1_frame_reflower_1_1_text_a59b8e102ef1adaab91815fb18ed44df8}{\$\+\_\+whitespace\+\_\+pattern}} = \textquotesingle{}/(\mbox{[}$^\wedge$\textbackslash{}S\textbackslash{}x\+A0\mbox{]}+)/u\textquotesingle{}
+\item 
+static \mbox{\hyperlink{class_dompdf_1_1_frame_reflower_1_1_text_a21f7f03f1696a7d02bf3e3f33bb1d469}{\$\+\_\+wordbreak\+\_\+pattern}} = \textquotesingle{}/(\mbox{[}$^\wedge$\textbackslash{}S\textbackslash{}x\+A0\mbox{]}+$\vert$\textbackslash{}-\/+$\vert$\textbackslash{}x\+AD+)/u\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_reflower_1_1_text_a77efc8002591af6c37bbd0cb4601e48f}{\+\_\+collapse\+\_\+white\+\_\+space}} (\$text)
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_reflower_1_1_text_a635e3c1c5b904006fe31aae7baf7c8ac}{\+\_\+line\+\_\+break}} (\$text)
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_reflower_1_1_text_a2762e26a075066890d2219a11d98ea0a}{\+\_\+newline\+\_\+break}} (\$text)
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_reflower_1_1_text_ae577bd34e6001170d9fb69bd3731aaee}{\+\_\+layout\+\_\+line}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_reflower_1_1_text_a75ee7016db77da0ffd28c2ac301a1477}{\$\+\_\+block\+\_\+parent}}
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_frame_reflower_1_1_text_aff12a4858e57db8ae96bf92cb2337579}{\$\+\_\+frame}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 21 of file Text.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_dompdf_1_1_frame_reflower_1_1_text_ae55ebe4652ffeb5ec06aec9d60554da7}\label{class_dompdf_1_1_frame_reflower_1_1_text_ae55ebe4652ffeb5ec06aec9d60554da7}} 
+\index{Text@{Text}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{Text\+Frame\+Decorator}]{\$frame,  }\item[{\mbox{\hyperlink{class_dompdf_1_1_font_metrics}{Font\+Metrics}}}]{\$font\+Metrics }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+Text\+Frame\+Decorator & {\em \$frame} & \\
+\hline
+\mbox{\hyperlink{class_dompdf_1_1_font_metrics}{Font\+Metrics}} & {\em \$font\+Metrics} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 54 of file Text.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_dompdf_1_1_frame_reflower_1_1_text_a77efc8002591af6c37bbd0cb4601e48f}\label{class_dompdf_1_1_frame_reflower_1_1_text_a77efc8002591af6c37bbd0cb4601e48f}} 
+\index{Text@{Text}!\_collapse\_white\_space@{\_collapse\_white\_space}}
+\index{\_collapse\_white\_space@{\_collapse\_white\_space}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{\_collapse\_white\_space()}{\_collapse\_white\_space()}}
+{\footnotesize\ttfamily \+\_\+collapse\+\_\+white\+\_\+space (\begin{DoxyParamCaption}\item[{}]{\$text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$text} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Definition at line 64 of file Text.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_reflower_1_1_text_ae577bd34e6001170d9fb69bd3731aaee}\label{class_dompdf_1_1_frame_reflower_1_1_text_ae577bd34e6001170d9fb69bd3731aaee}} 
+\index{Text@{Text}!\_layout\_line@{\_layout\_line}}
+\index{\_layout\_line@{\_layout\_line}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{\_layout\_line()}{\_layout\_line()}}
+{\footnotesize\ttfamily \+\_\+layout\+\_\+line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+@noinspection Php\+Missing\+Break\+Statement\+Inspection
+
+Definition at line 206 of file Text.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_reflower_1_1_text_a635e3c1c5b904006fe31aae7baf7c8ac}\label{class_dompdf_1_1_frame_reflower_1_1_text_a635e3c1c5b904006fe31aae7baf7c8ac}} 
+\index{Text@{Text}!\_line\_break@{\_line\_break}}
+\index{\_line\_break@{\_line\_break}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{\_line\_break()}{\_line\_break()}}
+{\footnotesize\ttfamily \+\_\+line\+\_\+break (\begin{DoxyParamCaption}\item[{}]{\$text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$text} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool$\vert$int 
+\end{DoxyReturn}
+
+
+Definition at line 73 of file Text.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_reflower_1_1_text_a2762e26a075066890d2219a11d98ea0a}\label{class_dompdf_1_1_frame_reflower_1_1_text_a2762e26a075066890d2219a11d98ea0a}} 
+\index{Text@{Text}!\_newline\_break@{\_newline\_break}}
+\index{\_newline\_break@{\_newline\_break}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{\_newline\_break()}{\_newline\_break()}}
+{\footnotesize\ttfamily \+\_\+newline\+\_\+break (\begin{DoxyParamCaption}\item[{}]{\$text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$text} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool$\vert$int 
+\end{DoxyReturn}
+
+
+Definition at line 197 of file Text.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_reflower_1_1_text_a13a307ce2ec5efd0773f0f23ae4f7e87}\label{class_dompdf_1_1_frame_reflower_1_1_text_a13a307ce2ec5efd0773f0f23ae4f7e87}} 
+\index{Text@{Text}!calculate\_auto\_width@{calculate\_auto\_width}}
+\index{calculate\_auto\_width@{calculate\_auto\_width}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{calculate\_auto\_width()}{calculate\_auto\_width()}}
+{\footnotesize\ttfamily calculate\+\_\+auto\+\_\+width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Determine current frame width based on contents
+
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_dompdf_1_1_frame_reflower_1_1_abstract_frame_reflower_a13a307ce2ec5efd0773f0f23ae4f7e87}{Abstract\+Frame\+Reflower}}.
+
+
+
+Definition at line 539 of file Text.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_reflower_1_1_text_a139176699e8bfe68e03e3a1866e751b6}\label{class_dompdf_1_1_frame_reflower_1_1_text_a139176699e8bfe68e03e3a1866e751b6}} 
+\index{Text@{Text}!get\_min\_max\_width@{get\_min\_max\_width}}
+\index{get\_min\_max\_width@{get\_min\_max\_width}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{get\_min\_max\_width()}{get\_min\_max\_width()}}
+{\footnotesize\ttfamily get\+\_\+min\+\_\+max\+\_\+width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Required for table layout\+: Returns an array(0 =$>$ min, 1 =$>$ max, \char`\"{}min\char`\"{} =$>$ min, \char`\"{}max\char`\"{} =$>$ max) of the minimum and maximum widths of this frame. This provides a basic implementation. Child classes should override this if necessary.
+
+\begin{DoxyReturn}{Returns}
+array$\vert$null 
+\end{DoxyReturn}
+@noinspection Php\+Missing\+Break\+Statement\+Inspection
+
+Reimplemented from \mbox{\hyperlink{class_dompdf_1_1_frame_reflower_1_1_abstract_frame_reflower_a139176699e8bfe68e03e3a1866e751b6}{Abstract\+Frame\+Reflower}}.
+
+
+
+Definition at line 415 of file Text.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_reflower_1_1_text_a30005c77915affe30f5a80e6498d311f}\label{class_dompdf_1_1_frame_reflower_1_1_text_a30005c77915affe30f5a80e6498d311f}} 
+\index{Text@{Text}!getFontMetrics@{getFontMetrics}}
+\index{getFontMetrics@{getFontMetrics}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{getFontMetrics()}{getFontMetrics()}}
+{\footnotesize\ttfamily get\+Font\+Metrics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_dompdf_1_1_font_metrics}{Font\+Metrics}} 
+\end{DoxyReturn}
+
+
+Definition at line 529 of file Text.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_reflower_1_1_text_a6ba1034e458c4d1b7d07c01fea57d5ae}\label{class_dompdf_1_1_frame_reflower_1_1_text_a6ba1034e458c4d1b7d07c01fea57d5ae}} 
+\index{Text@{Text}!reflow@{reflow}}
+\index{reflow@{reflow}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{reflow()}{reflow()}}
+{\footnotesize\ttfamily reflow (\begin{DoxyParamCaption}\item[{Block\+Frame\+Decorator}]{\$block = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+Block\+Frame\+Decorator | null & {\em \$block} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 377 of file Text.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_reflower_1_1_text_ae0ecaa863eb8923656b2ee3f950d06cd}\label{class_dompdf_1_1_frame_reflower_1_1_text_ae0ecaa863eb8923656b2ee3f950d06cd}} 
+\index{Text@{Text}!setFontMetrics@{setFontMetrics}}
+\index{setFontMetrics@{setFontMetrics}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{setFontMetrics()}{setFontMetrics()}}
+{\footnotesize\ttfamily set\+Font\+Metrics (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dompdf_1_1_font_metrics}{Font\+Metrics}}}]{\$font\+Metrics }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_dompdf_1_1_font_metrics}{Font\+Metrics}} & {\em \$font\+Metrics} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\$this 
+\end{DoxyReturn}
+
+
+Definition at line 520 of file Text.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_dompdf_1_1_frame_reflower_1_1_text_a75ee7016db77da0ffd28c2ac301a1477}\label{class_dompdf_1_1_frame_reflower_1_1_text_a75ee7016db77da0ffd28c2ac301a1477}} 
+\index{Text@{Text}!\$\_block\_parent@{\$\_block\_parent}}
+\index{\$\_block\_parent@{\$\_block\_parent}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{\$\_block\_parent}{$\_block\_parent}}
+{\footnotesize\ttfamily \$\+\_\+block\+\_\+parent\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 31 of file Text.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_reflower_1_1_text_aff12a4858e57db8ae96bf92cb2337579}\label{class_dompdf_1_1_frame_reflower_1_1_text_aff12a4858e57db8ae96bf92cb2337579}} 
+\index{Text@{Text}!\$\_frame@{\$\_frame}}
+\index{\$\_frame@{\$\_frame}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{\$\_frame}{$\_frame}}
+{\footnotesize\ttfamily \$\+\_\+frame\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 36 of file Text.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_reflower_1_1_text_a59b8e102ef1adaab91815fb18ed44df8}\label{class_dompdf_1_1_frame_reflower_1_1_text_a59b8e102ef1adaab91815fb18ed44df8}} 
+\index{Text@{Text}!\$\_whitespace\_pattern@{\$\_whitespace\_pattern}}
+\index{\$\_whitespace\_pattern@{\$\_whitespace\_pattern}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{\$\_whitespace\_pattern}{$\_whitespace\_pattern}}
+{\footnotesize\ttfamily \$\+\_\+whitespace\+\_\+pattern = \textquotesingle{}/(\mbox{[}$^\wedge$\textbackslash{}S\textbackslash{}x\+A0\mbox{]}+)/u\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 40 of file Text.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_reflower_1_1_text_a21f7f03f1696a7d02bf3e3f33bb1d469}\label{class_dompdf_1_1_frame_reflower_1_1_text_a21f7f03f1696a7d02bf3e3f33bb1d469}} 
+\index{Text@{Text}!\$\_wordbreak\_pattern@{\$\_wordbreak\_pattern}}
+\index{\$\_wordbreak\_pattern@{\$\_wordbreak\_pattern}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{\$\_wordbreak\_pattern}{$\_wordbreak\_pattern}}
+{\footnotesize\ttfamily \$\+\_\+wordbreak\+\_\+pattern = \textquotesingle{}/(\mbox{[}$^\wedge$\textbackslash{}S\textbackslash{}x\+A0\mbox{]}+$\vert$\textbackslash{}-\/+$\vert$\textbackslash{}x\+AD+)/u\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 43 of file Text.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_frame_reflower_1_1_text_a3f38bee59b85a063f500a41fca5ddcaa}\label{class_dompdf_1_1_frame_reflower_1_1_text_a3f38bee59b85a063f500a41fca5ddcaa}} 
+\index{Text@{Text}!SOFT\_HYPHEN@{SOFT\_HYPHEN}}
+\index{SOFT\_HYPHEN@{SOFT\_HYPHEN}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{SOFT\_HYPHEN}{SOFT\_HYPHEN}}
+{\footnotesize\ttfamily const SOFT\+\_\+\+HYPHEN = \char`\"{}\textbackslash{}x\+C2\textbackslash{}x\+AD\char`\"{}}
+
+PHP string represantation of HTML entity $<$shy$>$ 
+
+Definition at line 26 of file Text.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/dompdf/src/\+Frame\+Reflower/\mbox{\hyperlink{src_2_frame_reflower_2_text_8php}{Text.\+php}}\end{DoxyCompactItemize}

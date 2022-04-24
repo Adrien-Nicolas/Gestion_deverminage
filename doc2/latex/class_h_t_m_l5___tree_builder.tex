@@ -1,0 +1,723 @@
+\hypertarget{class_h_t_m_l5___tree_builder}{}\doxysection{HTML5\+\_\+\+Tree\+Builder Class Reference}
+\label{class_h_t_m_l5___tree_builder}\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_h_t_m_l5___tree_builder_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\item 
+\mbox{\hyperlink{class_h_t_m_l5___tree_builder_aec5802ee640cdb5999cea54c4b40a5b2}{get\+Quirks\+Mode}} ()
+\item 
+\mbox{\hyperlink{class_h_t_m_l5___tree_builder_abd44ee4f9dd77d7cd4791c6fe4759ad5}{emit\+Token}} (\$token, \$mode=null)
+\item 
+\mbox{\hyperlink{class_h_t_m_l5___tree_builder_a44eef21ce6816a964342544e08096b68}{foster\+Parent}} (\$node)
+\item 
+\mbox{\hyperlink{class_h_t_m_l5___tree_builder_a1b93de6c4a499639577f513823fd6ea0}{current\+Table\+Is\+Tainted}} ()
+\item 
+\mbox{\hyperlink{class_h_t_m_l5___tree_builder_ae1211ba830b47de151e252b5e6803994}{setup\+Context}} (\$context=null)
+\item 
+\mbox{\hyperlink{class_h_t_m_l5___tree_builder_ad1f15ac94f083d56310874bc5e484e72}{adjust\+Math\+MLAttributes}} (\$token)
+\item 
+\mbox{\hyperlink{class_h_t_m_l5___tree_builder_a2f5d7df18ae74fa5c5dd73d46a15d64b}{adjust\+SVGAttributes}} (\$token)
+\item 
+\mbox{\hyperlink{class_h_t_m_l5___tree_builder_a5ca2f6c55e1dee43126d42e4419fdca6}{adjust\+Foreign\+Attributes}} (\$token)
+\item 
+\mbox{\hyperlink{class_h_t_m_l5___tree_builder_a48fa71a83fc7223c34cf0debc52a945a}{insert\+Foreign\+Element}} (\$token, \$namespace\+URI)
+\item 
+\mbox{\hyperlink{class_h_t_m_l5___tree_builder_afc8a3c62679cf00ade9f15fb2a6d6132}{save}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_h_t_m_l5___tree_builder_a6a0169b26b5301f906b1ec481b3f1eea}{\$stack}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{class_h_t_m_l5___tree_builder_a33b15d31b4f865ae52c242023a2a9f8f}{\$content\+\_\+model}}
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_a0322e4ec6cc4c3605a1740f8e3e152a3}{INITIAL}} = 0
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_adf5e87dd214315cf86e55b5ded1000e2}{BEFORE\+\_\+\+HTML}} = 1
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_ae329d333b13dc817bfcbc44d41f417d7}{BEFORE\+\_\+\+HEAD}} = 2
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_a36d3a95e7ce3b7f1b01dfe6dc342efbf}{IN\+\_\+\+HEAD}} = 3
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_ab6eccf0fc3fbf1d9f3ca439ec971f311}{IN\+\_\+\+HEAD\+\_\+\+NOSCRIPT}} = 4
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_a1625ff338570c58d591a248830a37d0f}{AFTER\+\_\+\+HEAD}} = 5
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_aa73afefcd74e165a3aa8875d2ee3d290}{IN\+\_\+\+BODY}} = 6
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_ab9120c692320717a5fe2a5dcabef2200}{IN\+\_\+\+CDATA\+\_\+\+RCDATA}} = 7
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_aeb1a650e7f0487c82482930e42d44bcc}{IN\+\_\+\+TABLE}} = 8
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_a4f07fd0035850d7d25fe26b94199bd5c}{IN\+\_\+\+TABLE\+\_\+\+TEXT}} = 9
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_ae87c68c59aee101dc135ea15d44f13f1}{IN\+\_\+\+CAPTION}} = 10
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_a733c708d660b34ae687bbf48eb099fb5}{IN\+\_\+\+COLUMN\+\_\+\+GROUP}} = 11
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_a4d8362459c99c23d21d762e543cd6a30}{IN\+\_\+\+TABLE\+\_\+\+BODY}} = 12
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_a9dc360d8ac865c64b74ad6d38a2b04a6}{IN\+\_\+\+ROW}} = 13
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_a4f54becf684c4c9c69aeadab26887ae0}{IN\+\_\+\+CELL}} = 14
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_a70311f420fd6abb349f5d1007974da07}{IN\+\_\+\+SELECT}} = 15
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_ae77872f1d18757831fc4f2589ce5107d}{IN\+\_\+\+SELECT\+\_\+\+IN\+\_\+\+TABLE}} = 16
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_a5360eda75ff9eb2053ced8923a5cf125}{IN\+\_\+\+FOREIGN\+\_\+\+CONTENT}} = 17
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_a051c49b44f479c683a59485fcab970fd}{AFTER\+\_\+\+BODY}} = 18
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_ad90e80b8fe8360af7a4c3a181946ccae}{IN\+\_\+\+FRAMESET}} = 19
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_a921f1342dbbab0a478939263619c95a6}{AFTER\+\_\+\+FRAMESET}} = 20
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_a206aa87833171628d7f769af213cc808}{AFTER\+\_\+\+AFTER\+\_\+\+BODY}} = 21
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_afb846cc6b8422d8ee6d10d55161b281f}{AFTER\+\_\+\+AFTER\+\_\+\+FRAMESET}} = 22
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_a529dab89a12c1069dde3d4d83b255bcf}{SPECIAL}} = 100
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_aed458b434ae5ce9ceabfbd6ccc935220}{SCOPING}} = 101
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_a51df53d3fba58f10aa8f8cdb129f2834}{FORMATTING}} = 102
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_a29a68d7915b4e7ed257209e14c7788cd}{PHRASING}} = 103
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_a52e936d10d94c75684fe014a69c2a85a}{NO\+\_\+\+QUIRKS}} = 200
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_ab3745f6b3ea1419ad332c34494002d96}{QUIRKS\+\_\+\+MODE}} = 201
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_af6c446ad7a7871d9d2dff0b624697f69}{LIMITED\+\_\+\+QUIRKS\+\_\+\+MODE}} = 202
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_a1ff75d1a12fbd8713563986b153e3c4e}{MARKER}} = 300
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_aeae161bbeef687efbc618e4e63faf9aa}{NS\+\_\+\+HTML}} = null
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_a50f3b0937bfc09a332351eac9d9131ba}{NS\+\_\+\+MATHML}} = \textquotesingle{}http\+://www.\+w3.\+org/1998/Math/Math\+ML\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_a3555cf539a34b9e96833a5c2096ff29d}{NS\+\_\+\+SVG}} = \textquotesingle{}http\+://www.\+w3.\+org/2000/svg\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_a141fc1c123fa915fec1264a651fe0e11}{NS\+\_\+\+XLINK}} = \textquotesingle{}http\+://www.\+w3.\+org/1999/xlink\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_a876cbf1a789c15bc6119a1958496013d}{NS\+\_\+\+XML}} = \textquotesingle{}http\+://www.\+w3.\+org/XML/1998/namespace\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_a3dbde6f6b31072c7e21ec9fc4264e60b}{NS\+\_\+\+XMLNS}} = \textquotesingle{}http\+://www.\+w3.\+org/2000/xmlns/\textquotesingle{}
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_a98a1ffb09ff8784af7b767bd0d76204c}{SCOPE}} = 0
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_a72fcaa7810fac439032ccf1939f592ae}{SCOPE\+\_\+\+LISTITEM}} = 1
+\item 
+const \mbox{\hyperlink{class_h_t_m_l5___tree_builder_a6f21b31c75dd2a8abdd38965ba5696ac}{SCOPE\+\_\+\+TABLE}} = 2
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 37 of file Tree\+Builder.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a095c5d389db211932136b53f25f39685}\label{class_h_t_m_l5___tree_builder_a095c5d389db211932136b53f25f39685}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_h_t_m_l5___tree_builder}{HTML5\+\_\+\+Tree\+Builder}} constructor. 
+
+Definition at line 153 of file Tree\+Builder.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a5ca2f6c55e1dee43126d42e4419fdca6}\label{class_h_t_m_l5___tree_builder_a5ca2f6c55e1dee43126d42e4419fdca6}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!adjustForeignAttributes@{adjustForeignAttributes}}
+\index{adjustForeignAttributes@{adjustForeignAttributes}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{adjustForeignAttributes()}{adjustForeignAttributes()}}
+{\footnotesize\ttfamily adjust\+Foreign\+Attributes (\begin{DoxyParamCaption}\item[{}]{\$token }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$token} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Definition at line 3911 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_ad1f15ac94f083d56310874bc5e484e72}\label{class_h_t_m_l5___tree_builder_ad1f15ac94f083d56310874bc5e484e72}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!adjustMathMLAttributes@{adjustMathMLAttributes}}
+\index{adjustMathMLAttributes@{adjustMathMLAttributes}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{adjustMathMLAttributes()}{adjustMathMLAttributes()}}
+{\footnotesize\ttfamily adjust\+Math\+MLAttributes (\begin{DoxyParamCaption}\item[{}]{\$token }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$token} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Definition at line 3821 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a2f5d7df18ae74fa5c5dd73d46a15d64b}\label{class_h_t_m_l5___tree_builder_a2f5d7df18ae74fa5c5dd73d46a15d64b}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!adjustSVGAttributes@{adjustSVGAttributes}}
+\index{adjustSVGAttributes@{adjustSVGAttributes}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{adjustSVGAttributes()}{adjustSVGAttributes()}}
+{\footnotesize\ttfamily adjust\+SVGAttributes (\begin{DoxyParamCaption}\item[{}]{\$token }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$token} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+
+
+Definition at line 3834 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a1b93de6c4a499639577f513823fd6ea0}\label{class_h_t_m_l5___tree_builder_a1b93de6c4a499639577f513823fd6ea0}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!currentTableIsTainted@{currentTableIsTainted}}
+\index{currentTableIsTainted@{currentTableIsTainted}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{currentTableIsTainted()}{currentTableIsTainted()}}
+{\footnotesize\ttfamily current\+Table\+Is\+Tainted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 3762 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_abd44ee4f9dd77d7cd4791c6fe4759ad5}\label{class_h_t_m_l5___tree_builder_abd44ee4f9dd77d7cd4791c6fe4759ad5}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!emitToken@{emitToken}}
+\index{emitToken@{emitToken}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{emitToken()}{emitToken()}}
+{\footnotesize\ttfamily emit\+Token (\begin{DoxyParamCaption}\item[{}]{\$token,  }\item[{}]{\$mode = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Process tag tokens
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em \$token} & \\
+\hline
+null & {\em \$mode} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 173 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a44eef21ce6816a964342544e08096b68}\label{class_h_t_m_l5___tree_builder_a44eef21ce6816a964342544e08096b68}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!fosterParent@{fosterParent}}
+\index{fosterParent@{fosterParent}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{fosterParent()}{fosterParent()}}
+{\footnotesize\ttfamily foster\+Parent (\begin{DoxyParamCaption}\item[{}]{\$node }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$node} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 3713 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_aec5802ee640cdb5999cea54c4b40a5b2}\label{class_h_t_m_l5___tree_builder_aec5802ee640cdb5999cea54c4b40a5b2}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!getQuirksMode@{getQuirksMode}}
+\index{getQuirksMode@{getQuirksMode}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{getQuirksMode()}{getQuirksMode()}}
+{\footnotesize\ttfamily get\+Quirks\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 163 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a48fa71a83fc7223c34cf0debc52a945a}\label{class_h_t_m_l5___tree_builder_a48fa71a83fc7223c34cf0debc52a945a}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!insertForeignElement@{insertForeignElement}}
+\index{insertForeignElement@{insertForeignElement}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{insertForeignElement()}{insertForeignElement()}}
+{\footnotesize\ttfamily insert\+Foreign\+Element (\begin{DoxyParamCaption}\item[{}]{\$token,  }\item[{}]{\$namespace\+URI }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$token} & \\
+\hline
+{\em \$namespace\+URI} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 3938 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_afc8a3c62679cf00ade9f15fb2a6d6132}\label{class_h_t_m_l5___tree_builder_afc8a3c62679cf00ade9f15fb2a6d6132}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!save@{save}}
+\index{save@{save}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+DOMDocument$\vert$\+DOMNode\+List 
+\end{DoxyReturn}
+
+
+Definition at line 3976 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_ae1211ba830b47de151e252b5e6803994}\label{class_h_t_m_l5___tree_builder_ae1211ba830b47de151e252b5e6803994}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!setupContext@{setupContext}}
+\index{setupContext@{setupContext}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{setupContext()}{setupContext()}}
+{\footnotesize\ttfamily setup\+Context (\begin{DoxyParamCaption}\item[{}]{\$context = {\ttfamily null} }\end{DoxyParamCaption})}
+
+Sets up the tree constructor for building a fragment.
+
+
+\begin{DoxyParams}[1]{Parameters}
+null & {\em \$context} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 3771 of file Tree\+Builder.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a33b15d31b4f865ae52c242023a2a9f8f}\label{class_h_t_m_l5___tree_builder_a33b15d31b4f865ae52c242023a2a9f8f}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!\$content\_model@{\$content\_model}}
+\index{\$content\_model@{\$content\_model}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{\$content\_model}{$content\_model}}
+{\footnotesize\ttfamily \$content\+\_\+model}
+
+
+
+Definition at line 39 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a6a0169b26b5301f906b1ec481b3f1eea}\label{class_h_t_m_l5___tree_builder_a6a0169b26b5301f906b1ec481b3f1eea}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!\$stack@{\$stack}}
+\index{\$stack@{\$stack}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{\$stack}{$stack}}
+{\footnotesize\ttfamily \$stack = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line 38 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a206aa87833171628d7f769af213cc808}\label{class_h_t_m_l5___tree_builder_a206aa87833171628d7f769af213cc808}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!AFTER\_AFTER\_BODY@{AFTER\_AFTER\_BODY}}
+\index{AFTER\_AFTER\_BODY@{AFTER\_AFTER\_BODY}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{AFTER\_AFTER\_BODY}{AFTER\_AFTER\_BODY}}
+{\footnotesize\ttfamily const AFTER\+\_\+\+AFTER\+\_\+\+BODY = 21}
+
+
+
+Definition at line 101 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_afb846cc6b8422d8ee6d10d55161b281f}\label{class_h_t_m_l5___tree_builder_afb846cc6b8422d8ee6d10d55161b281f}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!AFTER\_AFTER\_FRAMESET@{AFTER\_AFTER\_FRAMESET}}
+\index{AFTER\_AFTER\_FRAMESET@{AFTER\_AFTER\_FRAMESET}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{AFTER\_AFTER\_FRAMESET}{AFTER\_AFTER\_FRAMESET}}
+{\footnotesize\ttfamily const AFTER\+\_\+\+AFTER\+\_\+\+FRAMESET = 22}
+
+
+
+Definition at line 102 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a051c49b44f479c683a59485fcab970fd}\label{class_h_t_m_l5___tree_builder_a051c49b44f479c683a59485fcab970fd}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!AFTER\_BODY@{AFTER\_BODY}}
+\index{AFTER\_BODY@{AFTER\_BODY}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{AFTER\_BODY}{AFTER\_BODY}}
+{\footnotesize\ttfamily const AFTER\+\_\+\+BODY = 18}
+
+
+
+Definition at line 98 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a921f1342dbbab0a478939263619c95a6}\label{class_h_t_m_l5___tree_builder_a921f1342dbbab0a478939263619c95a6}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!AFTER\_FRAMESET@{AFTER\_FRAMESET}}
+\index{AFTER\_FRAMESET@{AFTER\_FRAMESET}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{AFTER\_FRAMESET}{AFTER\_FRAMESET}}
+{\footnotesize\ttfamily const AFTER\+\_\+\+FRAMESET = 20}
+
+
+
+Definition at line 100 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a1625ff338570c58d591a248830a37d0f}\label{class_h_t_m_l5___tree_builder_a1625ff338570c58d591a248830a37d0f}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!AFTER\_HEAD@{AFTER\_HEAD}}
+\index{AFTER\_HEAD@{AFTER\_HEAD}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{AFTER\_HEAD}{AFTER\_HEAD}}
+{\footnotesize\ttfamily const AFTER\+\_\+\+HEAD = 5}
+
+
+
+Definition at line 85 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_ae329d333b13dc817bfcbc44d41f417d7}\label{class_h_t_m_l5___tree_builder_ae329d333b13dc817bfcbc44d41f417d7}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!BEFORE\_HEAD@{BEFORE\_HEAD}}
+\index{BEFORE\_HEAD@{BEFORE\_HEAD}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{BEFORE\_HEAD}{BEFORE\_HEAD}}
+{\footnotesize\ttfamily const BEFORE\+\_\+\+HEAD = 2}
+
+
+
+Definition at line 82 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_adf5e87dd214315cf86e55b5ded1000e2}\label{class_h_t_m_l5___tree_builder_adf5e87dd214315cf86e55b5ded1000e2}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!BEFORE\_HTML@{BEFORE\_HTML}}
+\index{BEFORE\_HTML@{BEFORE\_HTML}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{BEFORE\_HTML}{BEFORE\_HTML}}
+{\footnotesize\ttfamily const BEFORE\+\_\+\+HTML = 1}
+
+
+
+Definition at line 81 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a51df53d3fba58f10aa8f8cdb129f2834}\label{class_h_t_m_l5___tree_builder_a51df53d3fba58f10aa8f8cdb129f2834}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!FORMATTING@{FORMATTING}}
+\index{FORMATTING@{FORMATTING}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{FORMATTING}{FORMATTING}}
+{\footnotesize\ttfamily const FORMATTING = 102}
+
+
+
+Definition at line 126 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_aa73afefcd74e165a3aa8875d2ee3d290}\label{class_h_t_m_l5___tree_builder_aa73afefcd74e165a3aa8875d2ee3d290}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!IN\_BODY@{IN\_BODY}}
+\index{IN\_BODY@{IN\_BODY}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{IN\_BODY}{IN\_BODY}}
+{\footnotesize\ttfamily const IN\+\_\+\+BODY = 6}
+
+
+
+Definition at line 86 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_ae87c68c59aee101dc135ea15d44f13f1}\label{class_h_t_m_l5___tree_builder_ae87c68c59aee101dc135ea15d44f13f1}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!IN\_CAPTION@{IN\_CAPTION}}
+\index{IN\_CAPTION@{IN\_CAPTION}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{IN\_CAPTION}{IN\_CAPTION}}
+{\footnotesize\ttfamily const IN\+\_\+\+CAPTION = 10}
+
+
+
+Definition at line 90 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_ab9120c692320717a5fe2a5dcabef2200}\label{class_h_t_m_l5___tree_builder_ab9120c692320717a5fe2a5dcabef2200}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!IN\_CDATA\_RCDATA@{IN\_CDATA\_RCDATA}}
+\index{IN\_CDATA\_RCDATA@{IN\_CDATA\_RCDATA}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{IN\_CDATA\_RCDATA}{IN\_CDATA\_RCDATA}}
+{\footnotesize\ttfamily const IN\+\_\+\+CDATA\+\_\+\+RCDATA = 7}
+
+
+
+Definition at line 87 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a4f54becf684c4c9c69aeadab26887ae0}\label{class_h_t_m_l5___tree_builder_a4f54becf684c4c9c69aeadab26887ae0}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!IN\_CELL@{IN\_CELL}}
+\index{IN\_CELL@{IN\_CELL}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{IN\_CELL}{IN\_CELL}}
+{\footnotesize\ttfamily const IN\+\_\+\+CELL = 14}
+
+
+
+Definition at line 94 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a733c708d660b34ae687bbf48eb099fb5}\label{class_h_t_m_l5___tree_builder_a733c708d660b34ae687bbf48eb099fb5}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!IN\_COLUMN\_GROUP@{IN\_COLUMN\_GROUP}}
+\index{IN\_COLUMN\_GROUP@{IN\_COLUMN\_GROUP}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{IN\_COLUMN\_GROUP}{IN\_COLUMN\_GROUP}}
+{\footnotesize\ttfamily const IN\+\_\+\+COLUMN\+\_\+\+GROUP = 11}
+
+
+
+Definition at line 91 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a5360eda75ff9eb2053ced8923a5cf125}\label{class_h_t_m_l5___tree_builder_a5360eda75ff9eb2053ced8923a5cf125}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!IN\_FOREIGN\_CONTENT@{IN\_FOREIGN\_CONTENT}}
+\index{IN\_FOREIGN\_CONTENT@{IN\_FOREIGN\_CONTENT}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{IN\_FOREIGN\_CONTENT}{IN\_FOREIGN\_CONTENT}}
+{\footnotesize\ttfamily const IN\+\_\+\+FOREIGN\+\_\+\+CONTENT = 17}
+
+
+
+Definition at line 97 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_ad90e80b8fe8360af7a4c3a181946ccae}\label{class_h_t_m_l5___tree_builder_ad90e80b8fe8360af7a4c3a181946ccae}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!IN\_FRAMESET@{IN\_FRAMESET}}
+\index{IN\_FRAMESET@{IN\_FRAMESET}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{IN\_FRAMESET}{IN\_FRAMESET}}
+{\footnotesize\ttfamily const IN\+\_\+\+FRAMESET = 19}
+
+
+
+Definition at line 99 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a36d3a95e7ce3b7f1b01dfe6dc342efbf}\label{class_h_t_m_l5___tree_builder_a36d3a95e7ce3b7f1b01dfe6dc342efbf}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!IN\_HEAD@{IN\_HEAD}}
+\index{IN\_HEAD@{IN\_HEAD}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{IN\_HEAD}{IN\_HEAD}}
+{\footnotesize\ttfamily const IN\+\_\+\+HEAD = 3}
+
+
+
+Definition at line 83 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_ab6eccf0fc3fbf1d9f3ca439ec971f311}\label{class_h_t_m_l5___tree_builder_ab6eccf0fc3fbf1d9f3ca439ec971f311}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!IN\_HEAD\_NOSCRIPT@{IN\_HEAD\_NOSCRIPT}}
+\index{IN\_HEAD\_NOSCRIPT@{IN\_HEAD\_NOSCRIPT}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{IN\_HEAD\_NOSCRIPT}{IN\_HEAD\_NOSCRIPT}}
+{\footnotesize\ttfamily const IN\+\_\+\+HEAD\+\_\+\+NOSCRIPT = 4}
+
+
+
+Definition at line 84 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a9dc360d8ac865c64b74ad6d38a2b04a6}\label{class_h_t_m_l5___tree_builder_a9dc360d8ac865c64b74ad6d38a2b04a6}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!IN\_ROW@{IN\_ROW}}
+\index{IN\_ROW@{IN\_ROW}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{IN\_ROW}{IN\_ROW}}
+{\footnotesize\ttfamily const IN\+\_\+\+ROW = 13}
+
+
+
+Definition at line 93 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a70311f420fd6abb349f5d1007974da07}\label{class_h_t_m_l5___tree_builder_a70311f420fd6abb349f5d1007974da07}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!IN\_SELECT@{IN\_SELECT}}
+\index{IN\_SELECT@{IN\_SELECT}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{IN\_SELECT}{IN\_SELECT}}
+{\footnotesize\ttfamily const IN\+\_\+\+SELECT = 15}
+
+
+
+Definition at line 95 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_ae77872f1d18757831fc4f2589ce5107d}\label{class_h_t_m_l5___tree_builder_ae77872f1d18757831fc4f2589ce5107d}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!IN\_SELECT\_IN\_TABLE@{IN\_SELECT\_IN\_TABLE}}
+\index{IN\_SELECT\_IN\_TABLE@{IN\_SELECT\_IN\_TABLE}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{IN\_SELECT\_IN\_TABLE}{IN\_SELECT\_IN\_TABLE}}
+{\footnotesize\ttfamily const IN\+\_\+\+SELECT\+\_\+\+IN\+\_\+\+TABLE = 16}
+
+
+
+Definition at line 96 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_aeb1a650e7f0487c82482930e42d44bcc}\label{class_h_t_m_l5___tree_builder_aeb1a650e7f0487c82482930e42d44bcc}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!IN\_TABLE@{IN\_TABLE}}
+\index{IN\_TABLE@{IN\_TABLE}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{IN\_TABLE}{IN\_TABLE}}
+{\footnotesize\ttfamily const IN\+\_\+\+TABLE = 8}
+
+
+
+Definition at line 88 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a4d8362459c99c23d21d762e543cd6a30}\label{class_h_t_m_l5___tree_builder_a4d8362459c99c23d21d762e543cd6a30}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!IN\_TABLE\_BODY@{IN\_TABLE\_BODY}}
+\index{IN\_TABLE\_BODY@{IN\_TABLE\_BODY}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{IN\_TABLE\_BODY}{IN\_TABLE\_BODY}}
+{\footnotesize\ttfamily const IN\+\_\+\+TABLE\+\_\+\+BODY = 12}
+
+
+
+Definition at line 92 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a4f07fd0035850d7d25fe26b94199bd5c}\label{class_h_t_m_l5___tree_builder_a4f07fd0035850d7d25fe26b94199bd5c}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!IN\_TABLE\_TEXT@{IN\_TABLE\_TEXT}}
+\index{IN\_TABLE\_TEXT@{IN\_TABLE\_TEXT}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{IN\_TABLE\_TEXT}{IN\_TABLE\_TEXT}}
+{\footnotesize\ttfamily const IN\+\_\+\+TABLE\+\_\+\+TEXT = 9}
+
+
+
+Definition at line 89 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a0322e4ec6cc4c3605a1740f8e3e152a3}\label{class_h_t_m_l5___tree_builder_a0322e4ec6cc4c3605a1740f8e3e152a3}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!INITIAL@{INITIAL}}
+\index{INITIAL@{INITIAL}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{INITIAL}{INITIAL}}
+{\footnotesize\ttfamily const INITIAL = 0}
+
+
+
+Definition at line 80 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_af6c446ad7a7871d9d2dff0b624697f69}\label{class_h_t_m_l5___tree_builder_af6c446ad7a7871d9d2dff0b624697f69}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!LIMITED\_QUIRKS\_MODE@{LIMITED\_QUIRKS\_MODE}}
+\index{LIMITED\_QUIRKS\_MODE@{LIMITED\_QUIRKS\_MODE}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{LIMITED\_QUIRKS\_MODE}{LIMITED\_QUIRKS\_MODE}}
+{\footnotesize\ttfamily const LIMITED\+\_\+\+QUIRKS\+\_\+\+MODE = 202}
+
+
+
+Definition at line 132 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a1ff75d1a12fbd8713563986b153e3c4e}\label{class_h_t_m_l5___tree_builder_a1ff75d1a12fbd8713563986b153e3c4e}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!MARKER@{MARKER}}
+\index{MARKER@{MARKER}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{MARKER}{MARKER}}
+{\footnotesize\ttfamily const MARKER = 300}
+
+
+
+Definition at line 135 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a52e936d10d94c75684fe014a69c2a85a}\label{class_h_t_m_l5___tree_builder_a52e936d10d94c75684fe014a69c2a85a}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!NO\_QUIRKS@{NO\_QUIRKS}}
+\index{NO\_QUIRKS@{NO\_QUIRKS}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{NO\_QUIRKS}{NO\_QUIRKS}}
+{\footnotesize\ttfamily const NO\+\_\+\+QUIRKS = 200}
+
+
+
+Definition at line 130 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_aeae161bbeef687efbc618e4e63faf9aa}\label{class_h_t_m_l5___tree_builder_aeae161bbeef687efbc618e4e63faf9aa}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!NS\_HTML@{NS\_HTML}}
+\index{NS\_HTML@{NS\_HTML}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{NS\_HTML}{NS\_HTML}}
+{\footnotesize\ttfamily const NS\+\_\+\+HTML = null}
+
+
+
+Definition at line 138 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a50f3b0937bfc09a332351eac9d9131ba}\label{class_h_t_m_l5___tree_builder_a50f3b0937bfc09a332351eac9d9131ba}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!NS\_MATHML@{NS\_MATHML}}
+\index{NS\_MATHML@{NS\_MATHML}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{NS\_MATHML}{NS\_MATHML}}
+{\footnotesize\ttfamily const NS\+\_\+\+MATHML = \textquotesingle{}http\+://www.\+w3.\+org/1998/Math/Math\+ML\textquotesingle{}}
+
+
+
+Definition at line 139 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a3555cf539a34b9e96833a5c2096ff29d}\label{class_h_t_m_l5___tree_builder_a3555cf539a34b9e96833a5c2096ff29d}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!NS\_SVG@{NS\_SVG}}
+\index{NS\_SVG@{NS\_SVG}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{NS\_SVG}{NS\_SVG}}
+{\footnotesize\ttfamily const NS\+\_\+\+SVG = \textquotesingle{}http\+://www.\+w3.\+org/2000/svg\textquotesingle{}}
+
+
+
+Definition at line 140 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a141fc1c123fa915fec1264a651fe0e11}\label{class_h_t_m_l5___tree_builder_a141fc1c123fa915fec1264a651fe0e11}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!NS\_XLINK@{NS\_XLINK}}
+\index{NS\_XLINK@{NS\_XLINK}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{NS\_XLINK}{NS\_XLINK}}
+{\footnotesize\ttfamily const NS\+\_\+\+XLINK = \textquotesingle{}http\+://www.\+w3.\+org/1999/xlink\textquotesingle{}}
+
+
+
+Definition at line 141 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a876cbf1a789c15bc6119a1958496013d}\label{class_h_t_m_l5___tree_builder_a876cbf1a789c15bc6119a1958496013d}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!NS\_XML@{NS\_XML}}
+\index{NS\_XML@{NS\_XML}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{NS\_XML}{NS\_XML}}
+{\footnotesize\ttfamily const NS\+\_\+\+XML = \textquotesingle{}http\+://www.\+w3.\+org/XML/1998/namespace\textquotesingle{}}
+
+
+
+Definition at line 142 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a3dbde6f6b31072c7e21ec9fc4264e60b}\label{class_h_t_m_l5___tree_builder_a3dbde6f6b31072c7e21ec9fc4264e60b}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!NS\_XMLNS@{NS\_XMLNS}}
+\index{NS\_XMLNS@{NS\_XMLNS}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{NS\_XMLNS}{NS\_XMLNS}}
+{\footnotesize\ttfamily const NS\+\_\+\+XMLNS = \textquotesingle{}http\+://www.\+w3.\+org/2000/xmlns/\textquotesingle{}}
+
+
+
+Definition at line 143 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a29a68d7915b4e7ed257209e14c7788cd}\label{class_h_t_m_l5___tree_builder_a29a68d7915b4e7ed257209e14c7788cd}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!PHRASING@{PHRASING}}
+\index{PHRASING@{PHRASING}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{PHRASING}{PHRASING}}
+{\footnotesize\ttfamily const PHRASING = 103}
+
+
+
+Definition at line 127 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_ab3745f6b3ea1419ad332c34494002d96}\label{class_h_t_m_l5___tree_builder_ab3745f6b3ea1419ad332c34494002d96}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!QUIRKS\_MODE@{QUIRKS\_MODE}}
+\index{QUIRKS\_MODE@{QUIRKS\_MODE}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{QUIRKS\_MODE}{QUIRKS\_MODE}}
+{\footnotesize\ttfamily const QUIRKS\+\_\+\+MODE = 201}
+
+
+
+Definition at line 131 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a98a1ffb09ff8784af7b767bd0d76204c}\label{class_h_t_m_l5___tree_builder_a98a1ffb09ff8784af7b767bd0d76204c}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!SCOPE@{SCOPE}}
+\index{SCOPE@{SCOPE}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{SCOPE}{SCOPE}}
+{\footnotesize\ttfamily const SCOPE = 0}
+
+
+
+Definition at line 146 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a72fcaa7810fac439032ccf1939f592ae}\label{class_h_t_m_l5___tree_builder_a72fcaa7810fac439032ccf1939f592ae}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!SCOPE\_LISTITEM@{SCOPE\_LISTITEM}}
+\index{SCOPE\_LISTITEM@{SCOPE\_LISTITEM}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{SCOPE\_LISTITEM}{SCOPE\_LISTITEM}}
+{\footnotesize\ttfamily const SCOPE\+\_\+\+LISTITEM = 1}
+
+
+
+Definition at line 147 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a6f21b31c75dd2a8abdd38965ba5696ac}\label{class_h_t_m_l5___tree_builder_a6f21b31c75dd2a8abdd38965ba5696ac}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!SCOPE\_TABLE@{SCOPE\_TABLE}}
+\index{SCOPE\_TABLE@{SCOPE\_TABLE}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{SCOPE\_TABLE}{SCOPE\_TABLE}}
+{\footnotesize\ttfamily const SCOPE\+\_\+\+TABLE = 2}
+
+
+
+Definition at line 148 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_aed458b434ae5ce9ceabfbd6ccc935220}\label{class_h_t_m_l5___tree_builder_aed458b434ae5ce9ceabfbd6ccc935220}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!SCOPING@{SCOPING}}
+\index{SCOPING@{SCOPING}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{SCOPING}{SCOPING}}
+{\footnotesize\ttfamily const SCOPING = 101}
+
+
+
+Definition at line 125 of file Tree\+Builder.\+php.
+
+\mbox{\Hypertarget{class_h_t_m_l5___tree_builder_a529dab89a12c1069dde3d4d83b255bcf}\label{class_h_t_m_l5___tree_builder_a529dab89a12c1069dde3d4d83b255bcf}} 
+\index{HTML5\_TreeBuilder@{HTML5\_TreeBuilder}!SPECIAL@{SPECIAL}}
+\index{SPECIAL@{SPECIAL}!HTML5\_TreeBuilder@{HTML5\_TreeBuilder}}
+\doxysubsubsection{\texorpdfstring{SPECIAL}{SPECIAL}}
+{\footnotesize\ttfamily const SPECIAL = 100}
+
+
+
+Definition at line 124 of file Tree\+Builder.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/dompdf/lib/html5lib/\mbox{\hyperlink{_tree_builder_8php}{Tree\+Builder.\+php}}\end{DoxyCompactItemize}

@@ -1,0 +1,241 @@
+<?php
+
+
+require_once('php/autoload.php');
+
+error_reporting(E_ALL);
+ini_set('display_errors', TRUE);
+ini_set('display_startup_errors', TRUE);
+
+$html = <<<HTML
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Se connecter - Administration déverminage</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo-page.png">
+    <meta name="description" content="Page principale">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-1.8.0.min.js"></script>
+    <script>
+        (function ($) {
+            $(function () {
+                $('nav ul li a:not(:only-child)').click(function (e) {
+                    $(this).siblings('.nav-dropdown').toggle();
+                    $('.nav-dropdown').not($(this).siblings()).hide();
+                    e.stopPropagation();
+                });
+                $('html').click(function () {
+                    $('.nav-dropdown').hide();
+                });
+                $('#nav-toggle').click(function () {
+                    $('nav ul').slideToggle();
+                });
+                $('#nav-toggle').on('click', function () {
+                    this.classList.toggle('active');
+                });
+            });
+        })(jQuery);
+    </script>
+</head>
+
+<body>
+    <div class="nav-container">
+        <a href="./index.php" class="name-nav">
+            <img src="img/logo.png" alt="logo epl" class="logo-nav">
+            <p>Administration déverminage</p>
+        <nav>
+            <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+            <ul class="nav-list">
+                <li>
+                    <div class="search">
+                        <form id="searchform" action="search.php" method="GET">
+                            <input placeholder="Rechercher" name="search">
+                        </form>
+                        <button class="searchform" type="submit" form="searchform" value="Submit"><span class="iconify"
+                                data-icon="si-glyph:magnifier" data-inline="false" style="color: black;"
+                                data-width="20px" data-height="20px"></span></button>
+                    </div>
+                </li>
+                <li>
+                    <a class="unselectable cpointer">Admin</a>
+                    <ul class="nav-dropdown">
+                        <li>
+                            <a class="unselectable" href="createuser.html">Créer un compte</a>
+                        </li>
+                        <li>
+                            <a class="unselectable" href="users.php">Gérer les comptes</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="unselectable" href="login.html">Se déconnecter</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+HTML;
+
+$id = $_GET['id'];
+
+$lot = Lot::getLotFromID($id);
+
+$capteurs = $lot->getAllCapteurs();
+$nbValid = $lot->getNbValidCap();
+$nbNotValid = $lot->getNbNotValidCap();
+$nbCap = $lot->getNbCap();
+$essaisId = $lot->getAllEssaisId();
+$idlist = '';
+foreach ($essaisId AS $eId) {
+    $idlist.=$eId.' ,';
+}
+$idlist = substr($idlist, 0, -1);
+
+
+$html .= '<h1 class="main-h1">Lot n°' . $lot->getNumLot() . '</h1>';
+
+$html .= <<<HTML
+            <div class="grid-container" >
+            <p class="txtc">Nombre de tubes essayé : $nbCap </p>
+            <p class="txtc">Dans les essais : $idlist</p>
+            <p class="txtc">Nombre de tubes conforme : $nbValid</p>
+            <p class="txtc">Nombre de tubes non conforme : $nbNotValid</p>
+             <div class="grid-line">
+                           <p class="titleRange grid-line-3">Rafraichissement des graphiques : </p>
+                           <p>Oui</p>
+                           <input id ="slide" type="range" min="0" max="1" value="0" id="rangeslide">
+                           <p>Non</p>
+                       </div>
+
+            <p></p>
+            <a class="cpointer t-end" id="modal-btn">Voulez vous supprimer ce lot ?
+            </a>
+        </div>
+        <div class="container-lot">
+HTML;
+
+foreach ($capteurs as $cap) {
+    $valid = $cap->getValid();
+    $i = $cap->getId();
+    $SN = $cap->getSN();
+
+    $html .= '<div class="lot">
+                <div class="nlot cpointer" id="btnTube' . $i . '">
+                    <a>Tube LED n°serie : ' . $SN . '</a>';
+    if ($valid == 0) {
+        $html .= '<span class="nvalid">non conforme
+
+                  </span>';
+    } else {
+        $html .= '<span class="valid">conforme
+                  </span>';
+    }
+    $html .= <<<HTML
+                    <div class="lot-icon" id="iconBtnTube$i">
+                        <span class="iconify" data-icon="bi:chevron-down" data-inline="false"></span>
+                    </div>
+                </div>
+                <div class="tube dnone" id="tube$i">
+                    <div id="graph$i"></div>
+                </div>
+            </div>
+            <script type="module">
+
+                import {AjaxRequest} from  './js/AjaxRequest.js';
+
+                /**
+                 * Permet d'ajouter le graphique
+                 */
+
+                var tube$i = document.getElementById('tube$i');
+                var btnTube$i = document.getElementById('btnTube$i');
+                var IconBtnTube$i = document.getElementById('iconBtnTube$i');
+
+                function ajaxAddGraph() {
+                    new AjaxRequest({
+                        url: "php/getGraph.php",
+                        method: "post",
+                        parameters: {
+                            id: $i,
+                            valid: $valid,
+                            refresh: document.getElementById('slide').value
+                        },
+                        onSuccess: function (res) {
+                            var divtube = document.createElement('div');
+                            divtube.innerHTML = res;
+                            tube$i.appendChild(divtube);
+                        }, onError: function (status, message) {
+                            window.alert('Error ' + status + ': ' + message);
+                        }
+                    });
+                }
+
+                btnTube$i.addEventListener("click", function () {
+                    if (!tube$i.classList.contains("dnone")) {
+                        tube$i.classList.add("dnone");
+                        IconBtnTube$i.classList.remove("iconBtnRotate");
+                        IconBtnTube$i.classList.add("iconBtnRotateNone");
+                        tube$i.innerHTML = "";
+
+                    }
+                    else {
+                        tube$i.classList.remove("dnone");
+                        IconBtnTube$i.classList.add("iconBtnRotate");
+                        IconBtnTube$i.classList.remove("iconBtnRotateNone");
+                        ajaxAddGraph();
+                    }
+                });
+            </script>
+HTML;
+}
+
+$html .= <<<HTML
+        </div>
+    </div>
+    <div class="modaldel-bg dnone">
+        <div class="modaldel">
+            <p id="modal-p">Etes vous sur de vouloir supprimer ce lot ?</p>
+            <div id="modal-div">
+                <a href="RemoveToDB.php">Oui
+                </a>
+                <a class="cpointer" id="modal-close">Non</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        var modalClose = document.getElementById('modal-close');
+        var modalBtn = document.getElementById('modal-btn');
+        var modalBg = document.querySelector('.modaldel-bg');
+
+        modalBtn.addEventListener('click', function () {
+            modalBg.classList.remove('dnone');
+        })
+
+        modalClose.addEventListener('click', function () {
+            modalBg.classList.add('dnone');
+
+
+        })
+
+        var modal = document.querySelector('.modaldel');
+        var modalp = document.getElementById('modal-p');
+        var modaldiv = document.getElementById('modal-div');
+
+        modalBg.onclick = function(e) {
+            if(e.target !== modal && e.target !== modaldiv && e.target !== modalp) {
+                modalBg.classList.add('dnone');
+            }
+        }
+    </script>
+</body>
+</html>
+HTML;
+
+echo $html;

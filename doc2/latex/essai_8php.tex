@@ -1,0 +1,221 @@
+\hypertarget{essai_8php}{}\doxysection{essai.\+php File Reference}
+\label{essai_8php}\index{essai.php@{essai.php}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{essai_8php_ae1a413be39aa48003638bca47ebd152d}{\$id\+Essai}} = \$\+\_\+\+GET\mbox{[}\char`\"{}idessai\char`\"{}\mbox{]}
+\item 
+\mbox{\hyperlink{essai_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}{\$authentication}} = new \mbox{\hyperlink{class_secure_user_authentication}{Secure\+User\+Authentication}}()
+\item 
+\mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}}(! \$authentication-\/$>$is\+User\+Connected()) \mbox{\hyperlink{essai_8php_a0811826b78691f7e8c277c73d7da0ae6}{\$user}} = \$authentication-\/$>$get\+User\+From\+Session()
+\item 
+\mbox{\hyperlink{essai_8php_a0a53a8f3a010d341aa90f7a679449332}{\$essai}} = Essai\+::get\+Essai\+From\+Id(\$id\+Essai)
+\item 
+\mbox{\hyperlink{essai_8php_a9fa7ca0ec7bd6092bdccc679d8231798}{\$nbval}} = \$essai-\/$>$get\+Nb\+Val()
+\item 
+\mbox{\hyperlink{essai_8php_a76ca9b82516aadaac906bd64c57b5c97}{\$userln}} = \char`\"{}ln\char`\"{}
+\item 
+\mbox{\hyperlink{essai_8php_ab29ef5fcd01416bf2a46a1af4f477798}{\$userfn}} = \char`\"{}fn\char`\"{}
+\item 
+\mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}}(\$essai-\/$>$get\+Config()==1 \&\& \$user-\/$>$get\+Role()==\textquotesingle{}Operateur\textquotesingle{} \&\& \$nbval $>$0) \mbox{\hyperlink{essai_8php_a2a14c6228789971847aa51d42e807ef1}{else}}
+\item 
+\mbox{\hyperlink{essai_8php_a481c918f8d853749e00b5942cabf599a}{\$date}} = \$essai-\/$>$get\+Date\+String()
+\item 
+\mbox{\hyperlink{essai_8php_a051e51ef7730f2c13ac50cd752727c27}{\$list\+Lot}} = \$essai-\/$>$get\+Lots()
+\item 
+\mbox{\hyperlink{essai_8php_ac97b558a7f81709ef1cac85bdbbeb9f0}{\$list\+Cap\+HS}} = \$essai-\/$>$get\+Pos\+Cap\+HS()
+\item 
+\mbox{\hyperlink{essai_8php_a5d0b3eaa3b3e85022229a4e93f3c4a4c}{\$nb\+Lot}} = sizeof(\$list\+Lot)
+\item 
+\mbox{\hyperlink{essai_8php_a7f2eaf2773a5cbdf4c81297ad2f766e9}{\$list\+Pers}} = \mbox{\hyperlink{class_utilisateur_a84a7758b1e6e258a56deaa2506f17093}{Utilisateur\+::get\+All\+Users}}()
+\item 
+\mbox{\hyperlink{essai_8php_a0a44e6760141442bb439b1ab1395d8ff}{\$page}} = new Web\+Page(\char`\"{}EPL -\/ Gestion Essai\char`\"{})
+\item 
+\mbox{\hyperlink{essai_8php_ae0a8f8e6ca8c80526b808ac6ea1adf7d}{\$list\+Position}}
+\item 
+\mbox{\hyperlink{essai_8php_a4fd7cad707f41d12b2eb910fe2ffa1f6}{if}} ( \$user-\/$>$get\+Role()==\textquotesingle{}Administrateur\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{essai_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}\label{essai_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}} 
+\index{essai.php@{essai.php}!\$authentication@{\$authentication}}
+\index{\$authentication@{\$authentication}!essai.php@{essai.php}}
+\doxysubsubsection{\texorpdfstring{\$authentication}{$authentication}}
+{\footnotesize\ttfamily \$authentication = new \mbox{\hyperlink{class_secure_user_authentication}{Secure\+User\+Authentication}}()}
+
+
+
+Definition at line 16 of file essai.\+php.
+
+\mbox{\Hypertarget{essai_8php_a481c918f8d853749e00b5942cabf599a}\label{essai_8php_a481c918f8d853749e00b5942cabf599a}} 
+\index{essai.php@{essai.php}!\$date@{\$date}}
+\index{\$date@{\$date}!essai.php@{essai.php}}
+\doxysubsubsection{\texorpdfstring{\$date}{$date}}
+{\footnotesize\ttfamily \$date = \$essai-\/$>$get\+Date\+String()}
+
+
+
+Definition at line 40 of file essai.\+php.
+
+\mbox{\Hypertarget{essai_8php_a0a53a8f3a010d341aa90f7a679449332}\label{essai_8php_a0a53a8f3a010d341aa90f7a679449332}} 
+\index{essai.php@{essai.php}!\$essai@{\$essai}}
+\index{\$essai@{\$essai}!essai.php@{essai.php}}
+\doxysubsubsection{\texorpdfstring{\$essai}{$essai}}
+{\footnotesize\ttfamily \$essai = Essai\+::get\+Essai\+From\+Id(\$id\+Essai)}
+
+
+
+Definition at line 25 of file essai.\+php.
+
+\mbox{\Hypertarget{essai_8php_ae1a413be39aa48003638bca47ebd152d}\label{essai_8php_ae1a413be39aa48003638bca47ebd152d}} 
+\index{essai.php@{essai.php}!\$idEssai@{\$idEssai}}
+\index{\$idEssai@{\$idEssai}!essai.php@{essai.php}}
+\doxysubsubsection{\texorpdfstring{\$idEssai}{$idEssai}}
+{\footnotesize\ttfamily \$id\+Essai = \$\+\_\+\+GET\mbox{[}\char`\"{}idessai\char`\"{}\mbox{]}}
+
+
+
+Definition at line 12 of file essai.\+php.
+
+\mbox{\Hypertarget{essai_8php_ac97b558a7f81709ef1cac85bdbbeb9f0}\label{essai_8php_ac97b558a7f81709ef1cac85bdbbeb9f0}} 
+\index{essai.php@{essai.php}!\$listCapHS@{\$listCapHS}}
+\index{\$listCapHS@{\$listCapHS}!essai.php@{essai.php}}
+\doxysubsubsection{\texorpdfstring{\$listCapHS}{$listCapHS}}
+{\footnotesize\ttfamily \$list\+Cap\+HS = \$essai-\/$>$get\+Pos\+Cap\+HS()}
+
+
+
+Definition at line 42 of file essai.\+php.
+
+\mbox{\Hypertarget{essai_8php_a051e51ef7730f2c13ac50cd752727c27}\label{essai_8php_a051e51ef7730f2c13ac50cd752727c27}} 
+\index{essai.php@{essai.php}!\$listLot@{\$listLot}}
+\index{\$listLot@{\$listLot}!essai.php@{essai.php}}
+\doxysubsubsection{\texorpdfstring{\$listLot}{$listLot}}
+{\footnotesize\ttfamily \$list\+Lot = \$essai-\/$>$get\+Lots()}
+
+
+
+Definition at line 41 of file essai.\+php.
+
+\mbox{\Hypertarget{essai_8php_a7f2eaf2773a5cbdf4c81297ad2f766e9}\label{essai_8php_a7f2eaf2773a5cbdf4c81297ad2f766e9}} 
+\index{essai.php@{essai.php}!\$listPers@{\$listPers}}
+\index{\$listPers@{\$listPers}!essai.php@{essai.php}}
+\doxysubsubsection{\texorpdfstring{\$listPers}{$listPers}}
+{\footnotesize\ttfamily \$list\+Pers = \mbox{\hyperlink{class_utilisateur_a84a7758b1e6e258a56deaa2506f17093}{Utilisateur\+::get\+All\+Users}}()}
+
+
+
+Definition at line 48 of file essai.\+php.
+
+\mbox{\Hypertarget{essai_8php_ae0a8f8e6ca8c80526b808ac6ea1adf7d}\label{essai_8php_ae0a8f8e6ca8c80526b808ac6ea1adf7d}} 
+\index{essai.php@{essai.php}!\$listPosition@{\$listPosition}}
+\index{\$listPosition@{\$listPosition}!essai.php@{essai.php}}
+\doxysubsubsection{\texorpdfstring{\$listPosition}{$listPosition}}
+{\footnotesize\ttfamily \$list\+Position}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [}
+\DoxyCodeLine{        \textcolor{stringliteral}{'A1'}, \textcolor{stringliteral}{'A2'}, \textcolor{stringliteral}{'A3'}, \textcolor{stringliteral}{'A4'}, \textcolor{stringliteral}{'A5'}, \textcolor{stringliteral}{'A6'}, \textcolor{stringliteral}{'A7'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'B1'}, \textcolor{stringliteral}{'B2'}, \textcolor{stringliteral}{'B3'}, \textcolor{stringliteral}{'B4'}, \textcolor{stringliteral}{'B5'}, \textcolor{stringliteral}{'B6'}, \textcolor{stringliteral}{'B7'}, \textcolor{stringliteral}{'B8'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'C1'}, \textcolor{stringliteral}{'C2'}, \textcolor{stringliteral}{'C3'}, \textcolor{stringliteral}{'C4'}, \textcolor{stringliteral}{'C5'}, \textcolor{stringliteral}{'C6'}, \textcolor{stringliteral}{'C7'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'D1'}, \textcolor{stringliteral}{'D2'}, \textcolor{stringliteral}{'D3'}, \textcolor{stringliteral}{'D4'}, \textcolor{stringliteral}{'D5'}, \textcolor{stringliteral}{'D6'}, \textcolor{stringliteral}{'D7'}, \textcolor{stringliteral}{'D8'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'E1'}, \textcolor{stringliteral}{'E2'}, \textcolor{stringliteral}{'E3'}, \textcolor{stringliteral}{'E4'}, \textcolor{stringliteral}{'E5'}, \textcolor{stringliteral}{'E6'}, \textcolor{stringliteral}{'E7'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'F1'}, \textcolor{stringliteral}{'F2'}, \textcolor{stringliteral}{'F3'}, \textcolor{stringliteral}{'F4'}, \textcolor{stringliteral}{'F5'}, \textcolor{stringliteral}{'F6'}, \textcolor{stringliteral}{'F7'}, \textcolor{stringliteral}{'F8'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'G1'}, \textcolor{stringliteral}{'G2'}, \textcolor{stringliteral}{'G3'}, \textcolor{stringliteral}{'G4'}, \textcolor{stringliteral}{'G5'}, \textcolor{stringliteral}{'G6'}, \textcolor{stringliteral}{'G7'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'H1'}, \textcolor{stringliteral}{'H2'}, \textcolor{stringliteral}{'H3'}, \textcolor{stringliteral}{'H4'}, \textcolor{stringliteral}{'H5'}, \textcolor{stringliteral}{'H6'}, \textcolor{stringliteral}{'H7'}, \textcolor{stringliteral}{'H8'}}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+
+
+Definition at line 55 of file essai.\+php.
+
+\mbox{\Hypertarget{essai_8php_a5d0b3eaa3b3e85022229a4e93f3c4a4c}\label{essai_8php_a5d0b3eaa3b3e85022229a4e93f3c4a4c}} 
+\index{essai.php@{essai.php}!\$nbLot@{\$nbLot}}
+\index{\$nbLot@{\$nbLot}!essai.php@{essai.php}}
+\doxysubsubsection{\texorpdfstring{\$nbLot}{$nbLot}}
+{\footnotesize\ttfamily \$nb\+Lot = sizeof(\$list\+Lot)}
+
+
+
+Definition at line 47 of file essai.\+php.
+
+\mbox{\Hypertarget{essai_8php_a9fa7ca0ec7bd6092bdccc679d8231798}\label{essai_8php_a9fa7ca0ec7bd6092bdccc679d8231798}} 
+\index{essai.php@{essai.php}!\$nbval@{\$nbval}}
+\index{\$nbval@{\$nbval}!essai.php@{essai.php}}
+\doxysubsubsection{\texorpdfstring{\$nbval}{$nbval}}
+{\footnotesize\ttfamily \$nbval = \$essai-\/$>$get\+Nb\+Val()}
+
+
+
+Definition at line 27 of file essai.\+php.
+
+\mbox{\Hypertarget{essai_8php_a0a44e6760141442bb439b1ab1395d8ff}\label{essai_8php_a0a44e6760141442bb439b1ab1395d8ff}} 
+\index{essai.php@{essai.php}!\$page@{\$page}}
+\index{\$page@{\$page}!essai.php@{essai.php}}
+\doxysubsubsection{\texorpdfstring{\$page}{$page}}
+{\footnotesize\ttfamily \$page = new Web\+Page(\char`\"{}EPL -\/ Gestion Essai\char`\"{})}
+
+
+
+Definition at line 52 of file essai.\+php.
+
+\mbox{\Hypertarget{essai_8php_a0811826b78691f7e8c277c73d7da0ae6}\label{essai_8php_a0811826b78691f7e8c277c73d7da0ae6}} 
+\index{essai.php@{essai.php}!\$user@{\$user}}
+\index{\$user@{\$user}!essai.php@{essai.php}}
+\doxysubsubsection{\texorpdfstring{\$user}{$user}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}} (! \$authentication-\/$>$is\+User\+Connected()) \$user = \$authentication-\/$>$get\+User\+From\+Session()}
+
+
+
+Definition at line 23 of file essai.\+php.
+
+\mbox{\Hypertarget{essai_8php_ab29ef5fcd01416bf2a46a1af4f477798}\label{essai_8php_ab29ef5fcd01416bf2a46a1af4f477798}} 
+\index{essai.php@{essai.php}!\$userfn@{\$userfn}}
+\index{\$userfn@{\$userfn}!essai.php@{essai.php}}
+\doxysubsubsection{\texorpdfstring{\$userfn}{$userfn}}
+{\footnotesize\ttfamily \$userfn = \char`\"{}fn\char`\"{}}
+
+
+
+Definition at line 31 of file essai.\+php.
+
+\mbox{\Hypertarget{essai_8php_a76ca9b82516aadaac906bd64c57b5c97}\label{essai_8php_a76ca9b82516aadaac906bd64c57b5c97}} 
+\index{essai.php@{essai.php}!\$userln@{\$userln}}
+\index{\$userln@{\$userln}!essai.php@{essai.php}}
+\doxysubsubsection{\texorpdfstring{\$userln}{$userln}}
+{\footnotesize\ttfamily \$userln = \char`\"{}ln\char`\"{}}
+
+
+
+Definition at line 30 of file essai.\+php.
+
+\mbox{\Hypertarget{essai_8php_a2a14c6228789971847aa51d42e807ef1}\label{essai_8php_a2a14c6228789971847aa51d42e807ef1}} 
+\index{essai.php@{essai.php}!else@{else}}
+\index{else@{else}!essai.php@{essai.php}}
+\doxysubsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}} ( \$essai-\/$>$get\+Config()==1 \&\&\$user-\/$>$get\+Role()==\textquotesingle{}Operateur\textquotesingle{} \&\&\$nbval $>$0) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \$listeProd = Lot::getAllProduits()}
+
+\end{DoxyCode}
+
+
+Definition at line 35 of file essai.\+php.
+
+\mbox{\Hypertarget{essai_8php_a4fd7cad707f41d12b2eb910fe2ffa1f6}\label{essai_8php_a4fd7cad707f41d12b2eb910fe2ffa1f6}} 
+\index{essai.php@{essai.php}!if@{if}}
+\index{if@{if}!essai.php@{essai.php}}
+\doxysubsubsection{\texorpdfstring{if}{if}}
+{\footnotesize\ttfamily if(\$user-\/$>$get\+Role()==\textquotesingle{}Administrateur\textquotesingle{}) (\begin{DoxyParamCaption}\item[{}]{\$user-\/$>$() = {\ttfamily =~\textquotesingle{}Administrateur\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 71 of file essai.\+php.
+

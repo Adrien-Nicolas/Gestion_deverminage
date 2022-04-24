@@ -1,0 +1,298 @@
+\hypertarget{class_font_lib_1_1_table_1_1_directory_entry}{}\doxysection{Directory\+Entry Class Reference}
+\label{class_font_lib_1_1_table_1_1_directory_entry}\index{DirectoryEntry@{DirectoryEntry}}
+Inheritance diagram for Directory\+Entry\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_font_lib_1_1_table_1_1_directory_entry}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_font_lib_1_1_table_1_1_directory_entry_acdf17553f647da4445ad02502f66566d}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{class_font_lib_1_1_true_type_1_1_file}{File}} \$font)
+\item 
+\mbox{\hyperlink{class_font_lib_1_1_table_1_1_directory_entry_a38d99acc70a1d8fd8f94455743b2d237}{parse}} ()
+\item 
+\mbox{\hyperlink{class_font_lib_1_1_table_1_1_directory_entry_a7d9f1864ed521583217c0b59709af9ce}{open}} (\$filename, \$mode=self\+::mode\+Read)
+\item 
+\mbox{\hyperlink{class_font_lib_1_1_table_1_1_directory_entry_ae9be646a5c526b9ffe3f83322a757228}{set\+Table}} (\mbox{\hyperlink{class_font_lib_1_1_table_1_1_table}{Table}} \$font\+\_\+table)
+\item 
+\mbox{\hyperlink{class_font_lib_1_1_table_1_1_directory_entry_a657bdf50a44530196c8dc08ec0362b79}{encode}} (\$entry\+\_\+offset)
+\item 
+\mbox{\hyperlink{class_font_lib_1_1_table_1_1_directory_entry_af2469ce4ebc6317428d2bf86fe7f205f}{get\+Font}} ()
+\item 
+\mbox{\hyperlink{class_font_lib_1_1_table_1_1_directory_entry_af1139206302e0e882ea5db944ccc3c68}{start\+Read}} ()
+\item 
+\mbox{\hyperlink{class_font_lib_1_1_table_1_1_directory_entry_ae165c0804468bd18493c4c7ad60bc408}{end\+Read}} ()
+\item 
+\mbox{\hyperlink{class_font_lib_1_1_table_1_1_directory_entry_a43a78a151e482f18fb598305366cb8de}{start\+Write}} ()
+\item 
+\mbox{\hyperlink{class_font_lib_1_1_table_1_1_directory_entry_a89337e0d6576b5ef8afde08085f9763e}{end\+Write}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_font_lib_1_1_table_1_1_directory_entry_ab821ed4b666f387f2d129fd05963b4ee}{compute\+Checksum}} (\$data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_font_lib_1_1_table_1_1_directory_entry_afda5952097e0bb8a02185baa865f41a7}{\$entry\+Length}} = 4
+\item 
+\mbox{\hyperlink{class_font_lib_1_1_table_1_1_directory_entry_a81d5015d41ed8ec66e9db8cdc5db9555}{\$tag}}
+\item 
+\mbox{\hyperlink{class_font_lib_1_1_table_1_1_directory_entry_a109f1eeb3d62139fada8587911db5ea1}{\$checksum}}
+\item 
+\mbox{\hyperlink{class_font_lib_1_1_table_1_1_directory_entry_aec4de82415d7f05cb9748d12d3a95a87}{\$offset}}
+\item 
+\mbox{\hyperlink{class_font_lib_1_1_table_1_1_directory_entry_adf14d8e29912c1855022dfa252aa4087}{\$length}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_font_lib_1_1_table_1_1_directory_entry_a9d63b61d7d442048fe453731932c6aed}{\$font}}
+\item 
+\mbox{\hyperlink{class_font_lib_1_1_table_1_1_directory_entry_adc1beea0c16ddcabbb2fbd5c6efdce00}{\$font\+\_\+table}}
+\item 
+\mbox{\hyperlink{class_font_lib_1_1_table_1_1_directory_entry_a5f5dd4d54530e710c32be5d10ed22601}{\$origF}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 19 of file Directory\+Entry.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_font_lib_1_1_table_1_1_directory_entry_acdf17553f647da4445ad02502f66566d}\label{class_font_lib_1_1_table_1_1_directory_entry_acdf17553f647da4445ad02502f66566d}} 
+\index{DirectoryEntry@{DirectoryEntry}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!DirectoryEntry@{DirectoryEntry}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_font_lib_1_1_true_type_1_1_file}{File}}}]{\$font }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_font_lib_1_1_true_type_1_1_table_directory_entry_acdf17553f647da4445ad02502f66566d}{Table\+Directory\+Entry}}.
+
+
+
+Definition at line 63 of file Directory\+Entry.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_font_lib_1_1_table_1_1_directory_entry_ab821ed4b666f387f2d129fd05963b4ee}\label{class_font_lib_1_1_table_1_1_directory_entry_ab821ed4b666f387f2d129fd05963b4ee}} 
+\index{DirectoryEntry@{DirectoryEntry}!computeChecksum@{computeChecksum}}
+\index{computeChecksum@{computeChecksum}!DirectoryEntry@{DirectoryEntry}}
+\doxysubsubsection{\texorpdfstring{computeChecksum()}{computeChecksum()}}
+{\footnotesize\ttfamily static compute\+Checksum (\begin{DoxyParamCaption}\item[{}]{\$data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 39 of file Directory\+Entry.\+php.
+
+\mbox{\Hypertarget{class_font_lib_1_1_table_1_1_directory_entry_a657bdf50a44530196c8dc08ec0362b79}\label{class_font_lib_1_1_table_1_1_directory_entry_a657bdf50a44530196c8dc08ec0362b79}} 
+\index{DirectoryEntry@{DirectoryEntry}!encode@{encode}}
+\index{encode@{encode}!DirectoryEntry@{DirectoryEntry}}
+\doxysubsubsection{\texorpdfstring{encode()}{encode()}}
+{\footnotesize\ttfamily encode (\begin{DoxyParamCaption}\item[{}]{\$entry\+\_\+offset }\end{DoxyParamCaption})}
+
+
+
+Definition at line 80 of file Directory\+Entry.\+php.
+
+\mbox{\Hypertarget{class_font_lib_1_1_table_1_1_directory_entry_ae165c0804468bd18493c4c7ad60bc408}\label{class_font_lib_1_1_table_1_1_directory_entry_ae165c0804468bd18493c4c7ad60bc408}} 
+\index{DirectoryEntry@{DirectoryEntry}!endRead@{endRead}}
+\index{endRead@{endRead}!DirectoryEntry@{DirectoryEntry}}
+\doxysubsubsection{\texorpdfstring{endRead()}{endRead()}}
+{\footnotesize\ttfamily end\+Read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 117 of file Directory\+Entry.\+php.
+
+\mbox{\Hypertarget{class_font_lib_1_1_table_1_1_directory_entry_a89337e0d6576b5ef8afde08085f9763e}\label{class_font_lib_1_1_table_1_1_directory_entry_a89337e0d6576b5ef8afde08085f9763e}} 
+\index{DirectoryEntry@{DirectoryEntry}!endWrite@{endWrite}}
+\index{endWrite@{endWrite}!DirectoryEntry@{DirectoryEntry}}
+\doxysubsubsection{\texorpdfstring{endWrite()}{endWrite()}}
+{\footnotesize\ttfamily end\+Write (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 125 of file Directory\+Entry.\+php.
+
+\mbox{\Hypertarget{class_font_lib_1_1_table_1_1_directory_entry_af2469ce4ebc6317428d2bf86fe7f205f}\label{class_font_lib_1_1_table_1_1_directory_entry_af2469ce4ebc6317428d2bf86fe7f205f}} 
+\index{DirectoryEntry@{DirectoryEntry}!getFont@{getFont}}
+\index{getFont@{getFont}!DirectoryEntry@{DirectoryEntry}}
+\doxysubsubsection{\texorpdfstring{getFont()}{getFont()}}
+{\footnotesize\ttfamily get\+Font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+File 
+\end{DoxyReturn}
+
+
+Definition at line 109 of file Directory\+Entry.\+php.
+
+\mbox{\Hypertarget{class_font_lib_1_1_table_1_1_directory_entry_a7d9f1864ed521583217c0b59709af9ce}\label{class_font_lib_1_1_table_1_1_directory_entry_a7d9f1864ed521583217c0b59709af9ce}} 
+\index{DirectoryEntry@{DirectoryEntry}!open@{open}}
+\index{open@{open}!DirectoryEntry@{DirectoryEntry}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily open (\begin{DoxyParamCaption}\item[{}]{\$filename,  }\item[{}]{\$mode = {\ttfamily self\+:\+:modeRead} }\end{DoxyParamCaption})}
+
+Open a font file in a chosen mode
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$filename} & The file name of the font to open \\
+\hline
+string & {\em \$mode} & The opening mode\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \mbox{\hyperlink{class_font_lib_1_1_binary_stream_a7d9f1864ed521583217c0b59709af9ce}{Binary\+Stream}}.
+
+
+
+Definition at line 72 of file Directory\+Entry.\+php.
+
+\mbox{\Hypertarget{class_font_lib_1_1_table_1_1_directory_entry_a38d99acc70a1d8fd8f94455743b2d237}\label{class_font_lib_1_1_table_1_1_directory_entry_a38d99acc70a1d8fd8f94455743b2d237}} 
+\index{DirectoryEntry@{DirectoryEntry}!parse@{parse}}
+\index{parse@{parse}!DirectoryEntry@{DirectoryEntry}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily parse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_font_lib_1_1_w_o_f_f_1_1_table_directory_entry_a38d99acc70a1d8fd8f94455743b2d237}{Table\+Directory\+Entry}}, and \mbox{\hyperlink{class_font_lib_1_1_true_type_1_1_table_directory_entry_a38d99acc70a1d8fd8f94455743b2d237}{Table\+Directory\+Entry}}.
+
+
+
+Definition at line 68 of file Directory\+Entry.\+php.
+
+\mbox{\Hypertarget{class_font_lib_1_1_table_1_1_directory_entry_ae9be646a5c526b9ffe3f83322a757228}\label{class_font_lib_1_1_table_1_1_directory_entry_ae9be646a5c526b9ffe3f83322a757228}} 
+\index{DirectoryEntry@{DirectoryEntry}!setTable@{setTable}}
+\index{setTable@{setTable}!DirectoryEntry@{DirectoryEntry}}
+\doxysubsubsection{\texorpdfstring{setTable()}{setTable()}}
+{\footnotesize\ttfamily set\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_font_lib_1_1_table_1_1_table}{Table}}}]{\$font\+\_\+table }\end{DoxyParamCaption})}
+
+
+
+Definition at line 76 of file Directory\+Entry.\+php.
+
+\mbox{\Hypertarget{class_font_lib_1_1_table_1_1_directory_entry_af1139206302e0e882ea5db944ccc3c68}\label{class_font_lib_1_1_table_1_1_directory_entry_af1139206302e0e882ea5db944ccc3c68}} 
+\index{DirectoryEntry@{DirectoryEntry}!startRead@{startRead}}
+\index{startRead@{startRead}!DirectoryEntry@{DirectoryEntry}}
+\doxysubsubsection{\texorpdfstring{startRead()}{startRead()}}
+{\footnotesize\ttfamily start\+Read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 113 of file Directory\+Entry.\+php.
+
+\mbox{\Hypertarget{class_font_lib_1_1_table_1_1_directory_entry_a43a78a151e482f18fb598305366cb8de}\label{class_font_lib_1_1_table_1_1_directory_entry_a43a78a151e482f18fb598305366cb8de}} 
+\index{DirectoryEntry@{DirectoryEntry}!startWrite@{startWrite}}
+\index{startWrite@{startWrite}!DirectoryEntry@{DirectoryEntry}}
+\doxysubsubsection{\texorpdfstring{startWrite()}{startWrite()}}
+{\footnotesize\ttfamily start\+Write (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 121 of file Directory\+Entry.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_font_lib_1_1_table_1_1_directory_entry_a109f1eeb3d62139fada8587911db5ea1}\label{class_font_lib_1_1_table_1_1_directory_entry_a109f1eeb3d62139fada8587911db5ea1}} 
+\index{DirectoryEntry@{DirectoryEntry}!\$checksum@{\$checksum}}
+\index{\$checksum@{\$checksum}!DirectoryEntry@{DirectoryEntry}}
+\doxysubsubsection{\texorpdfstring{\$checksum}{$checksum}}
+{\footnotesize\ttfamily \$checksum}
+
+
+
+Definition at line 33 of file Directory\+Entry.\+php.
+
+\mbox{\Hypertarget{class_font_lib_1_1_table_1_1_directory_entry_afda5952097e0bb8a02185baa865f41a7}\label{class_font_lib_1_1_table_1_1_directory_entry_afda5952097e0bb8a02185baa865f41a7}} 
+\index{DirectoryEntry@{DirectoryEntry}!\$entryLength@{\$entryLength}}
+\index{\$entryLength@{\$entryLength}!DirectoryEntry@{DirectoryEntry}}
+\doxysubsubsection{\texorpdfstring{\$entryLength}{$entryLength}}
+{\footnotesize\ttfamily \$entry\+Length = 4}
+
+
+
+Definition at line 30 of file Directory\+Entry.\+php.
+
+\mbox{\Hypertarget{class_font_lib_1_1_table_1_1_directory_entry_a9d63b61d7d442048fe453731932c6aed}\label{class_font_lib_1_1_table_1_1_directory_entry_a9d63b61d7d442048fe453731932c6aed}} 
+\index{DirectoryEntry@{DirectoryEntry}!\$font@{\$font}}
+\index{\$font@{\$font}!DirectoryEntry@{DirectoryEntry}}
+\doxysubsubsection{\texorpdfstring{\$font}{$font}}
+{\footnotesize\ttfamily \$font\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 23 of file Directory\+Entry.\+php.
+
+\mbox{\Hypertarget{class_font_lib_1_1_table_1_1_directory_entry_adc1beea0c16ddcabbb2fbd5c6efdce00}\label{class_font_lib_1_1_table_1_1_directory_entry_adc1beea0c16ddcabbb2fbd5c6efdce00}} 
+\index{DirectoryEntry@{DirectoryEntry}!\$font\_table@{\$font\_table}}
+\index{\$font\_table@{\$font\_table}!DirectoryEntry@{DirectoryEntry}}
+\doxysubsubsection{\texorpdfstring{\$font\_table}{$font\_table}}
+{\footnotesize\ttfamily \$font\+\_\+table\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 28 of file Directory\+Entry.\+php.
+
+\mbox{\Hypertarget{class_font_lib_1_1_table_1_1_directory_entry_adf14d8e29912c1855022dfa252aa4087}\label{class_font_lib_1_1_table_1_1_directory_entry_adf14d8e29912c1855022dfa252aa4087}} 
+\index{DirectoryEntry@{DirectoryEntry}!\$length@{\$length}}
+\index{\$length@{\$length}!DirectoryEntry@{DirectoryEntry}}
+\doxysubsubsection{\texorpdfstring{\$length}{$length}}
+{\footnotesize\ttfamily \$length}
+
+
+
+Definition at line 35 of file Directory\+Entry.\+php.
+
+\mbox{\Hypertarget{class_font_lib_1_1_table_1_1_directory_entry_aec4de82415d7f05cb9748d12d3a95a87}\label{class_font_lib_1_1_table_1_1_directory_entry_aec4de82415d7f05cb9748d12d3a95a87}} 
+\index{DirectoryEntry@{DirectoryEntry}!\$offset@{\$offset}}
+\index{\$offset@{\$offset}!DirectoryEntry@{DirectoryEntry}}
+\doxysubsubsection{\texorpdfstring{\$offset}{$offset}}
+{\footnotesize\ttfamily \$offset}
+
+
+
+Definition at line 34 of file Directory\+Entry.\+php.
+
+\mbox{\Hypertarget{class_font_lib_1_1_table_1_1_directory_entry_a5f5dd4d54530e710c32be5d10ed22601}\label{class_font_lib_1_1_table_1_1_directory_entry_a5f5dd4d54530e710c32be5d10ed22601}} 
+\index{DirectoryEntry@{DirectoryEntry}!\$origF@{\$origF}}
+\index{\$origF@{\$origF}!DirectoryEntry@{DirectoryEntry}}
+\doxysubsubsection{\texorpdfstring{\$origF}{$origF}}
+{\footnotesize\ttfamily \$origF\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 37 of file Directory\+Entry.\+php.
+
+\mbox{\Hypertarget{class_font_lib_1_1_table_1_1_directory_entry_a81d5015d41ed8ec66e9db8cdc5db9555}\label{class_font_lib_1_1_table_1_1_directory_entry_a81d5015d41ed8ec66e9db8cdc5db9555}} 
+\index{DirectoryEntry@{DirectoryEntry}!\$tag@{\$tag}}
+\index{\$tag@{\$tag}!DirectoryEntry@{DirectoryEntry}}
+\doxysubsubsection{\texorpdfstring{\$tag}{$tag}}
+{\footnotesize\ttfamily \$tag}
+
+
+
+Definition at line 32 of file Directory\+Entry.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/dompdf/lib/php-\/font-\/lib/src/\+Font\+Lib/\+Table/\mbox{\hyperlink{_directory_entry_8php}{Directory\+Entry.\+php}}\end{DoxyCompactItemize}

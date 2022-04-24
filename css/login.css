@@ -1,0 +1,185 @@
+@font-face {
+    font-family: "MavenPro";
+    src: url("../fonts/MavenPro-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "MavenPro-Medium";
+    src: url("../fonts/static/MavenPro-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "MavenPro-Black";
+    src: url("../fonts/static/MavenPro-Black.ttf") format("truetype");
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: "MavenPro", sans-serif;
+    min-height: 615px;
+}
+
+nav {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction:row;
+    background: white;
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
+    height: 50px;
+}
+
+.logo-nav {
+    margin-left: 30px;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+@media (max-height : 665px) {
+    .container-login{
+        display: inherit;
+        margin-top: 20px;
+    }
+}
+
+.container-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 150px;
+    width: 420px;
+    max-width: 90%;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.logo-login {
+    width: 100%;
+    animation: test 2s infinite linear;
+
+}
+
+
+@keyframes test {
+    0%, 100% {
+        position: relative;
+        left: 10px;
+        top: 0;
+    }
+    25%, 75% {
+        position: relative;
+        top: -10px;
+        left: 0px;
+    }
+    50% {
+        top: 0;
+        position: relative;
+        left: -10px;
+    }
+}
+
+.container-login h1 {
+    text-align: center;
+    margin: 19px 0 14px 0;
+}
+
+.container-login form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container-login input {
+    padding: 10px 7px;
+    margin-top: 10px;
+    border: solid black 1px;
+    border-radius: 5px;
+}
+
+.container-login label{
+    margin-top: 20px;
+}
+
+.fpass {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.fpass div {
+    font-size: 15px;
+}
+
+.fpass a {
+    margin-top: 8px;
+    font-size: 13px;
+    color: black;
+    text-decoration: none;
+}
+
+.btn-login {
+    display: flex;
+    justify-content: center;
+}
+
+.container-nav {
+    display: flex;
+    flex-direction: row;
+    float: left;
+    align-items: center;
+}
+
+@media ( max-width : 380px ) {
+    .container-nav {
+        width: 0px !important;
+    }
+    .p-nav {
+        display: none;
+    }
+}
+
+input[type='submit'] {
+    font-family: "MavenPro-Black", sans-serif;
+    border-radius: 20px !important;
+    color: black;
+    background: white;
+    width:min-content;
+    font-size: 12px;
+    padding : 12px 45px !important;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+h2{
+    margin: 0 0 20px 0;
+}
+
+.error {
+    color: #b70b00;
+}
+.p-nav {
+    color: black;
+    font-size: 1.2em;
+    margin: 0 0 0 30px;
+}
+
+@media (max-width: 500px) {
+    h2{
+        font-size: 1.1em;
+    }
+
+    .container-login h1 {
+        font-size: 1.4em;
+    }
+
+    .logo-login {
+        width: 60%;
+    }
+}

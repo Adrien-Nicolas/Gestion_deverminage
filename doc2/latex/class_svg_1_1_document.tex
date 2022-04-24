@@ -1,0 +1,436 @@
+\hypertarget{class_svg_1_1_document}{}\doxysection{Document Class Reference}
+\label{class_svg_1_1_document}\index{Document@{Document}}
+Inheritance diagram for Document\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_svg_1_1_document}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_a64d6ef0b5dd542185ab771b9d169a0da}{load\+File}} (\$filename)
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_a282b0af88968ac8e268c0f21cdf5f034}{get\+Surface}} ()
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_a50ea13fa39e68d74955ee3152089d699}{get\+Stack}} ()
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_ae7fba4c8be1972cf80dc1a95f390df23}{get\+Width}} ()
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_aa725283ffc599b3f6563cada4cbeb2c7}{get\+Height}} ()
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_abe8108bba91a218c24f0e99bb4365d35}{get\+Dimensions}} ()
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_adb581cf2baf3650db5ecdf057e90f98b}{handle\+Size\+Attributes}} (\$attributes)
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_a2a238eb37625dec8b40d857cdbccb582}{get\+Document}} ()
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_a9419e2f1e7b846a983462684de2afedc}{append\+Style\+Sheet}} (\$stylesheet)
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_a09523aa439d307c4be04cfce51fee483}{get\+Style\+Sheets}} ()
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_a893f461f8aa835be33b12b452dbf88b6}{render}} (\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface}{Surface\+Interface}} \$surface)
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_a02f50820d612fb5e3532c8ad281f4c1d}{get\+Def}} (\$id)
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_aa957d747d6ece713fbccf295116f165a}{\+\_\+char\+Data}} (\$parser, \$data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_acd4fc8da6d8d26510c29772a222f8f1b}{\$in\+Defs}} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_aeb8f33bdc0b237b46ed2ac933962d7cd}{init\+Parser}} ()
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_a98e54577cfd55e899bfebeba488c6c45}{before}} (\$attributes)
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_af34e790149850982cb35b49515a9e753}{svg\+Offset}} (\$attributes)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_a0722441477f957078ee2437054556cbc}{\$filename}}
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_af3a16c5f0dd7a74cf9acf6a49fff73a7}{\$x}}
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_a77b973d137fb33212e018b042df6e3e7}{\$y}}
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_a5795120b4b324bc4ca83f1e6fdce7d57}{\$width}}
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_a2c265bba1724371bb03e6901297c30b2}{\$height}}
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_a8ee24c8e118b17d1429e490274162f7c}{\$sub\+Path\+Init}}
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_a869e1bf70600a2668802e1d5d06be8d1}{\$path\+BBox}}
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_a296957216d6a0ad166560bdcd10b17e3}{\$view\+Box}}
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_a147a766daa03d52576c7345fea31c945}{\$parser}}
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_acdf6791b9122533241ea357bb05af859}{\$surface}}
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_a6a0169b26b5301f906b1ec481b3f1eea}{\$stack}} = array()
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_aa6ec534ac1cd16842d8459d8b52776aa}{\$defs}} = array()
+\item 
+\mbox{\hyperlink{class_svg_1_1_document_a7d2da558ad02e0b1ec363746cc0b8a50}{\$style\+Sheets}} = array()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 30 of file Document.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_svg_1_1_document_a095c5d389db211932136b53f25f39685}\label{class_svg_1_1_document_a095c5d389db211932136b53f25f39685}} 
+\index{Document@{Document}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 80 of file Document.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_svg_1_1_document_aa957d747d6ece713fbccf295116f165a}\label{class_svg_1_1_document_aa957d747d6ece713fbccf295116f165a}} 
+\index{Document@{Document}!\_charData@{\_charData}}
+\index{\_charData@{\_charData}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{\_charData()}{\_charData()}}
+{\footnotesize\ttfamily \+\_\+char\+Data (\begin{DoxyParamCaption}\item[{}]{\$parser,  }\item[{}]{\$data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 359 of file Document.\+php.
+
+\mbox{\Hypertarget{class_svg_1_1_document_a9419e2f1e7b846a983462684de2afedc}\label{class_svg_1_1_document_a9419e2f1e7b846a983462684de2afedc}} 
+\index{Document@{Document}!appendStyleSheet@{appendStyleSheet}}
+\index{appendStyleSheet@{appendStyleSheet}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{appendStyleSheet()}{appendStyleSheet()}}
+{\footnotesize\ttfamily append\+Style\+Sheet (\begin{DoxyParamCaption}\item[{}]{\$stylesheet }\end{DoxyParamCaption})}
+
+Append a style sheet
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Sabberworm\textbackslash{}\+CSS\textbackslash{}\+CSSList\textbackslash{}\+Document & {\em \$stylesheet} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 184 of file Document.\+php.
+
+\mbox{\Hypertarget{class_svg_1_1_document_a98e54577cfd55e899bfebeba488c6c45}\label{class_svg_1_1_document_a98e54577cfd55e899bfebeba488c6c45}} 
+\index{Document@{Document}!before@{before}}
+\index{before@{before}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{before()}{before()}}
+{\footnotesize\ttfamily before (\begin{DoxyParamCaption}\item[{}]{\$attributes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_svg_1_1_tag_1_1_abstract_tag_a98e54577cfd55e899bfebeba488c6c45}{Abstract\+Tag}}.
+
+
+
+Definition at line 197 of file Document.\+php.
+
+\mbox{\Hypertarget{class_svg_1_1_document_a02f50820d612fb5e3532c8ad281f4c1d}\label{class_svg_1_1_document_a02f50820d612fb5e3532c8ad281f4c1d}} 
+\index{Document@{Document}!getDef@{getDef}}
+\index{getDef@{getDef}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{getDef()}{getDef()}}
+{\footnotesize\ttfamily get\+Def (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+
+
+Definition at line 238 of file Document.\+php.
+
+\mbox{\Hypertarget{class_svg_1_1_document_abe8108bba91a218c24f0e99bb4365d35}\label{class_svg_1_1_document_abe8108bba91a218c24f0e99bb4365d35}} 
+\index{Document@{Document}!getDimensions@{getDimensions}}
+\index{getDimensions@{getDimensions}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{getDimensions()}{getDimensions()}}
+{\footnotesize\ttfamily get\+Dimensions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 107 of file Document.\+php.
+
+\mbox{\Hypertarget{class_svg_1_1_document_a2a238eb37625dec8b40d857cdbccb582}\label{class_svg_1_1_document_a2a238eb37625dec8b40d857cdbccb582}} 
+\index{Document@{Document}!getDocument@{getDocument}}
+\index{getDocument@{getDocument}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{getDocument()}{getDocument()}}
+{\footnotesize\ttfamily get\+Document (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_svg_1_1_tag_1_1_abstract_tag_a2a238eb37625dec8b40d857cdbccb582}{Abstract\+Tag}}.
+
+
+
+Definition at line 175 of file Document.\+php.
+
+\mbox{\Hypertarget{class_svg_1_1_document_aa725283ffc599b3f6563cada4cbeb2c7}\label{class_svg_1_1_document_aa725283ffc599b3f6563cada4cbeb2c7}} 
+\index{Document@{Document}!getHeight@{getHeight}}
+\index{getHeight@{getHeight}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{getHeight()}{getHeight()}}
+{\footnotesize\ttfamily get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 102 of file Document.\+php.
+
+\mbox{\Hypertarget{class_svg_1_1_document_a50ea13fa39e68d74955ee3152089d699}\label{class_svg_1_1_document_a50ea13fa39e68d74955ee3152089d699}} 
+\index{Document@{Document}!getStack@{getStack}}
+\index{getStack@{getStack}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{getStack()}{getStack()}}
+{\footnotesize\ttfamily get\+Stack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 92 of file Document.\+php.
+
+\mbox{\Hypertarget{class_svg_1_1_document_a09523aa439d307c4be04cfce51fee483}\label{class_svg_1_1_document_a09523aa439d307c4be04cfce51fee483}} 
+\index{Document@{Document}!getStyleSheets@{getStyleSheets}}
+\index{getStyleSheets@{getStyleSheets}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{getStyleSheets()}{getStyleSheets()}}
+{\footnotesize\ttfamily get\+Style\+Sheets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the document style sheets
+
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Sabberworm\textbackslash{}\+CSS\textbackslash{}\+CSSList\textbackslash{}\+Document\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Definition at line 193 of file Document.\+php.
+
+\mbox{\Hypertarget{class_svg_1_1_document_a282b0af88968ac8e268c0f21cdf5f034}\label{class_svg_1_1_document_a282b0af88968ac8e268c0f21cdf5f034}} 
+\index{Document@{Document}!getSurface@{getSurface}}
+\index{getSurface@{getSurface}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{getSurface()}{getSurface()}}
+{\footnotesize\ttfamily get\+Surface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Surface\+Interface 
+\end{DoxyReturn}
+
+
+Definition at line 87 of file Document.\+php.
+
+\mbox{\Hypertarget{class_svg_1_1_document_ae7fba4c8be1972cf80dc1a95f390df23}\label{class_svg_1_1_document_ae7fba4c8be1972cf80dc1a95f390df23}} 
+\index{Document@{Document}!getWidth@{getWidth}}
+\index{getWidth@{getWidth}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{getWidth()}{getWidth()}}
+{\footnotesize\ttfamily get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 97 of file Document.\+php.
+
+\mbox{\Hypertarget{class_svg_1_1_document_adb581cf2baf3650db5ecdf057e90f98b}\label{class_svg_1_1_document_adb581cf2baf3650db5ecdf057e90f98b}} 
+\index{Document@{Document}!handleSizeAttributes@{handleSizeAttributes}}
+\index{handleSizeAttributes@{handleSizeAttributes}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{handleSizeAttributes()}{handleSizeAttributes()}}
+{\footnotesize\ttfamily handle\+Size\+Attributes (\begin{DoxyParamCaption}\item[{}]{\$attributes }\end{DoxyParamCaption})}
+
+
+
+Definition at line 138 of file Document.\+php.
+
+\mbox{\Hypertarget{class_svg_1_1_document_aeb8f33bdc0b237b46ed2ac933962d7cd}\label{class_svg_1_1_document_aeb8f33bdc0b237b46ed2ac933962d7cd}} 
+\index{Document@{Document}!initParser@{initParser}}
+\index{initParser@{initParser}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{initParser()}{initParser()}}
+{\footnotesize\ttfamily init\+Parser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 64 of file Document.\+php.
+
+\mbox{\Hypertarget{class_svg_1_1_document_a64d6ef0b5dd542185ab771b9d169a0da}\label{class_svg_1_1_document_a64d6ef0b5dd542185ab771b9d169a0da}} 
+\index{Document@{Document}!loadFile@{loadFile}}
+\index{loadFile@{loadFile}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{loadFile()}{loadFile()}}
+{\footnotesize\ttfamily load\+File (\begin{DoxyParamCaption}\item[{}]{\$filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 59 of file Document.\+php.
+
+\mbox{\Hypertarget{class_svg_1_1_document_a893f461f8aa835be33b12b452dbf88b6}\label{class_svg_1_1_document_a893f461f8aa835be33b12b452dbf88b6}} 
+\index{Document@{Document}!render@{render}}
+\index{render@{render}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_svg_1_1_surface_1_1_surface_interface}{Surface\+Interface}}}]{\$surface }\end{DoxyParamCaption})}
+
+
+
+Definition at line 210 of file Document.\+php.
+
+\mbox{\Hypertarget{class_svg_1_1_document_af34e790149850982cb35b49515a9e753}\label{class_svg_1_1_document_af34e790149850982cb35b49515a9e753}} 
+\index{Document@{Document}!svgOffset@{svgOffset}}
+\index{svgOffset@{svgOffset}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{svgOffset()}{svgOffset()}}
+{\footnotesize\ttfamily svg\+Offset (\begin{DoxyParamCaption}\item[{}]{\$attributes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 231 of file Document.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_svg_1_1_document_aa6ec534ac1cd16842d8459d8b52776aa}\label{class_svg_1_1_document_aa6ec534ac1cd16842d8459d8b52776aa}} 
+\index{Document@{Document}!\$defs@{\$defs}}
+\index{\$defs@{\$defs}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{\$defs}{$defs}}
+{\footnotesize\ttfamily \$defs = array()\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 54 of file Document.\+php.
+
+\mbox{\Hypertarget{class_svg_1_1_document_a0722441477f957078ee2437054556cbc}\label{class_svg_1_1_document_a0722441477f957078ee2437054556cbc}} 
+\index{Document@{Document}!\$filename@{\$filename}}
+\index{\$filename@{\$filename}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{\$filename}{$filename}}
+{\footnotesize\ttfamily \$filename\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 32 of file Document.\+php.
+
+\mbox{\Hypertarget{class_svg_1_1_document_a2c265bba1724371bb03e6901297c30b2}\label{class_svg_1_1_document_a2c265bba1724371bb03e6901297c30b2}} 
+\index{Document@{Document}!\$height@{\$height}}
+\index{\$height@{\$height}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{\$height}{$height}}
+{\footnotesize\ttfamily \$height\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 38 of file Document.\+php.
+
+\mbox{\Hypertarget{class_svg_1_1_document_acd4fc8da6d8d26510c29772a222f8f1b}\label{class_svg_1_1_document_acd4fc8da6d8d26510c29772a222f8f1b}} 
+\index{Document@{Document}!\$inDefs@{\$inDefs}}
+\index{\$inDefs@{\$inDefs}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{\$inDefs}{$inDefs}}
+{\footnotesize\ttfamily \$in\+Defs = false}
+
+
+
+Definition at line 33 of file Document.\+php.
+
+\mbox{\Hypertarget{class_svg_1_1_document_a147a766daa03d52576c7345fea31c945}\label{class_svg_1_1_document_a147a766daa03d52576c7345fea31c945}} 
+\index{Document@{Document}!\$parser@{\$parser}}
+\index{\$parser@{\$parser}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{\$parser}{$parser}}
+{\footnotesize\ttfamily \$parser\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 45 of file Document.\+php.
+
+\mbox{\Hypertarget{class_svg_1_1_document_a869e1bf70600a2668802e1d5d06be8d1}\label{class_svg_1_1_document_a869e1bf70600a2668802e1d5d06be8d1}} 
+\index{Document@{Document}!\$pathBBox@{\$pathBBox}}
+\index{\$pathBBox@{\$pathBBox}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{\$pathBBox}{$pathBBox}}
+{\footnotesize\ttfamily \$path\+BBox\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 41 of file Document.\+php.
+
+\mbox{\Hypertarget{class_svg_1_1_document_a6a0169b26b5301f906b1ec481b3f1eea}\label{class_svg_1_1_document_a6a0169b26b5301f906b1ec481b3f1eea}} 
+\index{Document@{Document}!\$stack@{\$stack}}
+\index{\$stack@{\$stack}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{\$stack}{$stack}}
+{\footnotesize\ttfamily \$stack = array()\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 51 of file Document.\+php.
+
+\mbox{\Hypertarget{class_svg_1_1_document_a7d2da558ad02e0b1ec363746cc0b8a50}\label{class_svg_1_1_document_a7d2da558ad02e0b1ec363746cc0b8a50}} 
+\index{Document@{Document}!\$styleSheets@{\$styleSheets}}
+\index{\$styleSheets@{\$styleSheets}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{\$styleSheets}{$styleSheets}}
+{\footnotesize\ttfamily \$style\+Sheets = array()\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 57 of file Document.\+php.
+
+\mbox{\Hypertarget{class_svg_1_1_document_a8ee24c8e118b17d1429e490274162f7c}\label{class_svg_1_1_document_a8ee24c8e118b17d1429e490274162f7c}} 
+\index{Document@{Document}!\$subPathInit@{\$subPathInit}}
+\index{\$subPathInit@{\$subPathInit}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{\$subPathInit}{$subPathInit}}
+{\footnotesize\ttfamily \$sub\+Path\+Init\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 40 of file Document.\+php.
+
+\mbox{\Hypertarget{class_svg_1_1_document_acdf6791b9122533241ea357bb05af859}\label{class_svg_1_1_document_acdf6791b9122533241ea357bb05af859}} 
+\index{Document@{Document}!\$surface@{\$surface}}
+\index{\$surface@{\$surface}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{\$surface}{$surface}}
+{\footnotesize\ttfamily \$surface\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 48 of file Document.\+php.
+
+\mbox{\Hypertarget{class_svg_1_1_document_a296957216d6a0ad166560bdcd10b17e3}\label{class_svg_1_1_document_a296957216d6a0ad166560bdcd10b17e3}} 
+\index{Document@{Document}!\$viewBox@{\$viewBox}}
+\index{\$viewBox@{\$viewBox}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{\$viewBox}{$viewBox}}
+{\footnotesize\ttfamily \$view\+Box\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 42 of file Document.\+php.
+
+\mbox{\Hypertarget{class_svg_1_1_document_a5795120b4b324bc4ca83f1e6fdce7d57}\label{class_svg_1_1_document_a5795120b4b324bc4ca83f1e6fdce7d57}} 
+\index{Document@{Document}!\$width@{\$width}}
+\index{\$width@{\$width}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{\$width}{$width}}
+{\footnotesize\ttfamily \$width\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 37 of file Document.\+php.
+
+\mbox{\Hypertarget{class_svg_1_1_document_af3a16c5f0dd7a74cf9acf6a49fff73a7}\label{class_svg_1_1_document_af3a16c5f0dd7a74cf9acf6a49fff73a7}} 
+\index{Document@{Document}!\$x@{\$x}}
+\index{\$x@{\$x}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{\$x}{$x}}
+{\footnotesize\ttfamily \$x\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 35 of file Document.\+php.
+
+\mbox{\Hypertarget{class_svg_1_1_document_a77b973d137fb33212e018b042df6e3e7}\label{class_svg_1_1_document_a77b973d137fb33212e018b042df6e3e7}} 
+\index{Document@{Document}!\$y@{\$y}}
+\index{\$y@{\$y}!Document@{Document}}
+\doxysubsubsection{\texorpdfstring{\$y}{$y}}
+{\footnotesize\ttfamily \$y\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 36 of file Document.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/dompdf/lib/php-\/svg-\/lib/src/\+Svg/\mbox{\hyperlink{php-svg-lib_2src_2_svg_2_document_8php}{Document.\+php}}\end{DoxyCompactItemize}

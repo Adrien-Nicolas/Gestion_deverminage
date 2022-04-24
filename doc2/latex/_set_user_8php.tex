@@ -1,0 +1,50 @@
+\hypertarget{_set_user_8php}{}\doxysection{php/\+Set\+User.php File Reference}
+\label{_set_user_8php}\index{php/SetUser.php@{php/SetUser.php}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_set_user_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}{\$authentication}} = new \mbox{\hyperlink{class_secure_user_authentication}{Secure\+User\+Authentication}}()
+\item 
+\mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}}(! \$authentication-\/$>$is\+User\+Connected()) \mbox{\hyperlink{_set_user_8php_a0811826b78691f7e8c277c73d7da0ae6}{\$user}} = \$authentication-\/$>$get\+User\+From\+Session()
+\item 
+\mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}}(\$user-\/$>$get\+Role()==\textquotesingle{}Administrateur\textquotesingle{}) \mbox{\hyperlink{_set_user_8php_aeb2421c89704577767a224f0bb692b13}{else}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_set_user_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}\label{_set_user_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}} 
+\index{SetUser.php@{SetUser.php}!\$authentication@{\$authentication}}
+\index{\$authentication@{\$authentication}!SetUser.php@{SetUser.php}}
+\doxysubsubsection{\texorpdfstring{\$authentication}{$authentication}}
+{\footnotesize\ttfamily \$authentication = new \mbox{\hyperlink{class_secure_user_authentication}{Secure\+User\+Authentication}}()}
+
+
+
+Definition at line 10 of file Set\+User.\+php.
+
+\mbox{\Hypertarget{_set_user_8php_a0811826b78691f7e8c277c73d7da0ae6}\label{_set_user_8php_a0811826b78691f7e8c277c73d7da0ae6}} 
+\index{SetUser.php@{SetUser.php}!\$user@{\$user}}
+\index{\$user@{\$user}!SetUser.php@{SetUser.php}}
+\doxysubsubsection{\texorpdfstring{\$user}{$user}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}} (! \$authentication-\/$>$is\+User\+Connected()) \$user = \$authentication-\/$>$get\+User\+From\+Session()}
+
+
+
+Definition at line 17 of file Set\+User.\+php.
+
+\mbox{\Hypertarget{_set_user_8php_aeb2421c89704577767a224f0bb692b13}\label{_set_user_8php_aeb2421c89704577767a224f0bb692b13}} 
+\index{SetUser.php@{SetUser.php}!else@{else}}
+\index{else@{else}!SetUser.php@{SetUser.php}}
+\doxysubsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}} ( \$user-\/$>$get\+Role()==\textquotesingle{}Administrateur\textquotesingle{}) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{        header(\textcolor{stringliteral}{"{}Location: ../users"{}})}
+
+\end{DoxyCode}
+
+
+Definition at line 50 of file Set\+User.\+php.
+

@@ -1,0 +1,174 @@
+
+\begin{DoxyItemize}
+\item Supports most presentational HTML 4.\+0 attributes
+\item Supports external stylesheets, either local or through http/ftp (via fopen-\/wrappers)
+\item Supports complex tables, including row \& column spans, separate \& collapsed border models, individual cell styling
+\item \mbox{\hyperlink{namespace_dompdf_1_1_image}{Image}} support (gif, png (8, 24 and 32 bit with alpha channel), bmp \& jpeg)
+\item No dependencies on external PDF libraries, thanks to the R\&OS PDF class
+\item Inline PHP support
+\item Basic SVG support (see \char`\"{}\+Limitations\char`\"{} below)
+\end{DoxyItemize}\hypertarget{rules_autotoc_md86}{}\doxysection{Requirements}\label{rules_autotoc_md86}
+
+\begin{DoxyItemize}
+\item PHP version 7.\+1 or higher
+\item DOM extension
+\item MBString extension
+\item php-\/font-\/lib
+\item php-\/svg-\/lib
+\end{DoxyItemize}
+
+Note that some required dependencies may have further dependencies (notably php-\/svg-\/lib requires sabberworm/php-\/css-\/parser).\hypertarget{rules_autotoc_md87}{}\doxysubsection{Recommendations}\label{rules_autotoc_md87}
+
+\begin{DoxyItemize}
+\item OPcache (OPcache, XCache, APC, etc.)\+: improves performance
+\item GD (for image processing)
+\item IMagick or GMagick extension\+: improves image processing performance
+\end{DoxyItemize}
+
+Visit the wiki for more information\+: \href{https://github.com/dompdf/dompdf/wiki/Requirements}{\texttt{ https\+://github.\+com/dompdf/dompdf/wiki/\+Requirements}}\hypertarget{rules_autotoc_md88}{}\doxysection{About Fonts \& Character Encoding}\label{rules_autotoc_md88}
+PDF documents internally support the following fonts\+: Helvetica, Times-\/\+Roman, Courier, Zapf-\/\+Dingbats, \& Symbol. These fonts only support Windows ANSI encoding. In order for a PDF to display characters that are not available in Windows ANSI, you must supply an external font. \mbox{\hyperlink{class_dompdf_1_1_dompdf}{Dompdf}} will embed any referenced font in the PDF so long as it has been pre-\/loaded or is accessible to dompdf and reference in CSS @font-\/face rules. See the \href{https://github.com/dompdf/dompdf/wiki/About-Fonts-and-Character-Encoding}{\texttt{ font overview}} for more information on how to use fonts.
+
+The \href{https://dejavu-fonts.github.io/}{\texttt{ Deja\+Vu True\+Type fonts}} have been pre-\/installed to give dompdf decent Unicode character coverage by default. To use the Deja\+Vu fonts reference the font in your stylesheet, e.\+g. {\ttfamily body \{ font-\/family\+: Deja\+Vu Sans; \}} (for Deja\+Vu Sans). The following Deja\+Vu 2.\+34 fonts are available\+: Deja\+Vu Sans, Deja\+Vu Serif, and Deja\+Vu Sans Mono.\hypertarget{rules_autotoc_md89}{}\doxysection{Easy Installation}\label{rules_autotoc_md89}
+\hypertarget{rules_autotoc_md90}{}\doxysubsection{Install with composer}\label{rules_autotoc_md90}
+To install with \href{https://getcomposer.org/}{\texttt{ Composer}}, simply require the latest version of this package.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{composer require dompdf/dompdf}
+
+\end{DoxyCode}
+
+
+Make sure that the autoload file from Composer is loaded.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// somewhere early in your project's loading, require the Composer autoloader}}
+\DoxyCodeLine{\textcolor{comment}{// see: http://getcomposer.org/doc/00-\/intro.md}}
+\DoxyCodeLine{require \textcolor{stringliteral}{'vendor/autoload.php'};}
+
+\end{DoxyCode}
+\hypertarget{rules_autotoc_md91}{}\doxysubsection{Download and install}\label{rules_autotoc_md91}
+Download a packaged archive of dompdf and extract it into the directory where dompdf will reside
+
+
+\begin{DoxyItemize}
+\item You can download stable copies of dompdf from \href{https://github.com/dompdf/dompdf/releases}{\texttt{ https\+://github.\+com/dompdf/dompdf/releases}}
+\item Or download a nightly (the latest, unreleased code) from \href{http://eclecticgeek.com/dompdf}{\texttt{ http\+://eclecticgeek.\+com/dompdf}}
+\end{DoxyItemize}
+
+Use the packaged release autoloader to load dompdf, libraries, and helper functions in your PHP\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// include autoloader}}
+\DoxyCodeLine{require\_once \textcolor{stringliteral}{'dompdf/autoload.inc.php'};}
+
+\end{DoxyCode}
+
+
+Note\+: packaged releases are named according using semantic versioning ({\itshape dompdf\+\_\+\+MAJOR-\/\+MINOR-\/\+PATCH.\+zip}). So the 1.\+0.\+0 release would be dompdf\+\_\+1-\/0-\/0.\+zip. This is the only download that includes the autoloader for \mbox{\hyperlink{class_dompdf_1_1_dompdf}{Dompdf}} and all its dependencies.\hypertarget{rules_autotoc_md92}{}\doxysubsection{Install with git}\label{rules_autotoc_md92}
+From the command line, switch to the directory where dompdf will reside and run the following commands\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone https://github.com/dompdf/dompdf.git}
+\DoxyCodeLine{cd dompdf/lib}
+\DoxyCodeLine{}
+\DoxyCodeLine{git clone https://github.com/PhenX/php-\/font-\/lib.git php-\/font-\/lib}
+\DoxyCodeLine{cd php-\/font-\/lib}
+\DoxyCodeLine{git checkout 0.5.1}
+\DoxyCodeLine{cd ..}
+\DoxyCodeLine{}
+\DoxyCodeLine{git clone https://github.com/PhenX/php-\/svg-\/lib.git php-\/svg-\/lib}
+\DoxyCodeLine{cd php-\/svg-\/lib}
+\DoxyCodeLine{git checkout v0.3.2}
+\DoxyCodeLine{cd ..}
+\DoxyCodeLine{}
+\DoxyCodeLine{git clone https://github.com/sabberworm/PHP-\/CSS-\/Parser.git php-\/css-\/parser}
+\DoxyCodeLine{cd php-\/css-\/parser}
+\DoxyCodeLine{git checkout 8.1.0}
+
+\end{DoxyCode}
+
+
+Require dompdf and it\textquotesingle{}s dependencies in your PHP. For details see the \href{https://github.com/dompdf/utils/blob/master/autoload.inc.php}{\texttt{ autoloader in the utils project}}.\hypertarget{rules_autotoc_md93}{}\doxysection{Quick Start}\label{rules_autotoc_md93}
+Just pass your HTML in to dompdf and stream the output\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// reference the Dompdf namespace}}
+\DoxyCodeLine{use \mbox{\hyperlink{class_dompdf_1_1_dompdf}{Dompdf\(\backslash\)Dompdf}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// instantiate and use the dompdf class}}
+\DoxyCodeLine{\mbox{\hyperlink{test_p_d_f_8php_a43a29153c5521d1c78e68e511d4d73a6}{\$dompdf}} = \textcolor{keyword}{new} \mbox{\hyperlink{namespace_dompdf}{Dompdf}}();}
+\DoxyCodeLine{\mbox{\hyperlink{test_p_d_f_8php_a43a29153c5521d1c78e68e511d4d73a6}{\$dompdf}}-\/>loadHtml(\textcolor{stringliteral}{'hello world'});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// (Optional) Setup the paper size and orientation}}
+\DoxyCodeLine{\mbox{\hyperlink{test_p_d_f_8php_a43a29153c5521d1c78e68e511d4d73a6}{\$dompdf}}-\/>setPaper(\textcolor{stringliteral}{'A4'}, \textcolor{stringliteral}{'landscape'});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Render the HTML as PDF}}
+\DoxyCodeLine{\mbox{\hyperlink{test_p_d_f_8php_a43a29153c5521d1c78e68e511d4d73a6}{\$dompdf}}-\/>render();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Output the generated PDF to Browser}}
+\DoxyCodeLine{\mbox{\hyperlink{test_p_d_f_8php_a43a29153c5521d1c78e68e511d4d73a6}{\$dompdf}}-\/>stream();}
+
+\end{DoxyCode}
+\hypertarget{rules_autotoc_md94}{}\doxysubsection{Setting Options}\label{rules_autotoc_md94}
+Set options during dompdf instantiation\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{use \mbox{\hyperlink{class_dompdf_1_1_dompdf}{Dompdf\(\backslash\)Dompdf}};}
+\DoxyCodeLine{use \mbox{\hyperlink{class_dompdf_1_1_options}{Dompdf\(\backslash\)Options}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$options = \textcolor{keyword}{new} Options();}
+\DoxyCodeLine{\$options-\/>set(\textcolor{stringliteral}{'defaultFont'}, \textcolor{stringliteral}{'Courier'});}
+\DoxyCodeLine{\mbox{\hyperlink{test_p_d_f_8php_a43a29153c5521d1c78e68e511d4d73a6}{\$dompdf}} = \textcolor{keyword}{new} \mbox{\hyperlink{namespace_dompdf}{Dompdf}}(\$options);}
+
+\end{DoxyCode}
+
+
+or at run time
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{use \mbox{\hyperlink{class_dompdf_1_1_dompdf}{Dompdf\(\backslash\)Dompdf}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{test_p_d_f_8php_a43a29153c5521d1c78e68e511d4d73a6}{\$dompdf}} = \textcolor{keyword}{new} \mbox{\hyperlink{namespace_dompdf}{Dompdf}}();}
+\DoxyCodeLine{\$options = \mbox{\hyperlink{test_p_d_f_8php_a43a29153c5521d1c78e68e511d4d73a6}{\$dompdf}}-\/>getOptions();}
+\DoxyCodeLine{\$options-\/>setDefaultFont(\textcolor{stringliteral}{'Courier'});}
+\DoxyCodeLine{\mbox{\hyperlink{test_p_d_f_8php_a43a29153c5521d1c78e68e511d4d73a6}{\$dompdf}}-\/>setOptions(\$options);}
+
+\end{DoxyCode}
+
+
+See \href{src/Options.php}{\texttt{ Dompdf\textbackslash{}\+Options}} for a list of available options.\hypertarget{rules_autotoc_md95}{}\doxysubsection{Resource Reference Requirements}\label{rules_autotoc_md95}
+In order to protect potentially sensitive information \mbox{\hyperlink{class_dompdf_1_1_dompdf}{Dompdf}} imposes restrictions on files referenced from the local file system or the web.
+
+Files accessed through web-\/based protocols have the following requirements\+:
+\begin{DoxyItemize}
+\item The \mbox{\hyperlink{class_dompdf_1_1_dompdf}{Dompdf}} option \char`\"{}is\+Remote\+Enabled\char`\"{} must be set to \char`\"{}true\char`\"{}
+\item PHP must either have the curl extension enabled or the allow\+\_\+url\+\_\+fopen setting set to true
+\end{DoxyItemize}
+
+Files accessed through the local file system have the following requirement\+:
+\begin{DoxyItemize}
+\item The file must fall within the path(s) specified for the \mbox{\hyperlink{class_dompdf_1_1_dompdf}{Dompdf}} \char`\"{}chroot\char`\"{} option
+\end{DoxyItemize}\hypertarget{rules_autotoc_md96}{}\doxysection{Limitations (\+Known Issues)}\label{rules_autotoc_md96}
+
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{class_dompdf_1_1_dompdf}{Dompdf}} is not particularly tolerant to poorly-\/formed HTML input. To avoid any unexpected rendering issues you should either enable the built-\/in HTML5 parser at runtime ({\ttfamily \$options-\/$>$set\+Is\+Html5\+Parser\+Enabled(true);}) or run your HTML through a HTML validator/cleaner (such as \href{http://tidy.sourceforge.net}{\texttt{ Tidy}} or the \href{http://validator.w3.org}{\texttt{ W3C Markup Validation Service}}).
+\item Table cells are not pageable, meaning a table row must fit on a single page.
+\item Elements are rendered on the active page when they are parsed.
+\item Embedding \char`\"{}raw\char`\"{} SVG\textquotesingle{}s ({\ttfamily $<$svg$>$$<$path...$>$$<$/svg$>$}) isn\textquotesingle{}t working yet, you need to either link to an external SVG file, or use a Data\+URI like this\+: \`{}\`{}`php \$html = '$<$img src=\char`\"{}data\+:image/svg+xml;base64,\textquotesingle{} . base64\+\_\+encode(\$svg) . \textquotesingle{}\char`\"{} ...$>$\textquotesingle{}; \`{}\`{}\`{} Watch \href{https://github.com/dompdf/dompdf/issues/320}{\texttt{ https\+://github.\+com/dompdf/dompdf/issues/320}} for progress
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+
+
+\href{http://goo.gl/DSvWf}{\texttt{ }}
+
+{\itshape If you find this project useful, please consider making a donation. Any funds donated will be used to help further development on this project.)}
+
+The styles defined by 

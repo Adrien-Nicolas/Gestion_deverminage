@@ -1,0 +1,62 @@
+\hypertarget{users_8php}{}\doxysection{users.\+php File Reference}
+\label{users_8php}\index{users.php@{users.php}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{users_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}{\$authentication}} = new \mbox{\hyperlink{class_secure_user_authentication}{Secure\+User\+Authentication}}()
+\item 
+\mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}}(! \$authentication-\/$>$is\+User\+Connected()) \mbox{\hyperlink{users_8php_a9beb69abd183b4cbab11168a48480059}{\$page}} = new Web\+Page(\char`\"{}EPL -\/ Gestion des comptes\char`\"{})
+\item 
+\mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}}(\$role==\textquotesingle{}Administrateur\textquotesingle{}) \mbox{\hyperlink{users_8php_aeb991b81c19b5d249199f31d08815273}{else}}
+\item 
+\mbox{\hyperlink{users_8php_affd9e3eb0aad0a7ca42912cd925f148c}{\$ret}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{users_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}\label{users_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}} 
+\index{users.php@{users.php}!\$authentication@{\$authentication}}
+\index{\$authentication@{\$authentication}!users.php@{users.php}}
+\doxysubsubsection{\texorpdfstring{\$authentication}{$authentication}}
+{\footnotesize\ttfamily \$authentication = new \mbox{\hyperlink{class_secure_user_authentication}{Secure\+User\+Authentication}}()}
+
+
+
+Definition at line 9 of file users.\+php.
+
+\mbox{\Hypertarget{users_8php_a9beb69abd183b4cbab11168a48480059}\label{users_8php_a9beb69abd183b4cbab11168a48480059}} 
+\index{users.php@{users.php}!\$page@{\$page}}
+\index{\$page@{\$page}!users.php@{users.php}}
+\doxysubsubsection{\texorpdfstring{\$page}{$page}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}} (! \$authentication-\/$>$is\+User\+Connected()) \$page = new Web\+Page(\char`\"{}EPL -\/ Gestion des comptes\char`\"{})}
+
+
+
+Definition at line 15 of file users.\+php.
+
+\mbox{\Hypertarget{users_8php_affd9e3eb0aad0a7ca42912cd925f148c}\label{users_8php_affd9e3eb0aad0a7ca42912cd925f148c}} 
+\index{users.php@{users.php}!\$ret@{\$ret}}
+\index{\$ret@{\$ret}!users.php@{users.php}}
+\doxysubsubsection{\texorpdfstring{\$ret}{$ret}}
+{\footnotesize\ttfamily \$ret}
+
+
+
+Definition at line 137 of file users.\+php.
+
+\mbox{\Hypertarget{users_8php_aeb991b81c19b5d249199f31d08815273}\label{users_8php_aeb991b81c19b5d249199f31d08815273}} 
+\index{users.php@{users.php}!else@{else}}
+\index{else@{else}!users.php@{users.php}}
+\doxysubsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}} ( \$role==\textquotesingle{}Administrateur\textquotesingle{}) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{        \mbox{\hyperlink{users_8php_a9beb69abd183b4cbab11168a48480059}{\$page}}-\/>appendContent(\textcolor{stringliteral}{'<option>Administrateur</option><option selected>Opérateur</option>'})}
+
+\end{DoxyCode}
+
+
+Definition at line 76 of file users.\+php.
+

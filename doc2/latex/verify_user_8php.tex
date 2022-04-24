@@ -1,0 +1,50 @@
+\hypertarget{verify_user_8php}{}\doxysection{php/verify\+User.php File Reference}
+\label{verify_user_8php}\index{php/verifyUser.php@{php/verifyUser.php}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{verify_user_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}{\$authentication}} = new \mbox{\hyperlink{class_secure_user_authentication}{Secure\+User\+Authentication}}()
+\item 
+\mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}}(! \$authentication-\/$>$is\+User\+Connected()) \mbox{\hyperlink{verify_user_8php_a0811826b78691f7e8c277c73d7da0ae6}{\$user}} = \$authentication-\/$>$get\+User\+From\+Session()
+\item 
+\mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}}(\$user-\/$>$get\+Role()==\textquotesingle{}Administrateur\textquotesingle{}) \mbox{\hyperlink{verify_user_8php_aeb2421c89704577767a224f0bb692b13}{else}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{verify_user_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}\label{verify_user_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}} 
+\index{verifyUser.php@{verifyUser.php}!\$authentication@{\$authentication}}
+\index{\$authentication@{\$authentication}!verifyUser.php@{verifyUser.php}}
+\doxysubsubsection{\texorpdfstring{\$authentication}{$authentication}}
+{\footnotesize\ttfamily \$authentication = new \mbox{\hyperlink{class_secure_user_authentication}{Secure\+User\+Authentication}}()}
+
+
+
+Definition at line 9 of file verify\+User.\+php.
+
+\mbox{\Hypertarget{verify_user_8php_a0811826b78691f7e8c277c73d7da0ae6}\label{verify_user_8php_a0811826b78691f7e8c277c73d7da0ae6}} 
+\index{verifyUser.php@{verifyUser.php}!\$user@{\$user}}
+\index{\$user@{\$user}!verifyUser.php@{verifyUser.php}}
+\doxysubsubsection{\texorpdfstring{\$user}{$user}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}} (! \$authentication-\/$>$is\+User\+Connected()) \$user = \$authentication-\/$>$get\+User\+From\+Session()}
+
+
+
+Definition at line 14 of file verify\+User.\+php.
+
+\mbox{\Hypertarget{verify_user_8php_aeb2421c89704577767a224f0bb692b13}\label{verify_user_8php_aeb2421c89704577767a224f0bb692b13}} 
+\index{verifyUser.php@{verifyUser.php}!else@{else}}
+\index{else@{else}!verifyUser.php@{verifyUser.php}}
+\doxysubsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}} ( \$user-\/$>$get\+Role()==\textquotesingle{}Administrateur\textquotesingle{}) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    header(\textcolor{stringliteral}{'Location: ../index.php'})}
+
+\end{DoxyCode}
+
+
+Definition at line 42 of file verify\+User.\+php.
+

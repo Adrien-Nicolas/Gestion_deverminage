@@ -1,0 +1,53 @@
+\hypertarget{createuser_8php}{}\doxysection{createuser.\+php File Reference}
+\label{createuser_8php}\index{createuser.php@{createuser.php}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{createuser_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}{\$authentication}} = new \mbox{\hyperlink{class_secure_user_authentication}{Secure\+User\+Authentication}}()
+\item 
+\mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}}(! \$authentication-\/$>$is\+User\+Connected()) \mbox{\hyperlink{createuser_8php_a9beb69abd183b4cbab11168a48480059}{\$page}} = new Web\+Page(\char`\"{}EPL -\/ Création d\textquotesingle{}un utilisateur\char`\"{})
+\item 
+\mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}}(isset(\$\+\_\+\+GET\mbox{[}\char`\"{}error\char`\"{}\mbox{]})) \mbox{\hyperlink{createuser_8php_a0789fbc09e4b388803bf78cc668858c3}{else}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{createuser_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}\label{createuser_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}} 
+\index{createuser.php@{createuser.php}!\$authentication@{\$authentication}}
+\index{\$authentication@{\$authentication}!createuser.php@{createuser.php}}
+\doxysubsubsection{\texorpdfstring{\$authentication}{$authentication}}
+{\footnotesize\ttfamily \$authentication = new \mbox{\hyperlink{class_secure_user_authentication}{Secure\+User\+Authentication}}()}
+
+
+
+Definition at line 10 of file createuser.\+php.
+
+\mbox{\Hypertarget{createuser_8php_a9beb69abd183b4cbab11168a48480059}\label{createuser_8php_a9beb69abd183b4cbab11168a48480059}} 
+\index{createuser.php@{createuser.php}!\$page@{\$page}}
+\index{\$page@{\$page}!createuser.php@{createuser.php}}
+\doxysubsubsection{\texorpdfstring{\$page}{$page}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}} (! \$authentication-\/$>$is\+User\+Connected()) \$page = new Web\+Page(\char`\"{}EPL -\/ Création d\textquotesingle{}un utilisateur\char`\"{})}
+
+
+
+Definition at line 16 of file createuser.\+php.
+
+\mbox{\Hypertarget{createuser_8php_a0789fbc09e4b388803bf78cc668858c3}\label{createuser_8php_a0789fbc09e4b388803bf78cc668858c3}} 
+\index{createuser.php@{createuser.php}!else@{else}}
+\index{else@{else}!createuser.php@{createuser.php}}
+\doxysubsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}} (isset( \$\+\_\+\+GET\mbox{[}\char`\"{}error\char`\"{}\mbox{]})) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \mbox{\hyperlink{createuser_8php_a9beb69abd183b4cbab11168a48480059}{\$page}}-\/>appendContent(<<<HTML}
+\DoxyCodeLine{<span \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}error"{}} \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}cred"{}}></span>}
+\DoxyCodeLine{HTML}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+Definition at line 34 of file createuser.\+php.
+

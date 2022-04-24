@@ -1,0 +1,17 @@
+.grid-stats {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+}
+
+.grid-stats p:nth-child(3n) {
+    text-align: right;
+}
+
+.grid-stats p {
+    margin-right: 10px;
+}
+
+.number {
+    position: absolute;
+    bottom: -30%;
+}

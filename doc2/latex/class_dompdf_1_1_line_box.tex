@@ -1,0 +1,313 @@
+\hypertarget{class_dompdf_1_1_line_box}{}\doxysection{Line\+Box Class Reference}
+\label{class_dompdf_1_1_line_box}\index{LineBox@{LineBox}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_line_box_a700b33422314f280794b9196151d6469}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_block}{Block}} \$frame, \$y=0)
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_line_box_aa68ec175f8696eaed08edd1fe3034b46}{get\+\_\+floats\+\_\+inside}} (\mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_page}{Page}} \$root)
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_line_box_a36ba0f5d5247b10a2d70d84bb572fe62}{get\+\_\+float\+\_\+offsets}} ()
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_line_box_abb10ccd258503d273acaf265bf1b1535}{get\+\_\+width}} ()
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_line_box_a2fa43a32f3dfc4dcde40b617b02d5a26}{get\+\_\+block\+\_\+frame}} ()
+\item 
+\& \mbox{\hyperlink{class_dompdf_1_1_line_box_ab2ca8569f30211634716612a8f27042a}{get\+\_\+frames}} ()
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_line_box_a4a64d32fccfcb04aa8f2a621188eccaa}{add\+\_\+frame}} (\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}} \$frame)
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_line_box_ac0e1e1ffec458b07883645b272e8a3b3}{recalculate\+\_\+width}} ()
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_line_box_a7516ca30af0db3cdbf9a7739b48ce91d}{\+\_\+\+\_\+to\+String}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_line_box_a1573d76e756a58e8cc74e3492164ee7e}{\$wc}} = 0
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_line_box_a77b973d137fb33212e018b042df6e3e7}{\$y}} = null
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_line_box_ae51391055f5e898dc2625d155b016aaa}{\$w}} = 0.\+0
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_line_box_ab00da9d5d8bd5b6b944793e093860aff}{\$h}} = 0.\+0
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_line_box_a8ce48148e988ab5ecd61213c1d460962}{\$left}} = 0.\+0
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_line_box_a79e068e5169b6f084dcf0baf74137378}{\$right}} = 0.\+0
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_line_box_aff1388bbb0b9b94aba9080bb920a1603}{\$tallest\+\_\+frame}} = null
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_line_box_ac4a81cf0b486179c96ee7a12ecdb896e}{\$floating\+\_\+blocks}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_line_box_a6aae626730296abe82c460cf818b51c1}{\$br}} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_line_box_ad3f6e3e9cfbaed8e4c4b92381116f90d}{\$\+\_\+block\+\_\+frame}}
+\item 
+\mbox{\hyperlink{class_dompdf_1_1_line_box_aa3eb299f58e604f660497ded8089f44b}{\$\+\_\+frames}} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 21 of file Line\+Box.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_dompdf_1_1_line_box_a700b33422314f280794b9196151d6469}\label{class_dompdf_1_1_line_box_a700b33422314f280794b9196151d6469}} 
+\index{LineBox@{LineBox}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!LineBox@{LineBox}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_block}{Block}}}]{\$frame,  }\item[{}]{\$y = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Class constructor
+
+
+\begin{DoxyParams}[1]{Parameters}
+Block & {\em \$frame} & the Block containing this line \\
+\hline
+int & {\em \$y} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 85 of file Line\+Box.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_dompdf_1_1_line_box_a7516ca30af0db3cdbf9a7739b48ce91d}\label{class_dompdf_1_1_line_box_a7516ca30af0db3cdbf9a7739b48ce91d}} 
+\index{LineBox@{LineBox}!\_\_toString@{\_\_toString}}
+\index{\_\_toString@{\_\_toString}!LineBox@{LineBox}}
+\doxysubsubsection{\texorpdfstring{\_\_toString()}{\_\_toString()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 280 of file Line\+Box.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_line_box_a4a64d32fccfcb04aa8f2a621188eccaa}\label{class_dompdf_1_1_line_box_a4a64d32fccfcb04aa8f2a621188eccaa}} 
+\index{LineBox@{LineBox}!add\_frame@{add\_frame}}
+\index{add\_frame@{add\_frame}!LineBox@{LineBox}}
+\doxysubsubsection{\texorpdfstring{add\_frame()}{add\_frame()}}
+{\footnotesize\ttfamily add\+\_\+frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}}}]{\$frame }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}} & {\em \$frame} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 256 of file Line\+Box.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_line_box_a2fa43a32f3dfc4dcde40b617b02d5a26}\label{class_dompdf_1_1_line_box_a2fa43a32f3dfc4dcde40b617b02d5a26}} 
+\index{LineBox@{LineBox}!get\_block\_frame@{get\_block\_frame}}
+\index{get\_block\_frame@{get\_block\_frame}!LineBox@{LineBox}}
+\doxysubsubsection{\texorpdfstring{get\_block\_frame()}{get\_block\_frame()}}
+{\footnotesize\ttfamily get\+\_\+block\+\_\+frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Block 
+\end{DoxyReturn}
+
+
+Definition at line 240 of file Line\+Box.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_line_box_a36ba0f5d5247b10a2d70d84bb572fe62}\label{class_dompdf_1_1_line_box_a36ba0f5d5247b10a2d70d84bb572fe62}} 
+\index{LineBox@{LineBox}!get\_float\_offsets@{get\_float\_offsets}}
+\index{get\_float\_offsets@{get\_float\_offsets}!LineBox@{LineBox}}
+\doxysubsubsection{\texorpdfstring{get\_float\_offsets()}{get\_float\_offsets()}}
+{\footnotesize\ttfamily get\+\_\+float\+\_\+offsets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 145 of file Line\+Box.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_line_box_aa68ec175f8696eaed08edd1fe3034b46}\label{class_dompdf_1_1_line_box_aa68ec175f8696eaed08edd1fe3034b46}} 
+\index{LineBox@{LineBox}!get\_floats\_inside@{get\_floats\_inside}}
+\index{get\_floats\_inside@{get\_floats\_inside}!LineBox@{LineBox}}
+\doxysubsubsection{\texorpdfstring{get\_floats\_inside()}{get\_floats\_inside()}}
+{\footnotesize\ttfamily get\+\_\+floats\+\_\+inside (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dompdf_1_1_frame_decorator_1_1_page}{Page}}}]{\$root }\end{DoxyParamCaption})}
+
+Returns the floating elements inside the first floating parent
+
+
+\begin{DoxyParams}[1]{Parameters}
+Page & {\em \$root} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}}\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Definition at line 101 of file Line\+Box.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_line_box_ab2ca8569f30211634716612a8f27042a}\label{class_dompdf_1_1_line_box_ab2ca8569f30211634716612a8f27042a}} 
+\index{LineBox@{LineBox}!get\_frames@{get\_frames}}
+\index{get\_frames@{get\_frames}!LineBox@{LineBox}}
+\doxysubsubsection{\texorpdfstring{get\_frames()}{get\_frames()}}
+{\footnotesize\ttfamily \& get\+\_\+frames (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_dompdf_1_1_frame}{Frame}}\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Definition at line 248 of file Line\+Box.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_line_box_abb10ccd258503d273acaf265bf1b1535}\label{class_dompdf_1_1_line_box_abb10ccd258503d273acaf265bf1b1535}} 
+\index{LineBox@{LineBox}!get\_width@{get\_width}}
+\index{get\_width@{get\_width}!LineBox@{LineBox}}
+\doxysubsubsection{\texorpdfstring{get\_width()}{get\_width()}}
+{\footnotesize\ttfamily get\+\_\+width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+
+
+Definition at line 232 of file Line\+Box.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_line_box_ac0e1e1ffec458b07883645b272e8a3b3}\label{class_dompdf_1_1_line_box_ac0e1e1ffec458b07883645b272e8a3b3}} 
+\index{LineBox@{LineBox}!recalculate\_width@{recalculate\_width}}
+\index{recalculate\_width@{recalculate\_width}!LineBox@{LineBox}}
+\doxysubsubsection{\texorpdfstring{recalculate\_width()}{recalculate\_width()}}
+{\footnotesize\ttfamily recalculate\+\_\+width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Recalculate \mbox{\hyperlink{class_dompdf_1_1_line_box}{Line\+Box}} width based on the contained frames total width.
+
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+
+
+Definition at line 266 of file Line\+Box.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_dompdf_1_1_line_box_ad3f6e3e9cfbaed8e4c4b92381116f90d}\label{class_dompdf_1_1_line_box_ad3f6e3e9cfbaed8e4c4b92381116f90d}} 
+\index{LineBox@{LineBox}!\$\_block\_frame@{\$\_block\_frame}}
+\index{\$\_block\_frame@{\$\_block\_frame}!LineBox@{LineBox}}
+\doxysubsubsection{\texorpdfstring{\$\_block\_frame}{$\_block\_frame}}
+{\footnotesize\ttfamily \$\+\_\+block\+\_\+frame\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 27 of file Line\+Box.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_line_box_aa3eb299f58e604f660497ded8089f44b}\label{class_dompdf_1_1_line_box_aa3eb299f58e604f660497ded8089f44b}} 
+\index{LineBox@{LineBox}!\$\_frames@{\$\_frames}}
+\index{\$\_frames@{\$\_frames}!LineBox@{LineBox}}
+\doxysubsubsection{\texorpdfstring{\$\_frames}{$\_frames}}
+{\footnotesize\ttfamily \$\+\_\+frames = \mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 32 of file Line\+Box.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_line_box_a6aae626730296abe82c460cf818b51c1}\label{class_dompdf_1_1_line_box_a6aae626730296abe82c460cf818b51c1}} 
+\index{LineBox@{LineBox}!\$br@{\$br}}
+\index{\$br@{\$br}!LineBox@{LineBox}}
+\doxysubsubsection{\texorpdfstring{\$br}{$br}}
+{\footnotesize\ttfamily \$br = false}
+
+
+
+Definition at line 77 of file Line\+Box.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_line_box_ac4a81cf0b486179c96ee7a12ecdb896e}\label{class_dompdf_1_1_line_box_ac4a81cf0b486179c96ee7a12ecdb896e}} 
+\index{LineBox@{LineBox}!\$floating\_blocks@{\$floating\_blocks}}
+\index{\$floating\_blocks@{\$floating\_blocks}!LineBox@{LineBox}}
+\doxysubsubsection{\texorpdfstring{\$floating\_blocks}{$floating\_blocks}}
+{\footnotesize\ttfamily \$floating\+\_\+blocks = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line 72 of file Line\+Box.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_line_box_ab00da9d5d8bd5b6b944793e093860aff}\label{class_dompdf_1_1_line_box_ab00da9d5d8bd5b6b944793e093860aff}} 
+\index{LineBox@{LineBox}!\$h@{\$h}}
+\index{\$h@{\$h}!LineBox@{LineBox}}
+\doxysubsubsection{\texorpdfstring{\$h}{$h}}
+{\footnotesize\ttfamily \$h = 0.\+0}
+
+
+
+Definition at line 52 of file Line\+Box.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_line_box_a8ce48148e988ab5ecd61213c1d460962}\label{class_dompdf_1_1_line_box_a8ce48148e988ab5ecd61213c1d460962}} 
+\index{LineBox@{LineBox}!\$left@{\$left}}
+\index{\$left@{\$left}!LineBox@{LineBox}}
+\doxysubsubsection{\texorpdfstring{\$left}{$left}}
+{\footnotesize\ttfamily \$left = 0.\+0}
+
+
+
+Definition at line 57 of file Line\+Box.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_line_box_a79e068e5169b6f084dcf0baf74137378}\label{class_dompdf_1_1_line_box_a79e068e5169b6f084dcf0baf74137378}} 
+\index{LineBox@{LineBox}!\$right@{\$right}}
+\index{\$right@{\$right}!LineBox@{LineBox}}
+\doxysubsubsection{\texorpdfstring{\$right}{$right}}
+{\footnotesize\ttfamily \$right = 0.\+0}
+
+
+
+Definition at line 62 of file Line\+Box.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_line_box_aff1388bbb0b9b94aba9080bb920a1603}\label{class_dompdf_1_1_line_box_aff1388bbb0b9b94aba9080bb920a1603}} 
+\index{LineBox@{LineBox}!\$tallest\_frame@{\$tallest\_frame}}
+\index{\$tallest\_frame@{\$tallest\_frame}!LineBox@{LineBox}}
+\doxysubsubsection{\texorpdfstring{\$tallest\_frame}{$tallest\_frame}}
+{\footnotesize\ttfamily \$tallest\+\_\+frame = null}
+
+
+
+Definition at line 67 of file Line\+Box.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_line_box_ae51391055f5e898dc2625d155b016aaa}\label{class_dompdf_1_1_line_box_ae51391055f5e898dc2625d155b016aaa}} 
+\index{LineBox@{LineBox}!\$w@{\$w}}
+\index{\$w@{\$w}!LineBox@{LineBox}}
+\doxysubsubsection{\texorpdfstring{\$w}{$w}}
+{\footnotesize\ttfamily \$w = 0.\+0}
+
+
+
+Definition at line 47 of file Line\+Box.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_line_box_a1573d76e756a58e8cc74e3492164ee7e}\label{class_dompdf_1_1_line_box_a1573d76e756a58e8cc74e3492164ee7e}} 
+\index{LineBox@{LineBox}!\$wc@{\$wc}}
+\index{\$wc@{\$wc}!LineBox@{LineBox}}
+\doxysubsubsection{\texorpdfstring{\$wc}{$wc}}
+{\footnotesize\ttfamily \$wc = 0}
+
+
+
+Definition at line 37 of file Line\+Box.\+php.
+
+\mbox{\Hypertarget{class_dompdf_1_1_line_box_a77b973d137fb33212e018b042df6e3e7}\label{class_dompdf_1_1_line_box_a77b973d137fb33212e018b042df6e3e7}} 
+\index{LineBox@{LineBox}!\$y@{\$y}}
+\index{\$y@{\$y}!LineBox@{LineBox}}
+\doxysubsubsection{\texorpdfstring{\$y}{$y}}
+{\footnotesize\ttfamily \$y = null}
+
+
+
+Definition at line 42 of file Line\+Box.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/dompdf/src/\mbox{\hyperlink{_line_box_8php}{Line\+Box.\+php}}\end{DoxyCompactItemize}

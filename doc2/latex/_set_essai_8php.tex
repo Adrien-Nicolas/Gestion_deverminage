@@ -1,0 +1,87 @@
+\hypertarget{_set_essai_8php}{}\doxysection{php/\+Set\+Essai.php File Reference}
+\label{_set_essai_8php}\index{php/SetEssai.php@{php/SetEssai.php}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_set_essai_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}{\$authentication}} = new \mbox{\hyperlink{class_secure_user_authentication}{Secure\+User\+Authentication}}()
+\item 
+\mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}}(! \$authentication-\/$>$is\+User\+Connected()) \mbox{\hyperlink{_set_essai_8php_a0811826b78691f7e8c277c73d7da0ae6}{\$user}} = \$authentication-\/$>$get\+User\+From\+Session()
+\item 
+\mbox{\hyperlink{_set_essai_8php_a2ee7d277dc7a99790236fde8a588821a}{\$list\+Desc}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{_set_essai_8php_ae1a413be39aa48003638bca47ebd152d}{\$id\+Essai}} = (int)\$\+\_\+\+GET\mbox{[}\char`\"{}id\char`\"{}\mbox{]}
+\item 
+\mbox{\hyperlink{_set_essai_8php_a0a53a8f3a010d341aa90f7a679449332}{\$essai}} = Essai\+::get\+Essai\+From\+Id(\$id\+Essai)
+\item 
+\mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}}(\$user-\/$>$get\+Role()==\textquotesingle{}Administrateur\textquotesingle{}$\vert$$\vert$ \$essai-\/$>$get\+Config()==0$\vert$$\vert$ \$essai-\/$>$get\+Nb\+Val()==0) \mbox{\hyperlink{_set_essai_8php_a07e9ecbce97e66a08350cad82d28dfdc}{else}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_set_essai_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}\label{_set_essai_8php_a0b4ae1d9fc52d7cdfdddd110846bb0d1}} 
+\index{SetEssai.php@{SetEssai.php}!\$authentication@{\$authentication}}
+\index{\$authentication@{\$authentication}!SetEssai.php@{SetEssai.php}}
+\doxysubsubsection{\texorpdfstring{\$authentication}{$authentication}}
+{\footnotesize\ttfamily \$authentication = new \mbox{\hyperlink{class_secure_user_authentication}{Secure\+User\+Authentication}}()}
+
+
+
+Definition at line 10 of file Set\+Essai.\+php.
+
+\mbox{\Hypertarget{_set_essai_8php_a0a53a8f3a010d341aa90f7a679449332}\label{_set_essai_8php_a0a53a8f3a010d341aa90f7a679449332}} 
+\index{SetEssai.php@{SetEssai.php}!\$essai@{\$essai}}
+\index{\$essai@{\$essai}!SetEssai.php@{SetEssai.php}}
+\doxysubsubsection{\texorpdfstring{\$essai}{$essai}}
+{\footnotesize\ttfamily \$essai = Essai\+::get\+Essai\+From\+Id(\$id\+Essai)}
+
+
+
+Definition at line 20 of file Set\+Essai.\+php.
+
+\mbox{\Hypertarget{_set_essai_8php_ae1a413be39aa48003638bca47ebd152d}\label{_set_essai_8php_ae1a413be39aa48003638bca47ebd152d}} 
+\index{SetEssai.php@{SetEssai.php}!\$idEssai@{\$idEssai}}
+\index{\$idEssai@{\$idEssai}!SetEssai.php@{SetEssai.php}}
+\doxysubsubsection{\texorpdfstring{\$idEssai}{$idEssai}}
+{\footnotesize\ttfamily \$id\+Essai = (int)\$\+\_\+\+GET\mbox{[}\char`\"{}id\char`\"{}\mbox{]}}
+
+
+
+Definition at line 19 of file Set\+Essai.\+php.
+
+\mbox{\Hypertarget{_set_essai_8php_a2ee7d277dc7a99790236fde8a588821a}\label{_set_essai_8php_a2ee7d277dc7a99790236fde8a588821a}} 
+\index{SetEssai.php@{SetEssai.php}!\$listDesc@{\$listDesc}}
+\index{\$listDesc@{\$listDesc}!SetEssai.php@{SetEssai.php}}
+\doxysubsubsection{\texorpdfstring{\$listDesc}{$listDesc}}
+{\footnotesize\ttfamily \$list\+Desc = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line 17 of file Set\+Essai.\+php.
+
+\mbox{\Hypertarget{_set_essai_8php_a0811826b78691f7e8c277c73d7da0ae6}\label{_set_essai_8php_a0811826b78691f7e8c277c73d7da0ae6}} 
+\index{SetEssai.php@{SetEssai.php}!\$user@{\$user}}
+\index{\$user@{\$user}!SetEssai.php@{SetEssai.php}}
+\doxysubsubsection{\texorpdfstring{\$user}{$user}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}} (! \$authentication-\/$>$is\+User\+Connected()) \$user = \$authentication-\/$>$get\+User\+From\+Session()}
+
+
+
+Definition at line 16 of file Set\+Essai.\+php.
+
+\mbox{\Hypertarget{_set_essai_8php_a07e9ecbce97e66a08350cad82d28dfdc}\label{_set_essai_8php_a07e9ecbce97e66a08350cad82d28dfdc}} 
+\index{SetEssai.php@{SetEssai.php}!else@{else}}
+\index{else@{else}!SetEssai.php@{SetEssai.php}}
+\doxysubsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_error_user_8php_a2796bde48c29b2a65dd65da219039dd2}{if}} ( \$user-\/$>$get\+Role()==\textquotesingle{}Administrateur\textquotesingle{}$\vert$$\vert$\$essai-\/$>$get\+Config()==0$\vert$$\vert$\$essai-\/$>$get\+Nb\+Val()==0) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{}
+\DoxyCodeLine{    header(\textcolor{stringliteral}{"{}Location: ./?=Cet Essai à déja été modifié"{}})}
+
+\end{DoxyCode}
+
+
+Definition at line 218 of file Set\+Essai.\+php.
+

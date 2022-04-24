@@ -1,0 +1,121 @@
+\hypertarget{class_sabberworm_1_1_c_s_s_1_1_value_1_1_value}{}\doxysection{Value Class Reference}
+\label{class_sabberworm_1_1_c_s_s_1_1_value_1_1_value}\index{Value@{Value}}
+Inheritance diagram for Value\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.794038cm]{class_sabberworm_1_1_c_s_s_1_1_value_1_1_value}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_value_1_1_value_add22f11a0f367e5ae553265f5d83782f}{\+\_\+\+\_\+construct}} (\$i\+Line\+No=0)
+\item 
+\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_value_1_1_value_a16d247e18fc050dffcf5ed26439b2905}{get\+Line\+No}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_value_1_1_value_a7142c8153ca9ec6c03b7060bf510bb64}{parse\+Value}} (\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state}{Parser\+State}} \$o\+Parser\+State, \$a\+List\+Delimiters=array())
+\item 
+static \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_value_1_1_value_a925c57c33113818eaea75a8636c548d7}{parse\+Identifier\+Or\+Function}} (\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state}{Parser\+State}} \$o\+Parser\+State, \$b\+Ignore\+Case=false)
+\item 
+static \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_value_1_1_value_aaf2596ee8c7aab108e17148da25ae755}{parse\+Primitive\+Value}} (\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state}{Parser\+State}} \$o\+Parser\+State)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_value_1_1_value_a1019368868955f64e3173e8f40d62582}{\$i\+Line\+No}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 9 of file Value.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sabberworm_1_1_c_s_s_1_1_value_1_1_value_add22f11a0f367e5ae553265f5d83782f}\label{class_sabberworm_1_1_c_s_s_1_1_value_1_1_value_add22f11a0f367e5ae553265f5d83782f}} 
+\index{Value@{Value}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Value@{Value}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$i\+Line\+No = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_value_1_1_primitive_value_add22f11a0f367e5ae553265f5d83782f}{Primitive\+Value}}, and \mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_value_1_1_calc_rule_value_list_add22f11a0f367e5ae553265f5d83782f}{Calc\+Rule\+Value\+List}}.
+
+
+
+Definition at line 12 of file Value.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sabberworm_1_1_c_s_s_1_1_value_1_1_value_a16d247e18fc050dffcf5ed26439b2905}\label{class_sabberworm_1_1_c_s_s_1_1_value_1_1_value_a16d247e18fc050dffcf5ed26439b2905}} 
+\index{Value@{Value}!getLineNo@{getLineNo}}
+\index{getLineNo@{getLineNo}!Value@{Value}}
+\doxysubsubsection{\texorpdfstring{getLineNo()}{getLineNo()}}
+{\footnotesize\ttfamily get\+Line\+No (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_sabberworm_1_1_c_s_s_1_1_renderable_a16d247e18fc050dffcf5ed26439b2905}{Renderable}}.
+
+
+
+Definition at line 124 of file Value.\+php.
+
+\mbox{\Hypertarget{class_sabberworm_1_1_c_s_s_1_1_value_1_1_value_a925c57c33113818eaea75a8636c548d7}\label{class_sabberworm_1_1_c_s_s_1_1_value_1_1_value_a925c57c33113818eaea75a8636c548d7}} 
+\index{Value@{Value}!parseIdentifierOrFunction@{parseIdentifierOrFunction}}
+\index{parseIdentifierOrFunction@{parseIdentifierOrFunction}!Value@{Value}}
+\doxysubsubsection{\texorpdfstring{parseIdentifierOrFunction()}{parseIdentifierOrFunction()}}
+{\footnotesize\ttfamily static parse\+Identifier\+Or\+Function (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state}{Parser\+State}}}]{\$o\+Parser\+State,  }\item[{}]{\$b\+Ignore\+Case = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 65 of file Value.\+php.
+
+\mbox{\Hypertarget{class_sabberworm_1_1_c_s_s_1_1_value_1_1_value_aaf2596ee8c7aab108e17148da25ae755}\label{class_sabberworm_1_1_c_s_s_1_1_value_1_1_value_aaf2596ee8c7aab108e17148da25ae755}} 
+\index{Value@{Value}!parsePrimitiveValue@{parsePrimitiveValue}}
+\index{parsePrimitiveValue@{parsePrimitiveValue}!Value@{Value}}
+\doxysubsubsection{\texorpdfstring{parsePrimitiveValue()}{parsePrimitiveValue()}}
+{\footnotesize\ttfamily static parse\+Primitive\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state}{Parser\+State}}}]{\$o\+Parser\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 78 of file Value.\+php.
+
+\mbox{\Hypertarget{class_sabberworm_1_1_c_s_s_1_1_value_1_1_value_a7142c8153ca9ec6c03b7060bf510bb64}\label{class_sabberworm_1_1_c_s_s_1_1_value_1_1_value_a7142c8153ca9ec6c03b7060bf510bb64}} 
+\index{Value@{Value}!parseValue@{parseValue}}
+\index{parseValue@{parseValue}!Value@{Value}}
+\doxysubsubsection{\texorpdfstring{parseValue()}{parseValue()}}
+{\footnotesize\ttfamily static parse\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sabberworm_1_1_c_s_s_1_1_parsing_1_1_parser_state}{Parser\+State}}}]{\$o\+Parser\+State,  }\item[{}]{\$a\+List\+Delimiters = {\ttfamily array()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 16 of file Value.\+php.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_sabberworm_1_1_c_s_s_1_1_value_1_1_value_a1019368868955f64e3173e8f40d62582}\label{class_sabberworm_1_1_c_s_s_1_1_value_1_1_value_a1019368868955f64e3173e8f40d62582}} 
+\index{Value@{Value}!\$iLineNo@{\$iLineNo}}
+\index{\$iLineNo@{\$iLineNo}!Value@{Value}}
+\doxysubsubsection{\texorpdfstring{\$iLineNo}{$iLineNo}}
+{\footnotesize\ttfamily \$i\+Line\+No\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 10 of file Value.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/dompdf/lib/php-\/css-\/parser/lib/\+Sabberworm/\+CSS/\+Value/\mbox{\hyperlink{_value_8php}{Value.\+php}}\end{DoxyCompactItemize}

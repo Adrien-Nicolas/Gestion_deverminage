@@ -1,0 +1,312 @@
+\hypertarget{class_temperature}{}\doxysection{Temperature Class Reference}
+\label{class_temperature}\index{Temperature@{Temperature}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_temperature_a1431fa67a5143a55f5602ac2dddf4a83}{\+\_\+\+\_\+construct}} (int \$id, int \$id\+Essai, int \$time, float \$value)
+\item 
+\mbox{\hyperlink{class_temperature_a12251d0c022e9e21c137a105ff683f13}{get\+Id}} ()
+\item 
+\mbox{\hyperlink{class_temperature_a1f11fa996501cd5785b673207164568f}{get\+Id\+Essai}} ()
+\item 
+\mbox{\hyperlink{class_temperature_a57c78d9f0aa316ee2fdd6995e2a06ce3}{get\+Time}} ()
+\item 
+\mbox{\hyperlink{class_temperature_ac0bc18784b182c89fcfd276625aef435}{get\+Value}} ()
+\item 
+\mbox{\hyperlink{class_temperature_a0b9c6740232a395804d60d3785f6c2cf}{set\+Id\+Essai}} (int \$id\+Essai)
+\item 
+\mbox{\hyperlink{class_temperature_a7bcfa1c6a9212274e43b2fb1ac19f6c9}{set\+Time}} (int \$time)
+\item 
+\mbox{\hyperlink{class_temperature_a814b2905bcb1f8531d735ae1b2fa62ff}{set\+Value}} (float \$value)
+\item 
+\mbox{\hyperlink{class_temperature_a70a0fe08035189260c72e32a9e20d30c}{get\+Values}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_temperature_a3dd39f39e2f19525dfa68189734ecc38}{get\+Temp\+From\+ID}} (int \$id)
+\item 
+static \mbox{\hyperlink{class_temperature_a280a64e66ae4be02218f2deab8d70e4f}{get\+All\+Value\+From\+Id\+Essai}} (int \$id\+Essai)
+\item 
+static \mbox{\hyperlink{class_temperature_a1f5a3cadf6a5e122136de8297e77d84d}{create\+Temp\+To\+DB}} (int \$id\+Essai, int \$time, float \$value)
+\item 
+static \mbox{\hyperlink{class_temperature_a6e80b8655f7a51eee60aee71167bb35b}{get\+Tempid\+Essai}} (int \$id)
+\item 
+static \mbox{\hyperlink{class_temperature_a380ede095fdfcd01e19927bdd98eb3c6}{getlast\+Temp}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 5 of file Temperature.\+php.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_temperature_a1431fa67a5143a55f5602ac2dddf4a83}\label{class_temperature_a1431fa67a5143a55f5602ac2dddf4a83}} 
+\index{Temperature@{Temperature}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!Temperature@{Temperature}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{int}]{\$id,  }\item[{int}]{\$id\+Essai,  }\item[{int}]{\$time,  }\item[{float}]{\$value }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_temperature}{Temperature}} constructor. 
+\begin{DoxyParams}{Parameters}
+{\em \$id} & \\
+\hline
+{\em \$id\+Essai} & \\
+\hline
+{\em \$time} & \\
+\hline
+{\em \$value} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 19 of file Temperature.\+php.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_temperature_a1f5a3cadf6a5e122136de8297e77d84d}\label{class_temperature_a1f5a3cadf6a5e122136de8297e77d84d}} 
+\index{Temperature@{Temperature}!createTempToDB@{createTempToDB}}
+\index{createTempToDB@{createTempToDB}!Temperature@{Temperature}}
+\doxysubsubsection{\texorpdfstring{createTempToDB()}{createTempToDB()}}
+{\footnotesize\ttfamily static create\+Temp\+To\+DB (\begin{DoxyParamCaption}\item[{int}]{\$id\+Essai,  }\item[{int}]{\$time,  }\item[{float}]{\$value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Méthode statique de la classe \mbox{\hyperlink{class_temperature}{Temperature}}, insert une température dans la base de données
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id\+Essai} & \\
+\hline
+int & {\em \$time} & \\
+\hline
+int & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 149 of file Temperature.\+php.
+
+\mbox{\Hypertarget{class_temperature_a280a64e66ae4be02218f2deab8d70e4f}\label{class_temperature_a280a64e66ae4be02218f2deab8d70e4f}} 
+\index{Temperature@{Temperature}!getAllValueFromIdEssai@{getAllValueFromIdEssai}}
+\index{getAllValueFromIdEssai@{getAllValueFromIdEssai}!Temperature@{Temperature}}
+\doxysubsubsection{\texorpdfstring{getAllValueFromIdEssai()}{getAllValueFromIdEssai()}}
+{\footnotesize\ttfamily static get\+All\+Value\+From\+Id\+Essai (\begin{DoxyParamCaption}\item[{int}]{\$id\+Essai }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Méthode statique de la classe \mbox{\hyperlink{class_temperature}{Temperature}}, récupere les valeurs qui ont l\textquotesingle{}id essai qui à été mis en parametre
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id\+Essai} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 123 of file Temperature.\+php.
+
+\mbox{\Hypertarget{class_temperature_a12251d0c022e9e21c137a105ff683f13}\label{class_temperature_a12251d0c022e9e21c137a105ff683f13}} 
+\index{Temperature@{Temperature}!getId@{getId}}
+\index{getId@{getId}!Temperature@{Temperature}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Accesseur de la classe \mbox{\hyperlink{class_temperature}{Temperature}} sur l\textquotesingle{}id
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file Temperature.\+php.
+
+\mbox{\Hypertarget{class_temperature_a1f11fa996501cd5785b673207164568f}\label{class_temperature_a1f11fa996501cd5785b673207164568f}} 
+\index{Temperature@{Temperature}!getIdEssai@{getIdEssai}}
+\index{getIdEssai@{getIdEssai}!Temperature@{Temperature}}
+\doxysubsubsection{\texorpdfstring{getIdEssai()}{getIdEssai()}}
+{\footnotesize\ttfamily get\+Id\+Essai (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Accesseur de la classe \mbox{\hyperlink{class_temperature}{Temperature}} sur l\textquotesingle{}id\+Essai
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 61 of file Temperature.\+php.
+
+\mbox{\Hypertarget{class_temperature_a380ede095fdfcd01e19927bdd98eb3c6}\label{class_temperature_a380ede095fdfcd01e19927bdd98eb3c6}} 
+\index{Temperature@{Temperature}!getlastTemp@{getlastTemp}}
+\index{getlastTemp@{getlastTemp}!Temperature@{Temperature}}
+\doxysubsubsection{\texorpdfstring{getlastTemp()}{getlastTemp()}}
+{\footnotesize\ttfamily static getlast\+Temp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Méthode de la classe \mbox{\hyperlink{class_temperature}{Temperature}}, permet l\textquotesingle{}obtention de la derniere valeur de temperature
+
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+
+
+Definition at line 216 of file Temperature.\+php.
+
+\mbox{\Hypertarget{class_temperature_a3dd39f39e2f19525dfa68189734ecc38}\label{class_temperature_a3dd39f39e2f19525dfa68189734ecc38}} 
+\index{Temperature@{Temperature}!getTempFromID@{getTempFromID}}
+\index{getTempFromID@{getTempFromID}!Temperature@{Temperature}}
+\doxysubsubsection{\texorpdfstring{getTempFromID()}{getTempFromID()}}
+{\footnotesize\ttfamily static get\+Temp\+From\+ID (\begin{DoxyParamCaption}\item[{int}]{\$id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Méthode de la classe \mbox{\hyperlink{class_temperature}{Temperature}}, créer un objet de classe température avec les données de la base de donnée
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_temperature}{Temperature}} 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 33 of file Temperature.\+php.
+
+\mbox{\Hypertarget{class_temperature_a6e80b8655f7a51eee60aee71167bb35b}\label{class_temperature_a6e80b8655f7a51eee60aee71167bb35b}} 
+\index{Temperature@{Temperature}!getTempidEssai@{getTempidEssai}}
+\index{getTempidEssai@{getTempidEssai}!Temperature@{Temperature}}
+\doxysubsubsection{\texorpdfstring{getTempidEssai()}{getTempidEssai()}}
+{\footnotesize\ttfamily static get\+Tempid\+Essai (\begin{DoxyParamCaption}\item[{int}]{\$id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Méthode statique de la classe \mbox{\hyperlink{class_temperature}{Temperature}}, crée un objet \mbox{\hyperlink{class_temperature}{Temperature}}, récupere les données d\textquotesingle{}une température dans la base de données
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id\+Essi} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_temperature}{Temperature}} 
+\end{DoxyReturn}
+
+
+Definition at line 168 of file Temperature.\+php.
+
+\mbox{\Hypertarget{class_temperature_a57c78d9f0aa316ee2fdd6995e2a06ce3}\label{class_temperature_a57c78d9f0aa316ee2fdd6995e2a06ce3}} 
+\index{Temperature@{Temperature}!getTime@{getTime}}
+\index{getTime@{getTime}!Temperature@{Temperature}}
+\doxysubsubsection{\texorpdfstring{getTime()}{getTime()}}
+{\footnotesize\ttfamily get\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Accesseur de la classe \mbox{\hyperlink{class_temperature}{Temperature}} sur time
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 71 of file Temperature.\+php.
+
+\mbox{\Hypertarget{class_temperature_ac0bc18784b182c89fcfd276625aef435}\label{class_temperature_ac0bc18784b182c89fcfd276625aef435}} 
+\index{Temperature@{Temperature}!getValue@{getValue}}
+\index{getValue@{getValue}!Temperature@{Temperature}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Accesseur de la classe \mbox{\hyperlink{class_temperature}{Temperature}} sur la valeur
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 81 of file Temperature.\+php.
+
+\mbox{\Hypertarget{class_temperature_a70a0fe08035189260c72e32a9e20d30c}\label{class_temperature_a70a0fe08035189260c72e32a9e20d30c}} 
+\index{Temperature@{Temperature}!getValues@{getValues}}
+\index{getValues@{getValues}!Temperature@{Temperature}}
+\doxysubsubsection{\texorpdfstring{getValues()}{getValues()}}
+{\footnotesize\ttfamily get\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Méthode de la classe \mbox{\hyperlink{class_temperature}{Temperature}}, permet l\textquotesingle{}obtention valeurs
+
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Definition at line 188 of file Temperature.\+php.
+
+\mbox{\Hypertarget{class_temperature_a0b9c6740232a395804d60d3785f6c2cf}\label{class_temperature_a0b9c6740232a395804d60d3785f6c2cf}} 
+\index{Temperature@{Temperature}!setIdEssai@{setIdEssai}}
+\index{setIdEssai@{setIdEssai}!Temperature@{Temperature}}
+\doxysubsubsection{\texorpdfstring{setIdEssai()}{setIdEssai()}}
+{\footnotesize\ttfamily set\+Id\+Essai (\begin{DoxyParamCaption}\item[{int}]{\$id\+Essai }\end{DoxyParamCaption})}
+
+Modificateur de la classe \mbox{\hyperlink{class_temperature}{Temperature}} sur l\textquotesingle{}id\+Essai
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id\+Essai} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 91 of file Temperature.\+php.
+
+\mbox{\Hypertarget{class_temperature_a7bcfa1c6a9212274e43b2fb1ac19f6c9}\label{class_temperature_a7bcfa1c6a9212274e43b2fb1ac19f6c9}} 
+\index{Temperature@{Temperature}!setTime@{setTime}}
+\index{setTime@{setTime}!Temperature@{Temperature}}
+\doxysubsubsection{\texorpdfstring{setTime()}{setTime()}}
+{\footnotesize\ttfamily set\+Time (\begin{DoxyParamCaption}\item[{int}]{\$time }\end{DoxyParamCaption})}
+
+Modificateur de la classe \mbox{\hyperlink{class_temperature}{Temperature}} sur le temps
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$time} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 101 of file Temperature.\+php.
+
+\mbox{\Hypertarget{class_temperature_a814b2905bcb1f8531d735ae1b2fa62ff}\label{class_temperature_a814b2905bcb1f8531d735ae1b2fa62ff}} 
+\index{Temperature@{Temperature}!setValue@{setValue}}
+\index{setValue@{setValue}!Temperature@{Temperature}}
+\doxysubsubsection{\texorpdfstring{setValue()}{setValue()}}
+{\footnotesize\ttfamily set\+Value (\begin{DoxyParamCaption}\item[{float}]{\$value }\end{DoxyParamCaption})}
+
+Modificateur de la classe \mbox{\hyperlink{class_temperature}{Temperature}} sur la valeur
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 111 of file Temperature.\+php.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/src/\mbox{\hyperlink{_temperature_8php}{Temperature.\+php}}\end{DoxyCompactItemize}

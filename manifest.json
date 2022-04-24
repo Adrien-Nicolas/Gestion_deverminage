@@ -1,0 +1,48 @@
+{
+  "name": "EPL- Essai de deverminage",
+  "short_name": "EPL",
+  "start_url": "/",
+  "display": "standalone",
+  "lang":"fr",
+  "background_color": "#FFE9D2",
+  "theme_color": "#FFE1C4",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": true,
+  "icons": [
+    {
+      "src": "img/icon-48-48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "img/icon-72-72.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "img/icon-96-96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "img/icon-128-128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "img/icon-144-144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "img/icon-192-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "img/icon-512-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

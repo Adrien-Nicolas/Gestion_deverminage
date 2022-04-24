@@ -1,0 +1,181 @@
+<?php
+
+require_once('php/autoload.php');
+
+error_reporting(E_ALL);
+ini_set('display_errors', TRUE);
+ini_set('display_startup_errors', TRUE);
+
+$page = new WebPage("EPL - Administration Essai de déverminage");
+$page->addAuthor('De Buyser Rémi');
+$page->addAuthor('Nicolas Adrien');
+$page->appendJsUrl("https://cdn.plot.ly/plotly-1.8.0.min.js");
+
+
+
+$id = $_GET['id'];
+
+$lot = Lot::getLotFromID($id);
+
+$capteurs = $lot->getAllCapteurs();
+$nbValid = $lot->getNbValidCap();
+$nbNotValid = $lot->getNbNotValidCap();
+$nbCap = $lot->getNbCap();
+$essaisId = $lot->getAllEssaisId();
+$idlist = '';
+foreach ($essaisId AS $eId) {
+    $idlist.=$eId.' ,';
+}
+$idlist = substr($idlist, 0, -1);
+
+$numLot=$lot->getNumLot();
+
+$page->appendContent(<<<HTML
+  <div class="container"> <h1 class="main-h1">Lot n°$numLot </h1>
+  HTML
+);
+
+$page->appendContent(<<<HTML
+           <div class="grid-container" >
+           <p class="txtc">Nombre de produit essayé : $nbCap </p>
+           <p class="txtc">Dans les essais : $idlist</p>
+           <p class="txtc">Nombre de produit conforme : $nbValid</p>
+           <p class="txtc">Nombre de produit non conforme : $nbNotValid</p>
+           <div class="grid-line">
+               <p class="titleRange grid-line-3">Rafraichissement des graphiques : </p>
+               <p>Oui</p>
+               <input id ="slide" type="range" min="0" max="1" value="0" id="rangeslide">
+               <p>Non</p>
+           </div>
+           <a class="cpointer t-end" id="modal-btn">Voulez vous supprimer ce lot ?</a>
+       <p id="RefreshGraph"></p>
+        </div>
+        <div class="container-lot">
+HTML
+);
+
+foreach ($capteurs as $cap) {
+    $valid = $cap->getValid();
+    $i = $cap->getId();
+    $SN = $cap->getSN();
+
+    $page->appendContent(<<<HTML
+        <div class="lot">
+                <div class="nlot cpointer" id="btnTube' $i  '">
+                    <a>Produit n°serie : $SN </a>
+HTML
+);
+    if ($valid == 0) {
+        $page->appendContent(<<<HTML
+    <span class="nvalid">non conforme</span>
+HTML
+        );
+    } else {
+        $page->appendContent(<<<HTML
+    <span class="valid">conforme</span>
+HTML
+);
+    }
+    $page->appendContent(<<<HTML
+                    <div class="lot-icon" id="iconBtnTube$i">
+                        <span class="iconify" data-icon="bi:chevron-down" data-inline="false"></span>
+                    </div>
+                </div>
+                <div class="tube dnone" id="tube$i">
+                    <div id="graph$i"></div>
+                </div>
+            </div>
+            <script type="module">
+
+
+                import {AjaxRequest} from  './js/AjaxRequest.js';
+
+                /**
+                 * Permet d'ajouter le graphique
+                 */
+
+                var tube$i = document.getElementById('tube$i');
+                var btnTube$i = document.getElementById('btnTube$i');
+                var IconBtnTube$i = document.getElementById('iconBtnTube$i');
+
+                function ajaxAddGraph() {
+                    new AjaxRequest({
+                        url: "php/getGraph.php",
+                        method: "post",
+                        parameters: {
+                            id: $i,
+                            valid: $valid,
+                            refresh: document.getElementById('slide').value
+                        },
+                        onSuccess: function (res) {
+                            var divtube = document.createElement('div');
+                            divtube.innerHTML = res;
+                            tube$i.appendChild(divtube);
+                        }, onError: function (status, message) {
+                            window.alert('Error ' + status + ': ' + message);
+                        }
+                    });
+                }
+
+                btnTube$i.addEventListener("click", function () {
+                    if (!tube$i.classList.contains("dnone")) {
+                        tube$i.classList.add("dnone");
+                        IconBtnTube$i.classList.remove("iconBtnRotate");
+                        IconBtnTube$i.classList.add("iconBtnRotateNone");
+                        tube$i.innerHTML = "";
+                    }
+                    else {
+                        tube$i.classList.remove("dnone");
+                        IconBtnTube$i.classList.add("iconBtnRotate");
+                        IconBtnTube$i.classList.remove("iconBtnRotateNone");
+                        ajaxAddGraph();
+                    }
+                });
+            </script>
+HTML
+    );
+}
+
+$page->appendContent(<<<HTML
+        </div>
+    </div>
+    <div class="modaldel-bg dnone">
+        <div class="modaldel">
+            <p id="modal-p">Etes vous sur de vouloir supprimer ce lot ?</p>
+            <div id="modal-div">
+                <a href="RemoveToDB.php">Oui
+                </a>
+                <a class="cpointer" id="modal-close">Non</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        var modalClose = document.getElementById('modal-close');
+        var modalBtn = document.getElementById('modal-btn');
+        var modalBg = document.querySelector('.modaldel-bg');
+
+        modalBtn.addEventListener('click', function () {
+            modalBg.classList.remove('dnone');
+        })
+
+        modalClose.addEventListener('click', function () {
+            modalBg.classList.add('dnone');
+
+        })
+
+        var modal = document.querySelector('.modaldel');
+        var modalp = document.getElementById('modal-p');
+        var modaldiv = document.getElementById('modal-div');
+
+        modalBg.onclick = function(e) {
+            if(e.target !== modal && e.target !== modaldiv && e.target !== modalp) {
+                modalBg.classList.add('dnone');
+            }
+        }
+    </script>
+
+HTML
+);
+
+
+echo $page->toHTML();
